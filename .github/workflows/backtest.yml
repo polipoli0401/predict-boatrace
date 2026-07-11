@@ -15,20 +15,38 @@ jobs:
       STADIUM_PREF_MAP: ${{ secrets.STADIUM_PREF_MAP }}
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.9'
+
       - name: Install dependencies
         run: pip install pandas requests scikit-learn scipy lightgbm
+
       - name: Run backtest
         run: python backtest_boatrace.py
-      - name: Commit strategy
+
+      - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add optimal_strategy.json strategy_scan.csv backtest_result.csv 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "Update backtest strategy [skip ci]"
-          git push || echo "Nothing to push"
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Update backtest strategy [skip ci]"
+          for i in 1 2 3; do
+            if git push; then
+              echo "Push succeeded"
+              exit 0
+            fi
+            echo "Push rejected, rebasing and retrying ($i/3)..."
+            git pull --rebase origin main
+          done
+          echo "Push failed after 3 retries"
+          exit 1
+
       - uses: actions/upload-artifact@v4
         with:
           name: backtest-outputs

@@ -91,6 +91,11 @@ Method notes
 - Strategy selection is a grid search and therefore optimistic;
   prediction_history.csv provides an untouched forward test.
 
+Acknowledgements
+----------------
+Developed with AI assistance (Claude by Anthropic).
+Design decisions, verification and operation by the repository owner.
+
 License / Disclaimer
 --------------------
 Released under the MIT License (see LICENSE).

@@ -88,5 +88,6 @@ Method notes
 
 License / Disclaimer
 --------------------
+Released under the MIT License (see LICENSE).
 No warranty of any kind. The authors accept no liability for financial
 losses incurred by using this software.

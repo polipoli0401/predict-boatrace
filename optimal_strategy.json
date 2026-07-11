@@ -3,10 +3,10 @@
   "filter": {
     "prob_min": 0.4,
     "prob_max": 0.5,
-    "gap_min": 0.2
+    "gap_min": 0.3
   },
-  "roi": 116.1,
-  "hit_rate": 32.3,
-  "n_races": 155,
-  "n_tickets": 155
+  "roi": 115.4,
+  "hit_rate": 29.9,
+  "n_races": 167,
+  "n_tickets": 167
 }

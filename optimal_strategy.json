@@ -1,0 +1,12 @@
+{
+  "strategy": "p3_box",
+  "filter": {
+    "prob_min": 0.4,
+    "prob_max": 0.5,
+    "gap_min": 0.2
+  },
+  "roi": 116.1,
+  "hit_rate": 32.3,
+  "n_races": 155,
+  "n_tickets": 155
+}

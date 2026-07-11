@@ -1,0 +1,7 @@
+# Python
+__pycache__/
+*.pyc
+
+# Local experiments (never commit)
+*.ipynb_checkpoints/
+.env

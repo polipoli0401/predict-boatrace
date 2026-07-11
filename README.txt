@@ -1,6 +1,11 @@
 Boat Race Prediction System
 ===========================
 
+This repository was built as a personal research / verification project
+to study whether machine learning can extract predictive value from
+publicly available boat race data. It is published for portfolio and
+educational purposes.
+
 An automated machine-learning pipeline that fetches public boat race
 data daily, trains gradient-boosting models, and outputs recommended
 trio (3-boat combination) tickets based on a backtested strategy.

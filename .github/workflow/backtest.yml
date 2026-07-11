@@ -1,0 +1,42 @@
+name: BoatRace Backtest
+
+on:
+  workflow_dispatch:
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install pandas requests scikit-learn scipy numpy lightgbm
+
+      - name: Run backtest
+        run: python backtest_boatrace.py
+
+      - name: Commit optimal threshold
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add backtest_result.csv optimal_threshold.csv optimal_threshold.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "Auto-update backtest results and optimal threshold [skip ci]"
+          git push || echo "Nothing to push"
+
+      - name: Upload backtest results
+        uses: actions/upload-artifact@v4
+        with:
+          name: backtest-results
+          path: |
+            backtest_result.csv
+            optimal_threshold.csv
+            optimal_threshold.json

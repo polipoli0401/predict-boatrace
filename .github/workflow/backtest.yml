@@ -6,37 +6,32 @@ on:
 jobs:
   backtest:
     runs-on: ubuntu-latest
+    timeout-minutes: 360
     permissions:
       contents: write
+    env:
+      API_BASE_URL: ${{ secrets.API_BASE_URL }}
+      TARGET_STADIUM_IDS: ${{ secrets.TARGET_STADIUM_IDS }}
+      STADIUM_PREF_MAP: ${{ secrets.STADIUM_PREF_MAP }}
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.9'
-
       - name: Install dependencies
-        run: |
-          pip install pandas requests scikit-learn scipy numpy lightgbm
-
+        run: pip install pandas requests scikit-learn scipy lightgbm
       - name: Run backtest
         run: python backtest_boatrace.py
-
-      - name: Commit optimal threshold
+      - name: Commit strategy
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add backtest_result.csv optimal_threshold.csv optimal_threshold.json 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "Auto-update backtest results and optimal threshold [skip ci]"
+          git add optimal_strategy.json strategy_scan.csv backtest_result.csv 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "Update backtest strategy [skip ci]"
           git push || echo "Nothing to push"
-
-      - name: Upload backtest results
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
-          name: backtest-results
+          name: backtest-outputs
           path: |
-            backtest_result.csv
-            optimal_threshold.csv
-            optimal_threshold.json
+            strategy_scan.csv
+            optimal_strategy.json

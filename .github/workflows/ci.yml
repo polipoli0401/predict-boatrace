@@ -24,7 +24,7 @@ jobs:
         run: pip install pandas numpy lightgbm scikit-learn requests ruff pytest
 
       - name: Ruff lint
-        run: ruff check .
+        run: ruff check . --fix
 
       - name: Run tests
         run: pytest -q

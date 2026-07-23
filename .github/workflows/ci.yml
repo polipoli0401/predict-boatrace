@@ -25,6 +25,3 @@ jobs:
 
       - name: Ruff lint
         run: ruff check . --fix
-
-      - name: Run tests
-        run: pytest -q

@@ -1,12 +1,12 @@
 {
-  "strategy": "top2_fix_nagashi",
+  "strategy": "p3_box",
   "filter": {
-    "prob_min": 0.6,
-    "prob_max": 0.7,
-    "gap_min": 0.3
+    "prob_min": 0.3,
+    "prob_max": 0.4,
+    "gap_min": 0.2
   },
-  "roi": 80.0,
-  "hit_rate": 50.8,
-  "n_races": 652,
-  "n_tickets": 1956
+  "roi": 139.2,
+  "hit_rate": 30.1,
+  "n_races": 113,
+  "n_tickets": 113
 }

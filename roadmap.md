@@ -134,9 +134,14 @@ Next steps implied by this result:
       (e.g. a blend or a residual model), out of sample
 - [ ] Fix the calibration bias: low-probability trios over-estimated,
       high-probability trios under-estimated
-- [ ] Race-day features not used yet: parts / propeller changes,
-      exhibition entry course, wind direction, weight adjustment (v1 day
-      file has them from 2026-01); test with `ev_backtest.py`
+- [x] Race-day features not used before (exhibition entry course,
+      parts / propeller changes, weight adjustment, wind components):
+      tested in `method_comparison.py` → no gain (D 2.349 vs C 2.348)
+- [x] Method comparison, same races 2026-04..11 (4,275): market 2.249 <
+      live 2.348 ≈ live+ 2.349 < morning 2.365; market + model pool
+      2.249 (= market). No method beats the closing odds.
+- [ ] Re-run the comparison in Actions with the real STADIUM_PREF_MAP
+      and again after more 2026 race-day data has accumulated
 - [ ] Re-run `ev_backtest.py` after each change; only a CI above 100%
       on held-out months would justify live odds
 

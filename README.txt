@@ -153,6 +153,15 @@ models, backtest and forward test (prediction_history.csv) are kept.
                            threshold, bootstrap 95% CI for ROI. Writes
                            data/verification/ev_backtest.{json,md}.
 
+  method_comparison.py     Same-race comparison of methods, monthly
+                           walk-forward from 2026-01 (scored from
+                           2026-04): A market, B morning model, C live
+                           model, D live + unused race-day items
+                           (exhibition entry course, parts / propeller
+                           changes, weight adjustment, head/tail and
+                           cross wind), E market + model pool. Writes
+                           data/verification/method_comparison.{json,md}.
+
   Decision (ev_config.json; all thresholds are configurable)
     Candidate     at least one combination with expected
                   return >= ev_min (1.2) AND probability >=
@@ -295,7 +304,15 @@ Method notes
   from 2.361 to 2.348 against the market's 2.246, and the rule's ROI
   from 74% to 76% (`ev_backtest.py --live`). Still missing even from the
   live model: parts / propeller changes, the exhibition entry course,
-  wind direction, weight adjustment. Treat candidates as
+  wind direction, weight adjustment.
+  Method comparison 2026-04..11-18 (4,275 races, method_comparison.py):
+  log-loss A market 2.249, B 2.365, C 2.348, D 2.349, E 2.249; EV-rule
+  ROI B/C/D 77-78% (CIs ~68-87%). The newly added race-day items did not
+  help (together <1.5% of model D's gain). Pooling with the market gave
+  the model a weight of 0.25 but no overall gain (E = A), i.e. no
+  information beyond the closing odds was detected. Note: race-day
+  items exist only from 2026-01, and the local run had no
+  STADIUM_PREF_MAP ("local racer" feature empty for B-D). Treat candidates as
   research output until verification over many races says otherwise.
 
 Acknowledgements

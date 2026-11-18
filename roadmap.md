@@ -140,6 +140,12 @@ Next steps implied by this result:
 - [x] Method comparison, same races 2026-04..11 (4,275): market 2.249 <
       live 2.348 ≈ live+ 2.349 < morning 2.365; market + model pool
       2.249 (= market). No method beats the closing odds.
+- [x] Strategy comparison out of sample (strategy_comparison.py): no
+      strategy above ~77% on 2026; longshots worst (favourite-longshot
+      bias); selected filters regress on the test period
+- [ ] Track the current optimal_strategy.json cell on new races only
+      (145% / 143% on 61 / 64 races, chosen post hoc; needs several
+      hundred new races before it means anything)
 - [ ] Re-run the comparison in Actions with the real STADIUM_PREF_MAP
       and again after more 2026 race-day data has accumulated
 - [ ] Re-run `ev_backtest.py` after each change; only a CI above 100%

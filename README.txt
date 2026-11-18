@@ -162,6 +162,14 @@ models, backtest and forward test (prediction_history.csv) are kept.
                            cross wind), E market + model pool. Writes
                            data/verification/method_comparison.{json,md}.
 
+  strategy_comparison.py   How-to-buy comparison, out of sample:
+                           parameters chosen on a selection period,
+                           reported on a later test period with
+                           bootstrap CIs. Existing 6 ticket strategies,
+                           model top-1, closing-odds bands, market
+                           favourite. Writes data/verification/
+                           strategy_comparison.{json,md}.
+
   Decision (ev_config.json; all thresholds are configurable)
     Candidate     at least one combination with expected
                   return >= ev_min (1.2) AND probability >=
@@ -312,7 +320,17 @@ Method notes
   the model a weight of 0.25 but no overall gain (E = A), i.e. no
   information beyond the closing odds was detected. Note: race-day
   items exist only from 2026-01, and the local run had no
-  STADIUM_PREF_MAP ("local racer" feature empty for B-D). Treat candidates as
+  STADIUM_PREF_MAP ("local racer" feature empty for B-D).
+  Strategy comparison (strategy_comparison.py; selection 2024-02..
+  2025-12, test 2026): no strategy beat ~75-77% on the test period;
+  filters that looked best on the selection period fell back on the
+  test period. Closing-odds bands show the favourite-longshot bias:
+  odds 1-20 return ~73-78%, 50+ only 30-46%; no band exceeds 100%.
+  The current optimal_strategy.json cell (favourite trio, top win prob
+  30-40%, gap >= 20%) returns 145% / 143% on 2024-25 / 2026, but on only
+  61 / 64 races (2026 CI 85-208%) and it was chosen as the best of ~240
+  cells on the same data, so it is a lead to watch on new races, not
+  evidence of an edge. Treat candidates as
   research output until verification over many races says otherwise.
 
 Acknowledgements

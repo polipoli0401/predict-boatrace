@@ -47,13 +47,13 @@ def test_expected_return_is_probability_times_odds():
 def test_no_prediction_is_undecidable():
     ev = evaluate_race(None, make_odds(flat_odds(10.0)), NOW, CFG)
     assert ev["decision"] == DECISION_UNDECIDABLE
-    assert ev["reason"] == "予測なし"
+    assert ev["reason"] == "No prediction"
 
 
 def test_no_odds_is_undecidable_but_keeps_rows():
     ev = evaluate_race(make_pred(), None, NOW, CFG)
     assert ev["decision"] == DECISION_UNDECIDABLE
-    assert ev["reason"] == "オッズ未取得"
+    assert ev["reason"] == "No odds"
     assert ev["rows"] and all(r["odds"] is None for r in ev["rows"])
 
 
@@ -118,7 +118,7 @@ def test_board_sort_and_keeps_races_without_odds():
     html = render_html(rows, NOW.date(), NOW, CFG)
     assert html.count('<tr class=') == 4
     md = render_markdown(rows, NOW.date(), NOW, CFG)
-    assert "取得失敗" in md and "未取得" in md
+    assert "Failed" in md and "Pending" in md
 
 
 def test_sort_key_missing_deadline_last():

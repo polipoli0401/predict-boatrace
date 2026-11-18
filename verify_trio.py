@@ -7,7 +7,12 @@ boatrace_results.csv:
     (100 JPY per candidate combination) -> hit rate, ROI, and the mean
     expected return at decision time (expected vs realised)
   - market comparison: log-loss of the model vs the closing-odds implied
-    probabilities (when closing odds were captured)
+    probabilities (closing odds from closing_odds.py, or closing odds
+    captured by race_day.py after the deadline)
+  - closing-odds rule check: the same decision rule (ev_config.json)
+    applied after the fact with CLOSING odds. Closing odds are not known
+    at decision time, so this is a reference for the rule and the
+    probabilities, not the result of actual decisions.
 Everything is reported per stadium and in total.
 
 Writes data/verification/summary.json and summary.md.
@@ -21,6 +26,7 @@ from datetime import date
 import pandas as pd
 
 from boatrace_sources import STADIUM_NAMES, iso_jst
+from ev_judge import load_config
 from race_store import VERIFY_DIR, odds_path, read_json, write_json
 
 RESULTS_CSV = "boatrace_results.csv"
@@ -49,10 +55,32 @@ def actual_results(results_csv=RESULTS_CSV):
 def _blank():
     return {"races": 0, "candidate_races": 0, "tickets": 0, "hits": 0,
             "invest": 0, "return": 0.0, "er_sum": 0.0,
-            "ll_model": 0.0, "ll_market": 0.0, "n_market": 0}
+            "ll_model": 0.0, "ll_market": 0.0, "n_market": 0,
+            "c_races": 0, "c_tickets": 0, "c_hits": 0, "c_return": 0.0,
+            "c_er_sum": 0.0}
 
 
-def verify(pred_files, results):
+def closing_odds_of(entry):
+    """{combo: odds} at the deadline, or None."""
+    src = (entry.get("closing") or {}).get("odds")
+    if not src and entry.get("is_final"):
+        src = entry.get("odds")
+    if not src:
+        return None
+    return {o["combination"]: o["value"] for o in src}
+
+
+def rule_candidates(probs, odds, cfg):
+    """Combinations the decision rule would pick with these odds."""
+    rows = [(k, p, odds.get(k)) for k, p in probs.items()]
+    rows = [(k, p, o, p * o) for k, p, o in rows
+            if o and p >= cfg["prob_min"] and p * o >= cfg["ev_min"]]
+    rows.sort(key=lambda r: -r[3])
+    return rows[:cfg["max_candidates_per_race"]]
+
+
+def verify(pred_files, results, cfg=None):
+    cfg = cfg or load_config()
     by = defaultdict(_blank)
     calib = []
     dates = []
@@ -82,7 +110,8 @@ def verify(pred_files, results):
             entry = (odds_doc.get("races") or {}).get(key) or {}
             pre = entry.get("pre_close") or {}
             cands = pre.get("candidates") or []
-            final = entry.get("odds") if entry.get("is_final") else None
+            final = closing_odds_of(entry)
+            rule = rule_candidates(probs, final, cfg) if final else []
             for s in (race["stadium_id"], "all"):
                 b = by[s]
                 if cands:
@@ -94,9 +123,15 @@ def verify(pred_files, results):
                     if hit:
                         b["hits"] += 1
                         b["return"] += payout or 0.0
+                if rule:
+                    b["c_races"] += 1
+                    b["c_tickets"] += len(rule)
+                    b["c_er_sum"] += sum(r[3] for r in rule)
+                    if any(r[0] == actual for r in rule):
+                        b["c_hits"] += 1
+                        b["c_return"] += payout or 0.0
                 if final:
-                    inv = {o["combination"]: 1 / o["value"] for o in final
-                           if o["value"]}
+                    inv = {k: 1 / v for k, v in final.items() if v}
                     tot = sum(inv.values())
                     if tot > 0 and actual in inv:
                         b["n_market"] += 1
@@ -130,6 +165,18 @@ def summarise(by, calib, dates):
             if b["invest"] else None,
             "mean_expected_return": round(100 * b["er_sum"] / b["tickets"], 1)
             if b["tickets"] else None,
+            "closing_rule": {
+                "candidate_races": b["c_races"],
+                "tickets": b["c_tickets"],
+                "hits": b["c_hits"],
+                "hit_rate": round(100 * b["c_hits"] / b["c_races"], 1)
+                if b["c_races"] else None,
+                "roi": round(100 * b["c_return"] / (100 * b["c_tickets"]), 1)
+                if b["c_tickets"] else None,
+                "mean_expected_return": round(
+                    100 * b["c_er_sum"] / b["c_tickets"], 1)
+                if b["c_tickets"] else None,
+            },
             "market_compared_races": b["n_market"],
             "log_loss_model_vs_market": [
                 round(b["ll_model"] / b["n_market"], 4),
@@ -148,14 +195,16 @@ def summarise(by, calib, dates):
 
 
 def to_markdown(s):
-    lines = [f"# 検証結果（{s['period'] or 'データなし'}）", "",
-             f"生成: {s['generated_at']}", "",
-             "## 場別（購入候補 = 締切前の最後の判定、1点100円換算）", "",
-             "| 場 | 予測レース | 候補レース | 点数 | 的中 | 的中率% | 投資 | 払戻 "
-             "| 回収率% | 平均期待回収率% | 対数損失(モデル/市場) |",
+    lines = [f"# Verification ({s['period'] or 'no data'})", "",
+             f"Generated: {s['generated_at']}", "",
+             "## By stadium (candidates = last pre-deadline decision, "
+             + "100 JPY per ticket)", "",
+             "| Stadium | Predicted races | Candidate races | Tickets | Hits "
+             + "| Hit % | Invested | Returned | ROI % | Mean exp. return % "
+             + "| Log-loss (model / market) |",
              "|---|---|---|---|---|---|---|---|---|---|---|"]
     for sid, v in s["by_stadium"].items():
-        name = "合計" if sid == "all" else STADIUM_NAMES.get(sid, sid)
+        name = "Total" if sid == "all" else STADIUM_NAMES.get(sid, sid)
         ll = (f"{v['log_loss_model_vs_market'][0]} / "
               f"{v['log_loss_model_vs_market'][1]} "
               f"(n={v['market_compared_races']})"
@@ -167,13 +216,29 @@ def to_markdown(s):
             f"| {v['roi'] if v['roi'] is not None else '—'} "
             f"| {v['mean_expected_return'] if v['mean_expected_return'] is not None else '—'} "
             f"| {ll} |")
-    lines += ["", "## 予測確率の校正（全組合せ）", "",
-              "| 予測確率帯 | 件数 | 予測平均 | 実際の的中率 |", "|---|---|---|---|"]
+    lines += ["", "## Rule applied with closing odds (reference)", "",
+              "The decision rule applied after the fact with closing odds. "
+              + "Closing odds are not known at decision time, so this is not "
+              + "the result of actual candidates.", "",
+              "| Stadium | Races | Tickets | Hits | Hit % | ROI % "
+              + "| Mean exp. return % |",
+              "|---|---|---|---|---|---|---|"]
+    for sid, v in s["by_stadium"].items():
+        name = "Total" if sid == "all" else STADIUM_NAMES.get(sid, sid)
+        c = v["closing_rule"]
+        dash = lambda x: "—" if x is None else x  # noqa: E731
+        lines.append(f"| {name} | {c['candidate_races']} | {c['tickets']} "
+                     f"| {c['hits']} | {dash(c['hit_rate'])} | {dash(c['roi'])} "
+                     f"| {dash(c['mean_expected_return'])} |")
+    lines += ["", "## Probability calibration (all combinations)", "",
+              "| Probability band | N | Mean predicted | Observed |",
+              "|---|---|---|---|"]
     for c in s["calibration"]:
         lines.append(f"| {c['bin']} | {c['n']} | {c['predicted']:.3f} "
                      f"| {c['observed']:.3f} |")
-    lines += ["", "対数損失は小さいほど良い。市場は締切時オッズの逆数を正規化した確率。"
-              "件数が少ない間は数値が大きくぶれるため、判断材料にしないこと。"]
+    lines += ["", "Lower log-loss is better. Market = closing odds inverted and "
+              + "normalised. Small samples fluctuate strongly; do not act on "
+              + "them."]
     return "\n".join(lines) + "\n"
 
 

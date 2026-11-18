@@ -1,15 +1,15 @@
 """Expected-return calculation and race-level decision.
 
-expected return (期待回収率) = calibrated trio probability x odds
+expected return = calibrated trio probability x odds
 (1.20 == 120%). Decision per race:
 
-  判定不可 (undecidable) : no prediction, no usable odds, odds too old,
+  Undecidable : no prediction, no usable odds, odds too old,
                           or the odds are the closing odds of a race
                           that has no pre-close decision.
-  購入候補 (candidate)   : at least one combination with
+  Candidate   : at least one combination with
                           expected return >= ev_min AND probability >=
                           prob_min, using fresh odds.
-  見送り (pass)          : otherwise.
+  Pass        : otherwise.
 
 A high expected return alone never makes a candidate (prob_min guard).
 """
@@ -21,9 +21,9 @@ from trio_prob import combo_key, trio_probabilities
 
 CONFIG_JSON = "ev_config.json"
 
-DECISION_CANDIDATE = "購入候補"
-DECISION_PASS = "見送り"
-DECISION_UNDECIDABLE = "判定不可"
+DECISION_CANDIDATE = "Candidate"
+DECISION_PASS = "Pass"
+DECISION_UNDECIDABLE = "Undecidable"
 
 
 def load_config(path=CONFIG_JSON):
@@ -55,7 +55,7 @@ def required_odds(prob, cfg):
 
 def scratched_boats(odds_map):
     """Boats whose every combination has no odds while others do
-    (published as 欠場 on the odds page)."""
+    (shown as scratched on the odds page)."""
     if not odds_map or not any(v is not None for v in odds_map.values()):
         return []
     boats = {int(b) for k in odds_map for b in k.split("-")}
@@ -75,7 +75,7 @@ def evaluate_race(pred, odds_entry, now, cfg, calibration=None):
               "rows": [], "stale": False, "scratched": [],
               "odds_at": None, "recomputed": False}
     if not pred or not pred.get("predictions"):
-        result["reason"] = "予測なし"
+        result["reason"] = "No prediction"
         return result
 
     probs = {p["combination"]: p["probability"] for p in pred["predictions"]}
@@ -103,7 +103,7 @@ def evaluate_race(pred, odds_entry, now, cfg, calibration=None):
                      "candidate": False})
 
     if odds_map is None:
-        result["reason"] = "オッズ未取得"
+        result["reason"] = "No odds"
         result["rows"] = _display_rows(rows, cfg)
         return result
 
@@ -122,7 +122,7 @@ def evaluate_race(pred, odds_entry, now, cfg, calibration=None):
 
     if result["stale"]:
         result["decision"] = DECISION_UNDECIDABLE
-        result["reason"] = "オッズが古い"
+        result["reason"] = "Odds too old"
     elif any(r["candidate"] for r in rows):
         result["decision"] = DECISION_CANDIDATE
     else:
@@ -130,7 +130,7 @@ def evaluate_race(pred, odds_entry, now, cfg, calibration=None):
     if scratched:
         result["reason"] = ((result["reason"] + " / ") if result["reason"]
                             else "") + \
-            f"欠場艇{','.join(map(str, scratched))}を除外して再計算"
+            f"Recomputed without scratched boat {','.join(map(str, scratched))}"
     result["rows"] = _display_rows(rows, cfg)
     return result
 

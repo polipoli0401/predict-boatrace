@@ -2,7 +2,7 @@ name: BoatRace Predictor
 
 # Night run for the race day that has just started (JST):
 #   results fetch -> training -> prediction (incl. trio probabilities)
-#   -> verification of past race days -> race board without odds.
+#   -> closing odds of past days -> verification -> race board.
 # The v1 day file with that day's entry lists appears around 00:15 JST.
 # Scheduled runs are often delayed by hours, so the run is placed early
 # enough to finish before the first deadlines (~08:45 JST).
@@ -26,6 +26,7 @@ jobs:
       API_BASE_URL: ${{ secrets.API_BASE_URL }}
       TARGET_STADIUM_IDS: ${{ secrets.TARGET_STADIUM_IDS }}
       STADIUM_PREF_MAP: ${{ secrets.STADIUM_PREF_MAP }}
+      CLOSING_ODDS_BASE_URL: ${{ secrets.CLOSING_ODDS_BASE_URL }}
       TZ: Asia/Tokyo
     steps:
       - uses: actions/checkout@v4
@@ -42,6 +43,9 @@ jobs:
 
       - name: Run prediction
         run: python predict_boatrace.py
+
+      - name: Closing odds for past race days (verification only)
+        run: python closing_odds.py
 
       - name: Verify past race days
         run: python verify_trio.py

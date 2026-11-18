@@ -1,5 +1,5 @@
 """Race board: all target stadiums merged into one list sorted by the
-scheduled deadline (締切予定時刻), rendered as HTML (GitHub Pages) and
+scheduled deadline, rendered as HTML (GitHub Pages) and
 Markdown (Actions job summary)."""
 import html
 import json
@@ -13,8 +13,8 @@ from ev_judge import (
     parse_jst,
 )
 
-ODDS_STATUS_LABEL = {"success": "取得済", "pending": "未取得",
-                     "failed": "取得失敗"}
+ODDS_STATUS_LABEL = {"success": "Fetched", "pending": "Pending",
+                     "failed": "Failed"}
 
 
 def fmt_prob(c):
@@ -32,7 +32,7 @@ def fmt_ev(c):
 
 def fmt_req(c):
     r = c.get("required_odds")
-    return "確率不足" if r is None else f"{r:.1f}倍〜"
+    return "Low prob." if r is None else f"≥ {r:.1f}"
 
 
 def fmt_combo(c):
@@ -46,7 +46,7 @@ def _hhmm(text):
 
 def build_rows(preds_doc, info_doc, odds_doc, cfg, calibration, now):
     """One row per race from the union of predictions / race info / odds.
-    Races without odds or predictions are kept (判定不可)."""
+    Races without odds or predictions are kept (undecidable)."""
     preds = (preds_doc or {}).get("races", {})
     infos = (info_doc or {}).get("races", {})
     odds = (odds_doc or {}).get("races", {})
@@ -58,15 +58,15 @@ def build_rows(preds_doc, info_doc, odds_doc, cfg, calibration, now):
         closed_at = i.get("closed_at") or (p or {}).get("closed_at")
         ev = evaluate_race(p, o, now, cfg, calibration)
         if o and o.get("status") == "failed" and not o.get("odds"):
-            ev["reason"] = "オッズ取得失敗"
+            ev["reason"] = "Odds fetch failed"
         rows.append({
             "key": key, "stadium_id": sid,
             "stadium_name": STADIUM_NAMES.get(sid, sid),
             "race_number": rno, "closed_at": closed_at,
             "closed_hhmm": _hhmm(closed_at),
-            "entry_status": i.get("entry_status", "未取得"),
+            "entry_status": i.get("entry_status", "Not yet"),
             "entry_note": i.get("entry_note"),
-            "exhibition_status": i.get("exhibition_status", "未取得"),
+            "exhibition_status": i.get("exhibition_status", "Not yet"),
             "finished": bool(i.get("finished")),
             "is_closed": bool(parse_jst(closed_at)
                               and parse_jst(closed_at) <= now),
@@ -103,21 +103,22 @@ def summary_counts(rows):
 # Markdown (job summary)
 # ------------------------------------------------------------
 def render_markdown(rows, day, now, cfg):
-    out = [f"## {day.isoformat()} レース一覧（締切予定時刻順・JST）",
-           f"生成: {iso_jst(now)} / 判定基準: 期待回収率 ≥ "
-           f"{cfg['ev_min']*100:.0f}% かつ 確率 ≥ {cfg['prob_min']*100:.0f}%"
-           f"、オッズ取得から {cfg['stale_minutes']} 分以内", "",
-           "| 締切 | 場・R | 出走 | 展示 | オッズ取得 | 状況 | 買い目 "
-           "| 確率 | 必要オッズ | オッズ | 期待回収率 | 判定 |",
+    out = [f"## Races {day.isoformat()} (by deadline, JST)",
+           f"Generated {iso_jst(now)} / rule: expected return ≥ "
+           + f"{cfg['ev_min']*100:.0f}% and probability ≥ "
+           + f"{cfg['prob_min']*100:.0f}%, odds at most "
+           + f"{cfg['stale_minutes']} min old", "",
+           "| Deadline | Race | Entries | Exhibition | Odds at | Odds "
+           + "| Trio | Prob. | Break-even | Odds | Exp. return | Decision |",
            "|---|---|---|---|---|---|---|---|---|---|---|---|"]
     for r in rows:
         combos = r["rows"][:3]
 
         def cell(f, combos=combos):
             return "<br>".join(f(c) for c in combos) or "—"
-        decision = r["decision"] + (f"（{r['reason']}）" if r["reason"] else "")
+        decision = r["decision"] + (f" ({r['reason']})" if r["reason"] else "")
         if r["is_closed"]:
-            decision = "締切済 / " + decision
+            decision = "Closed / " + decision
         out.append(
             f"| {r['closed_hhmm']} | {r['stadium_name']} {r['race_number']}R "
             f"| {r['entry_status']} | {r['exhibition_status']} "
@@ -126,8 +127,8 @@ def render_markdown(rows, day, now, cfg):
             f"| {cell(fmt_combo)} | {cell(fmt_prob)} | {cell(fmt_req)} "
             f"| {cell(fmt_odds)} | {cell(fmt_ev)} "
             f"| {decision} |")
-    out += ["", "★ = 購入候補の組合せ。予測は研究目的の参考値で、"
-            "的中や利益を保証しません。最終判断は利用者が行ってください。"]
+    out += ["", "★ = candidate combination. Research output only: no "
+            + "guarantee of hits or profit. Decisions are the user's."]
     return "\n".join(out)
 
 
@@ -201,7 +202,7 @@ _JS = """
     if (mins > stale && !el.closest('tr.closed')) {
       var w = document.createElement('span');
       w.className = 'warn';
-      w.textContent = '取得から' + mins + '分経過（古いオッズ）';
+      w.textContent = 'fetched ' + mins + ' min ago (stale)';
       el.appendChild(w);
     }
   });
@@ -248,7 +249,7 @@ def render_html(rows, day, now, cfg, verification=None):
         if r["odds_status"] == "failed" and r["odds_error"]:
             status += f'<span class="reason">{_esc(r["odds_error"])}</span>'
         decision = (f'<span class="dec {dec_cls}">'
-                    f'{"締切済・" if r["is_closed"] else ""}'
+                    f'{"Closed · " if r["is_closed"] else ""}'
                     f'{_esc(r["decision"])}'
                     + (f'<span class="reason">{_esc(r["reason"])}</span>'
                        if r["reason"] else "") + "</span>")
@@ -257,65 +258,70 @@ def render_html(rows, day, now, cfg, verification=None):
             if r.get("entry_note") else "")
         body.append(
             f'<tr class="{" ".join(cls)}">'
-            f'<td data-label="締切予定"><b>{_esc(r["closed_hhmm"])}</b></td>'
-            f'<td data-label="場・R">{_esc(r["stadium_name"])} '
+            f'<td data-label="Deadline"><b>{_esc(r["closed_hhmm"])}</b></td>'
+            f'<td data-label="Race">{_esc(r["stadium_name"])} '
             f'{r["race_number"]}R</td>'
-            f'<td data-label="出走情報">{entry}</td>'
-            f'<td data-label="展示情報">{_esc(r["exhibition_status"])}</td>'
-            f'<td data-label="オッズ取得">{odds_cell}</td>'
-            f'<td data-label="取得状況" class="st-{_esc(r["odds_status"])}">'
+            f'<td data-label="Entries">{entry}</td>'
+            f'<td data-label="Exhibition">{_esc(r["exhibition_status"])}</td>'
+            f'<td data-label="Odds at">{odds_cell}</td>'
+            f'<td data-label="Odds status" class="st-{_esc(r["odds_status"])}">'
             f'{status}</td>'
-            f'<td data-label="予測買い目" class="combos">'
+            f'<td data-label="Trio" class="combos">'
             f'{col(lambda c: _esc(fmt_combo(c)))}</td>'
-            f'<td data-label="予測確率" class="num combos">{col(fmt_prob)}</td>'
-            f'<td data-label="必要オッズ" class="num combos">{col(fmt_req)}</td>'
-            f'<td data-label="オッズ" class="num combos">{col(fmt_odds)}</td>'
-            f'<td data-label="期待回収率" class="num combos">{col(fmt_ev)}</td>'
-            f'<td data-label="判定">{decision}</td></tr>')
+            f'<td data-label="Probability" class="num combos">{col(fmt_prob)}</td>'
+            f'<td data-label="Break-even" class="num combos">{col(fmt_req)}</td>'
+            f'<td data-label="Odds" class="num combos">{col(fmt_odds)}</td>'
+            f'<td data-label="Exp. return" class="num combos">{col(fmt_ev)}</td>'
+            f'<td data-label="Decision">{decision}</td></tr>')
 
     verify_html = ""
     if verification and verification.get("by_stadium"):
         vrows = "".join(
-            f"<tr><td>{_esc(STADIUM_NAMES.get(s, s) if s != 'all' else '合計')}</td>"
+            f"<tr><td>{_esc(STADIUM_NAMES.get(s, s) if s != 'all' else 'Total')}</td>"
             f"<td class=num>{v['candidate_races']}</td>"
             f"<td class=num>{v['tickets']}</td>"
             f"<td class=num>{v['hit_rate']}</td>"
             f"<td class=num>{v['roi']}</td>"
-            f"<td class=num>{v['mean_expected_return']}</td></tr>"
+            f"<td class=num>{v['mean_expected_return']}</td>"
+            f"<td class=num>{(v.get('closing_rule') or {}).get('roi')}</td></tr>"
             for s, v in verification["by_stadium"].items())
         verify_html = (
-            "<h2 style='font-size:15px;margin:20px 0 0'>検証（購入候補の実績・"
-            f"{_esc(verification.get('period'))}）</h2>"
-            "<table><thead><tr><th>場</th><th>候補レース</th><th>点数</th>"
-            "<th>的中率%</th><th>回収率%</th><th>平均期待回収率%</th>"
+            "<h2 style='font-size:15px;margin:20px 0 0'>Verification ("
+            f"{_esc(verification.get('period'))})</h2>"
+            "<table><thead><tr><th>Stadium</th><th>Candidate races</th>"
+            "<th>Tickets</th><th>Hit %</th><th>ROI %</th>"
+            "<th>Mean exp. return %</th><th>ROI % with closing odds (ref.)</th>"
             f"</tr></thead><tbody>{vrows}</tbody></table>")
 
     return f"""<!doctype html>
-<html lang="ja"><head><meta charset="utf-8">
+<html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="refresh" content="300">
-<title>レース一覧 {day.isoformat()}</title>
+<title>Race board {day.isoformat()}</title>
 <style>{_CSS}</style></head><body><main>
-<h1>{day.isoformat()} レース一覧</h1>
-<p class="meta">締切予定時刻順（JST）・生成 {_esc(iso_jst(now))} ・
-判定基準：期待回収率 {cfg['ev_min']*100:.0f}%以上 かつ 予測確率
-{cfg['prob_min']*100:.0f}%以上、オッズ取得から{cfg['stale_minutes']}分以内</p>
+<h1>Race board {day.isoformat()}</h1>
+<p class="meta">Sorted by deadline (JST) · generated {_esc(iso_jst(now))} ·
+rule: expected return ≥ {cfg['ev_min']*100:.0f}% and probability
+≥ {cfg['prob_min']*100:.0f}%, odds at most {cfg['stale_minutes']} min old</p>
 <div class="counts">
-<span class="chip">購入候補 <b>{counts[DECISION_CANDIDATE]}</b></span>
-<span class="chip">見送り <b>{counts[DECISION_PASS]}</b></span>
-<span class="chip">判定不可 <b>{counts[DECISION_UNDECIDABLE]}</b></span>
-<span class="chip">（締切前のレースのみ集計）</span></div>
+<span class="chip">Candidate <b>{counts[DECISION_CANDIDATE]}</b></span>
+<span class="chip">Pass <b>{counts[DECISION_PASS]}</b></span>
+<span class="chip">Undecidable <b>{counts[DECISION_UNDECIDABLE]}</b></span>
+<span class="chip">(open races only)</span></div>
 <p class="filters"><label><input type="checkbox" id="hide-closed">
-締切済みのレースを隠す</label></p>
-<table class="board"><thead><tr><th>締切予定</th><th>場・R</th><th>出走情報</th>
-<th>展示情報</th><th>オッズ取得</th><th>取得状況</th><th>予測買い目</th>
-<th>予測確率</th><th>必要オッズ</th><th>オッズ</th><th>期待回収率</th><th>判定</th></tr></thead>
-<tbody>{"".join(body) or '<tr><td colspan="12">対象レースがありません</td></tr>'}</tbody></table>
+Hide closed races</label></p>
+<table class="board"><thead><tr><th>Deadline</th><th>Race</th><th>Entries</th>
+<th>Exhibition</th><th>Odds at</th><th>Odds status</th><th>Trio</th>
+<th>Probability</th><th>Break-even</th><th>Odds</th><th>Exp. return</th><th>Decision</th></tr></thead>
+<tbody>{"".join(body) or '<tr><td colspan="12">No races</td></tr>'}</tbody></table>
 {verify_html}
-<footer>★ = 購入候補の組合せ（期待回収率の高い順）。必要オッズ = 実際のオッズがこの値以上なら
-期待回収率が基準（{cfg['ev_min']*100:.0f}%）に届く目安（予測確率が基準未満の組合せは「確率不足」）。予測確率は過去のバックテストで補正した参考値で、
-的中や利益を保証しません。オッズは取得時点の値で、締切までに変動します。自動購入は行いません。
-最終的な購入判断は利用者が行ってください。</footer>
+<footer>★ = candidate combination (highest expected return first).
+Break-even = the odds at which a combination reaches the
+{cfg['ev_min']*100:.0f}% expected-return threshold ("Low prob." = below the
+probability threshold). Probabilities are calibrated on past backtests and
+are research output only: no guarantee of hits or profit. Odds are as of
+the fetch time and change until the deadline. No automatic betting;
+decisions are the user's.</footer>
 </main><script>{_JS % cfg['stale_minutes']}</script></body></html>
 """
 

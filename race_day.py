@@ -35,7 +35,7 @@ from boatrace_sources import (
     target_stadium_ids,
     today_jst,
 )
-from ev_judge import evaluate_race, load_config, parse_jst
+from ev_judge import DECISION_CANDIDATE, evaluate_race, load_config, parse_jst
 from race_store import (
     VERIFY_DIR,
     info_path,
@@ -47,6 +47,12 @@ from race_store import (
 from trio_prob import load_calibration
 
 SITE_DIR = "site"
+
+ENTRY_OK = "Received"
+ENTRY_CHANGED = "Changed"
+ENTRY_MISSING = "Not yet"
+EX_OK = "Received"
+EX_MISSING = "Not yet"
 
 
 # ------------------------------------------------------------
@@ -87,28 +93,28 @@ def refresh_race_info(day, stadiums, preds_doc, prev_info):
 
         note = None
         if not entrants:
-            entry_status = "未取得"
+            entry_status = ENTRY_MISSING
         elif pred:
             predicted = {str(e["boat"]): e["racer_number"]
                          for e in pred.get("entries", [])}
             if predicted and predicted != entrants:
-                entry_status = "変更あり"
+                entry_status = ENTRY_CHANGED
                 changed = sorted(set(predicted) ^ set(entrants)
                                  | {b for b in predicted
                                     if b in entrants
                                     and predicted[b] != entrants[b]})
-                note = f"{','.join(changed)}号艇が予測時と異なる"
+                note = f"Boat {','.join(changed)} differs from the prediction"
             else:
-                entry_status = "取得済"
+                entry_status = ENTRY_OK
         else:
-            entry_status = "取得済"
-            note = "予測未作成"
+            entry_status = ENTRY_OK
+            note = "Not predicted yet"
 
         ex_boats = st.get("exhibition_boats") or pv.get("exhibition_boats") or []
         if ex_boats and len(entrants) and len(ex_boats) < len(entrants):
             missing = sorted(set(entrants) - {str(b) for b in ex_boats})
             note = ((note + " / ") if note else "") + \
-                f"展示なし:{','.join(missing)}号艇（欠場の可能性）"
+                f"No exhibition for boat {','.join(missing)} (possibly scratched)"
         races[key] = {
             "stadium_id": sid, "race_number": rno,
             "closed_at": closed_at,
@@ -116,7 +122,7 @@ def refresh_race_info(day, stadiums, preds_doc, prev_info):
             "entry_status": entry_status,
             "entry_note": note,
             "exhibition_boats": ex_boats,
-            "exhibition_status": "取得済" if ex_boats else "未取得",
+            "exhibition_status": EX_OK if ex_boats else EX_MISSING,
             "finished": bool(st.get("finished") or pv.get("finished")),
         }
     return {"date": day.isoformat(), "updated_at": iso_jst(),
@@ -137,7 +143,7 @@ def races_to_repredict(info_doc, preds_doc, now, mode):
             continue
         if not r.get("entrants"):
             continue
-        if mode == "force" or key not in preds or r["entry_status"] == "変更あり":
+        if mode == "force" or key not in preds or r["entry_status"] == ENTRY_CHANGED:
             out.append(key)
     return out
 
@@ -310,7 +316,7 @@ def main():
     info_doc, prog_df, prog_meta = refresh_race_info(
         day, stadiums, preds_doc, read_json(info_path(day)))
     print(f"Race info: {len(info_doc['races'])} races "
-          f"({sum(r['entry_status'] == '変更あり' for r in info_doc['races'].values())} changed)")
+          f"({sum(r['entry_status'] == ENTRY_CHANGED for r in info_doc['races'].values())} changed)")
 
     keys = races_to_repredict(info_doc, preds_doc, now_jst(), args.repredict)
     if keys:
@@ -342,7 +348,7 @@ def main():
     if summary:
         with open(summary, "a", encoding="utf-8") as f:
             f.write(md + "\n")
-    cands = sum(r["decision"] == "購入候補" and not r["is_closed"] for r in rows)
+    cands = sum(r["decision"] == DECISION_CANDIDATE and not r["is_closed"] for r in rows)
     print(f"Board: {len(rows)} races, {cands} open candidates -> "
           f"{SITE_DIR}/index.html")
 

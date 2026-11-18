@@ -28,6 +28,7 @@ def run_update(monkeypatch, results, now, odds_doc=None,
 
 
 def ok(value=10.0, final=False):
+    # labels as published by the odds page (Japanese source strings)
     return {"ok": True, "odds": flat_odds(value), "error": None,
             "label": "締切時オッズ" if final else "オッズ更新時間 12:00",
             "is_final": final}
@@ -43,7 +44,7 @@ def test_success_then_failure_keeps_previous_odds(monkeypatch):
     e = doc["races"]["18-01"]
     assert e["status"] == "success" and e["odds"]
     assert e["odds_fetched_at"].startswith("2026-11-19T12:00")
-    assert e["pre_close"]["decision"] == "購入候補"
+    assert e["pre_close"]["decision"] == "Candidate"
 
     t2 = t1 + timedelta(minutes=10)
     doc = run_update(monkeypatch, [FAIL], t2, odds_doc=doc)

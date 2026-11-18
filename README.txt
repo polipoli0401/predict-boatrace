@@ -46,52 +46,137 @@ Architecture
 
 Race-day pipeline (night prediction -> odds -> board)
 -----------------------------------------------------
+Added 2026-11. Goal: combine the night prediction with odds, show
+expected-return based candidates for the target stadiums on one list
+sorted by deadline, and verify the result per stadium. The existing
+models, backtest and forward test (prediction_history.csv) are kept.
+
+  Daily flow (JST)
+    00:37  BoatRace Predictor
+           fetch results -> train (~20 s) -> save models -> predict the
+           day's races (trio probabilities) -> closing odds of past days
+           -> verification -> board (no odds yet)
+    06:41  BoatRace Race Day (morning update)
+    08:07-21:37 every 30 min  BoatRace Race Day
+           entrants / deadlines / exhibition -> re-predict only races
+           that were missing or changed (saved models, ~4 s, no
+           training) -> odds (if a source is configured) -> expected
+           return -> decision -> board
+    GitHub Actions start times are not guaranteed: delays of several
+    hours were observed for the former 03:00 JST schedule. Runs are
+    therefore early and frequent, at off-peak minutes, and the board
+    always shows when odds were fetched.
+
+  Modules
   boatrace_sources.py      Data-source access. Entry lists, deadlines,
                            exhibition status and results come from the
-                           consolidated v1 day file (published around
-                           00:15 JST on race day, updated ~10 min);
-                           the v2 programs file fills any race v1 lacks.
-                           Optional trio-odds fetcher (ODDS_BASE_URL).
+                           consolidated v1 day file (first published
+                           around 00:15 JST on race day, then updated
+                           about every 10 min). The v2 programs file
+                           fills races missing in v1 (on 2026-11-18,
+                           v1 lacked 2 of 12 races at one stadium).
+                           v1 -> existing column mapping was checked
+                           against v2 for the same day: all populated
+                           values matched (unknown average ST: v2 null,
+                           v1 0 -> stored as missing).
+                           Also: optional live trio-odds page parser
+                           (ODDS_BASE_URL) and http retry helper.
 
-  trio_prob.py             Trio probabilities for all 20 combinations
-                           (Harville ordering model on P(win); NOT the
-                           product of per-boat top-3 probabilities),
-                           calibrated with trio_calibration.json.
+  trio_prob.py             Probabilities for all 20 trio combinations.
+                           Harville ordering model on P(win):
+                             P(i,j,k in order) = p_i * p_j/(1-p_i)
+                                                 * p_k/(1-p_i-p_j)
+                           summed over the 6 orders of a trio. This is
+                           NOT the product of per-boat top-3
+                           probabilities; the 20 values sum to 1.
+                           A scratched boat is removed and the rest
+                           re-normalised (conditional distribution).
 
-  calibrate_trio.py        Fits that calibration from the walk-forward
-                           probabilities in backtest_result.csv (time
-                           split check: oldest 80% fit / newest 20% test).
+  calibrate_trio.py        Raw Harville probabilities are over-confident
+                           for favourites (the models are trained with
+                           class_weight='balanced'). An isotonic map is
+                           fitted on the walk-forward probabilities in
+                           backtest_result.csv and stored in
+                           trio_calibration.json together with a
+                           time-split check (oldest 80% fit, newest 20%
+                           test). Result at creation (test period
+                           2026-05-02 .. 2026-11-17, 3,857 races):
+                             log-loss 2.400 -> 2.376
+                             predicted 0.37 -> observed 0.29 (raw)
+                             predicted 0.33 -> observed 0.36 (calibrated)
+                           Refitted by the backtest workflow.
 
-  race_day.py              Light race-day update, no training: entry
-                           changes, deadlines, exhibition status,
-                           re-prediction with saved models where needed,
-                           odds (if configured), expected return,
-                           decision, race board (site/index.html and
-                           the Actions job summary).
+  race_day.py              Light race-day update (see flow above).
+                           Re-predictions are NOT written to
+                           prediction_history.csv, so the forward test
+                           keeps the night prediction only.
 
-  ev_judge.py / board.py   Expected return = probability x odds.
-                           Decision rules and thresholds: ev_config.json.
+  ev_judge.py              expected return = calibrated probability x
+                           odds (1.20 = 120%). Decision rule below.
+  board.py                 Board: one list for all target stadiums,
+                           sorted by deadline, then stadium code, then
+                           race number; races without odds stay listed.
+                           HTML for GitHub Pages (phone layout as cards,
+                           light/dark) and Markdown for the job summary.
 
-  verify_trio.py           Per-stadium verification: candidate hit rate
-                           and ROI, expected vs realised return,
-                           probability calibration, model vs closing-odds
-                           market log-loss.
+  closing_odds.py          Closing odds (締切時オッズ) of past race days
+                           from a day file that is published the next
+                           morning (CLOSING_ODDS_BASE_URL). Verification
+                           only: it cannot be used before the deadline.
+                           Checked on 2026-11-17: for 129 of 132 races
+                           the winning trio's odds x 100 equalled the
+                           trio payout, i.e. these are closing odds.
 
-  Workflows
-    BoatRace Predictor   00:37 JST  results -> training -> prediction ->
-                                    verification -> board (no odds)
-    BoatRace Race Day    06:41 JST and every 30 min 08:07-21:37 JST
-    Scheduled start times are not guaranteed (multi-hour delays observed);
-    the board always shows when odds were fetched.
+  verify_trio.py           data/verification/summary.{json,md}, per
+                           stadium and total:
+                           - candidates (last pre-deadline decision):
+                             hit rate, ROI, mean expected return
+                           - closing-odds rule check (reference only):
+                             the same rule applied with closing odds
+                           - model vs market log-loss (market = closing
+                             odds, inverted and normalised)
+                           - probability calibration table
 
-  Decision (ev_config.json)
-    購入候補  expected return >= ev_min (1.2) AND probability >= prob_min
-              (0.05), odds fetched within stale_minutes (15)
-    見送り    otherwise
-    判定不可  no prediction / no odds / odds too old
-    The board also shows the break-even ("必要オッズ") per combination,
-    so the rule can be applied by hand when no odds source is configured.
-    No automatic betting. Final decisions are the user's.
+  Decision (ev_config.json; all thresholds are configurable)
+    購入候補 (candidate)    at least one combination with expected
+                            return >= ev_min (1.2) AND probability >=
+                            prob_min (0.05), odds fetched within
+                            stale_minutes (15) at decision time; at most
+                            max_candidates_per_race (3) combinations
+    見送り (pass)           otherwise
+    判定不可 (undecidable)  no prediction, no odds, or odds too old
+    A high expected return alone never makes a candidate (prob_min).
+    必要オッズ (break-even odds) = ev_min / probability is shown for
+    every combination with probability >= prob_min, so the rule can be
+    applied by hand with the odds shown in a betting app.
+    The page also warns when the odds shown are older than
+    stale_minutes at viewing time. No automatic betting.
+
+  Odds status (data/odds/<date>.json, per race)
+    success   last fetch succeeded (odds_fetched_at, JST)
+    pending   not fetched yet (or no odds source configured)
+    failed    last attempt failed (last_failure_at, last_error); the
+              previous successful odds are kept and shown with their
+              own fetch time, never as current odds
+    Missing odds are null, never 0. pre_close keeps the last decision
+    made with odds fetched before the deadline; closing keeps the
+    closing odds from closing_odds.py.
+
+Odds sources (status 2026-11-19)
+--------------------------------
+  Live (pre-deadline) trio odds: NOT available yet.
+  - Official site: no API. Its trio odds page answered 403 (Access
+    Denied, bot protection) to scripted requests; the pipeline does
+    not try to work around that. ODDS_BASE_URL is therefore unset and
+    every race shows odds "未取得" (pending).
+  - Paid boat-race database API (from 3,300 JPY / month for
+    personal use): the product page does not mention odds; to be
+    confirmed with the vendor (odds, trio, pre-deadline, automated use).
+  - Free JSON day file with odds: previous days only, published
+    the next morning -> used for verification (closing odds), not for
+    decisions.
+  Until a permitted live source exists, decisions are manual using the
+  board's break-even odds (必要オッズ).
 
 Data files (committed by workflows)
 -----------------------------------
@@ -122,10 +207,12 @@ Setup
                           Used for the "local racer" feature.
 
    Optional:
-     ODDS_BASE_URL        Base URL of a trio-odds page source. Leave
-                          unset unless the source's terms allow
+     ODDS_BASE_URL        Base URL of a live trio-odds page source.
+                          Leave unset unless the source's terms allow
                           automated access; without it no odds are
                           fetched and every race shows "未取得".
+     CLOSING_ODDS_BASE_URL  Base of the next-day JSON with closing odds
+                          (verification only). Unset -> step skipped.
      PROGRAMS_V1_URL      Override for the v1 day-file base
                           (default: {API_BASE_URL}/api/v1).
 
@@ -137,7 +224,9 @@ Setup
 
 3. Run the "BoatRace Predictor" workflow manually once.
    The first run downloads the full history and may take ~40 minutes;
-   exhibition-data backfill can extend this further.
+   exhibition-data backfill can extend this further. Backfill dates
+   that return no data are recorded in data/backfill_attempts.json and
+   are not requested again (except the last 14 days).
 
 4. Run the "BoatRace Backtest" workflow to generate
    optimal_strategy.json. Training four model sets per day in
@@ -161,6 +250,19 @@ Method notes
   walk-forward (train on days < D, predict day D).
 - Strategy selection is a grid search and therefore optimistic;
   prediction_history.csv provides an untouched forward test.
+- Dates are Japan time (JST). Until 2026-11 the scripts used the
+  runner's UTC date, so the 03:00 JST run predicted the previous JST
+  day (races already finished). Forward-test rows before and after the
+  fix are not strictly comparable.
+- Previously ~500 backfill dates without exhibition data were requested
+  on every run (1.5 s pause each), which was most of the ~30 min daily
+  runtime; training plus prediction takes about 20 seconds.
+- The race-day expected return is only as good as the probabilities.
+  In a local check on 2026-11-15..17 (60 races, 2 stadiums) the market
+  (closing odds) had a lower log-loss than the model (2.17 vs 2.24),
+  so large expected returns mostly mark disagreements with the market,
+  not proven value. The sample is far too small to conclude anything. Treat candidates as
+  research output until verification over many races says otherwise.
 
 Acknowledgements
 ----------------

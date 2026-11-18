@@ -146,6 +146,9 @@ raw = pd.read_csv(RESULTS_CSV)
 raw['stadium_id'] = raw['stadium_id'].astype(int).astype(str).str.zfill(2)
 raw = raw[raw['stadium_id'].isin(TARGET_STADIUM_IDS)]
 raw = raw.dropna(subset=['place', 'boat_number'])
+# Train only on days before the target day (matters when TARGET_DATE is
+# set to a past day; on scheduled runs the CSV ends the day before).
+raw = raw[raw['race_date'] < TARGET_DATE.isoformat()]
 raw['place'] = raw['place'].astype(int)
 log(f"Training data: {len(raw)} rows ({raw['race_date'].nunique()} days)")
 

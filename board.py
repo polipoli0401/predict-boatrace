@@ -281,13 +281,15 @@ def render_html(rows, day, now, cfg, verification=None):
             f"<td class=num>{v['tickets']}</td>"
             f"<td class=num>{v['hit_rate']}</td>"
             f"<td class=num>{v['roi']}</td>"
-            f"<td class=num>{v['mean_expected_return']}</td></tr>"
+            f"<td class=num>{v['mean_expected_return']}</td>"
+            f"<td class=num>{(v.get('closing_rule') or {}).get('roi')}</td></tr>"
             for s, v in verification["by_stadium"].items())
         verify_html = (
             "<h2 style='font-size:15px;margin:20px 0 0'>検証（購入候補の実績・"
             f"{_esc(verification.get('period'))}）</h2>"
             "<table><thead><tr><th>場</th><th>候補レース</th><th>点数</th>"
             "<th>的中率%</th><th>回収率%</th><th>平均期待回収率%</th>"
+            "<th>締切時オッズでの回収率%（参考）</th>"
             f"</tr></thead><tbody>{vrows}</tbody></table>")
 
     return f"""<!doctype html>

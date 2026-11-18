@@ -20,7 +20,7 @@ def v1_racer(e, number, avg_st=0.17):
 
 def v1_doc():
     full = {"closed_at": "2026-11-19 08:47:00", "grade_number": 5,
-            "subtitle": "予選",
+            "subtitle": "",
             "racers": {str(e): v1_racer(e, 4000 + e, avg_st=0 if e == 6 else 0.17)
                        for e in range(1, 7)},
             "preview": {"racers": {str(e): {"exhibition_time": 6.8}

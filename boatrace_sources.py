@@ -25,11 +25,12 @@ import requests
 JST = ZoneInfo("Asia/Tokyo")
 
 STADIUM_NAMES = {
-    "01": "桐生", "02": "戸田", "03": "江戸川", "04": "平和島", "05": "多摩川",
-    "06": "浜名湖", "07": "蒲郡", "08": "常滑", "09": "津", "10": "三国",
-    "11": "びわこ", "12": "住之江", "13": "尼崎", "14": "鳴門", "15": "丸亀",
-    "16": "児島", "17": "宮島", "18": "徳山", "19": "下関", "20": "若松",
-    "21": "芦屋", "22": "福岡", "23": "唐津", "24": "大村",
+    "01": "Kiryu", "02": "Toda", "03": "Edogawa", "04": "Heiwajima",
+    "05": "Tamagawa", "06": "Hamanako", "07": "Gamagori", "08": "Tokoname",
+    "09": "Tsu", "10": "Mikuni", "11": "Biwako", "12": "Suminoe",
+    "13": "Amagasaki", "14": "Naruto", "15": "Marugame", "16": "Kojima",
+    "17": "Miyajima", "18": "Tokuyama", "19": "Shimonoseki", "20": "Wakamatsu",
+    "21": "Ashiya", "22": "Fukuoka", "23": "Karatsu", "24": "Omura",
 }
 
 REQUEST_TIMEOUT = 20
@@ -129,6 +130,7 @@ def _get_json(url):
 # entry lists (programs)
 # ------------------------------------------------------------
 def _subtitle_flags(subtitle):
+    # Source strings are Japanese: "final" / "semi-final" race titles.
     s = str(subtitle or "")
     return (1 if "優勝" in s and "準優勝" not in s else 0,
             1 if "準優勝" in s else 0)
@@ -422,6 +424,8 @@ def parse_trio_odds_html(html):
         raise ValueError(f"expected 20 trio combinations, got {len(odds)}")
     label = (p.tab4_time or "").strip() or None
     return {"odds": odds, "label": label,
+            # the source labels closing odds with the Japanese word for
+            # "deadline"
             "is_final": bool(label and "締切" in label)}
 
 

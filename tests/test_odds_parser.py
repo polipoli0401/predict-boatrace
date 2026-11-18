@@ -5,6 +5,8 @@ import pytest
 from boatrace_sources import parse_trio_odds_html
 
 
+# Labels and cell texts below are the Japanese strings the source page
+# publishes ("odds updated at", "closing odds", "scratched").
 def make_odds_html(values, label="オッズ更新時間 14:05"):
     """Synthetic page with the same table layout as the official trio
     odds page: one column group (2nd, 3rd, odds) per first boat."""

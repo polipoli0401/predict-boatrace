@@ -195,14 +195,16 @@ def summarise(by, calib, dates):
 
 
 def to_markdown(s):
-    lines = [f"# 検証結果（{s['period'] or 'データなし'}）", "",
-             f"生成: {s['generated_at']}", "",
-             "## 場別（購入候補 = 締切前の最後の判定、1点100円換算）", "",
-             "| 場 | 予測レース | 候補レース | 点数 | 的中 | 的中率% | 投資 | 払戻 "
-             "| 回収率% | 平均期待回収率% | 対数損失(モデル/市場) |",
+    lines = [f"# Verification ({s['period'] or 'no data'})", "",
+             f"Generated: {s['generated_at']}", "",
+             "## By stadium (candidates = last pre-deadline decision, "
+             "100 JPY per ticket)", "",
+             "| Stadium | Predicted races | Candidate races | Tickets | Hits "
+             "| Hit % | Invested | Returned | ROI % | Mean exp. return % "
+             "| Log-loss (model / market) |",
              "|---|---|---|---|---|---|---|---|---|---|---|"]
     for sid, v in s["by_stadium"].items():
-        name = "合計" if sid == "all" else STADIUM_NAMES.get(sid, sid)
+        name = "Total" if sid == "all" else STADIUM_NAMES.get(sid, sid)
         ll = (f"{v['log_loss_model_vs_market'][0]} / "
               f"{v['log_loss_model_vs_market'][1]} "
               f"(n={v['market_compared_races']})"
@@ -214,25 +216,29 @@ def to_markdown(s):
             f"| {v['roi'] if v['roi'] is not None else '—'} "
             f"| {v['mean_expected_return'] if v['mean_expected_return'] is not None else '—'} "
             f"| {ll} |")
-    lines += ["", "## 締切時オッズでの事後評価（参考）", "",
-              "判定ルールを締切時オッズに当てはめた場合の成績。判定時点では締切時オッズは"
-              "分からないため、実際の購入候補の成績ではない。", "",
-              "| 場 | 該当レース | 点数 | 的中 | 的中率% | 回収率% | 平均期待回収率% |",
+    lines += ["", "## Rule applied with closing odds (reference)", "",
+              "The decision rule applied after the fact with closing odds. "
+              "Closing odds are not known at decision time, so this is not "
+              "the result of actual candidates.", "",
+              "| Stadium | Races | Tickets | Hits | Hit % | ROI % "
+              "| Mean exp. return % |",
               "|---|---|---|---|---|---|---|"]
     for sid, v in s["by_stadium"].items():
-        name = "合計" if sid == "all" else STADIUM_NAMES.get(sid, sid)
+        name = "Total" if sid == "all" else STADIUM_NAMES.get(sid, sid)
         c = v["closing_rule"]
         dash = lambda x: "—" if x is None else x  # noqa: E731
         lines.append(f"| {name} | {c['candidate_races']} | {c['tickets']} "
                      f"| {c['hits']} | {dash(c['hit_rate'])} | {dash(c['roi'])} "
                      f"| {dash(c['mean_expected_return'])} |")
-    lines += ["", "## 予測確率の校正（全組合せ）", "",
-              "| 予測確率帯 | 件数 | 予測平均 | 実際の的中率 |", "|---|---|---|---|"]
+    lines += ["", "## Probability calibration (all combinations)", "",
+              "| Probability band | N | Mean predicted | Observed |",
+              "|---|---|---|---|"]
     for c in s["calibration"]:
         lines.append(f"| {c['bin']} | {c['n']} | {c['predicted']:.3f} "
                      f"| {c['observed']:.3f} |")
-    lines += ["", "対数損失は小さいほど良い。市場は締切時オッズの逆数を正規化した確率。"
-              "件数が少ない間は数値が大きくぶれるため、判断材料にしないこと。"]
+    lines += ["", "Lower log-loss is better. Market = closing odds inverted and "
+              "normalised. Small samples fluctuate strongly; do not act on "
+              "them."]
     return "\n".join(lines) + "\n"
 
 

@@ -119,7 +119,7 @@ models, backtest and forward test (prediction_history.csv) are kept.
                            HTML for GitHub Pages (phone layout as cards,
                            light/dark) and Markdown for the job summary.
 
-  closing_odds.py          Closing odds (締切時オッズ) of past race days
+  closing_odds.py          Closing odds of past race days
                            from a day file that is published the next
                            morning (CLOSING_ODDS_BASE_URL). Verification
                            only: it cannot be used before the deadline.
@@ -138,15 +138,15 @@ models, backtest and forward test (prediction_history.csv) are kept.
                            - probability calibration table
 
   Decision (ev_config.json; all thresholds are configurable)
-    購入候補 (candidate)    at least one combination with expected
-                            return >= ev_min (1.2) AND probability >=
-                            prob_min (0.05), odds fetched within
-                            stale_minutes (15) at decision time; at most
-                            max_candidates_per_race (3) combinations
-    見送り (pass)           otherwise
-    判定不可 (undecidable)  no prediction, no odds, or odds too old
+    Candidate     at least one combination with expected
+                  return >= ev_min (1.2) AND probability >=
+                  prob_min (0.05), odds fetched within
+                  stale_minutes (15) at decision time; at most
+                  max_candidates_per_race (3) combinations
+    Pass          otherwise
+    Undecidable   no prediction, no odds, or odds too old
     A high expected return alone never makes a candidate (prob_min).
-    必要オッズ (break-even odds) = ev_min / probability is shown for
+    Break-even odds = ev_min / probability is shown for
     every combination with probability >= prob_min, so the rule can be
     applied by hand with the odds shown in a betting app.
     The page also warns when the odds shown are older than
@@ -168,7 +168,7 @@ Odds sources (status 2026-11-19)
   - Official site: no API. Its trio odds page answered 403 (Access
     Denied, bot protection) to scripted requests; the pipeline does
     not try to work around that. ODDS_BASE_URL is therefore unset and
-    every race shows odds "未取得" (pending).
+    every race shows odds as pending.
   - Paid boat-race database API (from 3,300 JPY / month for
     personal use): the product page does not mention odds; to be
     confirmed with the vendor (odds, trio, pre-deadline, automated use).
@@ -176,7 +176,7 @@ Odds sources (status 2026-11-19)
     the next morning -> used for verification (closing odds), not for
     decisions.
   Until a permitted live source exists, decisions are manual using the
-  board's break-even odds (必要オッズ).
+  board's break-even odds.
 
 Data files (committed by workflows)
 -----------------------------------
@@ -210,7 +210,7 @@ Setup
      ODDS_BASE_URL        Base URL of a live trio-odds page source.
                           Leave unset unless the source's terms allow
                           automated access; without it no odds are
-                          fetched and every race shows "未取得".
+                          fetched and every race shows odds as pending.
      CLOSING_ODDS_BASE_URL  Base of the next-day JSON with closing odds
                           (verification only). Unset -> step skipped.
      PROGRAMS_V1_URL      Override for the v1 day-file base

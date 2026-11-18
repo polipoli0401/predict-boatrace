@@ -1,4 +1,4 @@
-"""Closing trio odds (締切時オッズ) for past race days, for verification.
+"""Closing trio odds for past race days, for verification.
 
 Source: a JSON day file that includes odds for the PREVIOUS days only
 (published the next morning JST), set by the CLOSING_ODDS_BASE_URL

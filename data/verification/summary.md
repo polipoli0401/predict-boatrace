@@ -1,6 +1,6 @@
 # Verification (no data)
 
-Generated: 2026-11-19T03:07:34+09:00
+Generated: 2026-11-19T07:42:35+09:00
 
 ## By stadium (candidates = last pre-deadline decision, 100 JPY per ticket)
 

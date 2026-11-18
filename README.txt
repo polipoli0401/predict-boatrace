@@ -192,8 +192,9 @@ Data files (committed by workflows)
                            failed), last success / failure time (JST);
                            a failed fetch never deletes earlier odds.
   data/verification/       summary.json / summary.md.
-  data/backfill_attempts.json  Dates whose backfill returned no data
-                           (not retried every run).
+  data/backfill_attempts.json  Downloads that returned no data:
+                           non-race (date, stadium) pairs and empty
+                           backfill dates (not retried every run).
   models/                  Boosters of the last training run (+ id).
 
 Setup
@@ -224,9 +225,10 @@ Setup
 
 3. Run the "BoatRace Predictor" workflow manually once.
    The first run downloads the full history and may take ~40 minutes;
-   exhibition-data backfill can extend this further. Backfill dates
-   that return no data are recorded in data/backfill_attempts.json and
-   are not requested again (except the last 14 days).
+   exhibition-data backfill can extend this further. Non-race
+   (date, stadium) pairs and backfill dates that return no data are
+   recorded in data/backfill_attempts.json and are not requested again
+   (except the last 14 days), so later runs fetch in about a minute.
 
 4. Run the "BoatRace Backtest" workflow to generate
    optimal_strategy.json. Training four model sets per day in
@@ -254,9 +256,13 @@ Method notes
   runner's UTC date, so the 03:00 JST run predicted the previous JST
   day (races already finished). Forward-test rows before and after the
   fix are not strictly comparable.
-- Previously ~500 backfill dates without exhibition data were requested
-  on every run (1.5 s pause each), which was most of the ~30 min daily
-  runtime; training plus prediction takes about 20 seconds.
+- The target stadiums do not race every day. Until 2026-11 every
+  (date, stadium) pair without races (~900 since 2024) counted as
+  "missing" and was re-requested on every run with a 1.5 s pause, which
+  made the fetch step take ~30 min. Such pairs, and backfill dates that
+  returned no data, are now recorded in data/backfill_attempts.json and
+  skipped (the last 14 days are still retried). The fetch step now takes
+  about 1 minute; training plus prediction about 20 seconds.
 - The race-day expected return is only as good as the probabilities.
   In a local check on 2026-11-15..17 (60 races, 2 stadiums) the market
   (closing odds) had a lower log-loss than the model (2.17 vs 2.24),

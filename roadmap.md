@@ -52,8 +52,9 @@ verification. Automatic betting is out of scope.
 
 #### 5-1 Built (2026-11-19)
 - [x] Current-state survey: data sources, workflows, runtimes
-      (training + prediction ~20 s; most of the old ~30 min was
-      re-requesting ~500 empty backfill dates → now remembered)
+      (training + prediction ~20 s; the old ~30 min fetch re-requested
+      ~900 non-race (date, stadium) pairs every run → now remembered,
+      fetch ~1 min)
 - [x] JST dates in fetch / predict (the UTC date predicted the previous
       JST day)
 - [x] Night prediction at 00:37 JST from the v1 day file, v2 fallback;

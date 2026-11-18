@@ -39,9 +39,12 @@ INTERVAL_SEC     = 1.5
 # completed on the next run.
 REFRESH_DAYS = 2
 
-# Backfill attempts that returned no data are remembered and not retried
-# on every run (that loop of ~500 empty dates was most of the runtime).
-# Dates within RETRY_RECENT_DAYS are still retried each run.
+# Downloads that returned no data are remembered and not retried on every
+# run. Most importantly a (date, stadium) without races: the target
+# stadiums do not race every day, and those ~900 non-race pairs were
+# re-requested on every run (1.5 s pause each), which was most of the
+# ~30 min runtime. Also remembered: exhibition / program backfill dates
+# without data. Dates within RETRY_RECENT_DAYS are still retried.
 ATTEMPT_JSON = os.path.join("data", "backfill_attempts.json")
 RETRY_RECENT_DAYS = 14
 
@@ -296,7 +299,9 @@ current = TARGET_DATE_FROM
 while current <= TARGET_DATE_TO:
     ds = current.isoformat()
     missing = [s for s in TARGET_STADIUM_IDS
-               if (ds, s) not in existing_keys or ds >= refresh_from]
+               if ds >= refresh_from
+               or ((ds, s) not in existing_keys
+                   and backfill_due(attempts, ds, f"results-{s}"))]
 
     # decide which backfills are needed for already-stored dates
     need_preview_fill, need_program_fill = False, False
@@ -357,6 +362,10 @@ while current <= TARGET_DATE_TO:
     if missing and r_data:
         day_results = [r for r in parse_results(r_data)
                        if r['stadium_id'] in missing]
+        got = {r['stadium_id'] for r in day_results}
+        for sid in missing:
+            if sid not in got:
+                mark_attempt(attempts, ds, f"results-{sid}")   # no races
         for rec in day_results:
             key = (rec['stadium_id'], rec['race_number'], rec['boat_number'])
             rec.update(pmap.get(key, {c: None for c in PROGRAM_COLS}))

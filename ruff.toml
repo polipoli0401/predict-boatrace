@@ -1,0 +1,7 @@
+# Keep CI lint on ruff's classic default rule set (pyflakes + basic
+# pycodestyle errors). Newer ruff releases enable many more rules by
+# default, which the existing code was never written against.
+target-version = "py311"
+
+[lint]
+select = ["E4", "E7", "E9", "F"]

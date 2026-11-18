@@ -10,7 +10,8 @@ Environment variables (repository secrets):
 """
 import requests
 import pandas as pd
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
+from zoneinfo import ZoneInfo
 import time
 import os
 import json
@@ -27,9 +28,22 @@ TARGET_STADIUM_IDS = [
 if not TARGET_STADIUM_IDS:
     raise RuntimeError("TARGET_STADIUM_IDS is not set.")
 
+# Dates are Japan time: race days are JST, while Actions runners are UTC.
+TODAY_JST        = datetime.now(ZoneInfo("Asia/Tokyo")).date()
 TARGET_DATE_FROM = date(2024, 1, 1)
-TARGET_DATE_TO   = date.today() - timedelta(days=1)
+TARGET_DATE_TO   = TODAY_JST - timedelta(days=1)
 INTERVAL_SEC     = 1.5
+
+# The most recent REFRESH_DAYS days are always re-downloaded and replace
+# stored rows, so a day captured before all its races were published is
+# completed on the next run.
+REFRESH_DAYS = 2
+
+# Backfill attempts that returned no data are remembered and not retried
+# on every run (that loop of ~500 empty dates was most of the runtime).
+# Dates within RETRY_RECENT_DAYS are still retried each run.
+ATTEMPT_JSON = os.path.join("data", "backfill_attempts.json")
+RETRY_RECENT_DAYS = 14
 
 # Exhibition backfill is attempted for dates on/after this value.
 # If the data source has no exhibition data for older dates, raise this
@@ -231,9 +245,36 @@ def evaluate_predictions(results_df, history_path):
                   f"ROI {ret/inv*100:.1f}%")
 
 
+def load_attempts():
+    if os.path.exists(ATTEMPT_JSON):
+        with open(ATTEMPT_JSON, encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
+def save_attempts(attempts):
+    os.makedirs(os.path.dirname(ATTEMPT_JSON), exist_ok=True)
+    with open(ATTEMPT_JSON, "w", encoding="utf-8") as f:
+        json.dump(dict(sorted(attempts.items())), f, indent=0)
+        f.write("\n")
+
+
+def backfill_due(attempts, ds, kind):
+    recent_from = (TODAY_JST - timedelta(days=RETRY_RECENT_DAYS)).isoformat()
+    return ds >= recent_from or kind not in attempts.get(ds, [])
+
+
+def mark_attempt(attempts, ds, kind):
+    kinds = attempts.setdefault(ds, [])
+    if kind not in kinds:
+        kinds.append(kind)
+
+
 # ============================================================
 # main
 # ============================================================
+attempts = load_attempts()
+refresh_from = (TARGET_DATE_TO - timedelta(days=REFRESH_DAYS - 1)).isoformat()
 existing_df = pd.DataFrame()
 if os.path.exists(RESULTS_CSV):
     existing_df = pd.read_csv(RESULTS_CSV)
@@ -254,7 +295,8 @@ current = TARGET_DATE_FROM
 
 while current <= TARGET_DATE_TO:
     ds = current.isoformat()
-    missing = [s for s in TARGET_STADIUM_IDS if (ds, s) not in existing_keys]
+    missing = [s for s in TARGET_STADIUM_IDS
+               if (ds, s) not in existing_keys or ds >= refresh_from]
 
     # decide which backfills are needed for already-stored dates
     need_preview_fill, need_program_fill = False, False
@@ -262,10 +304,12 @@ while current <= TARGET_DATE_TO:
         day_rows = existing_df[existing_df['race_date'] == ds]
         if len(day_rows) > 0:
             if ds >= PREVIEW_MIN_DATE and \
-                    day_rows['exhibition_time'].isna().all():
+                    day_rows['exhibition_time'].isna().all() and \
+                    backfill_due(attempts, ds, "preview"):
                 need_preview_fill = True
-            if day_rows['race_grade'].isna().all() \
-                    or day_rows['racer_age'].isna().all():
+            if (day_rows['race_grade'].isna().all()
+                    or day_rows['racer_age'].isna().all()) and \
+                    backfill_due(attempts, ds, "program"):
                 need_program_fill = True
 
     if not missing and not need_preview_fill and not need_program_fill:
@@ -295,6 +339,9 @@ while current <= TARGET_DATE_TO:
                 for c, v in vmap[key].items():
                     existing_df.at[i, c] = v
         preview_filled += 1
+    if need_preview_fill and not any(
+            vmap.get(k, {}).get('exhibition_time') is not None for k in vmap):
+        mark_attempt(attempts, ds, "preview")
 
     if need_program_fill and pmap:
         day_rows = existing_df[existing_df['race_date'] == ds]
@@ -304,6 +351,8 @@ while current <= TARGET_DATE_TO:
                 for c, v in pmap[key].items():
                     existing_df.at[i, c] = v
         program_filled += 1
+    if need_program_fill and not pmap:
+        mark_attempt(attempts, ds, "program")
 
     if missing and r_data:
         day_results = [r for r in parse_results(r_data)
@@ -317,8 +366,19 @@ while current <= TARGET_DATE_TO:
     current += timedelta(days=1)
     time.sleep(INTERVAL_SEC)
 
-combined = pd.concat([existing_df, pd.DataFrame(new_rows)],
-                     ignore_index=True) if new_rows else existing_df
+if new_rows:
+    new_df = pd.DataFrame(new_rows)
+    if not existing_df.empty:
+        # re-downloaded (refresh window) days replace their stored rows
+        replaced = pd.MultiIndex.from_frame(
+            new_df[['race_date', 'stadium_id']].drop_duplicates())
+        old_idx = pd.MultiIndex.from_frame(
+            existing_df[['race_date', 'stadium_id']])
+        existing_df = existing_df[~old_idx.isin(replaced)]
+    combined = pd.concat([existing_df, new_df], ignore_index=True)
+else:
+    combined = existing_df
+save_attempts(attempts)
 
 if not combined.empty:
     combined['stadium_id'] = combined['stadium_id'] \

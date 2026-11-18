@@ -265,3 +265,20 @@ def build_ticket(strategy, race_df):
         third_candidates = [b for b in b3 if b not in fixed][:3]
         return [sorted(fixed + [t]) for t in third_candidates]
     return []
+
+
+def strategy_tickets(strategy, strat_filter, race_df):
+    """Apply optimal_strategy.json's filter and ticket rule to one race
+    (same logic as predict_boatrace.py's daily loop). race_df needs
+    boat_number, p1 (normalised) and p3."""
+    result = race_df.sort_values('p1', ascending=False)
+    top_prob = result.iloc[0]['p1']
+    gap = top_prob - (result.iloc[1]['p1'] if len(result) > 1 else 0)
+    ok = True
+    if 'prob_min' in strat_filter:
+        ok &= strat_filter['prob_min'] <= top_prob
+    if 'prob_max' in strat_filter:
+        ok &= top_prob < strat_filter['prob_max']
+    if 'gap_min' in strat_filter:
+        ok &= strat_filter['gap_min'] <= gap
+    return build_ticket(strategy, race_df) if ok else []

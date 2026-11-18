@@ -5,6 +5,15 @@ results CSV using morning-available features only, applies the strategy
 selected by the backtest, and writes recommended tickets to
 prediction_result.txt and prediction_history.csv.
 
+Additionally (race-day pipeline):
+  - the trained boosters are saved to models/ so race-day updates can
+    re-predict without retraining;
+  - per-race trio probabilities (all 20 combinations, calibrated) are
+    written to data/predictions/YYYY-MM-DD.json.
+
+The target date is the Japan (JST) calendar date; set TARGET_DATE
+(YYYY-MM-DD) to override.
+
 Environment variables (repository secrets):
   API_BASE_URL, TARGET_STADIUM_IDS, STADIUM_PREF_MAP
 """
@@ -13,8 +22,6 @@ import numpy as np
 import lightgbm as lgb
 from sklearn.model_selection import TimeSeriesSplit
 from sklearn.metrics import roc_auc_score
-import datetime
-import requests
 import os
 import json
 
@@ -22,17 +29,22 @@ from predict_boatrace_lib import (
     TARGET_STADIUM_IDS, FEATURE_COLS, PARAMS, STRATEGY_NAMES,
     prepare_features, build_ticket
 )
+from boatrace_sources import load_day_programs, today_jst, iso_jst
+from race_store import save_models, build_race_prediction, merge_predictions
+from trio_prob import load_calibration, trio_probabilities
 
 API_BASE = os.environ.get("API_BASE_URL")
 if not API_BASE:
     raise RuntimeError("API_BASE_URL is not set.")
 
-TARGET_DATE   = datetime.date.today()
+# Race days are JST; GitHub Actions runners are UTC.
+TARGET_DATE   = today_jst()
 RESULTS_CSV   = "boatrace_results.csv"
 HISTORY_CSV   = "prediction_history.csv"
 STRATEGY_JSON = "optimal_strategy.json"
 
 output_lines = []
+RACE_META = {}   # (stadium_id, race_number) -> {closed_at, source}
 
 
 def log(msg):
@@ -41,53 +53,21 @@ def log(msg):
 
 
 def fetch_today_programs(target_date):
-    url = (f"{API_BASE}/programs/v2/"
-           f"{target_date.year}/{target_date.strftime('%Y%m%d')}.json")
+    """Entry lists for target_date in the original column layout.
+    The consolidated v1 day file is used first (published around
+    00:15 JST on race day); the v2 programs file fills any race that
+    v1 is missing. Race deadlines are kept in RACE_META."""
     try:
-        resp = requests.get(url, timeout=15)
-        if resp.status_code == 404:
-            return pd.DataFrame()
-        resp.raise_for_status()
-        data = resp.json()
+        df, meta = load_day_programs(target_date, TARGET_STADIUM_IDS)
     except Exception as e:
-        log(f"[ERROR] program fetch failed: {e}")
+        log(f"[ERROR] program fetch failed: {type(e).__name__}")
         return pd.DataFrame()
-    records = []
-    for race in data.get("programs", []):
-        sid = str(race.get("race_stadium_number", "")).zfill(2)
-        if sid not in TARGET_STADIUM_IDS:
-            continue
-        subtitle = str(race.get("race_subtitle") or "")
-        boats = race.get("boats", {})
-        for boat in (boats.values() if isinstance(boats, dict) else boats):
-            records.append({
-                "race_date": target_date.isoformat(), "stadium_id": sid,
-                "race_number": race.get("race_number"),
-                "boat_number": boat.get("racer_boat_number"),
-                "racer_number": boat.get("racer_number"),
-                "racer_name": boat.get("racer_name"),
-                "official_national_win_rate": boat.get("racer_national_top_1_percent", 0),
-                "official_national_top2_rate": boat.get("racer_national_top_2_percent", 0),
-                "official_national_top3_rate": boat.get("racer_national_top_3_percent", 0),
-                "official_local_win_rate": boat.get("racer_local_top_1_percent", 0),
-                "official_local_top2_rate": boat.get("racer_local_top_2_percent", 0),
-                "official_local_top3_rate": boat.get("racer_local_top_3_percent", 0),
-                "official_avg_st": boat.get("racer_average_start_timing", 0),
-                "racer_class": boat.get("racer_class_number", 4),
-                "flying_count": boat.get("racer_flying_count", 0),
-                "late_count": boat.get("racer_late_count", 0),
-                "racer_age": boat.get("racer_age", 0),
-                "racer_branch": boat.get("racer_branch_number", 0),
-                "racer_weight": boat.get("racer_weight", 0),
-                "motor_number": boat.get("racer_assigned_motor_number", 0),
-                "motor_top2_rate": boat.get("racer_assigned_motor_top_2_percent", 0),
-                "motor_top3_rate": boat.get("racer_assigned_motor_top_3_percent", 0),
-                "boat_top2_rate": boat.get("racer_assigned_boat_top_2_percent", 0),
-                "race_grade": race.get("race_grade_number", 5),
-                "is_final": 1 if "優勝" in subtitle and "準優勝" not in subtitle else 0,
-                "is_semifinal": 1 if "準優勝" in subtitle else 0,
-            })
-    return pd.DataFrame(records)
+    RACE_META.update(meta)
+    if meta:
+        src = pd.Series([m['source'] for m in meta.values()]).value_counts()
+        log("Programs: " + ", ".join(f"{k} {v} races"
+                                     for k, v in src.items()))
+    return df
 
 
 def save_prediction_history(race_date, stadium_id, race_number,
@@ -192,6 +172,19 @@ m1.fit(X, train_df['is_first'])
 m3 = lgb.LGBMClassifier(**PARAMS)
 m3.fit(X, train_df['is_top3'])
 
+model_ident = save_models(m1, m3, {
+    "trained_at": iso_jst(),
+    "train_rows": int(len(train_df)),
+    "train_days": int(train_df['race_date'].nunique()),
+    "train_last_date": pd.Timestamp(train_df['race_date'].max())
+                         .date().isoformat(),
+    "features": FEATURE_COLS,
+    "params": PARAMS,
+})
+log(f"Model saved: {model_ident['model_id']}")
+calibration = load_calibration()
+race_records = []
+
 for name, ycol in [("win", 'is_first'), ("top3", 'is_top3')]:
     aucs, y = [], train_df[ycol]
     for tr, va in TimeSeriesSplit(n_splits=3).split(X):
@@ -248,7 +241,22 @@ else:
             save_prediction_history(TARGET_DATE.isoformat(), sid, rno,
                                     tickets, race_df, HISTORY_CSV)
 
-    log(f"\n=== Summary ===")
+            trio_raw, trio_cal = trio_probabilities(
+                race_df['boat_number'].tolist(), race_df['p1'].tolist(),
+                calibration)
+            meta = RACE_META.get((sid, int(rno)), {})
+            race_records.append(build_race_prediction(
+                TARGET_DATE, sid, rno, meta.get('closed_at'), race_df,
+                trio_raw, trio_cal, tickets, iso_jst(), model_ident,
+                meta.get('source')))
+
+    if race_records:
+        merge_predictions(TARGET_DATE, race_records, model_ident,
+                          calibration, iso_jst())
+        log(f"Saved trio predictions for {len(race_records)} races "
+            f"(calibrated: {'yes' if calibration else 'no'})")
+
+    log("\n=== Summary ===")
     if bet_summary:
         total = sum(len(t) for _, _, t in bet_summary)
         log(f"Recommended: {len(bet_summary)} races, {total} tickets "

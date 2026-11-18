@@ -1,0 +1,22 @@
+{
+  "ev_min": 1.2,
+  "prob_min": 0.05,
+  "stale_minutes": 15,
+  "max_candidates_per_race": 3,
+  "show_combinations": 3,
+  "odds_window_minutes": 150,
+  "odds_after_close_minutes": 40,
+  "odds_request_interval_sec": 2.0,
+  "odds_max_requests_per_run": 40,
+  "_notes": {
+    "ev_min": "期待回収率(確率×オッズ)の下限。1.2 = 120%",
+    "prob_min": "補正後の予測的中確率の下限。期待回収率が高くても確率が低い組合せは候補にしない",
+    "stale_minutes": "判定時点でオッズ取得からこの分数を超えていれば古いオッズとして判定不可",
+    "max_candidates_per_race": "1レースで購入候補に出す組合せの上限(期待回収率の高い順)",
+    "show_combinations": "一覧に表示する組合せ数(候補がなければ確率上位)",
+    "odds_window_minutes": "締切までこの分数以内のレースのオッズを取得する",
+    "odds_after_close_minutes": "締切後この分数以内なら締切時オッズを取りに行く(検証用)",
+    "odds_request_interval_sec": "公式サイトへのリクエスト間隔(秒)",
+    "odds_max_requests_per_run": "1回の実行で送るオッズ取得リクエストの上限"
+  }
+}

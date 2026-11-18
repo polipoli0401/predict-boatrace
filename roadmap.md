@@ -38,9 +38,21 @@ Any change invalidates the forward test and restarts the clock.
 - [ ] Recent-ST form features (mean / variance of last ~10 starts)
 - [ ] Race-slot context features (class gaps, race number, lineup design)
 
+### Race-day pipeline (added 2026-11)
+- [x] Night prediction at 00:37 JST from the v1 day file (v2 fallback)
+- [x] Saved models; race-day re-prediction without retraining
+- [x] Calibrated trio probabilities (Harville + isotonic, time-split check)
+- [x] Odds status model (success / pending / failed), JST timestamps,
+      previous success kept on failure
+- [x] Merged 3-stadium board sorted by deadline; expected return; decision
+- [x] Per-stadium verification (hit rate, ROI, expected vs realised)
+- [ ] Odds source with terms that allow automated access (the official
+      site currently returns 403 to scripted clients)
+- [ ] Live (exhibition) model in the race-day update — still
+      evaluation-only, see Phase 3/4
+
 ### Non-goals
 - Betting automation (manual, small-stakes verification only)
-- Real-time odds integration (out of scope for this data source)
 - Kelly-style stake sizing (edge estimate too uncertain to justify)
 
 ## Honest status

@@ -5,3 +5,6 @@ __pycache__/
 # Local experiments (never commit)
 *.ipynb_checkpoints/
 .env
+
+# Race board build output (published via GitHub Pages)
+site/

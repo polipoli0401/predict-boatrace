@@ -1,19 +1,32 @@
 name: BoatRace Predictor
 
+# Night run for the race day that has just started (JST):
+#   results fetch -> training -> prediction (incl. trio probabilities)
+#   -> verification of past race days -> race board without odds.
+# The v1 day file with that day's entry lists appears around 00:15 JST.
+# Scheduled runs are often delayed by hours, so the run is placed early
+# enough to finish before the first deadlines (~08:45 JST).
+
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 18 * * *'   # 18:00 UTC = 03:00 JST
+    - cron: '37 15 * * *'   # 15:37 UTC = 00:37 JST
+
+concurrency:
+  group: boatrace-data
+  cancel-in-progress: false
 
 jobs:
   run-script:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     permissions:
       contents: write
     env:
       API_BASE_URL: ${{ secrets.API_BASE_URL }}
       TARGET_STADIUM_IDS: ${{ secrets.TARGET_STADIUM_IDS }}
       STADIUM_PREF_MAP: ${{ secrets.STADIUM_PREF_MAP }}
+      TZ: Asia/Tokyo
     steps:
       - uses: actions/checkout@v4
 
@@ -30,11 +43,17 @@ jobs:
       - name: Run prediction
         run: python predict_boatrace.py
 
+      - name: Verify past race days
+        run: python verify_trio.py
+
+      - name: Build race board (no odds)
+        run: python race_day.py --no-odds --repredict never
+
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add boatrace_results.csv prediction_history.csv 2>/dev/null || true
+          git add boatrace_results.csv prediction_history.csv data models 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No changes to commit"
             exit 0
@@ -57,3 +76,24 @@ jobs:
           path: |
             prediction_result.txt
             prediction_history.csv
+            site/index.html
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy-pages:
+    needs: run-script
+    runs-on: ubuntu-latest
+    # Requires Settings > Pages > Source = "GitHub Actions".
+    # A failure here never affects the data commit above.
+    continue-on-error: true
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

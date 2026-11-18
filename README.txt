@@ -44,6 +44,55 @@ Architecture
                            always-[1,2,3] baseline, and stores the best
                            morning configuration.
 
+Race-day pipeline (night prediction -> odds -> board)
+-----------------------------------------------------
+  boatrace_sources.py      Data-source access. Entry lists, deadlines,
+                           exhibition status and results come from the
+                           consolidated v1 day file (published around
+                           00:15 JST on race day, updated ~10 min);
+                           the v2 programs file fills any race v1 lacks.
+                           Optional trio-odds fetcher (ODDS_BASE_URL).
+
+  trio_prob.py             Trio probabilities for all 20 combinations
+                           (Harville ordering model on P(win); NOT the
+                           product of per-boat top-3 probabilities),
+                           calibrated with trio_calibration.json.
+
+  calibrate_trio.py        Fits that calibration from the walk-forward
+                           probabilities in backtest_result.csv (time
+                           split check: oldest 80% fit / newest 20% test).
+
+  race_day.py              Light race-day update, no training: entry
+                           changes, deadlines, exhibition status,
+                           re-prediction with saved models where needed,
+                           odds (if configured), expected return,
+                           decision, race board (site/index.html and
+                           the Actions job summary).
+
+  ev_judge.py / board.py   Expected return = probability x odds.
+                           Decision rules and thresholds: ev_config.json.
+
+  verify_trio.py           Per-stadium verification: candidate hit rate
+                           and ROI, expected vs realised return,
+                           probability calibration, model vs closing-odds
+                           market log-loss.
+
+  Workflows
+    BoatRace Predictor   00:37 JST  results -> training -> prediction ->
+                                    verification -> board (no odds)
+    BoatRace Race Day    06:41 JST and every 30 min 08:07-21:37 JST
+    Scheduled start times are not guaranteed (multi-hour delays observed);
+    the board always shows when odds were fetched.
+
+  Decision (ev_config.json)
+    購入候補  expected return >= ev_min (1.2) AND probability >= prob_min
+              (0.05), odds fetched within stale_minutes (15)
+    見送り    otherwise
+    判定不可  no prediction / no odds / odds too old
+    The board also shows the break-even ("必要オッズ") per combination,
+    so the rule can be applied by hand when no odds source is configured.
+    No automatic betting. Final decisions are the user's.
+
 Data files (committed by workflows)
 -----------------------------------
   boatrace_results.csv     Accumulated race results + program features
@@ -51,6 +100,16 @@ Data files (committed by workflows)
   prediction_history.csv   Every prediction with its later outcome
                            (untouched forward test).
   optimal_strategy.json    Strategy selected by the latest backtest.
+  trio_calibration.json    Trio-probability calibration + its check.
+  data/predictions/        Per-day trio predictions (JSON, per race).
+  data/raceinfo/           Latest deadline / entrants / exhibition.
+  data/odds/               Trio odds with status (success / pending /
+                           failed), last success / failure time (JST);
+                           a failed fetch never deletes earlier odds.
+  data/verification/       summary.json / summary.md.
+  data/backfill_attempts.json  Dates whose backfill returned no data
+                           (not retried every run).
+  models/                  Boosters of the last training run (+ id).
 
 Setup
 -----
@@ -61,6 +120,16 @@ Setup
      TARGET_STADIUM_IDS   Comma-separated stadium IDs, e.g. "01,02,03".
      STADIUM_PREF_MAP     Stadium-to-home-branch map, e.g. "01:10,02:20".
                           Used for the "local racer" feature.
+
+   Optional:
+     ODDS_BASE_URL        Base URL of a trio-odds page source. Leave
+                          unset unless the source's terms allow
+                          automated access; without it no odds are
+                          fetched and every race shows "未取得".
+     PROGRAMS_V1_URL      Override for the v1 day-file base
+                          (default: {API_BASE_URL}/api/v1).
+
+   For the race board page: Settings > Pages > Source = "GitHub Actions".
 
 2. Enable write access for workflows
    (Settings > Actions > General > Workflow permissions

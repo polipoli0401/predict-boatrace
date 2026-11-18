@@ -1,0 +1,91 @@
+name: BoatRace Race Day
+
+# Light race-day update (no training):
+#   entry changes / deadlines / exhibition status (v1 day file)
+#   -> re-prediction with saved models only where needed
+#   -> trio odds (only when an odds source is configured)
+#   -> expected return, decision, race board.
+# Scheduled times are not guaranteed (delays of hours have been observed
+# at the top of the hour), so runs are every 30 minutes at off-peak
+# minutes and the board shows when odds were fetched.
+
+on:
+  workflow_dispatch:
+    inputs:
+      repredict:
+        description: 'Re-prediction mode'
+        type: choice
+        options: [auto, never, force]
+        default: auto
+  schedule:
+    - cron: '41 21 * * *'       # 06:41 JST morning update
+    - cron: '7,37 23 * * *'     # 08:07, 08:37 JST
+    - cron: '7,37 0-12 * * *'   # 09:07 - 21:37 JST
+
+concurrency:
+  group: boatrace-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    env:
+      API_BASE_URL: ${{ secrets.API_BASE_URL }}
+      TARGET_STADIUM_IDS: ${{ secrets.TARGET_STADIUM_IDS }}
+      STADIUM_PREF_MAP: ${{ secrets.STADIUM_PREF_MAP }}
+      ODDS_BASE_URL: ${{ secrets.ODDS_BASE_URL }}
+      TZ: Asia/Tokyo
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pandas requests scikit-learn scipy lightgbm
+
+      - name: Race-day update
+        run: python race_day.py --repredict "${{ inputs.repredict || 'auto' }}"
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Race-day update [skip ci]"
+          for i in 1 2 3; do
+            if git push; then
+              echo "Push succeeded"
+              exit 0
+            fi
+            echo "Push rejected, rebasing and retrying ($i/3)..."
+            git pull --rebase origin main
+          done
+          echo "Push failed after 3 retries"
+          exit 1
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy-pages:
+    needs: update
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

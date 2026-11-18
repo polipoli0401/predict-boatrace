@@ -16,7 +16,12 @@ rule and the probabilities, not achievable betting results.
 Closing odds are cached in cache/closing_trio.csv (not committed).
 Writes data/verification/ev_backtest.json and ev_backtest.md.
 
-Usage: python ev_backtest.py --from 2026-01-01 --to 2026-11-17
+--live uses the "live" model probabilities instead (morning features +
+exhibition time / rank, tilt, exhibition start timing, wind and wave),
+restricted to races with exhibition data; the calibration is fitted on
+earlier live-model races. Output: ev_backtest_live.{json,md}.
+
+Usage: python ev_backtest.py --from 2026-01-01 --to 2026-11-17 [--live]
 """
 import argparse
 import json
@@ -70,7 +75,7 @@ def load_closing(start, end, stadiums):
     return out
 
 
-def race_records(bt, calibration, closing):
+def race_records(bt, calibration, closing, pkey="p1"):
     recs = []
     for r in bt.itertuples():
         sid = str(r.stadium_id).zfill(2)
@@ -79,7 +84,7 @@ def race_records(bt, calibration, closing):
         if not odds:
             continue
         d = json.loads(r.boats_json)
-        probs = apply_calibration(harville_trio(d["bn"], d["p1"]), calibration)
+        probs = apply_calibration(harville_trio(d["bn"], d[pkey]), calibration)
         actual = "-".join(str(b) for b in sorted(json.loads(r.actual_trio)))
         inv = {k: 1 / v for k, v in odds.items() if v}
         tot = sum(inv.values())
@@ -166,6 +171,7 @@ def to_markdown(res):
                 + f"| {fmt(v['mean_expected_return'])} "
                 + f"| {fmt(v['log_loss_model'])} / {fmt(v['log_loss_market'])} |")
     md = [f"# Expected-return rule with closing odds ({res['period']})", "",
+          f"Model: {res['model']}.", "",
           f"Generated: {res['generated_at']}. Probabilities: walk-forward "
           + "backtest; calibration fitted only on races "
           + f"{res['calibration_fit'][0]} .. {res['calibration_fit'][1]}. "
@@ -196,26 +202,33 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--from", dest="start", default="2026-01-01")
     ap.add_argument("--to", dest="end")
+    ap.add_argument("--live", action="store_true")
     args = ap.parse_args()
+    pkey = "p1L" if args.live else "p1"
+    suffix = "_live" if args.live else ""
     stadiums = target_stadium_ids()
     cfg = load_config()
 
     bt = pd.read_csv(BACKTEST_CSV).sort_values("race_date")
     bt = bt[bt["stadium_id"].astype(int).astype(str).str.zfill(2).isin(stadiums)]
+    if args.live:
+        bt = bt[bt["has_exhibition"] == 1]
     start = date.fromisoformat(args.start)
     end = date.fromisoformat(args.end or bt["race_date"].max())
 
-    samples = list(race_samples(bt[bt["race_date"] < start.isoformat()]))
+    samples = list(race_samples(bt[bt["race_date"] < start.isoformat()], pkey))
     calibration = fit_map(samples)
     period = bt[(bt["race_date"] >= start.isoformat())
                 & (bt["race_date"] <= end.isoformat())]
     closing = load_closing(start, end, stadiums)
-    recs = race_records(period, calibration, closing)
+    recs = race_records(period, calibration, closing, pkey)
     print(f"{len(recs)} races with closing odds ({start} .. {end}); "
           f"calibration fitted on {len(samples)} earlier races")
 
     rng = np.random.default_rng(42)
     res = {"generated_at": iso_jst(), "period": f"{start} .. {end}",
+           "model": "live (with exhibition / wind / wave)" if args.live
+           else "morning (no race-day information)",
            "calibration_fit": [samples[0][0], samples[-1][0]],
            "ev_min": cfg["ev_min"], "prob_min": cfg["prob_min"],
            "max_candidates": cfg["max_candidates_per_race"],
@@ -230,8 +243,8 @@ def main():
         res["thresholds"][str(t)] = evaluate(recs, cfg, t, rng)
     res["calibration"] = calibration_table(recs)
 
-    write_json(os.path.join(VERIFY_DIR, "ev_backtest.json"), res)
-    with open(os.path.join(VERIFY_DIR, "ev_backtest.md"), "w",
+    write_json(os.path.join(VERIFY_DIR, f"ev_backtest{suffix}.json"), res)
+    with open(os.path.join(VERIFY_DIR, f"ev_backtest{suffix}.md"), "w",
               encoding="utf-8") as f:
         f.write(to_markdown(res))
     a = res["by_stadium"]["all"]

@@ -24,12 +24,13 @@ HOLDOUT_SHARE = 0.2
 BINS = [0, 0.02, 0.05, 0.10, 0.15, 0.20, 0.30, 0.50, 1.0]
 
 
-def race_samples(bt):
-    """Yield (race_date, {combo: raw_prob}, actual_combo)."""
+def race_samples(bt, pkey="p1"):
+    """Yield (race_date, {combo: raw_prob}, actual_combo).
+    pkey: "p1" (morning model) or "p1L" (live model)."""
     for row in bt.itertuples():
         d = json.loads(row.boats_json)
         actual = "-".join(str(b) for b in sorted(json.loads(row.actual_trio)))
-        yield row.race_date, harville_trio(d["bn"], d["p1"]), actual
+        yield row.race_date, harville_trio(d["bn"], d[pkey]), actual
 
 
 def fit_map(samples):

@@ -124,6 +124,9 @@ calibration fitted only on earlier races:
   mean expected return 177%. Higher thresholds are worse.
 - Conclusion: the current model has no edge over the market; the EV rule
   is not usable for betting. Paying for live odds is not justified yet.
+- Live model (exhibition, tilt, exhibition ST, wind, wave) on the same
+  5,010 races: log-loss 2.361 → 2.348 vs market 2.246; ROI 74% → 76%.
+  Race-day information closes only ~10% of the gap to the market.
 
 Next steps implied by this result:
 - [ ] Market-anchored probabilities: start from closing-odds implied
@@ -131,6 +134,9 @@ Next steps implied by this result:
       (e.g. a blend or a residual model), out of sample
 - [ ] Fix the calibration bias: low-probability trios over-estimated,
       high-probability trios under-estimated
+- [ ] Race-day features not used yet: parts / propeller changes,
+      exhibition entry course, wind direction, weight adjustment (v1 day
+      file has them from 2026-01); test with `ev_backtest.py`
 - [ ] Re-run `ev_backtest.py` after each change; only a CI above 100%
       on held-out months would justify live odds
 

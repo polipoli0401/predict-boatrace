@@ -1,0 +1,368 @@
+{
+ "generated_at": "2026-11-19T08:24:48+09:00",
+ "period": "2026-01-01 .. 2026-11-17",
+ "model": "live (with exhibition / wind / wave)",
+ "calibration_fit": [
+  "2024-02-04",
+  "2025-12-31"
+ ],
+ "ev_min": 1.2,
+ "prob_min": 0.05,
+ "max_candidates": 3,
+ "by_stadium": {
+  "18": {
+   "races": 2208,
+   "candidate_races": 1622,
+   "tickets": 2750,
+   "hits": 162,
+   "hit_rate": 10.0,
+   "roi": 82.6,
+   "mean_expected_return": 175.2,
+   "log_loss_model": 2.3056,
+   "log_loss_market": 2.209,
+   "roi_ci95": [
+    69.1,
+    97.1
+   ]
+  },
+  "21": {
+   "races": 1917,
+   "candidate_races": 1466,
+   "tickets": 2527,
+   "hits": 111,
+   "hit_rate": 7.6,
+   "roi": 74.3,
+   "mean_expected_return": 175.2,
+   "log_loss_model": 2.4064,
+   "log_loss_market": 2.2892,
+   "roi_ci95": [
+    59.5,
+    89.8
+   ]
+  },
+  "24": {
+   "races": 885,
+   "candidate_races": 683,
+   "tickets": 1196,
+   "hits": 57,
+   "hit_rate": 8.3,
+   "roi": 61.5,
+   "mean_expected_return": 180.0,
+   "log_loss_model": 2.3297,
+   "log_loss_market": 2.243,
+   "roi_ci95": [
+    44.3,
+    79.0
+   ]
+  },
+  "all": {
+   "races": 5010,
+   "candidate_races": 3771,
+   "tickets": 6473,
+   "hits": 330,
+   "hit_rate": 8.8,
+   "roi": 75.5,
+   "mean_expected_return": 176.1,
+   "log_loss_model": 2.3484,
+   "log_loss_market": 2.2457,
+   "roi_ci95": [
+    66.6,
+    84.3
+   ]
+  }
+ },
+ "by_month": {
+  "2026-01": {
+   "races": 418,
+   "candidate_races": 307,
+   "tickets": 508,
+   "hits": 24,
+   "hit_rate": 7.8,
+   "roi": 79.5,
+   "mean_expected_return": 173.6,
+   "log_loss_model": 2.3573,
+   "log_loss_market": 2.2573,
+   "roi_ci95": [
+    46.8,
+    117.1
+   ]
+  },
+  "2026-02": {
+   "races": 372,
+   "candidate_races": 287,
+   "tickets": 478,
+   "hits": 28,
+   "hit_rate": 9.8,
+   "roi": 74.9,
+   "mean_expected_return": 168.2,
+   "log_loss_model": 2.3301,
+   "log_loss_market": 2.2137,
+   "roi_ci95": [
+    46.0,
+    108.5
+   ]
+  },
+  "2026-03": {
+   "races": 444,
+   "candidate_races": 325,
+   "tickets": 530,
+   "hits": 28,
+   "hit_rate": 8.6,
+   "roi": 78.4,
+   "mean_expected_return": 171.0,
+   "log_loss_model": 2.3395,
+   "log_loss_market": 2.2369,
+   "roi_ci95": [
+    47.5,
+    112.8
+   ]
+  },
+  "2026-04": {
+   "races": 360,
+   "candidate_races": 287,
+   "tickets": 510,
+   "hits": 27,
+   "hit_rate": 9.4,
+   "roi": 74.1,
+   "mean_expected_return": 180.2,
+   "log_loss_model": 2.3321,
+   "log_loss_market": 2.2409,
+   "roi_ci95": [
+    45.1,
+    106.8
+   ]
+  },
+  "2026-05": {
+   "races": 456,
+   "candidate_races": 337,
+   "tickets": 595,
+   "hits": 35,
+   "hit_rate": 10.4,
+   "roi": 88.2,
+   "mean_expected_return": 179.3,
+   "log_loss_model": 2.3419,
+   "log_loss_market": 2.2327,
+   "roi_ci95": [
+    60.5,
+    118.8
+   ]
+  },
+  "2026-06": {
+   "races": 407,
+   "candidate_races": 307,
+   "tickets": 506,
+   "hits": 31,
+   "hit_rate": 10.1,
+   "roi": 91.5,
+   "mean_expected_return": 168.5,
+   "log_loss_model": 2.3513,
+   "log_loss_market": 2.2725,
+   "roi_ci95": [
+    59.6,
+    124.4
+   ]
+  },
+  "2026-07": {
+   "races": 480,
+   "candidate_races": 354,
+   "tickets": 607,
+   "hits": 28,
+   "hit_rate": 7.9,
+   "roi": 70.0,
+   "mean_expected_return": 176.3,
+   "log_loss_model": 2.3443,
+   "log_loss_market": 2.2286,
+   "roi_ci95": [
+    40.5,
+    104.1
+   ]
+  },
+  "2026-08": {
+   "races": 621,
+   "candidate_races": 478,
+   "tickets": 871,
+   "hits": 46,
+   "hit_rate": 9.6,
+   "roi": 73.7,
+   "mean_expected_return": 184.0,
+   "log_loss_model": 2.4349,
+   "log_loss_market": 2.3021,
+   "roi_ci95": [
+    51.8,
+    96.6
+   ]
+  },
+  "2026-09": {
+   "races": 576,
+   "candidate_races": 430,
+   "tickets": 729,
+   "hits": 37,
+   "hit_rate": 8.6,
+   "roi": 81.2,
+   "mean_expected_return": 173.2,
+   "log_loss_model": 2.3521,
+   "log_loss_market": 2.2761,
+   "roi_ci95": [
+    53.6,
+    110.6
+   ]
+  },
+  "2026-10": {
+   "races": 564,
+   "candidate_races": 427,
+   "tickets": 746,
+   "hits": 25,
+   "hit_rate": 5.9,
+   "roi": 48.7,
+   "mean_expected_return": 181.4,
+   "log_loss_model": 2.3222,
+   "log_loss_market": 2.2099,
+   "roi_ci95": [
+    28.6,
+    71.6
+   ]
+  },
+  "2026-11": {
+   "races": 312,
+   "candidate_races": 232,
+   "tickets": 393,
+   "hits": 21,
+   "hit_rate": 9.1,
+   "roi": 81.2,
+   "mean_expected_return": 172.9,
+   "log_loss_model": 2.2702,
+   "log_loss_market": 2.1926,
+   "roi_ci95": [
+    47.8,
+    120.0
+   ]
+  }
+ },
+ "thresholds": {
+  "1.0": {
+   "races": 5010,
+   "candidate_races": 4588,
+   "tickets": 9629,
+   "hits": 629,
+   "hit_rate": 13.7,
+   "roi": 78.0,
+   "mean_expected_return": 154.3,
+   "log_loss_model": 2.3484,
+   "log_loss_market": 2.2457,
+   "roi_ci95": [
+    71.5,
+    84.5
+   ]
+  },
+  "1.2": {
+   "races": 5010,
+   "candidate_races": 3771,
+   "tickets": 6473,
+   "hits": 330,
+   "hit_rate": 8.8,
+   "roi": 75.5,
+   "mean_expected_return": 176.1,
+   "log_loss_model": 2.3484,
+   "log_loss_market": 2.2457,
+   "roi_ci95": [
+    66.8,
+    84.3
+   ]
+  },
+  "1.5": {
+   "races": 5010,
+   "candidate_races": 2469,
+   "tickets": 3561,
+   "hits": 140,
+   "hit_rate": 5.7,
+   "roi": 71.3,
+   "mean_expected_return": 211.1,
+   "log_loss_model": 2.3484,
+   "log_loss_market": 2.2457,
+   "roi_ci95": [
+    58.6,
+    84.1
+   ]
+  },
+  "2.0": {
+   "races": 5010,
+   "candidate_races": 1186,
+   "tickets": 1458,
+   "hits": 31,
+   "hit_rate": 2.6,
+   "roi": 52.0,
+   "mean_expected_return": 269.5,
+   "log_loss_model": 2.3484,
+   "log_loss_market": 2.2457,
+   "roi_ci95": [
+    33.5,
+    71.6
+   ]
+  },
+  "3.0": {
+   "races": 5010,
+   "candidate_races": 284,
+   "tickets": 318,
+   "hits": 3,
+   "hit_rate": 1.1,
+   "roi": 26.1,
+   "mean_expected_return": 388.6,
+   "log_loss_model": 2.3484,
+   "log_loss_market": 2.2457,
+   "roi_ci95": [
+    0.0,
+    67.0
+   ]
+  }
+ },
+ "calibration": [
+  {
+   "bin": "(0.0, 0.02]",
+   "n": 41751,
+   "predicted": 0.0086,
+   "observed": 0.0074
+  },
+  {
+   "bin": "(0.02, 0.05]",
+   "n": 26740,
+   "predicted": 0.0324,
+   "observed": 0.0279
+  },
+  {
+   "bin": "(0.05, 0.1]",
+   "n": 15320,
+   "predicted": 0.0713,
+   "observed": 0.0696
+  },
+  {
+   "bin": "(0.1, 0.15]",
+   "n": 8549,
+   "predicted": 0.124,
+   "observed": 0.1302
+  },
+  {
+   "bin": "(0.15, 0.2]",
+   "n": 4477,
+   "predicted": 0.1704,
+   "observed": 0.1885
+  },
+  {
+   "bin": "(0.2, 0.3]",
+   "n": 2721,
+   "predicted": 0.2342,
+   "observed": 0.2591
+  },
+  {
+   "bin": "(0.3, 0.5]",
+   "n": 634,
+   "predicted": 0.3581,
+   "observed": 0.3502
+  },
+  {
+   "bin": "(0.5, 1.0]",
+   "n": 8,
+   "predicted": 0.5706,
+   "observed": 0.5
+  }
+ ]
+}

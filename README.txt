@@ -288,7 +288,14 @@ Method notes
   random at market odds (~75%). Raising the threshold made it worse
   (>= 2.0: 65%, >= 3.0: 38%). Large expected returns from this model
   mark its disagreements with the market, i.e. model error, not value.
-  Do not bet on the rule as it stands. Treat candidates as
+  Do not bet on the rule as it stands.
+  Race-day information does not close the gap: on the same 5,010 races
+  with exhibition data, the live model (morning features + exhibition
+  time / rank, tilt, exhibition ST, wind, wave) improved log-loss only
+  from 2.361 to 2.348 against the market's 2.246, and the rule's ROI
+  from 74% to 76% (`ev_backtest.py --live`). Still missing even from the
+  live model: parts / propeller changes, the exhibition entry course,
+  wind direction, weight adjustment. Treat candidates as
   research output until verification over many races says otherwise.
 
 Acknowledgements

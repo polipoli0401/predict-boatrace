@@ -115,6 +115,25 @@ verification. Automatic betting is out of scope.
       look-ahead), per stadium; adjust `ev_config.json` only from
       out-of-sample results
 
+#### Result of the long-range test (2026-11-19)
+`ev_backtest.py`, 2026-01-01..11-17, 6,250 races, closing odds,
+calibration fitted only on earlier races:
+- Market log-loss lower than the model at every stadium and in every
+  month (2.24 vs 2.36).
+- Rule (EV ≥ 1.2, p ≥ 0.05): 8,100 tickets, ROI 70% (95% CI 62–78%),
+  mean expected return 177%. Higher thresholds are worse.
+- Conclusion: the current model has no edge over the market; the EV rule
+  is not usable for betting. Paying for live odds is not justified yet.
+
+Next steps implied by this result:
+- [ ] Market-anchored probabilities: start from closing-odds implied
+      probabilities and test whether the model adds information
+      (e.g. a blend or a residual model), out of sample
+- [ ] Fix the calibration bias: low-probability trios over-estimated,
+      high-probability trios under-estimated
+- [ ] Re-run `ev_backtest.py` after each change; only a CI above 100%
+      on held-out months would justify live odds
+
 #### 5-5 Later (only if 5-4 justifies it)
 - [ ] Direct trio-probability model (instead of Harville from P(win)),
       validated against the current method

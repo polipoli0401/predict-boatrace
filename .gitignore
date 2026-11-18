@@ -8,3 +8,6 @@ __pycache__/
 
 # Race board build output (published via GitHub Pages)
 site/
+
+# Local caches (e.g. closing odds for ev_backtest.py)
+cache/

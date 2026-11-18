@@ -146,6 +146,13 @@ models, backtest and forward test (prediction_history.csv) are kept.
                            only on races before the range. Manual
                            workflow: "BoatRace Backfill Verification".
 
+  ev_backtest.py           Out-of-sample test of the decision rule over a
+                           long range (default from 2026-01-01) with
+                           closing odds; calibration fitted only on
+                           earlier races; per stadium / month /
+                           threshold, bootstrap 95% CI for ROI. Writes
+                           data/verification/ev_backtest.{json,md}.
+
   Decision (ev_config.json; all thresholds are configurable)
     Candidate     at least one combination with expected
                   return >= ev_min (1.2) AND probability >=
@@ -273,12 +280,15 @@ Method notes
   skipped (the last 14 days are still retried). The fetch step now takes
   about 1 minute; training plus prediction about 20 seconds.
 - The race-day expected return is only as good as the probabilities.
-  Backfill check 2026-10-19..11-17 (552 races, 3 stadiums): the market
-  (closing odds) had a lower log-loss than the model at every stadium
-  (total 2.14 vs 2.24). The rule applied with closing odds picked 671
-  tickets with a mean expected return of 171% but realised 74% ROI. So
-  large expected returns mostly mark disagreements with the market, not
-  value. One month of data; keep accumulating before concluding. Treat candidates as
+  Out-of-sample test 2026-01-01..11-17 (ev_backtest.py, 6,250 races,
+  closing odds): the market had a lower log-loss than the model at all
+  3 stadiums and in all 11 months (2.24 vs 2.36). The rule picked 8,100
+  tickets in 75% of races with a mean expected return of 177% and
+  realised 70% ROI (95% CI 62-78%), i.e. no better than buying at
+  random at market odds (~75%). Raising the threshold made it worse
+  (>= 2.0: 65%, >= 3.0: 38%). Large expected returns from this model
+  mark its disagreements with the market, i.e. model error, not value.
+  Do not bet on the rule as it stands. Treat candidates as
   research output until verification over many races says otherwise.
 
 Acknowledgements

@@ -1,0 +1,2214 @@
+{
+ "date": "2026-11-16",
+ "races": {
+  "18-01": {
+   "stadium_id": "18",
+   "race_number": 1,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 4.6
+     },
+     {
+      "combination": "1-2-4",
+      "value": 7.3
+     },
+     {
+      "combination": "1-2-5",
+      "value": 6.3
+     },
+     {
+      "combination": "1-2-6",
+      "value": 66.7
+     },
+     {
+      "combination": "1-3-4",
+      "value": 6.6
+     },
+     {
+      "combination": "1-3-5",
+      "value": 3.7
+     },
+     {
+      "combination": "1-3-6",
+      "value": 40.4
+     },
+     {
+      "combination": "1-4-5",
+      "value": 5.9
+     },
+     {
+      "combination": "1-4-6",
+      "value": 51.2
+     },
+     {
+      "combination": "1-5-6",
+      "value": 26.3
+     },
+     {
+      "combination": "2-3-4",
+      "value": 54.3
+     },
+     {
+      "combination": "2-3-5",
+      "value": 40.0
+     },
+     {
+      "combination": "2-3-6",
+      "value": 163.1
+     },
+     {
+      "combination": "2-4-5",
+      "value": 37.3
+     },
+     {
+      "combination": "2-4-6",
+      "value": 151.9
+     },
+     {
+      "combination": "2-5-6",
+      "value": 142.1
+     },
+     {
+      "combination": "3-4-5",
+      "value": 38.3
+     },
+     {
+      "combination": "3-4-6",
+      "value": 146.8
+     },
+     {
+      "combination": "3-5-6",
+      "value": 104.8
+     },
+     {
+      "combination": "4-5-6",
+      "value": 81.5
+     }
+    ]
+   }
+  },
+  "18-02": {
+   "stadium_id": "18",
+   "race_number": 2,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 4.5
+     },
+     {
+      "combination": "1-2-4",
+      "value": 8.6
+     },
+     {
+      "combination": "1-2-5",
+      "value": 12.0
+     },
+     {
+      "combination": "1-2-6",
+      "value": 31.7
+     },
+     {
+      "combination": "1-3-4",
+      "value": 3.7
+     },
+     {
+      "combination": "1-3-5",
+      "value": 3.7
+     },
+     {
+      "combination": "1-3-6",
+      "value": 22.3
+     },
+     {
+      "combination": "1-4-5",
+      "value": 11.1
+     },
+     {
+      "combination": "1-4-6",
+      "value": 24.5
+     },
+     {
+      "combination": "1-5-6",
+      "value": 39.3
+     },
+     {
+      "combination": "2-3-4",
+      "value": 46.1
+     },
+     {
+      "combination": "2-3-5",
+      "value": 47.2
+     },
+     {
+      "combination": "2-3-6",
+      "value": 70.0
+     },
+     {
+      "combination": "2-4-5",
+      "value": 75.6
+     },
+     {
+      "combination": "2-4-6",
+      "value": 85.9
+     },
+     {
+      "combination": "2-5-6",
+      "value": 130.3
+     },
+     {
+      "combination": "3-4-5",
+      "value": 42.0
+     },
+     {
+      "combination": "3-4-6",
+      "value": 92.2
+     },
+     {
+      "combination": "3-5-6",
+      "value": 66.3
+     },
+     {
+      "combination": "4-5-6",
+      "value": 111.2
+     }
+    ]
+   }
+  },
+  "18-03": {
+   "stadium_id": "18",
+   "race_number": 3,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 5.1
+     },
+     {
+      "combination": "1-2-4",
+      "value": 33.7
+     },
+     {
+      "combination": "1-2-5",
+      "value": 48.0
+     },
+     {
+      "combination": "1-2-6",
+      "value": 138.8
+     },
+     {
+      "combination": "1-3-4",
+      "value": 2.4
+     },
+     {
+      "combination": "1-3-5",
+      "value": 2.6
+     },
+     {
+      "combination": "1-3-6",
+      "value": 23.8
+     },
+     {
+      "combination": "1-4-5",
+      "value": 25.7
+     },
+     {
+      "combination": "1-4-6",
+      "value": 119.0
+     },
+     {
+      "combination": "1-5-6",
+      "value": 138.8
+     },
+     {
+      "combination": "2-3-4",
+      "value": 41.6
+     },
+     {
+      "combination": "2-3-5",
+      "value": 41.6
+     },
+     {
+      "combination": "2-3-6",
+      "value": 249.9
+     },
+     {
+      "combination": "2-4-5",
+      "value": 99.9
+     },
+     {
+      "combination": "2-4-6",
+      "value": 277.7
+     },
+     {
+      "combination": "2-5-6",
+      "value": 416.6
+     },
+     {
+      "combination": "3-4-5",
+      "value": 10.8
+     },
+     {
+      "combination": "3-4-6",
+      "value": 59.5
+     },
+     {
+      "combination": "3-5-6",
+      "value": 73.5
+     },
+     {
+      "combination": "4-5-6",
+      "value": 208.3
+     }
+    ]
+   }
+  },
+  "18-04": {
+   "stadium_id": "18",
+   "race_number": 4,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 1.9
+     },
+     {
+      "combination": "1-2-4",
+      "value": 4.7
+     },
+     {
+      "combination": "1-2-5",
+      "value": 4.7
+     },
+     {
+      "combination": "1-2-6",
+      "value": 11.2
+     },
+     {
+      "combination": "1-3-4",
+      "value": 13.7
+     },
+     {
+      "combination": "1-3-5",
+      "value": 15.9
+     },
+     {
+      "combination": "1-3-6",
+      "value": 42.0
+     },
+     {
+      "combination": "1-4-5",
+      "value": 40.1
+     },
+     {
+      "combination": "1-4-6",
+      "value": 79.5
+     },
+     {
+      "combination": "1-5-6",
+      "value": 54.1
+     },
+     {
+      "combination": "2-3-4",
+      "value": 39.3
+     },
+     {
+      "combination": "2-3-5",
+      "value": 59.3
+     },
+     {
+      "combination": "2-3-6",
+      "value": 81.2
+     },
+     {
+      "combination": "2-4-5",
+      "value": 113.2
+     },
+     {
+      "combination": "2-4-6",
+      "value": 89.0
+     },
+     {
+      "combination": "2-5-6",
+      "value": 133.5
+     },
+     {
+      "combination": "3-4-5",
+      "value": 149.5
+     },
+     {
+      "combination": "3-4-6",
+      "value": 178.0
+     },
+     {
+      "combination": "3-5-6",
+      "value": 287.5
+     },
+     {
+      "combination": "4-5-6",
+      "value": 219.8
+     }
+    ]
+   }
+  },
+  "18-05": {
+   "stadium_id": "18",
+   "race_number": 5,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 8.3
+     },
+     {
+      "combination": "1-2-4",
+      "value": 47.8
+     },
+     {
+      "combination": "1-2-5",
+      "value": 4.4
+     },
+     {
+      "combination": "1-2-6",
+      "value": 5.4
+     },
+     {
+      "combination": "1-3-4",
+      "value": 56.3
+     },
+     {
+      "combination": "1-3-5",
+      "value": 19.8
+     },
+     {
+      "combination": "1-3-6",
+      "value": 19.0
+     },
+     {
+      "combination": "1-4-5",
+      "value": 130.2
+     },
+     {
+      "combination": "1-4-6",
+      "value": 139.9
+     },
+     {
+      "combination": "1-5-6",
+      "value": 10.8
+     },
+     {
+      "combination": "2-3-4",
+      "value": 66.2
+     },
+     {
+      "combination": "2-3-5",
+      "value": 10.5
+     },
+     {
+      "combination": "2-3-6",
+      "value": 8.7
+     },
+     {
+      "combination": "2-4-5",
+      "value": 66.2
+     },
+     {
+      "combination": "2-4-6",
+      "value": 49.0
+     },
+     {
+      "combination": "2-5-6",
+      "value": 4.3
+     },
+     {
+      "combination": "3-4-5",
+      "value": 151.1
+     },
+     {
+      "combination": "3-4-6",
+      "value": 171.7
+     },
+     {
+      "combination": "3-5-6",
+      "value": 20.9
+     },
+     {
+      "combination": "4-5-6",
+      "value": 89.9
+     }
+    ]
+   }
+  },
+  "18-06": {
+   "stadium_id": "18",
+   "race_number": 6,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 1.5
+     },
+     {
+      "combination": "1-2-4",
+      "value": 36.7
+     },
+     {
+      "combination": "1-2-5",
+      "value": 17.9
+     },
+     {
+      "combination": "1-2-6",
+      "value": 9.0
+     },
+     {
+      "combination": "1-3-4",
+      "value": 25.7
+     },
+     {
+      "combination": "1-3-5",
+      "value": 11.9
+     },
+     {
+      "combination": "1-3-6",
+      "value": 7.5
+     },
+     {
+      "combination": "1-4-5",
+      "value": 102.9
+     },
+     {
+      "combination": "1-4-6",
+      "value": 78.3
+     },
+     {
+      "combination": "1-5-6",
+      "value": 61.0
+     },
+     {
+      "combination": "2-3-4",
+      "value": 48.0
+     },
+     {
+      "combination": "2-3-5",
+      "value": 25.0
+     },
+     {
+      "combination": "2-3-6",
+      "value": 17.6
+     },
+     {
+      "combination": "2-4-5",
+      "value": 116.2
+     },
+     {
+      "combination": "2-4-6",
+      "value": 150.0
+     },
+     {
+      "combination": "2-5-6",
+      "value": 85.7
+     },
+     {
+      "combination": "3-4-5",
+      "value": 70.6
+     },
+     {
+      "combination": "3-4-6",
+      "value": 87.8
+     },
+     {
+      "combination": "3-5-6",
+      "value": 45.5
+     },
+     {
+      "combination": "4-5-6",
+      "value": 133.4
+     }
+    ]
+   }
+  },
+  "18-07": {
+   "stadium_id": "18",
+   "race_number": 7,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 6.3
+     },
+     {
+      "combination": "1-2-4",
+      "value": 15.5
+     },
+     {
+      "combination": "1-2-5",
+      "value": 66.2
+     },
+     {
+      "combination": "1-2-6",
+      "value": 3.6
+     },
+     {
+      "combination": "1-3-4",
+      "value": 23.0
+     },
+     {
+      "combination": "1-3-5",
+      "value": 139.4
+     },
+     {
+      "combination": "1-3-6",
+      "value": 8.4
+     },
+     {
+      "combination": "1-4-5",
+      "value": 176.6
+     },
+     {
+      "combination": "1-4-6",
+      "value": 17.0
+     },
+     {
+      "combination": "1-5-6",
+      "value": 147.2
+     },
+     {
+      "combination": "2-3-4",
+      "value": 19.3
+     },
+     {
+      "combination": "2-3-5",
+      "value": 80.2
+     },
+     {
+      "combination": "2-3-6",
+      "value": 3.1
+     },
+     {
+      "combination": "2-4-5",
+      "value": 98.1
+     },
+     {
+      "combination": "2-4-6",
+      "value": 8.2
+     },
+     {
+      "combination": "2-5-6",
+      "value": 85.4
+     },
+     {
+      "combination": "3-4-5",
+      "value": 203.8
+     },
+     {
+      "combination": "3-4-6",
+      "value": 20.7
+     },
+     {
+      "combination": "3-5-6",
+      "value": 220.8
+     },
+     {
+      "combination": "4-5-6",
+      "value": 203.8
+     }
+    ]
+   }
+  },
+  "18-08": {
+   "stadium_id": "18",
+   "race_number": 8,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 8.8
+     },
+     {
+      "combination": "1-2-4",
+      "value": 2.2
+     },
+     {
+      "combination": "1-2-5",
+      "value": 6.2
+     },
+     {
+      "combination": "1-2-6",
+      "value": 23.9
+     },
+     {
+      "combination": "1-3-4",
+      "value": 20.8
+     },
+     {
+      "combination": "1-3-5",
+      "value": 52.3
+     },
+     {
+      "combination": "1-3-6",
+      "value": 112.4
+     },
+     {
+      "combination": "1-4-5",
+      "value": 18.9
+     },
+     {
+      "combination": "1-4-6",
+      "value": 49.9
+     },
+     {
+      "combination": "1-5-6",
+      "value": 124.9
+     },
+     {
+      "combination": "2-3-4",
+      "value": 14.9
+     },
+     {
+      "combination": "2-3-5",
+      "value": 53.5
+     },
+     {
+      "combination": "2-3-6",
+      "value": 102.2
+     },
+     {
+      "combination": "2-4-5",
+      "value": 5.8
+     },
+     {
+      "combination": "2-4-6",
+      "value": 12.2
+     },
+     {
+      "combination": "2-5-6",
+      "value": 44.1
+     },
+     {
+      "combination": "3-4-5",
+      "value": 86.5
+     },
+     {
+      "combination": "3-4-6",
+      "value": 173.0
+     },
+     {
+      "combination": "3-5-6",
+      "value": 374.8
+     },
+     {
+      "combination": "4-5-6",
+      "value": 40.8
+     }
+    ]
+   }
+  },
+  "18-09": {
+   "stadium_id": "18",
+   "race_number": 9,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 4.6
+     },
+     {
+      "combination": "1-2-4",
+      "value": 3.7
+     },
+     {
+      "combination": "1-2-5",
+      "value": 59.3
+     },
+     {
+      "combination": "1-2-6",
+      "value": 19.4
+     },
+     {
+      "combination": "1-3-4",
+      "value": 3.6
+     },
+     {
+      "combination": "1-3-5",
+      "value": 35.5
+     },
+     {
+      "combination": "1-3-6",
+      "value": 14.0
+     },
+     {
+      "combination": "1-4-5",
+      "value": 23.4
+     },
+     {
+      "combination": "1-4-6",
+      "value": 7.3
+     },
+     {
+      "combination": "1-5-6",
+      "value": 63.5
+     },
+     {
+      "combination": "2-3-4",
+      "value": 20.6
+     },
+     {
+      "combination": "2-3-5",
+      "value": 92.0
+     },
+     {
+      "combination": "2-3-6",
+      "value": 66.7
+     },
+     {
+      "combination": "2-4-5",
+      "value": 70.2
+     },
+     {
+      "combination": "2-4-6",
+      "value": 24.0
+     },
+     {
+      "combination": "2-5-6",
+      "value": 190.6
+     },
+     {
+      "combination": "3-4-5",
+      "value": 86.0
+     },
+     {
+      "combination": "3-4-6",
+      "value": 25.4
+     },
+     {
+      "combination": "3-5-6",
+      "value": 78.4
+     },
+     {
+      "combination": "4-5-6",
+      "value": 72.1
+     }
+    ]
+   }
+  },
+  "18-10": {
+   "stadium_id": "18",
+   "race_number": 10,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 6.3
+     },
+     {
+      "combination": "1-2-4",
+      "value": 3.3
+     },
+     {
+      "combination": "1-2-5",
+      "value": 16.2
+     },
+     {
+      "combination": "1-2-6",
+      "value": 5.5
+     },
+     {
+      "combination": "1-3-4",
+      "value": 12.6
+     },
+     {
+      "combination": "1-3-5",
+      "value": 31.1
+     },
+     {
+      "combination": "1-3-6",
+      "value": 14.8
+     },
+     {
+      "combination": "1-4-5",
+      "value": 29.8
+     },
+     {
+      "combination": "1-4-6",
+      "value": 10.4
+     },
+     {
+      "combination": "1-5-6",
+      "value": 37.8
+     },
+     {
+      "combination": "2-3-4",
+      "value": 22.1
+     },
+     {
+      "combination": "2-3-5",
+      "value": 63.0
+     },
+     {
+      "combination": "2-3-6",
+      "value": 38.3
+     },
+     {
+      "combination": "2-4-5",
+      "value": 28.3
+     },
+     {
+      "combination": "2-4-6",
+      "value": 12.7
+     },
+     {
+      "combination": "2-5-6",
+      "value": 53.5
+     },
+     {
+      "combination": "3-4-5",
+      "value": 94.6
+     },
+     {
+      "combination": "3-4-6",
+      "value": 30.1
+     },
+     {
+      "combination": "3-5-6",
+      "value": 135.1
+     },
+     {
+      "combination": "4-5-6",
+      "value": 32.6
+     }
+    ]
+   }
+  },
+  "18-11": {
+   "stadium_id": "18",
+   "race_number": 11,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 7.3
+     },
+     {
+      "combination": "1-2-4",
+      "value": 3.5
+     },
+     {
+      "combination": "1-2-5",
+      "value": 18.4
+     },
+     {
+      "combination": "1-2-6",
+      "value": 21.7
+     },
+     {
+      "combination": "1-3-4",
+      "value": 10.0
+     },
+     {
+      "combination": "1-3-5",
+      "value": 24.6
+     },
+     {
+      "combination": "1-3-6",
+      "value": 61.3
+     },
+     {
+      "combination": "1-4-5",
+      "value": 18.1
+     },
+     {
+      "combination": "1-4-6",
+      "value": 42.7
+     },
+     {
+      "combination": "1-5-6",
+      "value": 125.9
+     },
+     {
+      "combination": "2-3-4",
+      "value": 5.2
+     },
+     {
+      "combination": "2-3-5",
+      "value": 11.3
+     },
+     {
+      "combination": "2-3-6",
+      "value": 24.9
+     },
+     {
+      "combination": "2-4-5",
+      "value": 8.8
+     },
+     {
+      "combination": "2-4-6",
+      "value": 30.6
+     },
+     {
+      "combination": "2-5-6",
+      "value": 77.1
+     },
+     {
+      "combination": "3-4-5",
+      "value": 21.3
+     },
+     {
+      "combination": "3-4-6",
+      "value": 53.1
+     },
+     {
+      "combination": "3-5-6",
+      "value": 55.6
+     },
+     {
+      "combination": "4-5-6",
+      "value": 77.1
+     }
+    ]
+   }
+  },
+  "18-12": {
+   "stadium_id": "18",
+   "race_number": 12,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 5.2
+     },
+     {
+      "combination": "1-2-4",
+      "value": 4.5
+     },
+     {
+      "combination": "1-2-5",
+      "value": 19.4
+     },
+     {
+      "combination": "1-2-6",
+      "value": 15.4
+     },
+     {
+      "combination": "1-3-4",
+      "value": 3.5
+     },
+     {
+      "combination": "1-3-5",
+      "value": 12.3
+     },
+     {
+      "combination": "1-3-6",
+      "value": 20.4
+     },
+     {
+      "combination": "1-4-5",
+      "value": 6.4
+     },
+     {
+      "combination": "1-4-6",
+      "value": 9.4
+     },
+     {
+      "combination": "1-5-6",
+      "value": 39.3
+     },
+     {
+      "combination": "2-3-4",
+      "value": 59.9
+     },
+     {
+      "combination": "2-3-5",
+      "value": 174.0
+     },
+     {
+      "combination": "2-3-6",
+      "value": 174.0
+     },
+     {
+      "combination": "2-4-5",
+      "value": 110.7
+     },
+     {
+      "combination": "2-4-6",
+      "value": 83.0
+     },
+     {
+      "combination": "2-5-6",
+      "value": 166.1
+     },
+     {
+      "combination": "3-4-5",
+      "value": 66.4
+     },
+     {
+      "combination": "3-4-6",
+      "value": 76.1
+     },
+     {
+      "combination": "3-5-6",
+      "value": 203.0
+     },
+     {
+      "combination": "4-5-6",
+      "value": 45.6
+     }
+    ]
+   }
+  },
+  "24-01": {
+   "stadium_id": "24",
+   "race_number": 1,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 4.5
+     },
+     {
+      "combination": "1-2-4",
+      "value": 3.8
+     },
+     {
+      "combination": "1-2-5",
+      "value": 23.6
+     },
+     {
+      "combination": "1-2-6",
+      "value": 13.9
+     },
+     {
+      "combination": "1-3-4",
+      "value": 4.8
+     },
+     {
+      "combination": "1-3-5",
+      "value": 13.9
+     },
+     {
+      "combination": "1-3-6",
+      "value": 16.3
+     },
+     {
+      "combination": "1-4-5",
+      "value": 12.5
+     },
+     {
+      "combination": "1-4-6",
+      "value": 8.3
+     },
+     {
+      "combination": "1-5-6",
+      "value": 28.5
+     },
+     {
+      "combination": "2-3-4",
+      "value": 27.7
+     },
+     {
+      "combination": "2-3-5",
+      "value": 81.8
+     },
+     {
+      "combination": "2-3-6",
+      "value": 90.0
+     },
+     {
+      "combination": "2-4-5",
+      "value": 62.0
+     },
+     {
+      "combination": "2-4-6",
+      "value": 51.4
+     },
+     {
+      "combination": "2-5-6",
+      "value": 128.6
+     },
+     {
+      "combination": "3-4-5",
+      "value": 62.0
+     },
+     {
+      "combination": "3-4-6",
+      "value": 64.3
+     },
+     {
+      "combination": "3-5-6",
+      "value": 138.5
+     },
+     {
+      "combination": "4-5-6",
+      "value": 36.7
+     }
+    ]
+   }
+  },
+  "24-02": {
+   "stadium_id": "24",
+   "race_number": 2,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 2.6
+     },
+     {
+      "combination": "1-2-4",
+      "value": 7.6
+     },
+     {
+      "combination": "1-2-5",
+      "value": 9.4
+     },
+     {
+      "combination": "1-2-6",
+      "value": 12.7
+     },
+     {
+      "combination": "1-3-4",
+      "value": 9.3
+     },
+     {
+      "combination": "1-3-5",
+      "value": 12.7
+     },
+     {
+      "combination": "1-3-6",
+      "value": 12.4
+     },
+     {
+      "combination": "1-4-5",
+      "value": 13.8
+     },
+     {
+      "combination": "1-4-6",
+      "value": 16.2
+     },
+     {
+      "combination": "1-5-6",
+      "value": 26.4
+     },
+     {
+      "combination": "2-3-4",
+      "value": 42.7
+     },
+     {
+      "combination": "2-3-5",
+      "value": 43.6
+     },
+     {
+      "combination": "2-3-6",
+      "value": 57.4
+     },
+     {
+      "combination": "2-4-5",
+      "value": 31.8
+     },
+     {
+      "combination": "2-4-6",
+      "value": 87.3
+     },
+     {
+      "combination": "2-5-6",
+      "value": 111.6
+     },
+     {
+      "combination": "3-4-5",
+      "value": 74.4
+     },
+     {
+      "combination": "3-4-6",
+      "value": 66.9
+     },
+     {
+      "combination": "3-5-6",
+      "value": 80.3
+     },
+     {
+      "combination": "4-5-6",
+      "value": 23.6
+     }
+    ]
+   }
+  },
+  "24-03": {
+   "stadium_id": "24",
+   "race_number": 3,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 4.9
+     },
+     {
+      "combination": "1-2-4",
+      "value": 7.9
+     },
+     {
+      "combination": "1-2-5",
+      "value": 10.5
+     },
+     {
+      "combination": "1-2-6",
+      "value": 7.8
+     },
+     {
+      "combination": "1-3-4",
+      "value": 7.5
+     },
+     {
+      "combination": "1-3-5",
+      "value": 17.3
+     },
+     {
+      "combination": "1-3-6",
+      "value": 5.8
+     },
+     {
+      "combination": "1-4-5",
+      "value": 18.6
+     },
+     {
+      "combination": "1-4-6",
+      "value": 6.4
+     },
+     {
+      "combination": "1-5-6",
+      "value": 18.1
+     },
+     {
+      "combination": "2-3-4",
+      "value": 75.7
+     },
+     {
+      "combination": "2-3-5",
+      "value": 148.2
+     },
+     {
+      "combination": "2-3-6",
+      "value": 53.2
+     },
+     {
+      "combination": "2-4-5",
+      "value": 131.1
+     },
+     {
+      "combination": "2-4-6",
+      "value": 57.8
+     },
+     {
+      "combination": "2-5-6",
+      "value": 126.3
+     },
+     {
+      "combination": "3-4-5",
+      "value": 59.8
+     },
+     {
+      "combination": "3-4-6",
+      "value": 30.7
+     },
+     {
+      "combination": "3-5-6",
+      "value": 87.4
+     },
+     {
+      "combination": "4-5-6",
+      "value": 38.3
+     }
+    ]
+   }
+  },
+  "24-04": {
+   "stadium_id": "24",
+   "race_number": 4,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 3.3
+     },
+     {
+      "combination": "1-2-4",
+      "value": 4.7
+     },
+     {
+      "combination": "1-2-5",
+      "value": 5.7
+     },
+     {
+      "combination": "1-2-6",
+      "value": 23.1
+     },
+     {
+      "combination": "1-3-4",
+      "value": 8.9
+     },
+     {
+      "combination": "1-3-5",
+      "value": 6.7
+     },
+     {
+      "combination": "1-3-6",
+      "value": 38.4
+     },
+     {
+      "combination": "1-4-5",
+      "value": 15.8
+     },
+     {
+      "combination": "1-4-6",
+      "value": 26.2
+     },
+     {
+      "combination": "1-5-6",
+      "value": 40.5
+     },
+     {
+      "combination": "2-3-4",
+      "value": 26.4
+     },
+     {
+      "combination": "2-3-5",
+      "value": 33.9
+     },
+     {
+      "combination": "2-3-6",
+      "value": 158.4
+     },
+     {
+      "combination": "2-4-5",
+      "value": 32.4
+     },
+     {
+      "combination": "2-4-6",
+      "value": 78.0
+     },
+     {
+      "combination": "2-5-6",
+      "value": 134.0
+     },
+     {
+      "combination": "3-4-5",
+      "value": 32.8
+     },
+     {
+      "combination": "3-4-6",
+      "value": 102.5
+     },
+     {
+      "combination": "3-5-6",
+      "value": 108.9
+     },
+     {
+      "combination": "4-5-6",
+      "value": 51.2
+     }
+    ]
+   }
+  },
+  "24-05": {
+   "stadium_id": "24",
+   "race_number": 5,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 4.3
+     },
+     {
+      "combination": "1-2-4",
+      "value": 7.4
+     },
+     {
+      "combination": "1-2-5",
+      "value": 5.6
+     },
+     {
+      "combination": "1-2-6",
+      "value": 3.4
+     },
+     {
+      "combination": "1-3-4",
+      "value": 20.6
+     },
+     {
+      "combination": "1-3-5",
+      "value": 15.4
+     },
+     {
+      "combination": "1-3-6",
+      "value": 10.4
+     },
+     {
+      "combination": "1-4-5",
+      "value": 35.3
+     },
+     {
+      "combination": "1-4-6",
+      "value": 18.9
+     },
+     {
+      "combination": "1-5-6",
+      "value": 16.0
+     },
+     {
+      "combination": "2-3-4",
+      "value": 81.0
+     },
+     {
+      "combination": "2-3-5",
+      "value": 70.0
+     },
+     {
+      "combination": "2-3-6",
+      "value": 37.9
+     },
+     {
+      "combination": "2-4-5",
+      "value": 118.1
+     },
+     {
+      "combination": "2-4-6",
+      "value": 53.6
+     },
+     {
+      "combination": "2-5-6",
+      "value": 34.7
+     },
+     {
+      "combination": "3-4-5",
+      "value": 129.1
+     },
+     {
+      "combination": "3-4-6",
+      "value": 114.8
+     },
+     {
+      "combination": "3-5-6",
+      "value": 96.1
+     },
+     {
+      "combination": "4-5-6",
+      "value": 76.5
+     }
+    ]
+   }
+  },
+  "24-06": {
+   "stadium_id": "24",
+   "race_number": 6,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 6.3
+     },
+     {
+      "combination": "1-2-4",
+      "value": 3.7
+     },
+     {
+      "combination": "1-2-5",
+      "value": 24.9
+     },
+     {
+      "combination": "1-2-6",
+      "value": 14.0
+     },
+     {
+      "combination": "1-3-4",
+      "value": 4.3
+     },
+     {
+      "combination": "1-3-5",
+      "value": 30.7
+     },
+     {
+      "combination": "1-3-6",
+      "value": 13.4
+     },
+     {
+      "combination": "1-4-5",
+      "value": 12.1
+     },
+     {
+      "combination": "1-4-6",
+      "value": 5.2
+     },
+     {
+      "combination": "1-5-6",
+      "value": 33.4
+     },
+     {
+      "combination": "2-3-4",
+      "value": 50.6
+     },
+     {
+      "combination": "2-3-5",
+      "value": 127.1
+     },
+     {
+      "combination": "2-3-6",
+      "value": 85.3
+     },
+     {
+      "combination": "2-4-5",
+      "value": 95.3
+     },
+     {
+      "combination": "2-4-6",
+      "value": 35.3
+     },
+     {
+      "combination": "2-5-6",
+      "value": 116.7
+     },
+     {
+      "combination": "3-4-5",
+      "value": 85.3
+     },
+     {
+      "combination": "3-4-6",
+      "value": 30.9
+     },
+     {
+      "combination": "3-5-6",
+      "value": 127.1
+     },
+     {
+      "combination": "4-5-6",
+      "value": 39.1
+     }
+    ]
+   }
+  },
+  "24-07": {
+   "stadium_id": "24",
+   "race_number": 7,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 4.1
+     },
+     {
+      "combination": "1-2-4",
+      "value": 3.2
+     },
+     {
+      "combination": "1-2-5",
+      "value": 6.5
+     },
+     {
+      "combination": "1-2-6",
+      "value": 30.9
+     },
+     {
+      "combination": "1-3-4",
+      "value": 5.6
+     },
+     {
+      "combination": "1-3-5",
+      "value": 13.3
+     },
+     {
+      "combination": "1-3-6",
+      "value": 41.7
+     },
+     {
+      "combination": "1-4-5",
+      "value": 6.9
+     },
+     {
+      "combination": "1-4-6",
+      "value": 28.1
+     },
+     {
+      "combination": "1-5-6",
+      "value": 31.9
+     },
+     {
+      "combination": "2-3-4",
+      "value": 42.3
+     },
+     {
+      "combination": "2-3-5",
+      "value": 73.3
+     },
+     {
+      "combination": "2-3-6",
+      "value": 190.6
+     },
+     {
+      "combination": "2-4-5",
+      "value": 63.5
+     },
+     {
+      "combination": "2-4-6",
+      "value": 67.2
+     },
+     {
+      "combination": "2-5-6",
+      "value": 116.6
+     },
+     {
+      "combination": "3-4-5",
+      "value": 96.9
+     },
+     {
+      "combination": "3-4-6",
+      "value": 142.9
+     },
+     {
+      "combination": "3-5-6",
+      "value": 238.2
+     },
+     {
+      "combination": "4-5-6",
+      "value": 90.7
+     }
+    ]
+   }
+  },
+  "24-08": {
+   "stadium_id": "24",
+   "race_number": 8,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 2.9
+     },
+     {
+      "combination": "1-2-4",
+      "value": 5.7
+     },
+     {
+      "combination": "1-2-5",
+      "value": 6.2
+     },
+     {
+      "combination": "1-2-6",
+      "value": 18.4
+     },
+     {
+      "combination": "1-3-4",
+      "value": 7.1
+     },
+     {
+      "combination": "1-3-5",
+      "value": 7.8
+     },
+     {
+      "combination": "1-3-6",
+      "value": 16.6
+     },
+     {
+      "combination": "1-4-5",
+      "value": 10.8
+     },
+     {
+      "combination": "1-4-6",
+      "value": 27.1
+     },
+     {
+      "combination": "1-5-6",
+      "value": 27.4
+     },
+     {
+      "combination": "2-3-4",
+      "value": 78.4
+     },
+     {
+      "combination": "2-3-5",
+      "value": 72.3
+     },
+     {
+      "combination": "2-3-6",
+      "value": 109.7
+     },
+     {
+      "combination": "2-4-5",
+      "value": 59.8
+     },
+     {
+      "combination": "2-4-6",
+      "value": 121.9
+     },
+     {
+      "combination": "2-5-6",
+      "value": 98.2
+     },
+     {
+      "combination": "3-4-5",
+      "value": 104.5
+     },
+     {
+      "combination": "3-4-6",
+      "value": 131.7
+     },
+     {
+      "combination": "3-5-6",
+      "value": 131.7
+     },
+     {
+      "combination": "4-5-6",
+      "value": 46.3
+     }
+    ]
+   }
+  },
+  "24-09": {
+   "stadium_id": "24",
+   "race_number": 9,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 3.2
+     },
+     {
+      "combination": "1-2-4",
+      "value": 6.0
+     },
+     {
+      "combination": "1-2-5",
+      "value": 5.0
+     },
+     {
+      "combination": "1-2-6",
+      "value": 11.6
+     },
+     {
+      "combination": "1-3-4",
+      "value": 8.5
+     },
+     {
+      "combination": "1-3-5",
+      "value": 6.0
+     },
+     {
+      "combination": "1-3-6",
+      "value": 15.1
+     },
+     {
+      "combination": "1-4-5",
+      "value": 16.7
+     },
+     {
+      "combination": "1-4-6",
+      "value": 33.8
+     },
+     {
+      "combination": "1-5-6",
+      "value": 19.3
+     },
+     {
+      "combination": "2-3-4",
+      "value": 119.4
+     },
+     {
+      "combination": "2-3-5",
+      "value": 73.0
+     },
+     {
+      "combination": "2-3-6",
+      "value": 146.0
+     },
+     {
+      "combination": "2-4-5",
+      "value": 146.0
+     },
+     {
+      "combination": "2-4-6",
+      "value": 131.4
+     },
+     {
+      "combination": "2-5-6",
+      "value": 61.4
+     },
+     {
+      "combination": "3-4-5",
+      "value": 134.0
+     },
+     {
+      "combination": "3-4-6",
+      "value": 219.0
+     },
+     {
+      "combination": "3-5-6",
+      "value": 126.3
+     },
+     {
+      "combination": "4-5-6",
+      "value": 139.8
+     }
+    ]
+   }
+  },
+  "24-10": {
+   "stadium_id": "24",
+   "race_number": 10,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 2.9
+     },
+     {
+      "combination": "1-2-4",
+      "value": 6.1
+     },
+     {
+      "combination": "1-2-5",
+      "value": 18.1
+     },
+     {
+      "combination": "1-2-6",
+      "value": 29.5
+     },
+     {
+      "combination": "1-3-4",
+      "value": 2.9
+     },
+     {
+      "combination": "1-3-5",
+      "value": 8.1
+     },
+     {
+      "combination": "1-3-6",
+      "value": 18.5
+     },
+     {
+      "combination": "1-4-5",
+      "value": 17.3
+     },
+     {
+      "combination": "1-4-6",
+      "value": 29.2
+     },
+     {
+      "combination": "1-5-6",
+      "value": 57.5
+     },
+     {
+      "combination": "2-3-4",
+      "value": 49.2
+     },
+     {
+      "combination": "2-3-5",
+      "value": 62.1
+     },
+     {
+      "combination": "2-3-6",
+      "value": 136.7
+     },
+     {
+      "combination": "2-4-5",
+      "value": 156.3
+     },
+     {
+      "combination": "2-4-6",
+      "value": 170.9
+     },
+     {
+      "combination": "2-5-6",
+      "value": 210.4
+     },
+     {
+      "combination": "3-4-5",
+      "value": 44.8
+     },
+     {
+      "combination": "3-4-6",
+      "value": 59.4
+     },
+     {
+      "combination": "3-5-6",
+      "value": 156.3
+     },
+     {
+      "combination": "4-5-6",
+      "value": 188.6
+     }
+    ]
+   }
+  },
+  "24-11": {
+   "stadium_id": "24",
+   "race_number": 11,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 5.7
+     },
+     {
+      "combination": "1-2-4",
+      "value": 4.2
+     },
+     {
+      "combination": "1-2-5",
+      "value": 6.6
+     },
+     {
+      "combination": "1-2-6",
+      "value": 30.7
+     },
+     {
+      "combination": "1-3-4",
+      "value": 6.0
+     },
+     {
+      "combination": "1-3-5",
+      "value": 6.4
+     },
+     {
+      "combination": "1-3-6",
+      "value": 27.5
+     },
+     {
+      "combination": "1-4-5",
+      "value": 5.7
+     },
+     {
+      "combination": "1-4-6",
+      "value": 30.0
+     },
+     {
+      "combination": "1-5-6",
+      "value": 29.8
+     },
+     {
+      "combination": "2-3-4",
+      "value": 76.1
+     },
+     {
+      "combination": "2-3-5",
+      "value": 43.8
+     },
+     {
+      "combination": "2-3-6",
+      "value": 148.7
+     },
+     {
+      "combination": "2-4-5",
+      "value": 38.5
+     },
+     {
+      "combination": "2-4-6",
+      "value": 193.8
+     },
+     {
+      "combination": "2-5-6",
+      "value": 99.9
+     },
+     {
+      "combination": "3-4-5",
+      "value": 42.3
+     },
+     {
+      "combination": "3-4-6",
+      "value": 139.0
+     },
+     {
+      "combination": "3-5-6",
+      "value": 94.0
+     },
+     {
+      "combination": "4-5-6",
+      "value": 59.2
+     }
+    ]
+   }
+  },
+  "24-12": {
+   "stadium_id": "24",
+   "race_number": 12,
+   "status": "pending",
+   "odds": null,
+   "odds_fetched_at": null,
+   "closing": {
+    "fetched_at": "2026-11-19T08:11:33+09:00",
+    "odds": [
+     {
+      "combination": "1-2-3",
+      "value": 3.4
+     },
+     {
+      "combination": "1-2-4",
+      "value": 5.3
+     },
+     {
+      "combination": "1-2-5",
+      "value": 11.5
+     },
+     {
+      "combination": "1-2-6",
+      "value": 28.1
+     },
+     {
+      "combination": "1-3-4",
+      "value": 3.8
+     },
+     {
+      "combination": "1-3-5",
+      "value": 7.3
+     },
+     {
+      "combination": "1-3-6",
+      "value": 19.9
+     },
+     {
+      "combination": "1-4-5",
+      "value": 10.3
+     },
+     {
+      "combination": "1-4-6",
+      "value": 18.6
+     },
+     {
+      "combination": "1-5-6",
+      "value": 28.6
+     },
+     {
+      "combination": "2-3-4",
+      "value": 52.5
+     },
+     {
+      "combination": "2-3-5",
+      "value": 88.0
+     },
+     {
+      "combination": "2-3-6",
+      "value": 154.3
+     },
+     {
+      "combination": "2-4-5",
+      "value": 93.5
+     },
+     {
+      "combination": "2-4-6",
+      "value": 130.1
+     },
+     {
+      "combination": "2-5-6",
+      "value": 132.4
+     },
+     {
+      "combination": "3-4-5",
+      "value": 58.9
+     },
+     {
+      "combination": "3-4-6",
+      "value": 96.5
+     },
+     {
+      "combination": "3-5-6",
+      "value": 145.3
+     },
+     {
+      "combination": "4-5-6",
+      "value": 89.6
+     }
+    ]
+   }
+  }
+ },
+ "updated_at": "2026-11-19T08:11:33+09:00"
+}

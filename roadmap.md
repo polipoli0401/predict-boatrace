@@ -75,6 +75,11 @@ verification. Automatic betting is out of scope.
       model vs market log-loss, calibration table
 - [x] Tests (pytest) for probabilities, odds parsing, decisions, board
       order, odds status handling, source mapping, verification rules
+- [x] Backfill of past days from walk-forward backtest probabilities
+      (manual workflow). First result, 2026-10-19..11-17, 552 races:
+      market log-loss lower than the model at all 3 stadiums; rule with
+      closing odds: 671 tickets, mean expected return 171%, realised
+      ROI 74%
 
 #### 5-2 Odds source (open)
 - [x] Official site: blocked for scripted clients (403) → not used

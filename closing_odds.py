@@ -97,25 +97,35 @@ def store_closing(day, closing, preds_doc):
     return n
 
 
-def main():
+def fetch_and_store(day, stadiums=None):
+    """Fetch one day's closing odds and store them for that day's
+    predicted races. Returns the number of races stored (or None)."""
     base = _base()
     if not base:
+        return None
+    stadiums = stadiums or target_stadium_ids()
+    resp, err = http_get(f"{base}/{day.year}/{day.strftime('%Y%m%d')}.json")
+    if resp is None or resp.status_code != 200:
+        print(f"Closing odds {day}: not available ({err})")
+        return None
+    try:
+        closing = parse_trio_closing(resp.json(), stadiums)
+    except ValueError:
+        print(f"Closing odds {day}: invalid JSON")
+        return None
+    n = store_closing(day, closing, read_json(os.path.join(
+        PRED_DIR, f"{day.isoformat()}.json")))
+    print(f"Closing odds {day}: stored for {n} races")
+    return n
+
+
+def main():
+    if not _base():
         print("Closing odds: CLOSING_ODDS_BASE_URL not set; skipped")
         return
     stadiums = target_stadium_ids()
     for day in dates_needing_closing(today_jst()):
-        resp, err = http_get(f"{base}/{day.year}/{day.strftime('%Y%m%d')}.json")
-        if resp is None or resp.status_code != 200:
-            print(f"Closing odds {day}: not available ({err})")
-            continue
-        try:
-            closing = parse_trio_closing(resp.json(), stadiums)
-        except ValueError:
-            print(f"Closing odds {day}: invalid JSON")
-            continue
-        n = store_closing(day, closing, read_json(os.path.join(
-            PRED_DIR, f"{day.isoformat()}.json")))
-        print(f"Closing odds {day}: stored for {n} races")
+        fetch_and_store(day, stadiums)
 
 
 if __name__ == "__main__":

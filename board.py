@@ -105,11 +105,11 @@ def summary_counts(rows):
 def render_markdown(rows, day, now, cfg):
     out = [f"## Races {day.isoformat()} (by deadline, JST)",
            f"Generated {iso_jst(now)} / rule: expected return ≥ "
-           f"{cfg['ev_min']*100:.0f}% and probability ≥ "
-           f"{cfg['prob_min']*100:.0f}%, odds at most "
-           f"{cfg['stale_minutes']} min old", "",
+           + f"{cfg['ev_min']*100:.0f}% and probability ≥ "
+           + f"{cfg['prob_min']*100:.0f}%, odds at most "
+           + f"{cfg['stale_minutes']} min old", "",
            "| Deadline | Race | Entries | Exhibition | Odds at | Odds "
-           "| Trio | Prob. | Break-even | Odds | Exp. return | Decision |",
+           + "| Trio | Prob. | Break-even | Odds | Exp. return | Decision |",
            "|---|---|---|---|---|---|---|---|---|---|---|---|"]
     for r in rows:
         combos = r["rows"][:3]
@@ -128,7 +128,7 @@ def render_markdown(rows, day, now, cfg):
             f"| {cell(fmt_odds)} | {cell(fmt_ev)} "
             f"| {decision} |")
     out += ["", "★ = candidate combination. Research output only: no "
-            "guarantee of hits or profit. Decisions are the user's."]
+            + "guarantee of hits or profit. Decisions are the user's."]
     return "\n".join(out)
 
 

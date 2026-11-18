@@ -198,10 +198,10 @@ def to_markdown(s):
     lines = [f"# Verification ({s['period'] or 'no data'})", "",
              f"Generated: {s['generated_at']}", "",
              "## By stadium (candidates = last pre-deadline decision, "
-             "100 JPY per ticket)", "",
+             + "100 JPY per ticket)", "",
              "| Stadium | Predicted races | Candidate races | Tickets | Hits "
-             "| Hit % | Invested | Returned | ROI % | Mean exp. return % "
-             "| Log-loss (model / market) |",
+             + "| Hit % | Invested | Returned | ROI % | Mean exp. return % "
+             + "| Log-loss (model / market) |",
              "|---|---|---|---|---|---|---|---|---|---|---|"]
     for sid, v in s["by_stadium"].items():
         name = "Total" if sid == "all" else STADIUM_NAMES.get(sid, sid)
@@ -218,10 +218,10 @@ def to_markdown(s):
             f"| {ll} |")
     lines += ["", "## Rule applied with closing odds (reference)", "",
               "The decision rule applied after the fact with closing odds. "
-              "Closing odds are not known at decision time, so this is not "
-              "the result of actual candidates.", "",
+              + "Closing odds are not known at decision time, so this is not "
+              + "the result of actual candidates.", "",
               "| Stadium | Races | Tickets | Hits | Hit % | ROI % "
-              "| Mean exp. return % |",
+              + "| Mean exp. return % |",
               "|---|---|---|---|---|---|---|"]
     for sid, v in s["by_stadium"].items():
         name = "Total" if sid == "all" else STADIUM_NAMES.get(sid, sid)
@@ -237,8 +237,8 @@ def to_markdown(s):
         lines.append(f"| {c['bin']} | {c['n']} | {c['predicted']:.3f} "
                      f"| {c['observed']:.3f} |")
     lines += ["", "Lower log-loss is better. Market = closing odds inverted and "
-              "normalised. Small samples fluctuate strongly; do not act on "
-              "them."]
+              + "normalised. Small samples fluctuate strongly; do not act on "
+              + "them."]
     return "\n".join(lines) + "\n"
 
 

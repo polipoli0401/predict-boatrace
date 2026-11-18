@@ -137,6 +137,15 @@ models, backtest and forward test (prediction_history.csv) are kept.
                              odds, inverted and normalised)
                            - probability calibration table
 
+  backfill_verification.py Fills past race days for verification without
+                           training: walk-forward probabilities from
+                           backtest_result.csv -> prediction files
+                           (marked "backfill", not in
+                           prediction_history.csv) + closing odds ->
+                           verification. The calibration used is refitted
+                           only on races before the range. Manual
+                           workflow: "BoatRace Backfill Verification".
+
   Decision (ev_config.json; all thresholds are configurable)
     Candidate     at least one combination with expected
                   return >= ev_min (1.2) AND probability >=
@@ -264,10 +273,12 @@ Method notes
   skipped (the last 14 days are still retried). The fetch step now takes
   about 1 minute; training plus prediction about 20 seconds.
 - The race-day expected return is only as good as the probabilities.
-  In a local check on 2026-11-15..17 (60 races, 2 stadiums) the market
-  (closing odds) had a lower log-loss than the model (2.17 vs 2.24),
-  so large expected returns mostly mark disagreements with the market,
-  not proven value. The sample is far too small to conclude anything. Treat candidates as
+  Backfill check 2026-10-19..11-17 (552 races, 3 stadiums): the market
+  (closing odds) had a lower log-loss than the model at every stadium
+  (total 2.14 vs 2.24). The rule applied with closing odds picked 671
+  tickets with a mean expected return of 171% but realised 74% ROI. So
+  large expected returns mostly mark disagreements with the market, not
+  value. One month of data; keep accumulating before concluding. Treat candidates as
   research output until verification over many races says otherwise.
 
 Acknowledgements

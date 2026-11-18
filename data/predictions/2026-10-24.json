@@ -1,0 +1,4264 @@
+{
+ "date": "2026-10-24",
+ "updated_at": "2026-11-19T08:11:18+09:00",
+ "model": {
+  "model_id": "walk-forward backtest"
+ },
+ "calibration": {
+  "method": "harville_from_p_win+isotonic (backfill)",
+  "fit_period": [
+   "2024-02-03",
+   "2026-10-18"
+  ]
+ },
+ "races": {
+  "21-01": {
+   "date": "2026-10-24",
+   "stadium_id": "21",
+   "race_number": 1,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 2,
+     "p_win": 0.1553,
+     "p_top3": 0.3472
+    },
+    {
+     "boat": 3,
+     "p_win": 0.0764,
+     "p_top3": 0.4413
+    },
+    {
+     "boat": 4,
+     "p_win": 0.1553,
+     "p_top3": 0.5653
+    },
+    {
+     "boat": 5,
+     "p_win": 0.2006,
+     "p_top3": 0.6731
+    },
+    {
+     "boat": 6,
+     "p_win": 0.0007,
+     "p_top3": 0.0201
+    },
+    {
+     "boat": 1,
+     "p_win": 0.4118,
+     "p_top3": 0.9141
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-2-5",
+     "probability": 0.18748,
+     "raw_probability": 0.23153
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.18748,
+     "raw_probability": 0.23153
+    },
+    {
+     "combination": "1-2-4",
+     "probability": 0.15631,
+     "raw_probability": 0.16636
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.10657,
+     "raw_probability": 0.10269
+    },
+    {
+     "combination": "1-2-3",
+     "probability": 0.08221,
+     "raw_probability": 0.0735
+    },
+    {
+     "combination": "1-3-4",
+     "probability": 0.08221,
+     "raw_probability": 0.0735
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.0643,
+     "raw_probability": 0.05317
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.03351,
+     "raw_probability": 0.02369
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.03351,
+     "raw_probability": 0.02369
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.02926,
+     "raw_probability": 0.01719
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.00583,
+     "raw_probability": 0.00087
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.00384,
+     "raw_probability": 0.00062
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.00384,
+     "raw_probability": 0.00027
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.00384,
+     "raw_probability": 0.00062
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.0034,
+     "raw_probability": 0.00015
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.0034,
+     "raw_probability": 0.0002
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.0034,
+     "raw_probability": 9e-05
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.0034,
+     "raw_probability": 0.0002
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.00311,
+     "raw_probability": 6e-05
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.00311,
+     "raw_probability": 6e-05
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "21-02": {
+   "date": "2026-10-24",
+   "stadium_id": "21",
+   "race_number": 2,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 1,
+     "p_win": 0.3266,
+     "p_top3": 0.8515
+    },
+    {
+     "boat": 2,
+     "p_win": 0.1615,
+     "p_top3": 0.4873
+    },
+    {
+     "boat": 4,
+     "p_win": 0.2642,
+     "p_top3": 0.8082
+    },
+    {
+     "boat": 5,
+     "p_win": 0.0044,
+     "p_top3": 0.0332
+    },
+    {
+     "boat": 6,
+     "p_win": 0.0299,
+     "p_top3": 0.2795
+    },
+    {
+     "boat": 3,
+     "p_win": 0.2134,
+     "p_top3": 0.7528
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-3-4",
+     "probability": 0.27096,
+     "raw_probability": 0.33103
+    },
+    {
+     "combination": "1-2-4",
+     "probability": 0.18925,
+     "raw_probability": 0.23167
+    },
+    {
+     "combination": "1-2-3",
+     "probability": 0.15779,
+     "raw_probability": 0.17069
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.12283,
+     "raw_probability": 0.12219
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.0443,
+     "raw_probability": 0.03675
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.03793,
+     "raw_probability": 0.02697
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.03057,
+     "raw_probability": 0.01932
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.02981,
+     "raw_probability": 0.01875
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.02574,
+     "raw_probability": 0.0135
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.01875,
+     "raw_probability": 0.01003
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.01297,
+     "raw_probability": 0.00528
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.01114,
+     "raw_probability": 0.00387
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.01033,
+     "raw_probability": 0.00277
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.00928,
+     "raw_probability": 0.00269
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.00758,
+     "raw_probability": 0.00194
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.00617,
+     "raw_probability": 0.00144
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.00387,
+     "raw_probability": 0.00042
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.00387,
+     "raw_probability": 0.0003
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.00343,
+     "raw_probability": 0.00016
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.00343,
+     "raw_probability": 0.00023
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "21-03": {
+   "date": "2026-10-24",
+   "stadium_id": "21",
+   "race_number": 3,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 6,
+     "p_win": 0.0228,
+     "p_top3": 0.1275
+    },
+    {
+     "boat": 4,
+     "p_win": 0.1876,
+     "p_top3": 0.5507
+    },
+    {
+     "boat": 5,
+     "p_win": 0.0396,
+     "p_top3": 0.3417
+    },
+    {
+     "boat": 1,
+     "p_win": 0.3866,
+     "p_top3": 0.832
+    },
+    {
+     "boat": 2,
+     "p_win": 0.0569,
+     "p_top3": 0.2753
+    },
+    {
+     "boat": 3,
+     "p_win": 0.3064,
+     "p_top3": 0.7851
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-3-4",
+     "probability": 0.32719,
+     "raw_probability": 0.48931
+    },
+    {
+     "combination": "1-2-3",
+     "probability": 0.12909,
+     "raw_probability": 0.12658
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.09484,
+     "raw_probability": 0.08663
+    },
+    {
+     "combination": "1-2-4",
+     "probability": 0.07313,
+     "raw_probability": 0.06022
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.06014,
+     "raw_probability": 0.04911
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.05174,
+     "raw_probability": 0.04113
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.05174,
+     "raw_probability": 0.04006
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.03876,
+     "raw_probability": 0.02737
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.03457,
+     "raw_probability": 0.02327
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.02768,
+     "raw_probability": 0.01549
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.02001,
+     "raw_probability": 0.0103
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.01662,
+     "raw_probability": 0.00694
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.01326,
+     "raw_probability": 0.00582
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.01138,
+     "raw_probability": 0.00396
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.01138,
+     "raw_probability": 0.00392
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.01056,
+     "raw_probability": 0.00351
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.00948,
+     "raw_probability": 0.00268
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.00816,
+     "raw_probability": 0.00198
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.0063,
+     "raw_probability": 0.00135
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.00396,
+     "raw_probability": 0.00035
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "21-04": {
+   "date": "2026-10-24",
+   "stadium_id": "21",
+   "race_number": 4,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 2,
+     "p_win": 0.1365,
+     "p_top3": 0.5405
+    },
+    {
+     "boat": 3,
+     "p_win": 0.1027,
+     "p_top3": 0.4009
+    },
+    {
+     "boat": 4,
+     "p_win": 0.2614,
+     "p_top3": 0.7379
+    },
+    {
+     "boat": 5,
+     "p_win": 0.0302,
+     "p_top3": 0.3358
+    },
+    {
+     "boat": 6,
+     "p_win": 0.0009,
+     "p_top3": 0.0151
+    },
+    {
+     "boat": 1,
+     "p_win": 0.4683,
+     "p_top3": 0.9397
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-2-4",
+     "probability": 0.30615,
+     "raw_probability": 0.39816
+    },
+    {
+     "combination": "1-3-4",
+     "probability": 0.2433,
+     "raw_probability": 0.28702
+    },
+    {
+     "combination": "1-2-3",
+     "probability": 0.12729,
+     "raw_probability": 0.11592
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.09546,
+     "raw_probability": 0.07815
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.05386,
+     "raw_probability": 0.04046
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.04663,
+     "raw_probability": 0.03112
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.03599,
+     "raw_probability": 0.02217
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.02083,
+     "raw_probability": 0.01095
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.0173,
+     "raw_probability": 0.00788
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.01099,
+     "raw_probability": 0.00342
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.00961,
+     "raw_probability": 0.00227
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.00626,
+     "raw_probability": 0.0009
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.00412,
+     "raw_probability": 0.00032
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.00412,
+     "raw_probability": 0.00064
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.00365,
+     "raw_probability": 0.0001
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.00365,
+     "raw_probability": 0.00023
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.00365,
+     "raw_probability": 0.00017
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.00334,
+     "raw_probability": 6e-05
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.00189,
+     "raw_probability": 3e-05
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.00189,
+     "raw_probability": 2e-05
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "21-05": {
+   "date": "2026-10-24",
+   "stadium_id": "21",
+   "race_number": 5,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 1,
+     "p_win": 0.4187,
+     "p_top3": 0.9393
+    },
+    {
+     "boat": 2,
+     "p_win": 0.1678,
+     "p_top3": 0.5866
+    },
+    {
+     "boat": 4,
+     "p_win": 0.2132,
+     "p_top3": 0.6375
+    },
+    {
+     "boat": 5,
+     "p_win": 0.1219,
+     "p_top3": 0.536
+    },
+    {
+     "boat": 6,
+     "p_win": 0.0007,
+     "p_top3": 0.0148
+    },
+    {
+     "boat": 3,
+     "p_win": 0.0776,
+     "p_top3": 0.3581
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-2-4",
+     "probability": 0.22364,
+     "raw_probability": 0.28754
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.15962,
+     "raw_probability": 0.19568
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.14309,
+     "raw_probability": 0.1421
+    },
+    {
+     "combination": "1-3-4",
+     "probability": 0.12011,
+     "raw_probability": 0.11792
+    },
+    {
+     "combination": "1-2-3",
+     "probability": 0.09074,
+     "raw_probability": 0.08543
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.06893,
+     "raw_probability": 0.05772
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.05664,
+     "raw_probability": 0.04761
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.04287,
+     "raw_probability": 0.02873
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.02989,
+     "raw_probability": 0.01961
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.02648,
+     "raw_probability": 0.01445
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.00603,
+     "raw_probability": 0.00098
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.00516,
+     "raw_probability": 0.00071
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.00379,
+     "raw_probability": 0.00048
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.00379,
+     "raw_probability": 0.00028
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.00336,
+     "raw_probability": 0.00024
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.00336,
+     "raw_probability": 0.00012
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.00336,
+     "raw_probability": 7e-05
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.00336,
+     "raw_probability": 0.00016
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.00336,
+     "raw_probability": 0.0001
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.00244,
+     "raw_probability": 5e-05
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "21-06": {
+   "date": "2026-10-24",
+   "stadium_id": "21",
+   "race_number": 6,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 1,
+     "p_win": 0.2964,
+     "p_top3": 0.7027
+    },
+    {
+     "boat": 2,
+     "p_win": 0.3122,
+     "p_top3": 0.8797
+    },
+    {
+     "boat": 3,
+     "p_win": 0.1726,
+     "p_top3": 0.5349
+    },
+    {
+     "boat": 4,
+     "p_win": 0.0646,
+     "p_top3": 0.1692
+    },
+    {
+     "boat": 5,
+     "p_win": 0.0895,
+     "p_top3": 0.4677
+    },
+    {
+     "boat": 6,
+     "p_win": 0.0648,
+     "p_top3": 0.37
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-2-3",
+     "probability": 0.20069,
+     "raw_probability": 0.27884
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.11543,
+     "raw_probability": 0.13009
+    },
+    {
+     "combination": "1-2-4",
+     "probability": 0.08399,
+     "raw_probability": 0.09137
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.08399,
+     "raw_probability": 0.09167
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.06472,
+     "raw_probability": 0.06055
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.06168,
+     "raw_probability": 0.05576
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.04585,
+     "raw_probability": 0.04246
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.04585,
+     "raw_probability": 0.0426
+    },
+    {
+     "combination": "1-3-4",
+     "probability": 0.04579,
+     "raw_probability": 0.0391
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.04579,
+     "raw_probability": 0.03923
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.02765,
+     "raw_probability": 0.01962
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.02765,
+     "raw_probability": 0.01969
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.02671,
+     "raw_probability": 0.01809
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.02671,
+     "raw_probability": 0.01815
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.02328,
+     "raw_probability": 0.01379
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.01799,
+     "raw_probability": 0.01272
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.01608,
+     "raw_probability": 0.00865
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.01608,
+     "raw_probability": 0.00868
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.01471,
+     "raw_probability": 0.00609
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.00934,
+     "raw_probability": 0.00284
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "21-07": {
+   "date": "2026-10-24",
+   "stadium_id": "21",
+   "race_number": 7,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 1,
+     "p_win": 0.3919,
+     "p_top3": 0.7398
+    },
+    {
+     "boat": 2,
+     "p_win": 0.2241,
+     "p_top3": 0.6851
+    },
+    {
+     "boat": 3,
+     "p_win": 0.1769,
+     "p_top3": 0.5266
+    },
+    {
+     "boat": 4,
+     "p_win": 0.1665,
+     "p_top3": 0.4532
+    },
+    {
+     "boat": 5,
+     "p_win": 0.0357,
+     "p_top3": 0.3157
+    },
+    {
+     "boat": 6,
+     "p_win": 0.0049,
+     "p_top3": 0.0447
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-2-3",
+     "probability": 0.23085,
+     "raw_probability": 0.28664
+    },
+    {
+     "combination": "1-2-4",
+     "probability": 0.22107,
+     "raw_probability": 0.2656
+    },
+    {
+     "combination": "1-3-4",
+     "probability": 0.16477,
+     "raw_probability": 0.19334
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.09057,
+     "raw_probability": 0.07882
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.05847,
+     "raw_probability": 0.04849
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.04471,
+     "raw_probability": 0.03508
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.04425,
+     "raw_probability": 0.03245
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.02734,
+     "raw_probability": 0.01441
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.02008,
+     "raw_probability": 0.01336
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.01867,
+     "raw_probability": 0.00982
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.01642,
+     "raw_probability": 0.00646
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.01225,
+     "raw_probability": 0.00467
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.01225,
+     "raw_probability": 0.00431
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.00765,
+     "raw_probability": 0.00192
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.00765,
+     "raw_probability": 0.00178
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.00622,
+     "raw_probability": 0.00131
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.00594,
+     "raw_probability": 0.00077
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.00391,
+     "raw_probability": 0.00032
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.00346,
+     "raw_probability": 0.00024
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.00346,
+     "raw_probability": 0.00022
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "21-08": {
+   "date": "2026-10-24",
+   "stadium_id": "21",
+   "race_number": 8,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 2,
+     "p_win": 0.3511,
+     "p_top3": 0.8332
+    },
+    {
+     "boat": 3,
+     "p_win": 0.1647,
+     "p_top3": 0.5391
+    },
+    {
+     "boat": 1,
+     "p_win": 0.3595,
+     "p_top3": 0.8489
+    },
+    {
+     "boat": 5,
+     "p_win": 0.0303,
+     "p_top3": 0.2415
+    },
+    {
+     "boat": 6,
+     "p_win": 0.0926,
+     "p_top3": 0.4527
+    },
+    {
+     "boat": 4,
+     "p_win": 0.0019,
+     "p_top3": 0.0342
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-2-3",
+     "probability": 0.34349,
+     "raw_probability": 0.4607
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.20305,
+     "raw_probability": 0.23752
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.09358,
+     "raw_probability": 0.07538
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.08904,
+     "raw_probability": 0.07227
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.08904,
+     "raw_probability": 0.07311
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.0363,
+     "raw_probability": 0.02204
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.0363,
+     "raw_probability": 0.02298
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.02135,
+     "raw_probability": 0.01117
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.02135,
+     "raw_probability": 0.01164
+    },
+    {
+     "combination": "1-2-4",
+     "probability": 0.01302,
+     "raw_probability": 0.00447
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.01195,
+     "raw_probability": 0.00383
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.00662,
+     "raw_probability": 0.00134
+    },
+    {
+     "combination": "1-3-4",
+     "probability": 0.00662,
+     "raw_probability": 0.0014
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.00566,
+     "raw_probability": 0.00068
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.00566,
+     "raw_probability": 0.00071
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.00368,
+     "raw_probability": 0.00021
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.00368,
+     "raw_probability": 0.00023
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.00368,
+     "raw_probability": 0.00021
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.00337,
+     "raw_probability": 7e-05
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.00258,
+     "raw_probability": 4e-05
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "21-09": {
+   "date": "2026-10-24",
+   "stadium_id": "21",
+   "race_number": 9,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 6,
+     "p_win": 0.0565,
+     "p_top3": 0.3503
+    },
+    {
+     "boat": 1,
+     "p_win": 0.401,
+     "p_top3": 0.8563
+    },
+    {
+     "boat": 2,
+     "p_win": 0.2313,
+     "p_top3": 0.6493
+    },
+    {
+     "boat": 3,
+     "p_win": 0.1373,
+     "p_top3": 0.5834
+    },
+    {
+     "boat": 4,
+     "p_win": 0.1057,
+     "p_top3": 0.3679
+    },
+    {
+     "boat": 5,
+     "p_win": 0.0683,
+     "p_top3": 0.2561
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-2-3",
+     "probability": 0.17083,
+     "raw_probability": 0.2304
+    },
+    {
+     "combination": "1-2-4",
+     "probability": 0.14243,
+     "raw_probability": 0.17029
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.09711,
+     "raw_probability": 0.10534
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.08376,
+     "raw_probability": 0.08603
+    },
+    {
+     "combination": "1-3-4",
+     "probability": 0.08376,
+     "raw_probability": 0.08601
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.05859,
+     "raw_probability": 0.05302
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.0472,
+     "raw_probability": 0.04325
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.0457,
+     "raw_probability": 0.03899
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.03999,
+     "raw_probability": 0.03541
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.03957,
+     "raw_probability": 0.03179
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.03054,
+     "raw_probability": 0.02189
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.02759,
+     "raw_probability": 0.01955
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.02666,
+     "raw_probability": 0.01787
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.02445,
+     "raw_probability": 0.01618
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.01796,
+     "raw_probability": 0.01321
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.01512,
+     "raw_probability": 0.00839
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.01468,
+     "raw_probability": 0.00816
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.01468,
+     "raw_probability": 0.00685
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.01005,
+     "raw_probability": 0.00424
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.00932,
+     "raw_probability": 0.00314
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "21-10": {
+   "date": "2026-10-24",
+   "stadium_id": "21",
+   "race_number": 10,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 3,
+     "p_win": 0.0448,
+     "p_top3": 0.3628
+    },
+    {
+     "boat": 4,
+     "p_win": 0.1368,
+     "p_top3": 0.4404
+    },
+    {
+     "boat": 5,
+     "p_win": 0.1832,
+     "p_top3": 0.5958
+    },
+    {
+     "boat": 6,
+     "p_win": 0.0245,
+     "p_top3": 0.1974
+    },
+    {
+     "boat": 2,
+     "p_win": 0.2319,
+     "p_top3": 0.6747
+    },
+    {
+     "boat": 1,
+     "p_win": 0.3788,
+     "p_top3": 0.8005
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-2-5",
+     "probability": 0.21745,
+     "raw_probability": 0.294
+    },
+    {
+     "combination": "1-2-4",
+     "probability": 0.15618,
+     "raw_probability": 0.20539
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.14296,
+     "raw_probability": 0.14895
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.07361,
+     "raw_probability": 0.06812
+    },
+    {
+     "combination": "1-2-3",
+     "probability": 0.06803,
+     "raw_probability": 0.06035
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.04972,
+     "raw_probability": 0.04359
+    },
+    {
+     "combination": "1-3-4",
+     "probability": 0.04168,
+     "raw_probability": 0.03022
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.04168,
+     "raw_probability": 0.03234
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.03217,
+     "raw_probability": 0.02334
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.02906,
+     "raw_probability": 0.02
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.02575,
+     "raw_probability": 0.01617
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.02447,
+     "raw_probability": 0.01398
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.01862,
+     "raw_probability": 0.01026
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.01862,
+     "raw_probability": 0.01071
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.01547,
+     "raw_probability": 0.00749
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.01233,
+     "raw_probability": 0.00549
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.01154,
+     "raw_probability": 0.00468
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.00759,
+     "raw_probability": 0.00219
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.0072,
+     "raw_probability": 0.00161
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.00586,
+     "raw_probability": 0.00113
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "21-11": {
+   "date": "2026-10-24",
+   "stadium_id": "21",
+   "race_number": 11,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 1,
+     "p_win": 0.3974,
+     "p_top3": 0.8864
+    },
+    {
+     "boat": 2,
+     "p_win": 0.0537,
+     "p_top3": 0.3182
+    },
+    {
+     "boat": 3,
+     "p_win": 0.2497,
+     "p_top3": 0.8098
+    },
+    {
+     "boat": 4,
+     "p_win": 0.148,
+     "p_top3": 0.5176
+    },
+    {
+     "boat": 5,
+     "p_win": 0.0921,
+     "p_top3": 0.3524
+    },
+    {
+     "boat": 6,
+     "p_win": 0.0591,
+     "p_top3": 0.2506
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-3-4",
+     "probability": 0.20153,
+     "raw_probability": 0.27717
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.14394,
+     "raw_probability": 0.16072
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.09412,
+     "raw_probability": 0.09943
+    },
+    {
+     "combination": "1-2-3",
+     "probability": 0.0854,
+     "raw_probability": 0.08983
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.08257,
+     "raw_probability": 0.07927
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.05415,
+     "raw_probability": 0.04888
+    },
+    {
+     "combination": "1-2-4",
+     "probability": 0.04812,
+     "raw_probability": 0.04414
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.04076,
+     "raw_probability": 0.03694
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.0349,
+     "raw_probability": 0.02805
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.03122,
+     "raw_probability": 0.02532
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.03113,
+     "raw_probability": 0.02282
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.02813,
+     "raw_probability": 0.02061
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.02492,
+     "raw_probability": 0.01557
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.01831,
+     "raw_probability": 0.01192
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.01831,
+     "raw_probability": 0.0132
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.01497,
+     "raw_probability": 0.00736
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.01497,
+     "raw_probability": 0.00609
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.01497,
+     "raw_probability": 0.00674
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.01025,
+     "raw_probability": 0.00376
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.00734,
+     "raw_probability": 0.00218
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "21-12": {
+   "date": "2026-10-24",
+   "stadium_id": "21",
+   "race_number": 12,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 5,
+     "p_win": 0.1279,
+     "p_top3": 0.5014
+    },
+    {
+     "boat": 1,
+     "p_win": 0.4637,
+     "p_top3": 0.877
+    },
+    {
+     "boat": 2,
+     "p_win": 0.1477,
+     "p_top3": 0.5421
+    },
+    {
+     "boat": 3,
+     "p_win": 0.1373,
+     "p_top3": 0.4339
+    },
+    {
+     "boat": 4,
+     "p_win": 0.0975,
+     "p_top3": 0.3912
+    },
+    {
+     "boat": 6,
+     "p_win": 0.026,
+     "p_top3": 0.2002
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-2-3",
+     "probability": 0.14381,
+     "raw_probability": 0.17537
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.13905,
+     "raw_probability": 0.16104
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.13366,
+     "raw_probability": 0.14723
+    },
+    {
+     "combination": "1-2-4",
+     "probability": 0.10637,
+     "raw_probability": 0.11757
+    },
+    {
+     "combination": "1-3-4",
+     "probability": 0.09564,
+     "raw_probability": 0.10744
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.09092,
+     "raw_probability": 0.09859
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.03897,
+     "raw_probability": 0.02874
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.03372,
+     "raw_probability": 0.02624
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.03016,
+     "raw_probability": 0.0249
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.03007,
+     "raw_probability": 0.02406
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.02625,
+     "raw_probability": 0.01748
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.02625,
+     "raw_probability": 0.01828
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.02408,
+     "raw_probability": 0.01682
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.02408,
+     "raw_probability": 0.01542
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.01079,
+     "raw_probability": 0.0045
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.0099,
+     "raw_probability": 0.00414
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.0099,
+     "raw_probability": 0.0038
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.00918,
+     "raw_probability": 0.00304
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.00918,
+     "raw_probability": 0.00279
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.00803,
+     "raw_probability": 0.00257
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "24-01": {
+   "date": "2026-10-24",
+   "stadium_id": "24",
+   "race_number": 1,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 3,
+     "p_win": 0.197,
+     "p_top3": 0.5957
+    },
+    {
+     "boat": 4,
+     "p_win": 0.1656,
+     "p_top3": 0.6456
+    },
+    {
+     "boat": 5,
+     "p_win": 0.0421,
+     "p_top3": 0.4069
+    },
+    {
+     "boat": 6,
+     "p_win": 0.0006,
+     "p_top3": 0.0274
+    },
+    {
+     "boat": 2,
+     "p_win": 0.2665,
+     "p_top3": 0.7728
+    },
+    {
+     "boat": 1,
+     "p_win": 0.3282,
+     "p_top3": 0.7149
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-2-3",
+     "probability": 0.23279,
+     "raw_probability": 0.30424
+    },
+    {
+     "combination": "1-2-4",
+     "probability": 0.21422,
+     "raw_probability": 0.24414
+    },
+    {
+     "combination": "1-3-4",
+     "probability": 0.15922,
+     "raw_probability": 0.15953
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.1218,
+     "raw_probability": 0.11483
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.06607,
+     "raw_probability": 0.05354
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.04509,
+     "raw_probability": 0.03481
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.03861,
+     "raw_probability": 0.02782
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.03453,
+     "raw_probability": 0.02509
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.03111,
+     "raw_probability": 0.02011
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.02025,
+     "raw_probability": 0.01329
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.00537,
+     "raw_probability": 0.00073
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.00394,
+     "raw_probability": 0.00034
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.00394,
+     "raw_probability": 0.00048
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.00394,
+     "raw_probability": 0.00027
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.00394,
+     "raw_probability": 0.00038
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.00349,
+     "raw_probability": 0.00018
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.00349,
+     "raw_probability": 8e-05
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.0032,
+     "raw_probability": 6e-05
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.00254,
+     "raw_probability": 4e-05
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.00245,
+     "raw_probability": 3e-05
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "24-02": {
+   "date": "2026-10-24",
+   "stadium_id": "24",
+   "race_number": 2,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 1,
+     "p_win": 0.3576,
+     "p_top3": 0.8286
+    },
+    {
+     "boat": 2,
+     "p_win": 0.2276,
+     "p_top3": 0.7543
+    },
+    {
+     "boat": 3,
+     "p_win": 0.1444,
+     "p_top3": 0.5949
+    },
+    {
+     "boat": 5,
+     "p_win": 0.0053,
+     "p_top3": 0.0838
+    },
+    {
+     "boat": 6,
+     "p_win": 0.0158,
+     "p_top3": 0.164
+    },
+    {
+     "boat": 4,
+     "p_win": 0.2494,
+     "p_top3": 0.7697
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-2-4",
+     "probability": 0.30223,
+     "raw_probability": 0.39052
+    },
+    {
+     "combination": "1-3-4",
+     "probability": 0.19875,
+     "raw_probability": 0.21818
+    },
+    {
+     "combination": "1-2-3",
+     "probability": 0.16989,
+     "raw_probability": 0.19112
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.11298,
+     "raw_probability": 0.1071
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.0321,
+     "raw_probability": 0.02064
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.03102,
+     "raw_probability": 0.01804
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.0197,
+     "raw_probability": 0.01011
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.01943,
+     "raw_probability": 0.00993
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.01708,
+     "raw_probability": 0.00599
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.01708,
+     "raw_probability": 0.00686
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.01362,
+     "raw_probability": 0.00497
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.01362,
+     "raw_probability": 0.00564
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.01085,
+     "raw_probability": 0.0033
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.01085,
+     "raw_probability": 0.00336
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.00796,
+     "raw_probability": 0.00165
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.00796,
+     "raw_probability": 0.00187
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.00407,
+     "raw_probability": 0.00031
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.0036,
+     "raw_probability": 0.00015
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.0036,
+     "raw_probability": 9e-05
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.0036,
+     "raw_probability": 0.00018
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "24-03": {
+   "date": "2026-10-24",
+   "stadium_id": "24",
+   "race_number": 3,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 5,
+     "p_win": 0.0432,
+     "p_top3": 0.3653
+    },
+    {
+     "boat": 6,
+     "p_win": 0.0006,
+     "p_top3": 0.0149
+    },
+    {
+     "boat": 1,
+     "p_win": 0.3471,
+     "p_top3": 0.6813
+    },
+    {
+     "boat": 2,
+     "p_win": 0.336,
+     "p_top3": 0.9316
+    },
+    {
+     "boat": 3,
+     "p_win": 0.1947,
+     "p_top3": 0.7367
+    },
+    {
+     "boat": 4,
+     "p_win": 0.0785,
+     "p_top3": 0.4851
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-2-3",
+     "probability": 0.34987,
+     "raw_probability": 0.48781
+    },
+    {
+     "combination": "1-2-4",
+     "probability": 0.17245,
+     "raw_probability": 0.1699
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.10142,
+     "raw_probability": 0.09025
+    },
+    {
+     "combination": "1-3-4",
+     "probability": 0.09069,
+     "raw_probability": 0.07323
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.08553,
+     "raw_probability": 0.06921
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.05533,
+     "raw_probability": 0.03875
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.04841,
+     "raw_probability": 0.03663
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.02174,
+     "raw_probability": 0.01319
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.02174,
+     "raw_probability": 0.01248
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.01418,
+     "raw_probability": 0.00569
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.00674,
+     "raw_probability": 0.00121
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.00423,
+     "raw_probability": 0.00052
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.00423,
+     "raw_probability": 0.00049
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.00375,
+     "raw_probability": 9e-05
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.00375,
+     "raw_probability": 9e-05
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.00375,
+     "raw_probability": 0.00017
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.00375,
+     "raw_probability": 0.00017
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.00375,
+     "raw_probability": 8e-05
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.00273,
+     "raw_probability": 4e-05
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.00194,
+     "raw_probability": 1e-05
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "24-04": {
+   "date": "2026-10-24",
+   "stadium_id": "24",
+   "race_number": 4,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 4,
+     "p_win": 0.0772,
+     "p_top3": 0.3416
+    },
+    {
+     "boat": 6,
+     "p_win": 0.0026,
+     "p_top3": 0.0446
+    },
+    {
+     "boat": 3,
+     "p_win": 0.1743,
+     "p_top3": 0.5566
+    },
+    {
+     "boat": 5,
+     "p_win": 0.0776,
+     "p_top3": 0.37
+    },
+    {
+     "boat": 2,
+     "p_win": 0.376,
+     "p_top3": 0.8189
+    },
+    {
+     "boat": 1,
+     "p_win": 0.2923,
+     "p_top3": 0.6219
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-2-3",
+     "probability": 0.28253,
+     "raw_probability": 0.38826
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.15356,
+     "raw_probability": 0.15327
+    },
+    {
+     "combination": "1-2-4",
+     "probability": 0.14761,
+     "raw_probability": 0.15242
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.08147,
+     "raw_probability": 0.07202
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.08147,
+     "raw_probability": 0.07243
+    },
+    {
+     "combination": "1-3-4",
+     "probability": 0.05687,
+     "raw_probability": 0.04698
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.05687,
+     "raw_probability": 0.04725
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.03724,
+     "raw_probability": 0.02792
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.02899,
+     "raw_probability": 0.01837
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.01746,
+     "raw_probability": 0.00908
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.01191,
+     "raw_probability": 0.00477
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.00783,
+     "raw_probability": 0.00224
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.00605,
+     "raw_probability": 0.00146
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.00578,
+     "raw_probability": 0.00086
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.00578,
+     "raw_probability": 0.00086
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.0038,
+     "raw_probability": 0.00028
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.0038,
+     "raw_probability": 0.00057
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.0038,
+     "raw_probability": 0.00028
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.0038,
+     "raw_probability": 0.00057
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.00337,
+     "raw_probability": 0.00011
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "24-05": {
+   "date": "2026-10-24",
+   "stadium_id": "24",
+   "race_number": 5,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 1,
+     "p_win": 0.3141,
+     "p_top3": 0.4701
+    },
+    {
+     "boat": 2,
+     "p_win": 0.0836,
+     "p_top3": 0.3618
+    },
+    {
+     "boat": 4,
+     "p_win": 0.1981,
+     "p_top3": 0.6272
+    },
+    {
+     "boat": 5,
+     "p_win": 0.1084,
+     "p_top3": 0.4261
+    },
+    {
+     "boat": 6,
+     "p_win": 0.0442,
+     "p_top3": 0.2591
+    },
+    {
+     "boat": 3,
+     "p_win": 0.2516,
+     "p_top3": 0.7481
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-3-4",
+     "probability": 0.1958,
+     "raw_probability": 0.26102
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.11293,
+     "raw_probability": 0.12628
+    },
+    {
+     "combination": "1-2-3",
+     "probability": 0.08897,
+     "raw_probability": 0.09459
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.08297,
+     "raw_probability": 0.09057
+    },
+    {
+     "combination": "1-2-4",
+     "probability": 0.06922,
+     "raw_probability": 0.0678
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.06769,
+     "raw_probability": 0.06456
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.05179,
+     "raw_probability": 0.04792
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.05179,
+     "raw_probability": 0.04834
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.0396,
+     "raw_probability": 0.03431
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.03919,
+     "raw_probability": 0.03256
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.03025,
+     "raw_probability": 0.02333
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.03025,
+     "raw_probability": 0.02446
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.02421,
+     "raw_probability": 0.01644
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.02421,
+     "raw_probability": 0.01689
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.01779,
+     "raw_probability": 0.01229
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.01779,
+     "raw_probability": 0.01179
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.0159,
+     "raw_probability": 0.00882
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.0159,
+     "raw_probability": 0.00854
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.01454,
+     "raw_probability": 0.00639
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.00924,
+     "raw_probability": 0.0031
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "24-06": {
+   "date": "2026-10-24",
+   "stadium_id": "24",
+   "race_number": 6,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 1,
+     "p_win": 0.2774,
+     "p_top3": 0.6987
+    },
+    {
+     "boat": 2,
+     "p_win": 0.3839,
+     "p_top3": 0.8805
+    },
+    {
+     "boat": 4,
+     "p_win": 0.2109,
+     "p_top3": 0.6687
+    },
+    {
+     "boat": 3,
+     "p_win": 0.069,
+     "p_top3": 0.4616
+    },
+    {
+     "boat": 5,
+     "p_win": 0.0011,
+     "p_top3": 0.0323
+    },
+    {
+     "boat": 6,
+     "p_win": 0.0577,
+     "p_top3": 0.3448
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-2-4",
+     "probability": 0.33785,
+     "raw_probability": 0.47597
+    },
+    {
+     "combination": "1-2-3",
+     "probability": 0.1333,
+     "raw_probability": 0.1291
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.11353,
+     "raw_probability": 0.10669
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.09793,
+     "raw_probability": 0.08556
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.08758,
+     "raw_probability": 0.07065
+    },
+    {
+     "combination": "1-3-4",
+     "probability": 0.0621,
+     "raw_probability": 0.04922
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.05343,
+     "raw_probability": 0.04065
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.03117,
+     "raw_probability": 0.01862
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.02066,
+     "raw_probability": 0.01092
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.01717,
+     "raw_probability": 0.00746
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.008,
+     "raw_probability": 0.00193
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.00651,
+     "raw_probability": 0.00127
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.00557,
+     "raw_probability": 0.00073
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.00409,
+     "raw_probability": 0.00033
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.00409,
+     "raw_probability": 0.00027
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.00362,
+     "raw_probability": 0.0002
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.00362,
+     "raw_probability": 0.00016
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.00362,
+     "raw_probability": 0.00013
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.00362,
+     "raw_probability": 0.00011
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.00254,
+     "raw_probability": 3e-05
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "24-07": {
+   "date": "2026-10-24",
+   "stadium_id": "24",
+   "race_number": 7,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 2,
+     "p_win": 0.1533,
+     "p_top3": 0.5188
+    },
+    {
+     "boat": 3,
+     "p_win": 0.29,
+     "p_top3": 0.8237
+    },
+    {
+     "boat": 4,
+     "p_win": 0.0553,
+     "p_top3": 0.3096
+    },
+    {
+     "boat": 5,
+     "p_win": 0.0019,
+     "p_top3": 0.0182
+    },
+    {
+     "boat": 6,
+     "p_win": 0.0341,
+     "p_top3": 0.2943
+    },
+    {
+     "boat": 1,
+     "p_win": 0.4653,
+     "p_top3": 0.9398
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-2-3",
+     "probability": 0.37436,
+     "raw_probability": 0.53919
+    },
+    {
+     "combination": "1-3-4",
+     "probability": 0.1807,
+     "raw_probability": 0.17379
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.12134,
+     "raw_probability": 0.10506
+    },
+    {
+     "combination": "1-2-4",
+     "probability": 0.08733,
+     "raw_probability": 0.06685
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.05711,
+     "raw_probability": 0.04023
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.04278,
+     "raw_probability": 0.02767
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.03055,
+     "raw_probability": 0.01667
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.02244,
+     "raw_probability": 0.01248
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.01463,
+     "raw_probability": 0.0053
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.01463,
+     "raw_probability": 0.00569
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.01019,
+     "raw_probability": 0.00227
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.009,
+     "raw_probability": 0.00217
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.00664,
+     "raw_probability": 0.0009
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.00595,
+     "raw_probability": 0.00067
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.00437,
+     "raw_probability": 0.00029
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.00437,
+     "raw_probability": 0.0004
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.00387,
+     "raw_probability": 0.00012
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.00387,
+     "raw_probability": 7e-05
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.00387,
+     "raw_probability": 0.00017
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.002,
+     "raw_probability": 2e-05
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "24-08": {
+   "date": "2026-10-24",
+   "stadium_id": "24",
+   "race_number": 8,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 1,
+     "p_win": 0.3847,
+     "p_top3": 0.8774
+    },
+    {
+     "boat": 2,
+     "p_win": 0.0609,
+     "p_top3": 0.3732
+    },
+    {
+     "boat": 3,
+     "p_win": 0.1327,
+     "p_top3": 0.5354
+    },
+    {
+     "boat": 4,
+     "p_win": 0.3109,
+     "p_top3": 0.8404
+    },
+    {
+     "boat": 5,
+     "p_win": 0.1083,
+     "p_top3": 0.4295
+    },
+    {
+     "boat": 6,
+     "p_win": 0.0025,
+     "p_top3": 0.072
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-3-4",
+     "probability": 0.24354,
+     "raw_probability": 0.32605
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.218,
+     "raw_probability": 0.25846
+    },
+    {
+     "combination": "1-2-4",
+     "probability": 0.13991,
+     "raw_probability": 0.13813
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.08932,
+     "raw_probability": 0.07835
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.06461,
+     "raw_probability": 0.05409
+    },
+    {
+     "combination": "1-2-3",
+     "probability": 0.05046,
+     "raw_probability": 0.04153
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.04364,
+     "raw_probability": 0.03273
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.04364,
+     "raw_probability": 0.02873
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.03368,
+     "raw_probability": 0.02269
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.01619,
+     "raw_probability": 0.00733
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.01291,
+     "raw_probability": 0.00537
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.00754,
+     "raw_probability": 0.0016
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.00614,
+     "raw_probability": 0.00126
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.00614,
+     "raw_probability": 0.00111
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.00586,
+     "raw_probability": 0.00087
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.00388,
+     "raw_probability": 0.00066
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.00386,
+     "raw_probability": 0.00046
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.00386,
+     "raw_probability": 0.00028
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.00342,
+     "raw_probability": 0.00015
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.00342,
+     "raw_probability": 0.00012
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "24-09": {
+   "date": "2026-10-24",
+   "stadium_id": "24",
+   "race_number": 9,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 6,
+     "p_win": 0.1146,
+     "p_top3": 0.6087
+    },
+    {
+     "boat": 1,
+     "p_win": 0.3938,
+     "p_top3": 0.8571
+    },
+    {
+     "boat": 2,
+     "p_win": 0.172,
+     "p_top3": 0.6016
+    },
+    {
+     "boat": 3,
+     "p_win": 0.2338,
+     "p_top3": 0.7499
+    },
+    {
+     "boat": 4,
+     "p_win": 0.0779,
+     "p_top3": 0.2134
+    },
+    {
+     "boat": 5,
+     "p_win": 0.0078,
+     "p_top3": 0.0695
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-2-3",
+     "probability": 0.2177,
+     "raw_probability": 0.29698
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.15399,
+     "raw_probability": 0.18287
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.11692,
+     "raw_probability": 0.12045
+    },
+    {
+     "combination": "1-3-4",
+     "probability": 0.11692,
+     "raw_probability": 0.11898
+    },
+    {
+     "combination": "1-2-4",
+     "probability": 0.08541,
+     "raw_probability": 0.07819
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.06178,
+     "raw_probability": 0.05183
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.05514,
+     "raw_probability": 0.04773
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.04217,
+     "raw_probability": 0.03371
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.0316,
+     "raw_probability": 0.02077
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.0245,
+     "raw_probability": 0.01394
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.01894,
+     "raw_probability": 0.01108
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.01548,
+     "raw_probability": 0.00725
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.01155,
+     "raw_probability": 0.00441
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.00983,
+     "raw_probability": 0.00285
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.00983,
+     "raw_probability": 0.00313
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.00721,
+     "raw_probability": 0.00193
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.00587,
+     "raw_probability": 0.00129
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.00587,
+     "raw_probability": 0.00125
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.0056,
+     "raw_probability": 0.00084
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.00369,
+     "raw_probability": 0.00052
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "24-10": {
+   "date": "2026-10-24",
+   "stadium_id": "24",
+   "race_number": 10,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 5,
+     "p_win": 0.1291,
+     "p_top3": 0.4857
+    },
+    {
+     "boat": 6,
+     "p_win": 0.0391,
+     "p_top3": 0.2969
+    },
+    {
+     "boat": 4,
+     "p_win": 0.0685,
+     "p_top3": 0.1735
+    },
+    {
+     "boat": 3,
+     "p_win": 0.145,
+     "p_top3": 0.4991
+    },
+    {
+     "boat": 2,
+     "p_win": 0.0993,
+     "p_top3": 0.3158
+    },
+    {
+     "boat": 1,
+     "p_win": 0.519,
+     "p_top3": 0.9601
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-3-5",
+     "probability": 0.16944,
+     "raw_probability": 0.21405
+    },
+    {
+     "combination": "1-2-3",
+     "probability": 0.14004,
+     "raw_probability": 0.15723
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.12584,
+     "raw_probability": 0.13608
+    },
+    {
+     "combination": "1-3-4",
+     "probability": 0.09632,
+     "raw_probability": 0.10394
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.08309,
+     "raw_probability": 0.08988
+    },
+    {
+     "combination": "1-2-4",
+     "probability": 0.06779,
+     "raw_probability": 0.06574
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.06311,
+     "raw_probability": 0.05719
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.05269,
+     "raw_probability": 0.04942
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.03966,
+     "raw_probability": 0.03609
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.03029,
+     "raw_probability": 0.02373
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.02425,
+     "raw_probability": 0.01698
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.01781,
+     "raw_probability": 0.0113
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.015,
+     "raw_probability": 0.00838
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.01456,
+     "raw_probability": 0.00625
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.01456,
+     "raw_probability": 0.00731
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.01086,
+     "raw_probability": 0.00463
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.00997,
+     "raw_probability": 0.00404
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.00925,
+     "raw_probability": 0.00308
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.00831,
+     "raw_probability": 0.00269
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.00714,
+     "raw_probability": 0.00199
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "24-11": {
+   "date": "2026-10-24",
+   "stadium_id": "24",
+   "race_number": 11,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 4,
+     "p_win": 0.1245,
+     "p_top3": 0.5292
+    },
+    {
+     "boat": 1,
+     "p_win": 0.4815,
+     "p_top3": 0.9011
+    },
+    {
+     "boat": 2,
+     "p_win": 0.0908,
+     "p_top3": 0.4884
+    },
+    {
+     "boat": 3,
+     "p_win": 0.0587,
+     "p_top3": 0.2769
+    },
+    {
+     "boat": 5,
+     "p_win": 0.2067,
+     "p_top3": 0.602
+    },
+    {
+     "boat": 6,
+     "p_win": 0.0378,
+     "p_top3": 0.2478
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-4-5",
+     "probability": 0.20356,
+     "raw_probability": 0.26783
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.15036,
+     "raw_probability": 0.18679
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.11121,
+     "raw_probability": 0.11623
+    },
+    {
+     "combination": "1-2-4",
+     "probability": 0.09291,
+     "raw_probability": 0.09652
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.07713,
+     "raw_probability": 0.07316
+    },
+    {
+     "combination": "1-3-4",
+     "probability": 0.06651,
+     "raw_probability": 0.05981
+    },
+    {
+     "combination": "1-2-3",
+     "probability": 0.04712,
+     "raw_probability": 0.04139
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.04117,
+     "raw_probability": 0.03755
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.03525,
+     "raw_probability": 0.02596
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.03144,
+     "raw_probability": 0.02292
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.02517,
+     "raw_probability": 0.01603
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.02392,
+     "raw_probability": 0.01428
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.01743,
+     "raw_probability": 0.00999
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.01653,
+     "raw_probability": 0.00899
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.01512,
+     "raw_probability": 0.00628
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.01206,
+     "raw_probability": 0.00537
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.01035,
+     "raw_probability": 0.00391
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.0096,
+     "raw_probability": 0.00338
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.00742,
+     "raw_probability": 0.00211
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.00573,
+     "raw_probability": 0.00148
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  },
+  "24-12": {
+   "date": "2026-10-24",
+   "stadium_id": "24",
+   "race_number": 12,
+   "closed_at": null,
+   "entry_source": "backtest_result.csv",
+   "entries": [
+    {
+     "boat": 2,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 3,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 4,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 5,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 6,
+     "racer_number": null,
+     "racer_class": null
+    },
+    {
+     "boat": 1,
+     "racer_number": null,
+     "racer_class": null
+    }
+   ],
+   "boats": [
+    {
+     "boat": 2,
+     "p_win": 0.1897,
+     "p_top3": 0.74
+    },
+    {
+     "boat": 3,
+     "p_win": 0.161,
+     "p_top3": 0.5099
+    },
+    {
+     "boat": 4,
+     "p_win": 0.1698,
+     "p_top3": 0.6371
+    },
+    {
+     "boat": 5,
+     "p_win": 0.018,
+     "p_top3": 0.155
+    },
+    {
+     "boat": 6,
+     "p_win": 0.0244,
+     "p_top3": 0.2398
+    },
+    {
+     "boat": 1,
+     "p_win": 0.4371,
+     "p_top3": 0.9587
+    }
+   ],
+   "predictions": [
+    {
+     "combination": "1-2-3",
+     "probability": 0.21472,
+     "raw_probability": 0.25617
+    },
+    {
+     "combination": "1-2-4",
+     "probability": 0.21472,
+     "raw_probability": 0.27396
+    },
+    {
+     "combination": "1-3-4",
+     "probability": 0.18555,
+     "raw_probability": 0.22167
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.06911,
+     "raw_probability": 0.05769
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.04298,
+     "raw_probability": 0.03266
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.03719,
+     "raw_probability": 0.02629
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.03719,
+     "raw_probability": 0.02817
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.03317,
+     "raw_probability": 0.02394
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.02997,
+     "raw_probability": 0.01926
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.02997,
+     "raw_probability": 0.02064
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.01595,
+     "raw_probability": 0.00695
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.01595,
+     "raw_probability": 0.00743
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.01595,
+     "raw_probability": 0.00605
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.01272,
+     "raw_probability": 0.0051
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.01272,
+     "raw_probability": 0.00544
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.0119,
+     "raw_probability": 0.00443
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.00886,
+     "raw_probability": 0.00239
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.0038,
+     "raw_probability": 0.00065
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.0038,
+     "raw_probability": 0.00053
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.0038,
+     "raw_probability": 0.00057
+    }
+   ],
+   "strategy_tickets": [],
+   "prediction_kind": "backfill",
+   "predicted_at": "2026-11-19T08:11:18+09:00",
+   "model_id": "walk-forward backtest"
+  }
+ }
+}

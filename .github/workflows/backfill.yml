@@ -1,0 +1,61 @@
+name: BoatRace Backfill Verification
+
+# Manual. Turns walk-forward backtest probabilities of past race days into
+# prediction files, fetches their closing odds and re-runs verification.
+# No training; days that already have a prediction file are skipped.
+
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'Number of most recent backtest days to backfill'
+        default: '30'
+
+concurrency:
+  group: boatrace-data
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    env:
+      TARGET_STADIUM_IDS: ${{ secrets.TARGET_STADIUM_IDS }}
+      CLOSING_ODDS_BASE_URL: ${{ secrets.CLOSING_ODDS_BASE_URL }}
+      TZ: Asia/Tokyo
+      BACKFILL_DAYS: ${{ inputs.days }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pandas requests scikit-learn
+
+      - name: Backfill and verify
+        run: python backfill_verification.py --days "$BACKFILL_DAYS"
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Backfill verification data [skip ci]"
+          for i in 1 2 3; do
+            if git push; then
+              echo "Push succeeded"
+              exit 0
+            fi
+            echo "Push rejected, rebasing and retrying ($i/3)..."
+            git pull --rebase origin main
+          done
+          echo "Push failed after 3 retries"
+          exit 1

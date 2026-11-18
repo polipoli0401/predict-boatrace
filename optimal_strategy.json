@@ -1,12 +1,12 @@
 {
-  "strategy": "p3_box",
+  "strategy": "honmei_1pt",
   "filter": {
     "prob_min": 0.3,
     "prob_max": 0.4,
     "gap_min": 0.2
   },
-  "roi": 139.2,
-  "hit_rate": 30.1,
-  "n_races": 113,
-  "n_tickets": 113
+  "roi": 144.1,
+  "hit_rate": 29.6,
+  "n_races": 125,
+  "n_tickets": 125
 }

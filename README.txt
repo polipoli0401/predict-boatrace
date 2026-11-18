@@ -144,7 +144,9 @@ Setup
    walk-forward mode takes roughly 3-4 hours.
 
 5. The daily schedule then runs automatically. Recommended tickets
-   appear in the workflow artifact (prediction_result.txt).
+   appear in the workflow artifact (prediction_result.txt). The race
+   board (all target stadiums by deadline, expected return, decision)
+   is published to GitHub Pages and shown in each run's job summary.
 
 Method notes
 ------------

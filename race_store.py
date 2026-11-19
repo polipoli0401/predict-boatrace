@@ -112,6 +112,8 @@ def build_race_prediction(day, stadium_id, race_number, closed_at,
                           kind="night"):
     """One race's prediction record. race_df has boat_number,
     racer_number, racer_class, p1, p3."""
+    from tracked_strategies import tracked_tickets  # lazy: needs env config
+
     rd = race_df.sort_values("boat_number")
     ranked = sorted(trio_cal.items(), key=lambda kv: -kv[1])
     return {
@@ -137,6 +139,8 @@ def build_race_prediction(day, stadium_id, race_number, closed_at,
                          "raw_probability": round(trio_raw.get(k, 0.0), 5)}
                         for k, v in ranked],
         "strategy_tickets": ["-".join(map(str, sorted(t))) for t in tickets],
+        # pre-registered strategies (strategies.json), fixed before the race
+        "tracked_tickets": tracked_tickets(stadium_id, rd[["boat_number", "p1", "p3"]]),
         "prediction_kind": kind,
         "predicted_at": predicted_at,
         "model_id": model_ident.get("model_id") if model_ident else None,

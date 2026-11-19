@@ -1,0 +1,666 @@
+{
+ "generated_at": "2026-11-19T08:36:29+09:00",
+ "part1": {
+  "selection": "2024-02-03 .. 2025-12-31",
+  "test": "2026-01-01 .. 2026-11-17",
+  "rows": [
+   {
+    "strategy": "Favorite trio (1 ticket)",
+    "unfiltered_selection": {
+     "races": 13035,
+     "tickets": 13035,
+     "hit_rate": 23.6,
+     "roi": 78.5,
+     "roi_ci95": [
+      75.7,
+      81.2
+     ]
+    },
+    "unfiltered_test": {
+     "races": 6250,
+     "tickets": 6250,
+     "hit_rate": 23.2,
+     "roi": 74.7,
+     "roi_ci95": [
+      71.0,
+      78.6
+     ]
+    },
+    "chosen_filter": {
+     "prob_min": 0.5,
+     "prob_max": 0.6,
+     "gap_min": 0.0
+    },
+    "filtered_selection": {
+     "races": 2905,
+     "tickets": 2905,
+     "hit_rate": 22.2,
+     "roi": 80.3,
+     "roi_ci95": [
+      74.4,
+      86.3
+     ]
+    },
+    "filtered_test": {
+     "races": 744,
+     "tickets": 744,
+     "hit_rate": 23.0,
+     "roi": 79.4,
+     "roi_ci95": [
+      67.8,
+      91.8
+     ]
+    }
+   },
+   {
+    "strategy": "Axis + partners (3 tickets)",
+    "unfiltered_selection": {
+     "races": 13035,
+     "tickets": 39105,
+     "hit_rate": 52.0,
+     "roi": 79.3,
+     "roi_ci95": [
+      77.5,
+      81.2
+     ]
+    },
+    "unfiltered_test": {
+     "races": 6250,
+     "tickets": 18750,
+     "hit_rate": 51.5,
+     "roi": 76.9,
+     "roi_ci95": [
+      74.3,
+      79.4
+     ]
+    },
+    "chosen_filter": {
+     "prob_min": 0.6,
+     "prob_max": 0.7,
+     "gap_min": 0.0
+    },
+    "filtered_selection": {
+     "races": 701,
+     "tickets": 2103,
+     "hit_rate": 51.8,
+     "roi": 80.3,
+     "roi_ci95": [
+      71.8,
+      89.6
+     ]
+    },
+    "filtered_test": {
+     "races": 26,
+     "tickets": 78,
+     "hit_rate": 65.4,
+     "roi": 112.3,
+     "roi_ci95": null
+    }
+   },
+   {
+    "strategy": "Top3-model box (1 ticket)",
+    "unfiltered_selection": {
+     "races": 13035,
+     "tickets": 13035,
+     "hit_rate": 24.6,
+     "roi": 77.4,
+     "roi_ci95": [
+      74.9,
+      80.0
+     ]
+    },
+    "unfiltered_test": {
+     "races": 6250,
+     "tickets": 6250,
+     "hit_rate": 24.6,
+     "roi": 76.9,
+     "roi_ci95": [
+      73.2,
+      80.7
+     ]
+    },
+    "chosen_filter": {
+     "prob_min": 0.3,
+     "prob_max": 0.5,
+     "gap_min": 0.3
+    },
+    "filtered_selection": {
+     "races": 513,
+     "tickets": 513,
+     "hit_rate": 21.1,
+     "roi": 80.1,
+     "roi_ci95": [
+      65.8,
+      94.1
+     ]
+    },
+    "filtered_test": {
+     "races": 331,
+     "tickets": 331,
+     "hit_rate": 19.6,
+     "roi": 74.1,
+     "roi_ci95": [
+      57.1,
+      89.9
+     ]
+    }
+   },
+   {
+    "strategy": "Drop-the-favorite (4 tickets)",
+    "unfiltered_selection": {
+     "races": 13035,
+     "tickets": 52140,
+     "hit_rate": 9.0,
+     "roi": 56.2,
+     "roi_ci95": [
+      51.9,
+      60.6
+     ]
+    },
+    "unfiltered_test": {
+     "races": 6250,
+     "tickets": 25000,
+     "hit_rate": 9.0,
+     "roi": 52.7,
+     "roi_ci95": [
+      46.7,
+      58.8
+     ]
+    },
+    "chosen_filter": {
+     "prob_min": 0.3,
+     "prob_max": 0.4,
+     "gap_min": 0.0
+    },
+    "filtered_selection": {
+     "races": 2970,
+     "tickets": 11880,
+     "hit_rate": 16.3,
+     "roi": 71.4,
+     "roi_ci95": [
+      63.4,
+      79.9
+     ]
+    },
+    "filtered_test": {
+     "races": 2048,
+     "tickets": 8192,
+     "hit_rate": 13.5,
+     "roi": 53.9,
+     "roi_ci95": [
+      46.7,
+      62.0
+     ]
+    }
+   },
+   {
+    "strategy": "Weak-lane1 exclusion box (4 tickets)",
+    "unfiltered_selection": {
+     "races": 3311,
+     "tickets": 13244,
+     "hit_rate": 19.3,
+     "roi": 69.6,
+     "roi_ci95": [
+      62.6,
+      77.2
+     ]
+    },
+    "unfiltered_test": {
+     "races": 2212,
+     "tickets": 8848,
+     "hit_rate": 16.7,
+     "roi": 55.8,
+     "roi_ci95": [
+      48.7,
+      62.6
+     ]
+    },
+    "chosen_filter": {
+     "prob_min": 0.3,
+     "prob_max": 0.4,
+     "gap_min": 0.0
+    },
+    "filtered_selection": {
+     "races": 2968,
+     "tickets": 11872,
+     "hit_rate": 18.5,
+     "roi": 71.1,
+     "roi_ci95": [
+      62.9,
+      79.8
+     ]
+    },
+    "filtered_test": {
+     "races": 2047,
+     "tickets": 8188,
+     "hit_rate": 15.1,
+     "roi": 54.4,
+     "roi_ci95": [
+      47.0,
+      62.0
+     ]
+    }
+   },
+   {
+    "strategy": "Top2 fixed + 3rd-slot spread (3 tickets)",
+    "unfiltered_selection": {
+     "races": 13035,
+     "tickets": 39105,
+     "hit_rate": 50.9,
+     "roi": 77.0,
+     "roi_ci95": [
+      75.2,
+      78.8
+     ]
+    },
+    "unfiltered_test": {
+     "races": 6250,
+     "tickets": 18750,
+     "hit_rate": 50.4,
+     "roi": 74.6,
+     "roi_ci95": [
+      72.1,
+      77.1
+     ]
+    },
+    "chosen_filter": {
+     "prob_min": 0.6,
+     "prob_max": 0.7,
+     "gap_min": 0.3
+    },
+    "filtered_selection": {
+     "races": 698,
+     "tickets": 2094,
+     "hit_rate": 52.4,
+     "roi": 85.1,
+     "roi_ci95": [
+      76.8,
+      93.0
+     ]
+    },
+    "filtered_test": {
+     "races": 26,
+     "tickets": 78,
+     "hit_rate": 42.3,
+     "roi": 60.9,
+     "roi_ci95": null
+    }
+   },
+   {
+    "strategy": "Model top-1 trio (1 ticket)",
+    "unfiltered_selection": {
+     "races": 13035,
+     "tickets": 13035,
+     "hit_rate": 23.6,
+     "roi": 78.5,
+     "roi_ci95": [
+      75.6,
+      81.2
+     ]
+    },
+    "unfiltered_test": {
+     "races": 6250,
+     "tickets": 6250,
+     "hit_rate": 23.2,
+     "roi": 74.4,
+     "roi_ci95": [
+      70.8,
+      78.2
+     ]
+    },
+    "chosen_filter": {
+     "top1_prob_min": 0.25
+    },
+    "filtered_selection": {
+     "races": 9988,
+     "tickets": 9988,
+     "hit_rate": 25.7,
+     "roi": 79.2,
+     "roi_ci95": [
+      76.3,
+      82.2
+     ]
+    },
+    "filtered_test": {
+     "races": 4089,
+     "tickets": 4089,
+     "hit_rate": 26.6,
+     "roi": 75.9,
+     "roi_ci95": [
+      71.8,
+      80.2
+     ]
+    }
+   }
+  ]
+ },
+ "part2": {
+  "selection": "2026-01-01 .. 2026-06-30",
+  "test": "2026-07-01 .. 2026-11-17",
+  "market_favourite_selection": {
+   "races": 3577,
+   "tickets": 3577,
+   "hit_rate": 26.3,
+   "roi": 74.8,
+   "roi_ci95": [
+    70.5,
+    79.2
+   ]
+  },
+  "market_favourite_test": {
+   "races": 2673,
+   "tickets": 2673,
+   "hit_rate": 25.9,
+   "roi": 73.0,
+   "roi_ci95": [
+    68.0,
+    78.2
+   ]
+  },
+  "model_top1_selection": {
+   "races": 3577,
+   "tickets": 3577,
+   "hit_rate": 23.1,
+   "roi": 73.8,
+   "roi_ci95": [
+    68.8,
+    79.1
+   ]
+  },
+  "model_top1_test": {
+   "races": 2673,
+   "tickets": 2673,
+   "hit_rate": 23.3,
+   "roi": 75.3,
+   "roi_ci95": [
+    69.5,
+    81.2
+   ]
+  },
+  "bands": [
+   {
+    "band": "1-3",
+    "all_in_band_selection": {
+     "races": 1741,
+     "tickets": 1865,
+     "hit_rate": 34.3,
+     "roi": 74.5,
+     "roi_ci95": [
+      69.5,
+      79.3
+     ]
+    },
+    "all_in_band_test": {
+     "races": 1313,
+     "tickets": 1423,
+     "hit_rate": 35.1,
+     "roi": 76.9,
+     "roi_ci95": [
+      71.1,
+      82.5
+     ]
+    },
+    "model_top1_selection": {
+     "races": 1350,
+     "tickets": 1350,
+     "hit_rate": 33.1,
+     "roi": 75.0,
+     "roi_ci95": [
+      69.5,
+      80.8
+     ]
+    },
+    "model_top1_test": {
+     "races": 999,
+     "tickets": 999,
+     "hit_rate": 32.8,
+     "roi": 76.3,
+     "roi_ci95": [
+      69.6,
+      83.1
+     ]
+    }
+   },
+   {
+    "band": "3-5",
+    "all_in_band_selection": {
+     "races": 2773,
+     "tickets": 4542,
+     "hit_rate": 31.0,
+     "roi": 72.5,
+     "roi_ci95": [
+      68.7,
+      76.2
+     ]
+    },
+    "all_in_band_test": {
+     "races": 2073,
+     "tickets": 3368,
+     "hit_rate": 32.4,
+     "roi": 77.4,
+     "roi_ci95": [
+      72.8,
+      82.2
+     ]
+    },
+    "model_top1_selection": {
+     "races": 1501,
+     "tickets": 1501,
+     "hit_rate": 19.7,
+     "roi": 72.4,
+     "roi_ci95": [
+      65.3,
+      80.3
+     ]
+    },
+    "model_top1_test": {
+     "races": 1165,
+     "tickets": 1165,
+     "hit_rate": 20.0,
+     "roi": 73.2,
+     "roi_ci95": [
+      65.0,
+      81.6
+     ]
+    }
+   },
+   {
+    "band": "5-10",
+    "all_in_band_selection": {
+     "races": 3318,
+     "tickets": 8696,
+     "hit_rate": 26.5,
+     "roi": 69.4,
+     "roi_ci95": [
+      65.6,
+      73.5
+     ]
+    },
+    "all_in_band_test": {
+     "races": 2479,
+     "tickets": 6399,
+     "hit_rate": 29.0,
+     "roi": 77.7,
+     "roi_ci95": [
+      73.0,
+      82.4
+     ]
+    },
+    "model_top1_selection": {
+     "races": 632,
+     "tickets": 632,
+     "hit_rate": 12.5,
+     "roi": 77.0,
+     "roi_ci95": [
+      61.9,
+      93.3
+     ]
+    },
+    "model_top1_test": {
+     "races": 445,
+     "tickets": 445,
+     "hit_rate": 13.0,
+     "roi": 77.8,
+     "roi_ci95": [
+      59.2,
+      96.4
+     ]
+    }
+   },
+   {
+    "band": "10-20",
+    "all_in_band_selection": {
+     "races": 3373,
+     "tickets": 10474,
+     "hit_rate": 16.8,
+     "roi": 73.5,
+     "roi_ci95": [
+      68.1,
+      79.0
+     ]
+    },
+    "all_in_band_test": {
+     "races": 2513,
+     "tickets": 7992,
+     "hit_rate": 17.2,
+     "roi": 75.5,
+     "roi_ci95": [
+      69.1,
+      81.7
+     ]
+    },
+    "model_top1_selection": {
+     "races": 76,
+     "tickets": 76,
+     "hit_rate": 6.6,
+     "roi": 72.2,
+     "roi_ci95": [
+      15.5,
+      136.1
+     ]
+    },
+    "model_top1_test": {
+     "races": 53,
+     "tickets": 53,
+     "hit_rate": 7.5,
+     "roi": 94.7,
+     "roi_ci95": [
+      18.9,
+      191.9
+     ]
+    }
+   },
+   {
+    "band": "20-50",
+    "all_in_band_selection": {
+     "races": 3513,
+     "tickets": 17124,
+     "hit_rate": 9.5,
+     "roi": 56.8,
+     "roi_ci95": [
+      51.1,
+      62.5
+     ]
+    },
+    "all_in_band_test": {
+     "races": 2623,
+     "tickets": 12783,
+     "hit_rate": 11.1,
+     "roi": 67.9,
+     "roi_ci95": [
+      60.5,
+      75.4
+     ]
+    },
+    "model_top1_selection": {
+     "races": 3,
+     "tickets": 3,
+     "hit_rate": 0.0,
+     "roi": 0.0,
+     "roi_ci95": null
+    },
+    "model_top1_test": {
+     "races": 5,
+     "tickets": 5,
+     "hit_rate": 0.0,
+     "roi": 0.0,
+     "roi_ci95": null
+    }
+   },
+   {
+    "band": "50-100",
+    "all_in_band_selection": {
+     "races": 3506,
+     "tickets": 13696,
+     "hit_rate": 2.8,
+     "roi": 46.5,
+     "roi_ci95": [
+      37.1,
+      56.1
+     ]
+    },
+    "all_in_band_test": {
+     "races": 2615,
+     "tickets": 10258,
+     "hit_rate": 2.8,
+     "roi": 45.9,
+     "roi_ci95": [
+      34.9,
+      56.6
+     ]
+    },
+    "model_top1_selection": {
+     "races": 0,
+     "tickets": 0,
+     "hit_rate": null,
+     "roi": null,
+     "roi_ci95": null
+    },
+    "model_top1_test": {
+     "races": 0,
+     "tickets": 0,
+     "hit_rate": null,
+     "roi": null,
+     "roi_ci95": null
+    }
+   },
+   {
+    "band": "100-",
+    "all_in_band_selection": {
+     "races": 3202,
+     "tickets": 14770,
+     "hit_rate": 0.9,
+     "roi": 29.5,
+     "roi_ci95": [
+      17.8,
+      42.9
+     ]
+    },
+    "all_in_band_test": {
+     "races": 2388,
+     "tickets": 11076,
+     "hit_rate": 1.2,
+     "roi": 36.2,
+     "roi_ci95": [
+      22.6,
+      51.2
+     ]
+    },
+    "model_top1_selection": {
+     "races": 0,
+     "tickets": 0,
+     "hit_rate": null,
+     "roi": null,
+     "roi_ci95": null
+    },
+    "model_top1_test": {
+     "races": 0,
+     "tickets": 0,
+     "hit_rate": null,
+     "roi": null,
+     "roi_ci95": null
+    }
+   }
+  ]
+ }
+}

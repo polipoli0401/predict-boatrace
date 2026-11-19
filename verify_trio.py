@@ -242,16 +242,88 @@ def to_markdown(s):
     return "\n".join(lines) + "\n"
 
 
+def tracked_summary(pred_files, results, strategies, seed=5):
+    """Forward results of the pre-registered strategies: races dated on or
+    after each strategy's frozen_at, live predictions only (no backfill),
+    tickets as stored before the race."""
+    import numpy as np
+    rng = np.random.default_rng(seed)
+    out = {}
+    for st in strategies:
+        per_race, first, last = [], None, None
+        for path in sorted(pred_files):
+            doc = read_json(path) or {}
+            d = doc.get("date")
+            if not d or d < st["frozen_at"]:
+                continue
+            for race in (doc.get("races") or {}).values():
+                if race.get("prediction_kind") == "backfill":
+                    continue
+                tickets = (race.get("tracked_tickets") or {}).get(st["id"])
+                res = results.get((d, race["stadium_id"],
+                                   int(race["race_number"])))
+                if not tickets or not res:
+                    continue
+                actual, payout = res
+                per_race.append((100 * len(tickets),
+                                 (payout or 0.0) if actual in tickets else 0.0))
+                first, last = first or d, d
+        inv = sum(i for i, _ in per_race)
+        ret = sum(r for _, r in per_race)
+        ci = None
+        if len(per_race) >= 30:
+            arr = np.array(per_race)
+            idx = rng.integers(0, len(arr), size=(2000, len(arr)))
+            rois = arr[idx, 1].sum(1) / arr[idx, 0].sum(1) * 100
+            ci = [round(float(np.percentile(rois, 2.5)), 1),
+                  round(float(np.percentile(rois, 97.5)), 1)]
+        out[st["id"]] = {
+            "name": st["name"], "frozen_at": st["frozen_at"],
+            "period": f"{first} .. {last}" if first else None,
+            "races": len(per_race), "tickets": int(inv // 100),
+            "hits": sum(1 for _, r in per_race if r > 0),
+            "invest": int(inv), "return": round(ret),
+            "roi": round(100 * ret / inv, 1) if inv else None,
+            "roi_ci95": ci,
+            "past_evidence": st.get("evidence"),
+        }
+    return out
+
+
+def tracked_markdown(tracked):
+    if not tracked:
+        return ""
+    lines = ["", "## Tracked strategies (new races only, pre-registered)", "",
+             "| Strategy | Since | Races | Tickets | Hits | ROI % | ROI 95% CI "
+             + "| Past (selection / test) |", "|---|---|---|---|---|---|---|---|"]
+    for v in tracked.values():
+        ev = v.get("past_evidence") or {}
+        past = (f"{ev.get('selection_roi')}% (n={ev.get('selection_races')}) / "
+                + f"{ev.get('test_roi')}% (n={ev.get('test_races')})") if ev else "—"
+        ci = f"{v['roi_ci95'][0]}–{v['roi_ci95'][1]}" if v["roi_ci95"] else "—"
+        lines.append(f"| {v['name']} | {v['frozen_at']} | {v['races']} "
+                     + f"| {v['tickets']} | {v['hits']} "
+                     + f"| {v['roi'] if v['roi'] is not None else '—'} | {ci} "
+                     + f"| {past} |")
+    lines += ["", "A strategy counts as confirmed only if its ROI stays above "
+              + "100% on new races with the lower CI bound above 100% "
+              + "(needs several hundred races)."]
+    return "\n".join(lines) + "\n"
+
+
 def main():
     files = glob.glob(os.path.join("data", "predictions", "*.json"))
     if not files:
         print("Verification: no prediction files yet")
         return
-    by, calib, dates = verify(files, actual_results())
+    results = actual_results()
+    by, calib, dates = verify(files, results)
     s = summarise(by, calib, dates)
+    from tracked_strategies import load_strategies
+    s["tracked"] = tracked_summary(files, results, load_strategies())
     write_json(os.path.join(VERIFY_DIR, "summary.json"), s)
     with open(os.path.join(VERIFY_DIR, "summary.md"), "w", encoding="utf-8") as f:
-        f.write(to_markdown(s))
+        f.write(to_markdown(s) + tracked_markdown(s["tracked"]))
     a = s["by_stadium"].get("all")
     if a:
         print(f"Verification {s['period']}: {a['races']} races, "

@@ -115,6 +115,46 @@ verification. Automatic betting is out of scope.
       look-ahead), per stadium; adjust `ev_config.json` only from
       out-of-sample results
 
+#### Result of the long-range test (2026-11-19)
+`ev_backtest.py`, 2026-01-01..11-17, 6,250 races, closing odds,
+calibration fitted only on earlier races:
+- Market log-loss lower than the model at every stadium and in every
+  month (2.24 vs 2.36).
+- Rule (EV ≥ 1.2, p ≥ 0.05): 8,100 tickets, ROI 70% (95% CI 62–78%),
+  mean expected return 177%. Higher thresholds are worse.
+- Conclusion: the current model has no edge over the market; the EV rule
+  is not usable for betting. Paying for live odds is not justified yet.
+- Live model (exhibition, tilt, exhibition ST, wind, wave) on the same
+  5,010 races: log-loss 2.361 → 2.348 vs market 2.246; ROI 74% → 76%.
+  Race-day information closes only ~10% of the gap to the market.
+
+Next steps implied by this result:
+- [ ] Market-anchored probabilities: start from closing-odds implied
+      probabilities and test whether the model adds information
+      (e.g. a blend or a residual model), out of sample
+- [ ] Fix the calibration bias: low-probability trios over-estimated,
+      high-probability trios under-estimated
+- [x] Race-day features not used before (exhibition entry course,
+      parts / propeller changes, weight adjustment, wind components):
+      tested in `method_comparison.py` → no gain (D 2.349 vs C 2.348)
+- [x] Method comparison, same races 2026-04..11 (4,275): market 2.249 <
+      live 2.348 ≈ live+ 2.349 < morning 2.365; market + model pool
+      2.249 (= market). No method beats the closing odds.
+- [x] Strategy comparison out of sample (strategy_comparison.py): no
+      strategy above ~77% on 2026; longshots worst (favourite-longshot
+      bias); selected filters regress on the test period
+- [x] Pre-registered 3 strategies (strategies.json, frozen 2026-11-20):
+      the only rules of 2,352 cells with ROI > 100% in both 2024-25 and
+      2026 (S1 favourite trio / S2 P(top-3) box, top win prob 30-40% and
+      gap >= 20%; S3 Omura P(top-3) box, top win prob 20-30%)
+- [ ] Forward check of S1-S3 on new races (verification summary /
+      board). Interim look at ~100 races each; an edge needs ROI > 100%
+      with the lower 95% bound > 100%. Do not change their parameters
+- [ ] Re-run the comparison in Actions with the real STADIUM_PREF_MAP
+      and again after more 2026 race-day data has accumulated
+- [ ] Re-run `ev_backtest.py` after each change; only a CI above 100%
+      on held-out months would justify live odds
+
 #### 5-5 Later (only if 5-4 justifies it)
 - [ ] Direct trio-probability model (instead of Harville from P(win)),
       validated against the current method

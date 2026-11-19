@@ -1,0 +1,654 @@
+{
+ "date": "2026-11-20",
+ "updated_at": "2026-11-20T01:45:42+09:00",
+ "races": {
+  "18-01": {
+   "stadium_id": "18",
+   "race_number": 1,
+   "closed_at": "2026-11-20 08:43:00",
+   "entrants": {
+    "1": 4551,
+    "2": 4966,
+    "3": 5090,
+    "4": 4945,
+    "5": 5459,
+    "6": 5000
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "18-02": {
+   "stadium_id": "18",
+   "race_number": 2,
+   "closed_at": "2026-11-20 09:09:00",
+   "entrants": {
+    "1": 5278,
+    "2": 3800,
+    "3": 4315,
+    "4": 4112,
+    "5": 5192,
+    "6": 4825
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "18-03": {
+   "stadium_id": "18",
+   "race_number": 3,
+   "closed_at": "2026-11-20 09:35:00",
+   "entrants": {
+    "1": 4144,
+    "2": 4336,
+    "3": 4417,
+    "4": 4926,
+    "5": 3655,
+    "6": 4015
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "18-04": {
+   "stadium_id": "18",
+   "race_number": 4,
+   "closed_at": "2026-11-20 10:01:00",
+   "entrants": {
+    "1": 4738,
+    "2": 3574,
+    "3": 4957,
+    "4": 5204,
+    "5": 3268,
+    "6": 5426
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "18-05": {
+   "stadium_id": "18",
+   "race_number": 5,
+   "closed_at": "2026-11-20 10:28:00",
+   "entrants": {
+    "1": 3686,
+    "2": 4945,
+    "3": 5091,
+    "4": 4710,
+    "5": 4408,
+    "6": 4950
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "18-06": {
+   "stadium_id": "18",
+   "race_number": 6,
+   "closed_at": "2026-11-20 10:58:00",
+   "entrants": {
+    "1": 4873,
+    "2": 4469,
+    "3": 3800,
+    "4": 3377,
+    "5": 4464,
+    "6": 5459
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "18-07": {
+   "stadium_id": "18",
+   "race_number": 7,
+   "closed_at": "2026-11-20 11:30:00",
+   "entrants": {
+    "1": 5176,
+    "2": 4813,
+    "3": 3544,
+    "4": 4315,
+    "5": 4417,
+    "6": 3361
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "18-08": {
+   "stadium_id": "18",
+   "race_number": 8,
+   "closed_at": "2026-11-20 12:03:00",
+   "entrants": {
+    "1": 4112,
+    "2": 5192,
+    "3": 3655,
+    "4": 3574,
+    "5": 4229,
+    "6": 4144
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "18-09": {
+   "stadium_id": "18",
+   "race_number": 9,
+   "closed_at": "2026-11-20 12:38:00",
+   "entrants": {
+    "1": 4926,
+    "2": 5000,
+    "3": 4966,
+    "4": 4015,
+    "5": 5204,
+    "6": 3686
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "18-10": {
+   "stadium_id": "18",
+   "race_number": 10,
+   "closed_at": "2026-11-20 13:11:00",
+   "entrants": {
+    "1": 4950,
+    "2": 3268,
+    "3": 4710,
+    "4": 5278,
+    "5": 4469,
+    "6": 4873
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "18-11": {
+   "stadium_id": "18",
+   "race_number": 11,
+   "closed_at": "2026-11-20 13:46:00",
+   "entrants": {
+    "1": 4825,
+    "2": 5091,
+    "3": 4464,
+    "4": 4551,
+    "5": 4336,
+    "6": 4738
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "18-12": {
+   "stadium_id": "18",
+   "race_number": 12,
+   "closed_at": "2026-11-20 14:23:00",
+   "entrants": {
+    "1": 4503,
+    "2": 4477,
+    "3": 4885,
+    "4": 4109,
+    "5": 4342,
+    "6": 4723
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "21-01": {
+   "stadium_id": "21",
+   "race_number": 1,
+   "closed_at": "2026-11-20 08:51:00",
+   "entrants": {
+    "1": 4049,
+    "2": 3929,
+    "3": 4007,
+    "4": 3748,
+    "5": 3523,
+    "6": 4031
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "21-02": {
+   "stadium_id": "21",
+   "race_number": 2,
+   "closed_at": "2026-11-20 09:17:00",
+   "entrants": {
+    "1": 3629,
+    "2": 3998,
+    "3": 4105,
+    "4": 3876,
+    "5": 3477,
+    "6": 3455
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "21-03": {
+   "stadium_id": "21",
+   "race_number": 3,
+   "closed_at": "2026-11-20 09:43:00",
+   "entrants": {
+    "1": 4118,
+    "2": 3809,
+    "3": 4028,
+    "4": 2878,
+    "5": 3439,
+    "6": 3772
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "21-04": {
+   "stadium_id": "21",
+   "race_number": 4,
+   "closed_at": "2026-11-20 10:09:00",
+   "entrants": {
+    "1": 4072,
+    "2": 3875,
+    "3": 3024,
+    "4": 3863,
+    "5": 3893,
+    "6": 3251
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "21-05": {
+   "stadium_id": "21",
+   "race_number": 5,
+   "closed_at": "2026-11-20 10:36:00",
+   "entrants": {
+    "1": 4025,
+    "2": 3662,
+    "3": 3663,
+    "4": 3852,
+    "5": 3075,
+    "6": 3514
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "21-06": {
+   "stadium_id": "21",
+   "race_number": 6,
+   "closed_at": "2026-11-20 11:03:00",
+   "entrants": {
+    "1": 3577,
+    "2": 3564,
+    "3": 3978,
+    "4": 4031,
+    "5": 4004,
+    "6": 3556
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "21-07": {
+   "stadium_id": "21",
+   "race_number": 7,
+   "closed_at": "2026-11-20 11:35:00",
+   "entrants": {
+    "1": 3297,
+    "2": 3614,
+    "3": 3664,
+    "4": 3848,
+    "5": 4105,
+    "6": 3748
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "21-08": {
+   "stadium_id": "21",
+   "race_number": 8,
+   "closed_at": "2026-11-20 12:10:00",
+   "entrants": {
+    "1": 2878,
+    "2": 4136,
+    "3": 3391,
+    "4": 3953,
+    "5": 3875,
+    "6": 3527
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "21-09": {
+   "stadium_id": "21",
+   "race_number": 9,
+   "closed_at": "2026-11-20 12:42:00",
+   "entrants": {
+    "1": 3075,
+    "2": 3477,
+    "3": 4049,
+    "4": 3024,
+    "5": 4118,
+    "6": 3352
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "21-10": {
+   "stadium_id": "21",
+   "race_number": 10,
+   "closed_at": "2026-11-20 13:17:00",
+   "entrants": {
+    "1": 3893,
+    "2": 4004,
+    "3": 3629,
+    "4": 3523,
+    "5": 3663,
+    "6": 3944
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "21-11": {
+   "stadium_id": "21",
+   "race_number": 11,
+   "closed_at": "2026-11-20 13:53:00",
+   "entrants": {
+    "1": 3439,
+    "2": 3455,
+    "3": 3929,
+    "4": 3251,
+    "5": 3664,
+    "6": 3978
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "21-12": {
+   "stadium_id": "21",
+   "race_number": 12,
+   "closed_at": "2026-11-20 14:30:00",
+   "entrants": {
+    "1": 3876,
+    "2": 3556,
+    "3": 4025,
+    "4": 4028,
+    "5": 4072,
+    "6": 4136
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "24-01": {
+   "stadium_id": "24",
+   "race_number": 1,
+   "closed_at": "2026-11-20 15:16:00",
+   "entrants": {
+    "1": 4104,
+    "2": 4073,
+    "3": 5008,
+    "4": 3568,
+    "5": 5295,
+    "6": 4027
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "24-02": {
+   "stadium_id": "24",
+   "race_number": 2,
+   "closed_at": "2026-11-20 15:46:00",
+   "entrants": {
+    "1": 5165,
+    "2": 3615,
+    "3": 5221,
+    "4": 4643,
+    "5": 4560,
+    "6": 5493
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "24-03": {
+   "stadium_id": "24",
+   "race_number": 3,
+   "closed_at": "2026-11-20 16:17:00",
+   "entrants": {
+    "1": 4216,
+    "2": 5231,
+    "3": 5138,
+    "4": 4111,
+    "5": 4368,
+    "6": 3623
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "24-04": {
+   "stadium_id": "24",
+   "race_number": 4,
+   "closed_at": "2026-11-20 16:43:00",
+   "entrants": {
+    "1": 4420,
+    "2": 4969,
+    "3": 3898,
+    "4": 4226,
+    "5": 5457,
+    "6": 3814
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "24-05": {
+   "stadium_id": "24",
+   "race_number": 5,
+   "closed_at": "2026-11-20 17:10:00",
+   "entrants": {
+    "1": 5412,
+    "2": 4415,
+    "3": 5228,
+    "4": 4905,
+    "5": 4545,
+    "6": 3808
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "24-06": {
+   "stadium_id": "24",
+   "race_number": 6,
+   "closed_at": "2026-11-20 17:37:00",
+   "entrants": {
+    "1": 3679,
+    "2": 4792,
+    "3": 4991,
+    "4": 5235,
+    "5": 3869,
+    "6": 4890
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "24-07": {
+   "stadium_id": "24",
+   "race_number": 7,
+   "closed_at": "2026-11-20 18:04:00",
+   "entrants": {
+    "1": 5221,
+    "2": 4954,
+    "3": 4241,
+    "4": 5008,
+    "5": 4131,
+    "6": 5496
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "24-08": {
+   "stadium_id": "24",
+   "race_number": 8,
+   "closed_at": "2026-11-20 18:33:00",
+   "entrants": {
+    "1": 4368,
+    "2": 4645,
+    "3": 4603,
+    "4": 3499,
+    "5": 4104,
+    "6": 5457
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "24-09": {
+   "stadium_id": "24",
+   "race_number": 9,
+   "closed_at": "2026-11-20 19:04:00",
+   "entrants": {
+    "1": 5295,
+    "2": 4545,
+    "3": 4420,
+    "4": 4216,
+    "5": 3615,
+    "6": 4608
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "24-10": {
+   "stadium_id": "24",
+   "race_number": 10,
+   "closed_at": "2026-11-20 19:36:00",
+   "entrants": {
+    "1": 4536,
+    "2": 5250,
+    "3": 4556,
+    "4": 5165,
+    "5": 5231,
+    "6": 5335
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "24-11": {
+   "stadium_id": "24",
+   "race_number": 11,
+   "closed_at": "2026-11-20 20:07:00",
+   "entrants": {
+    "1": 4991,
+    "2": 5228,
+    "3": 3814,
+    "4": 4073,
+    "5": 4643,
+    "6": 5138
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  },
+  "24-12": {
+   "stadium_id": "24",
+   "race_number": 12,
+   "closed_at": "2026-11-20 20:38:00",
+   "entrants": {
+    "1": 3898,
+    "2": 4560,
+    "3": 3679,
+    "4": 4415,
+    "5": 4111,
+    "6": 4954
+   },
+   "entry_status": "Received",
+   "entry_note": null,
+   "exhibition_boats": [],
+   "exhibition_status": "Not yet",
+   "finished": false
+  }
+ }
+}

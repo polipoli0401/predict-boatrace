@@ -1,0 +1,492 @@
+{
+ "generated_at": "2026-11-19T20:34:06+09:00",
+ "part1": {
+  "period": "2026-01-01 .. 2026-11-17",
+  "model_top1": {
+   "win": {
+    "races": 6250,
+    "hit_rate": 62.0,
+    "roi": 91.7,
+    "roi_ci95": [
+     89.3,
+     94.0
+    ]
+   },
+   "place": {
+    "races": 6250,
+    "hit_rate": 78.5,
+    "roi": 91.3,
+    "roi_ci95": [
+     89.8,
+     92.7
+    ]
+   },
+   "exacta": {
+    "races": 6250,
+    "hit_rate": 25.3,
+    "roi": 81.2,
+    "roi_ci95": [
+     77.4,
+     85.2
+    ]
+   },
+   "quinella": {
+    "races": 6250,
+    "hit_rate": 33.7,
+    "roi": 83.3,
+    "roi_ci95": [
+     79.9,
+     86.8
+    ]
+   },
+   "quinella_place": {
+    "races": 6250,
+    "hit_rate": 56.7,
+    "roi": 82.5,
+    "roi_ci95": [
+     80.5,
+     84.5
+    ]
+   },
+   "trifecta": {
+    "races": 6250,
+    "hit_rate": 10.1,
+    "roi": 79.0,
+    "roi_ci95": [
+     72.2,
+     86.1
+    ]
+   },
+   "trio": {
+    "races": 6250,
+    "hit_rate": 24.0,
+    "roi": 77.6,
+    "roi_ci95": [
+     73.7,
+     81.5
+    ]
+   }
+  },
+  "market_favourite": {
+   "win": {
+    "races": 6250,
+    "hit_rate": 60.6,
+    "roi": 81.9,
+    "roi_ci95": [
+     80.1,
+     83.6
+    ]
+   },
+   "exacta": {
+    "races": 6250,
+    "hit_rate": 27.2,
+    "roi": 77.2,
+    "roi_ci95": [
+     73.9,
+     80.7
+    ]
+   },
+   "quinella": {
+    "races": 6250,
+    "hit_rate": 35.5,
+    "roi": 77.2,
+    "roi_ci95": [
+     74.5,
+     80.0
+    ]
+   },
+   "trifecta": {
+    "races": 6250,
+    "hit_rate": 12.5,
+    "roi": 80.4,
+    "roi_ci95": [
+     75.1,
+     85.9
+    ]
+   },
+   "trio": {
+    "races": 6250,
+    "hit_rate": 27.1,
+    "roi": 76.9,
+    "roi_ci95": [
+     73.6,
+     80.2
+    ]
+   }
+  },
+  "implied_payout_rate": {
+   "win": 73.5,
+   "exacta": 74.4,
+   "quinella": 74.1,
+   "trifecta": 74.8,
+   "trio": 74.4
+  },
+  "model_top1_by_stadium": {
+   "18": {
+    "win": {
+     "races": 2244,
+     "hit_rate": 62.3,
+     "roi": 92.5,
+     "roi_ci95": [
+      88.6,
+      96.6
+     ]
+    },
+    "place": {
+     "races": 2244,
+     "hit_rate": 78.3,
+     "roi": 91.1,
+     "roi_ci95": [
+      88.7,
+      93.5
+     ]
+    },
+    "exacta": {
+     "races": 2244,
+     "hit_rate": 25.4,
+     "roi": 80.9,
+     "roi_ci95": [
+      74.3,
+      87.1
+     ]
+    },
+    "quinella": {
+     "races": 2244,
+     "hit_rate": 33.4,
+     "roi": 81.4,
+     "roi_ci95": [
+      75.9,
+      86.9
+     ]
+    },
+    "quinella_place": {
+     "races": 2244,
+     "hit_rate": 57.1,
+     "roi": 83.7,
+     "roi_ci95": [
+      80.3,
+      87.1
+     ]
+    },
+    "trifecta": {
+     "races": 2244,
+     "hit_rate": 9.8,
+     "roi": 80.7,
+     "roi_ci95": [
+      69.5,
+      92.0
+     ]
+    },
+    "trio": {
+     "races": 2244,
+     "hit_rate": 24.0,
+     "roi": 77.6,
+     "roi_ci95": [
+      71.5,
+      83.7
+     ]
+    }
+   },
+   "21": {
+    "win": {
+     "races": 1953,
+     "hit_rate": 62.0,
+     "roi": 89.6,
+     "roi_ci95": [
+      85.8,
+      93.3
+     ]
+    },
+    "place": {
+     "races": 1953,
+     "hit_rate": 77.5,
+     "roi": 88.1,
+     "roi_ci95": [
+      85.5,
+      90.8
+     ]
+    },
+    "exacta": {
+     "races": 1953,
+     "hit_rate": 23.9,
+     "roi": 78.3,
+     "roi_ci95": [
+      71.3,
+      85.4
+     ]
+    },
+    "quinella": {
+     "races": 1953,
+     "hit_rate": 31.7,
+     "roi": 80.4,
+     "roi_ci95": [
+      74.5,
+      86.7
+     ]
+    },
+    "quinella_place": {
+     "races": 1953,
+     "hit_rate": 55.4,
+     "roi": 79.9,
+     "roi_ci95": [
+      76.2,
+      83.4
+     ]
+    },
+    "trifecta": {
+     "races": 1953,
+     "hit_rate": 8.7,
+     "roi": 69.4,
+     "roi_ci95": [
+      57.8,
+      81.0
+     ]
+    },
+    "trio": {
+     "races": 1953,
+     "hit_rate": 20.9,
+     "roi": 70.5,
+     "roi_ci95": [
+      64.2,
+      77.4
+     ]
+    }
+   },
+   "24": {
+    "win": {
+     "races": 2053,
+     "hit_rate": 61.9,
+     "roi": 92.8,
+     "roi_ci95": [
+      89.0,
+      96.6
+     ]
+    },
+    "place": {
+     "races": 2053,
+     "hit_rate": 79.8,
+     "roi": 94.6,
+     "roi_ci95": [
+      92.1,
+      97.2
+     ]
+    },
+    "exacta": {
+     "races": 2053,
+     "hit_rate": 26.5,
+     "roi": 84.3,
+     "roi_ci95": [
+      77.3,
+      91.8
+     ]
+    },
+    "quinella": {
+     "races": 2053,
+     "hit_rate": 35.8,
+     "roi": 88.2,
+     "roi_ci95": [
+      82.4,
+      93.9
+     ]
+    },
+    "quinella_place": {
+     "races": 2053,
+     "hit_rate": 57.5,
+     "roi": 83.7,
+     "roi_ci95": [
+      80.5,
+      87.1
+     ]
+    },
+    "trifecta": {
+     "races": 2053,
+     "hit_rate": 11.7,
+     "roi": 86.3,
+     "roi_ci95": [
+      74.1,
+      99.3
+     ]
+    },
+    "trio": {
+     "races": 2053,
+     "hit_rate": 27.1,
+     "roi": 84.2,
+     "roi_ci95": [
+      77.2,
+      91.2
+     ]
+    }
+   }
+  }
+ },
+ "part2": {
+  "18": {
+   "selection": {
+    "trio": {
+     "races": 3894,
+     "hit_rate": 24.1,
+     "roi": 80.8,
+     "roi_ci95": [
+      75.9,
+      85.9
+     ]
+    },
+    "trifecta": {
+     "races": 3893,
+     "hit_rate": 10.4,
+     "roi": 87.9,
+     "roi_ci95": [
+      76.8,
+      101.2
+     ]
+    }
+   },
+   "test": {
+    "trio": {
+     "races": 2244,
+     "hit_rate": 24.0,
+     "roi": 77.6,
+     "roi_ci95": [
+      71.4,
+      84.0
+     ]
+    },
+    "trifecta": {
+     "races": 2243,
+     "hit_rate": 9.9,
+     "roi": 80.7,
+     "roi_ci95": [
+      69.1,
+      92.6
+     ]
+    }
+   }
+  },
+  "21": {
+   "selection": {
+    "trio": {
+     "races": 4477,
+     "hit_rate": 21.7,
+     "roi": 73.1,
+     "roi_ci95": [
+      68.6,
+      77.9
+     ]
+    },
+    "trifecta": {
+     "races": 4475,
+     "hit_rate": 8.6,
+     "roi": 72.0,
+     "roi_ci95": [
+      64.2,
+      80.1
+     ]
+    }
+   },
+   "test": {
+    "trio": {
+     "races": 1953,
+     "hit_rate": 20.9,
+     "roi": 70.5,
+     "roi_ci95": [
+      63.8,
+      77.4
+     ]
+    },
+    "trifecta": {
+     "races": 1952,
+     "hit_rate": 8.7,
+     "roi": 69.4,
+     "roi_ci95": [
+      57.8,
+      81.3
+     ]
+    }
+   }
+  },
+  "24": {
+   "selection": {
+    "trio": {
+     "races": 4664,
+     "hit_rate": 25.0,
+     "roi": 81.6,
+     "roi_ci95": [
+      77.0,
+      86.3
+     ]
+    },
+    "trifecta": {
+     "races": 4661,
+     "hit_rate": 9.7,
+     "roi": 80.6,
+     "roi_ci95": [
+      72.5,
+      89.0
+     ]
+    }
+   },
+   "test": {
+    "trio": {
+     "races": 2053,
+     "hit_rate": 24.5,
+     "roi": 75.3,
+     "roi_ci95": [
+      69.1,
+      81.9
+     ]
+    },
+    "trifecta": {
+     "races": 1842,
+     "hit_rate": 11.7,
+     "roi": 85.8,
+     "roi_ci95": [
+      73.2,
+      99.2
+     ]
+    }
+   }
+  },
+  "all": {
+   "selection": {
+    "trio": {
+     "races": 13035,
+     "hit_rate": 23.6,
+     "roi": 78.5,
+     "roi_ci95": [
+      75.7,
+      81.2
+     ]
+    },
+    "trifecta": {
+     "races": 13029,
+     "hit_rate": 9.5,
+     "roi": 79.8,
+     "roi_ci95": [
+      74.6,
+      85.3
+     ]
+    }
+   },
+   "test": {
+    "trio": {
+     "races": 6250,
+     "hit_rate": 23.2,
+     "roi": 74.6,
+     "roi_ci95": [
+      70.8,
+      78.5
+     ]
+    },
+    "trifecta": {
+     "races": 6037,
+     "hit_rate": 10.1,
+     "roi": 78.6,
+     "roi_ci95": [
+      71.6,
+      86.0
+     ]
+    }
+   }
+  }
+ }
+}

@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-19T08:11:40+09:00",
- "period": "2026-10-19 .. 2026-11-17",
+ "generated_at": "2026-11-20T07:46:05+09:00",
+ "period": "2026-10-19 .. 2026-11-19",
  "by_stadium": {
   "18": {
-   "races": 168,
-   "model_log_loss": 2.2264,
+   "races": 180,
+   "model_log_loss": 2.2213,
    "candidate_races": 0,
    "tickets": 0,
    "hits": 0,
@@ -14,17 +14,17 @@
    "roi": null,
    "mean_expected_return": null,
    "closing_rule": {
-    "candidate_races": 118,
-    "tickets": 204,
+    "candidate_races": 128,
+    "tickets": 220,
     "hits": 9,
-    "hit_rate": 7.6,
-    "roi": 66.5,
-    "mean_expected_return": 164.0
+    "hit_rate": 7.0,
+    "roi": 61.6,
+    "mean_expected_return": 166.2
    },
-   "market_compared_races": 168,
+   "market_compared_races": 180,
    "log_loss_model_vs_market": [
-    2.2264,
-    2.1395
+    2.2213,
+    2.1339
    ]
   },
   "21": {
@@ -53,8 +53,8 @@
    ]
   },
   "24": {
-   "races": 216,
-   "model_log_loss": 2.2893,
+   "races": 228,
+   "model_log_loss": 2.2779,
    "candidate_races": 0,
    "tickets": 0,
    "hits": 0,
@@ -64,22 +64,22 @@
    "roi": null,
    "mean_expected_return": null,
    "closing_rule": {
-    "candidate_races": 154,
-    "tickets": 247,
+    "candidate_races": 161,
+    "tickets": 258,
     "hits": 15,
-    "hit_rate": 9.7,
-    "roi": 97.6,
-    "mean_expected_return": 172.7
+    "hit_rate": 9.3,
+    "roi": 93.4,
+    "mean_expected_return": 172.3
    },
-   "market_compared_races": 216,
+   "market_compared_races": 228,
    "log_loss_model_vs_market": [
-    2.2893,
-    2.21
+    2.2779,
+    2.1958
    ]
   },
   "all": {
-   "races": 552,
-   "model_log_loss": 2.2369,
+   "races": 576,
+   "model_log_loss": 2.2317,
    "candidate_races": 0,
    "tickets": 0,
    "hits": 0,
@@ -89,62 +89,62 @@
    "roi": null,
    "mean_expected_return": null,
    "closing_rule": {
-    "candidate_races": 402,
-    "tickets": 671,
+    "candidate_races": 419,
+    "tickets": 698,
     "hits": 33,
-    "hit_rate": 8.2,
-    "roi": 73.8,
-    "mean_expected_return": 170.8
+    "hit_rate": 7.9,
+    "roi": 70.9,
+    "mean_expected_return": 171.2
    },
-   "market_compared_races": 552,
+   "market_compared_races": 576,
    "log_loss_model_vs_market": [
-    2.2369,
-    2.1385
+    2.2317,
+    2.1327
    ]
   }
  },
  "calibration": [
   {
    "bin": "(0.0, 0.02]",
-   "n": 5084,
+   "n": 5310,
    "predicted": 0.0101,
-   "observed": 0.0069
+   "observed": 0.0066
   },
   {
    "bin": "(0.02, 0.05]",
-   "n": 2581,
+   "n": 2695,
    "predicted": 0.0339,
-   "observed": 0.0263
+   "observed": 0.0256
   },
   {
    "bin": "(0.05, 0.1]",
-   "n": 1647,
+   "n": 1709,
    "predicted": 0.0738,
-   "observed": 0.0662
+   "observed": 0.069
   },
   {
    "bin": "(0.1, 0.15]",
-   "n": 849,
-   "predicted": 0.1265,
-   "observed": 0.1449
+   "n": 883,
+   "predicted": 0.1266,
+   "observed": 0.1427
   },
   {
    "bin": "(0.15, 0.2]",
-   "n": 450,
-   "predicted": 0.1698,
-   "observed": 0.1889
+   "n": 474,
+   "predicted": 0.17,
+   "observed": 0.192
   },
   {
    "bin": "(0.2, 0.3]",
-   "n": 364,
-   "predicted": 0.2346,
-   "observed": 0.2885
+   "n": 382,
+   "predicted": 0.2348,
+   "observed": 0.288
   },
   {
    "bin": "(0.3, 0.5]",
-   "n": 64,
-   "predicted": 0.335,
-   "observed": 0.4219
+   "n": 66,
+   "predicted": 0.3343,
+   "observed": 0.4091
   },
   {
    "bin": "(0.5, 1.0]",
@@ -152,5 +152,81 @@
    "predicted": 0.6356,
    "observed": 0.0
   }
- ]
+ ],
+ "tracked": {
+  "S1": {
+   "name": "Favourite trio, 1 ticket (top win prob 30-40%, gap >= 20%)",
+   "frozen_at": "2026-11-20",
+   "period": null,
+   "races": 0,
+   "tickets": 0,
+   "hits": 0,
+   "invest": 0,
+   "return": 0,
+   "roi": null,
+   "roi_ci95": null,
+   "past_evidence": {
+    "selection_roi": 145.2,
+    "selection_races": 61,
+    "test_roi": 143.0,
+    "test_races": 64
+   }
+  },
+  "S2": {
+   "name": "Top-3 by P(top-3) box, 1 ticket (top win prob 30-40%, gap >= 20%)",
+   "frozen_at": "2026-11-20",
+   "period": null,
+   "races": 0,
+   "tickets": 0,
+   "hits": 0,
+   "invest": 0,
+   "return": 0,
+   "roi": null,
+   "roi_ci95": null,
+   "past_evidence": {
+    "selection_roi": 131.5,
+    "selection_races": 61,
+    "test_roi": 115.5,
+    "test_races": 64
+   }
+  },
+  "S3": {
+   "name": "Omura only: top-3 by P(top-3) box, 1 ticket (top win prob 20-30%)",
+   "frozen_at": "2026-11-20",
+   "period": null,
+   "races": 0,
+   "tickets": 0,
+   "hits": 0,
+   "invest": 0,
+   "return": 0,
+   "roi": null,
+   "roi_ci95": null,
+   "past_evidence": {
+    "selection_roi": 100.6,
+    "selection_races": 65,
+    "test_roi": 103.5,
+    "test_races": 60
+   }
+  },
+  "S4": {
+   "name": "Win bet on the model's top boat when it is not the market favourite",
+   "frozen_at": "2026-11-20",
+   "period": null,
+   "races": 0,
+   "tickets": 0,
+   "hits": 0,
+   "invest": 0,
+   "return": 0,
+   "roi": null,
+   "roi_ci95": null,
+   "past_evidence": {
+    "selection_roi": 115.7,
+    "selection_races": 524,
+    "test_roi": 125.2,
+    "test_races": 409,
+    "periods": "2026-01..06 / 2026-07..11-17 (win odds exist only from 2026)",
+    "note": "Found in a bet-type analysis after the S1-S3 search; overall 2026: 933 races, ROI 119.9% (95% CI 109.8-130.8); Tokuyama 127%, Ashiya 115%, Omura 116%. The favourite is taken from closing odds, which are not known before the deadline."
+   }
+  }
+ }
 }

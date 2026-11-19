@@ -1,0 +1,26 @@
+{
+ "note": "Pre-registered strategies. Frozen on frozen_at; do not change parameters. Chosen as the only distinct rules (of 2,352 strategy x filter x stadium cells, model-only, decidable before the race) with ROI > 100% in BOTH the selection period (2024-02-03..2025-12-31) and the test period (2026-01-01..2026-11-17), each with >= 40 races. Selected from many candidates on past data, so chance is a likely explanation; only results on races from frozen_at onward count.",
+ "strategies": [
+  {
+   "id": "S1",
+   "name": "Favourite trio, 1 ticket (top win prob 30-40%, gap >= 20%)",
+   "frozen_at": "2026-11-20",
+   "rule": {"ticket": "honmei_1pt", "prob_min": 0.3, "prob_max": 0.4, "gap_min": 0.2},
+   "evidence": {"selection_roi": 145.2, "selection_races": 61, "test_roi": 143.0, "test_races": 64}
+  },
+  {
+   "id": "S2",
+   "name": "Top-3 by P(top-3) box, 1 ticket (top win prob 30-40%, gap >= 20%)",
+   "frozen_at": "2026-11-20",
+   "rule": {"ticket": "p3_box", "prob_min": 0.3, "prob_max": 0.4, "gap_min": 0.2},
+   "evidence": {"selection_roi": 131.5, "selection_races": 61, "test_roi": 115.5, "test_races": 64}
+  },
+  {
+   "id": "S3",
+   "name": "Omura only: top-3 by P(top-3) box, 1 ticket (top win prob 20-30%)",
+   "frozen_at": "2026-11-20",
+   "rule": {"ticket": "p3_box", "prob_min": 0.2, "prob_max": 0.3, "gap_min": 0.0, "stadiums": ["24"]},
+   "evidence": {"selection_roi": 100.6, "selection_races": 65, "test_roi": 103.5, "test_races": 60}
+  }
+ ]
+}

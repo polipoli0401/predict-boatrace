@@ -143,9 +143,13 @@ Next steps implied by this result:
 - [x] Strategy comparison out of sample (strategy_comparison.py): no
       strategy above ~77% on 2026; longshots worst (favourite-longshot
       bias); selected filters regress on the test period
-- [ ] Track the current optimal_strategy.json cell on new races only
-      (145% / 143% on 61 / 64 races, chosen post hoc; needs several
-      hundred new races before it means anything)
+- [x] Pre-registered 3 strategies (strategies.json, frozen 2026-11-20):
+      the only rules of 2,352 cells with ROI > 100% in both 2024-25 and
+      2026 (S1 favourite trio / S2 P(top-3) box, top win prob 30-40% and
+      gap >= 20%; S3 Omura P(top-3) box, top win prob 20-30%)
+- [ ] Forward check of S1-S3 on new races (verification summary /
+      board). Interim look at ~100 races each; an edge needs ROI > 100%
+      with the lower 95% bound > 100%. Do not change their parameters
 - [ ] Re-run the comparison in Actions with the real STADIUM_PREF_MAP
       and again after more 2026 race-day data has accumulated
 - [ ] Re-run `ev_backtest.py` after each change; only a CI above 100%

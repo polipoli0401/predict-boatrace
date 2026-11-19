@@ -170,6 +170,26 @@ models, backtest and forward test (prediction_history.csv) are kept.
                            favourite. Writes data/verification/
                            strategy_comparison.{json,md}.
 
+  tracked_strategies.py    Pre-registered strategies (strategies.json),
+                           frozen on 2026-11-20 and scored on new races
+                           only. Tickets are computed from pre-race
+                           probabilities and stored with each prediction
+                           ("tracked_tickets"); the board lists today's
+                           tracked bets; verify_trio.py reports forward
+                           ROI with a 95% CI.
+                             S1 favourite trio, 1 ticket, top win prob
+                                30-40% and gap >= 20%   (past 145% / 143%)
+                             S2 top-3 by P(top-3) box, same filter
+                                                        (past 132% / 116%)
+                             S3 Omura only, top-3 by P(top-3) box, top
+                                win prob 20-30%         (past 101% / 104%)
+                           Past = selection 2024-02..2025-12 / test 2026,
+                           about 60 races each. They are the only rules
+                           of 2,352 cells above 100% in both periods, so
+                           chance is a likely explanation. At ~6 races a
+                           month per strategy, a few hundred new races
+                           take years; check interim results at ~100.
+
   Decision (ev_config.json; all thresholds are configurable)
     Candidate     at least one combination with expected
                   return >= ev_min (1.2) AND probability >=

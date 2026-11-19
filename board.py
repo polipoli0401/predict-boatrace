@@ -35,6 +35,11 @@ def fmt_req(c):
     return "Low prob." if r is None else f"≥ {r:.1f}"
 
 
+def tracked_cell(r):
+    t = r.get("tracked") or {}
+    return "<br>".join(f"{_esc(k)}: {_esc(' / '.join(v))}" for k, v in t.items()) or "—"
+
+
 def fmt_combo(c):
     return ("★" if c["candidate"] else "") + c["combination"]
 
@@ -75,6 +80,8 @@ def build_rows(preds_doc, info_doc, odds_doc, cfg, calibration, now):
             "odds_label": (o or {}).get("official_label"),
             "odds_error": (o or {}).get("last_error"),
             "predicted_at": (p or {}).get("predicted_at"),
+            "tracked": {k: v for k, v in
+                        ((p or {}).get("tracked_tickets") or {}).items() if v},
             "prediction_kind": (p or {}).get("prediction_kind"),
             **{k: ev[k] for k in ("decision", "reason", "rows", "stale",
                                   "scratched")},
@@ -272,7 +279,8 @@ def render_html(rows, day, now, cfg, verification=None):
             f'<td data-label="Break-even" class="num combos">{col(fmt_req)}</td>'
             f'<td data-label="Odds" class="num combos">{col(fmt_odds)}</td>'
             f'<td data-label="Exp. return" class="num combos">{col(fmt_ev)}</td>'
-            f'<td data-label="Decision">{decision}</td></tr>')
+            f'<td data-label="Decision">{decision}</td>'
+            f'<td data-label="Tracked bets">{tracked_cell(r)}</td></tr>')
 
     verify_html = ""
     if verification and verification.get("by_stadium"):
@@ -292,6 +300,20 @@ def render_html(rows, day, now, cfg, verification=None):
             "<th>Tickets</th><th>Hit %</th><th>ROI %</th>"
             "<th>Mean exp. return %</th><th>ROI % with closing odds (ref.)</th>"
             f"</tr></thead><tbody>{vrows}</tbody></table>")
+    if verification and verification.get("tracked"):
+        trows = "".join(
+            f"<tr><td>{_esc(k)}: {_esc(v['name'])}</td>"
+            f"<td>{_esc(v['frozen_at'])}</td>"
+            f"<td class=num>{v['races']}</td><td class=num>{v['hits']}</td>"
+            f"<td class=num>{'—' if v['roi'] is None else v['roi']}</td>"
+            f"<td class=num>{'—' if not v['roi_ci95'] else str(v['roi_ci95'][0]) + '–' + str(v['roi_ci95'][1])}</td></tr>"
+            for k, v in verification["tracked"].items())
+        verify_html += (
+            "<h2 style='font-size:15px;margin:20px 0 0'>Tracked strategies "
+            "(new races only)</h2>"
+            "<table><thead><tr><th>Strategy</th><th>Since</th><th>Races</th>"
+            "<th>Hits</th><th>ROI %</th><th>ROI 95% CI</th></tr></thead>"
+            f"<tbody>{trows}</tbody></table>")
 
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
@@ -312,8 +334,9 @@ rule: expected return ≥ {cfg['ev_min']*100:.0f}% and probability
 Hide closed races</label></p>
 <table class="board"><thead><tr><th>Deadline</th><th>Race</th><th>Entries</th>
 <th>Exhibition</th><th>Odds at</th><th>Odds status</th><th>Trio</th>
-<th>Probability</th><th>Break-even</th><th>Odds</th><th>Exp. return</th><th>Decision</th></tr></thead>
-<tbody>{"".join(body) or '<tr><td colspan="12">No races</td></tr>'}</tbody></table>
+<th>Probability</th><th>Break-even</th><th>Odds</th><th>Exp. return</th><th>Decision</th>
+<th>Tracked bets</th></tr></thead>
+<tbody>{"".join(body) or '<tr><td colspan="13">No races</td></tr>'}</tbody></table>
 {verify_html}
 <footer>★ = candidate combination (highest expected return first).
 Break-even = the odds at which a combination reaches the

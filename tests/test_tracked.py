@@ -42,3 +42,32 @@ def test_tracked_summary_counts_only_new_live_races(tmp_path):
     assert out["races"] == 2 and out["hits"] == 1
     assert out["invest"] == 200 and out["return"] == 500
     assert out["roi"] == 250.0
+
+
+S4 = {"id": "S4", "name": "win", "frozen_at": "2026-11-20",
+      "rule": {"bet": "win", "condition": "not_favourite"}}
+
+
+def test_win_rule_ticket_is_model_top_boat():
+    df = boats([0.20, 0.45, 0.10, 0.10, 0.10, 0.05])
+    assert tickets_for(S4, "21", df) == ["2"]
+
+
+def test_win_bet_result_condition():
+    from verify_trio import win_bet_result
+    closing = {"closing": {"win_odds": {"1": 2.8, "2": 1.9, "3": 6.0},
+                           "win_payouts": [["1", 280]]}}
+    assert win_bet_result(["1"], closing, S4["rule"]) == (100, 280.0)   # not fav, hit
+    assert win_bet_result(["2"], closing, S4["rule"]) is None           # favourite
+    assert win_bet_result(["3"], closing, S4["rule"]) == (100, 0.0)     # miss
+    assert win_bet_result(["1"], {}, S4["rule"]) is None                # no data
+
+
+def test_parse_win_closing():
+    from closing_odds import parse_win_closing
+    doc = {"programs": {"stadiums": {"18": {"races": {"1": {
+        "odds": {"win": {"1": 2.8, "2": 1.9, "3": None}},
+        "result": {"payouts": {"win": [{"combination": "1", "amount": 280}]}}}}}}}}
+    out = parse_win_closing(doc, ["18"])
+    assert out["18-01"]["odds"] == {"1": 2.8, "2": 1.9}
+    assert out["18-01"]["payouts"] == [["1", 280]]

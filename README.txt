@@ -183,12 +183,25 @@ models, backtest and forward test (prediction_history.csv) are kept.
                                                         (past 132% / 116%)
                              S3 Omura only, top-3 by P(top-3) box, top
                                 win prob 20-30%         (past 101% / 104%)
+                             S4 win bet on the model's top boat when it
+                                is NOT the market favourite (lowest win
+                                odds)          (2026 H1 116% / H2 125%)
+                           S4 needs a look at the betting app before the
+                           deadline (buy only if another boat has the
+                           lowest win odds); tracking uses closing win
+                           odds and payouts stored by closing_odds.py.
                            Past = selection 2024-02..2025-12 / test 2026,
                            about 60 races each. They are the only rules
                            of 2,352 cells above 100% in both periods, so
                            chance is a likely explanation. At ~6 races a
                            month per strategy, a few hundred new races
                            take years; check interim results at ~100.
+
+  bet_type_comparison.py   Model's top ticket per bet type (win, place,
+                           exacta, quinella, wide, trifecta, trio) and
+                           per stadium, 2026 with closing odds; trio and
+                           trifecta per stadium back to 2024. Writes
+                           data/verification/bet_type_comparison.*.
 
   Decision (ev_config.json; all thresholds are configurable)
     Candidate     at least one combination with expected
@@ -350,7 +363,17 @@ Method notes
   30-40%, gap >= 20%) returns 145% / 143% on 2024-25 / 2026, but on only
   61 / 64 races (2026 CI 85-208%) and it was chosen as the best of ~240
   cells on the same data, so it is a lead to watch on new races, not
-  evidence of an edge. Treat candidates as
+  evidence of an edge.
+  Bet types (bet_type_comparison.py, 2026, 6,250 races, model's top
+  ticket): win 92% (CI 89-94%) and place 91% are far better than trio
+  78%, exacta 81%, trifecta 79%; implied payout rate ~74-75% for all
+  single-winner types. Stadiums: Ashiya is lowest in every period; no
+  consistent advantage for Omura. Win bet on the model's top boat when
+  it is not the closing-odds favourite: 933 races, ROI 120% (CI 110-
+  131%), 116% / 125% in the two halves of 2026 and 115-127% at each
+  stadium (mostly the model favouring boat 1 while the market favours
+  boat 2-4). Win odds exist only from 2026, and the favourite is taken
+  from closing odds; tracked as S4 on new races. Treat candidates as
   research output until verification over many races says otherwise.
 
 Acknowledgements

@@ -58,6 +58,29 @@ def parse_trio_closing(day_doc, stadiums):
     return out
 
 
+def parse_win_closing(day_doc, stadiums):
+    """{race_key: {"odds": {"1": 2.8, ...}, "payouts": [["1", 280], ...]}}
+    closing win odds and win payouts (for the win-bet strategy S4)."""
+    out = {}
+    st = ((day_doc or {}).get("programs") or {}).get("stadiums") or {}
+    for sk, sv in st.items():
+        sid = str(sk).zfill(2)
+        if sid not in stadiums:
+            continue
+        for rk, race in ((sv or {}).get("races") or {}).items():
+            race = race or {}
+            win = (race.get("odds") or {}).get("win")
+            odds = ({str(k): float(v) for k, v in win.items()
+                     if isinstance(v, (int, float)) and v > 0}
+                    if isinstance(win, dict) else {})
+            pays = [[str(p.get("combination")), p.get("amount")]
+                    for p in ((race.get("result") or {}).get("payouts") or {})
+                    .get("win") or [] if p.get("amount")]
+            if odds:
+                out[race_key(sid, int(rk))] = {"odds": odds, "payouts": pays}
+    return out
+
+
 def dates_needing_closing(today):
     since = today - timedelta(days=LOOKBACK_DAYS)
     out = []
@@ -72,14 +95,15 @@ def dates_needing_closing(today):
     return out
 
 
-def store_closing(day, closing, preds_doc):
+def store_closing(day, closing, preds_doc, win=None):
     doc = read_json(odds_path(day)) or {"date": day.isoformat(), "races": {}}
     races = doc.setdefault("races", {})
     fetched = iso_jst()
     n = 0
+    win = win or {}
     for key in (preds_doc or {}).get("races", {}):
         combos = closing.get(key)
-        if not combos:
+        if not combos and key not in win:
             continue
         sid, rno = key.split("-")
         entry = races.setdefault(key, {"stadium_id": sid,
@@ -89,8 +113,11 @@ def store_closing(day, closing, preds_doc):
         entry["closing"] = {
             "fetched_at": fetched,
             "odds": [{"combination": k, "value": v}
-                     for k, v in sorted(combos.items())],
+                     for k, v in sorted((combos or {}).items())],
         }
+        if key in win:
+            entry["closing"]["win_odds"] = win[key]["odds"]
+            entry["closing"]["win_payouts"] = win[key]["payouts"]
         n += 1
     doc["updated_at"] = fetched
     write_json_if_changed(odds_path(day), doc)
@@ -109,12 +136,14 @@ def fetch_and_store(day, stadiums=None):
         print(f"Closing odds {day}: not available ({err})")
         return None
     try:
-        closing = parse_trio_closing(resp.json(), stadiums)
+        doc = resp.json()
     except ValueError:
         print(f"Closing odds {day}: invalid JSON")
         return None
+    closing = parse_trio_closing(doc, stadiums)
+    win = parse_win_closing(doc, stadiums)
     n = store_closing(day, closing, read_json(os.path.join(
-        PRED_DIR, f"{day.isoformat()}.json")))
+        PRED_DIR, f"{day.isoformat()}.json")), win)
     print(f"Closing odds {day}: stored for {n} races")
     return n
 

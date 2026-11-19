@@ -1,26 +1,77 @@
 {
- "note": "Pre-registered strategies. Frozen on frozen_at; do not change parameters. Chosen as the only distinct rules (of 2,352 strategy x filter x stadium cells, model-only, decidable before the race) with ROI > 100% in BOTH the selection period (2024-02-03..2025-12-31) and the test period (2026-01-01..2026-11-17), each with >= 40 races. Selected from many candidates on past data, so chance is a likely explanation; only results on races from frozen_at onward count.",
+ "note": "Pre-registered strategies. Frozen on frozen_at; do not change parameters. Chosen as the only distinct rules (of 2,352 strategy x filter x stadium cells, model-only, decidable before the race) with ROI > 100% in BOTH the selection period (2024-02-03..2025-12-31) and the test period (2026-01-01..2026-11-17), each with >= 40 races. Selected from many candidates on past data, so chance is a likely explanation; only results on races from frozen_at onward count. S4 was added on 2026-11-19 from a separate bet-type analysis (few comparisons; the edge held in both halves of 2026 with the lower 95% bound above 100%).",
  "strategies": [
   {
    "id": "S1",
    "name": "Favourite trio, 1 ticket (top win prob 30-40%, gap >= 20%)",
    "frozen_at": "2026-11-20",
-   "rule": {"ticket": "honmei_1pt", "prob_min": 0.3, "prob_max": 0.4, "gap_min": 0.2},
-   "evidence": {"selection_roi": 145.2, "selection_races": 61, "test_roi": 143.0, "test_races": 64}
+   "rule": {
+    "ticket": "honmei_1pt",
+    "prob_min": 0.3,
+    "prob_max": 0.4,
+    "gap_min": 0.2
+   },
+   "evidence": {
+    "selection_roi": 145.2,
+    "selection_races": 61,
+    "test_roi": 143.0,
+    "test_races": 64
+   }
   },
   {
    "id": "S2",
    "name": "Top-3 by P(top-3) box, 1 ticket (top win prob 30-40%, gap >= 20%)",
    "frozen_at": "2026-11-20",
-   "rule": {"ticket": "p3_box", "prob_min": 0.3, "prob_max": 0.4, "gap_min": 0.2},
-   "evidence": {"selection_roi": 131.5, "selection_races": 61, "test_roi": 115.5, "test_races": 64}
+   "rule": {
+    "ticket": "p3_box",
+    "prob_min": 0.3,
+    "prob_max": 0.4,
+    "gap_min": 0.2
+   },
+   "evidence": {
+    "selection_roi": 131.5,
+    "selection_races": 61,
+    "test_roi": 115.5,
+    "test_races": 64
+   }
   },
   {
    "id": "S3",
    "name": "Omura only: top-3 by P(top-3) box, 1 ticket (top win prob 20-30%)",
    "frozen_at": "2026-11-20",
-   "rule": {"ticket": "p3_box", "prob_min": 0.2, "prob_max": 0.3, "gap_min": 0.0, "stadiums": ["24"]},
-   "evidence": {"selection_roi": 100.6, "selection_races": 65, "test_roi": 103.5, "test_races": 60}
+   "rule": {
+    "ticket": "p3_box",
+    "prob_min": 0.2,
+    "prob_max": 0.3,
+    "gap_min": 0.0,
+    "stadiums": [
+     "24"
+    ]
+   },
+   "evidence": {
+    "selection_roi": 100.6,
+    "selection_races": 65,
+    "test_roi": 103.5,
+    "test_races": 60
+   }
+  },
+  {
+   "id": "S4",
+   "name": "Win bet on the model's top boat when it is not the market favourite",
+   "frozen_at": "2026-11-20",
+   "rule": {
+    "bet": "win",
+    "condition": "not_favourite"
+   },
+   "how_to_use": "Before the deadline, check the win odds in the betting app; buy the model's top boat (shown on the board) only if another boat has the lowest win odds. Tracking uses the closing odds.",
+   "evidence": {
+    "selection_roi": 115.7,
+    "selection_races": 524,
+    "test_roi": 125.2,
+    "test_races": 409,
+    "periods": "2026-01..06 / 2026-07..11-17 (win odds exist only from 2026)",
+    "note": "Found in a bet-type analysis after the S1-S3 search; overall 2026: 933 races, ROI 119.9% (95% CI 109.8-130.8); Tokuyama 127%, Ashiya 115%, Omura 116%. The favourite is taken from closing odds, which are not known before the deadline."
+   }
   }
  ]
 }

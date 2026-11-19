@@ -147,9 +147,18 @@ Next steps implied by this result:
       the only rules of 2,352 cells with ROI > 100% in both 2024-25 and
       2026 (S1 favourite trio / S2 P(top-3) box, top win prob 30-40% and
       gap >= 20%; S3 Omura P(top-3) box, top win prob 20-30%)
-- [ ] Forward check of S1-S3 on new races (verification summary /
-      board). Interim look at ~100 races each; an edge needs ROI > 100%
-      with the lower 95% bound > 100%. Do not change their parameters
+- [x] Bet-type comparison (bet_type_comparison.py): win 92% / place 91%
+      vs trio 78% for the model's top ticket; Ashiya worst everywhere
+- [x] S4 added (frozen 2026-11-20): win bet on the model's top boat when
+      it is not the market favourite — 2026: 933 races, ROI 120% (CI
+      110-131%), both halves and all stadiums above 100%
+- [ ] Forward check of S1-S4 on new races (verification summary /
+      board). S4 has ~90 races a month: interim look after ~3 months;
+      S1-S3 at ~100 races each. An edge needs ROI > 100% with the lower
+      95% bound > 100%. Do not change their parameters
+- [ ] S4 in practice: the decision uses the odds seen before the
+      deadline; compare with the closing favourite once a pre-deadline
+      odds source exists (or log the app's favourite by hand)
 - [ ] Re-run the comparison in Actions with the real STADIUM_PREF_MAP
       and again after more 2026 race-day data has accumulated
 - [ ] Re-run `ev_backtest.py` after each change; only a CI above 100%

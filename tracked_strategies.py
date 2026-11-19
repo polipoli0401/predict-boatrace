@@ -30,11 +30,16 @@ def load_strategies(path=STRATEGIES_JSON):
 
 def tickets_for(strategy, stadium_id, boats_df):
     """boats_df: boat_number, p1 (normalised win prob), p3.
-    Returns a list of trio strings ("1-2-3")."""
+    Returns a list of trio strings ("1-2-3"), or for a win-bet rule
+    (rule["bet"] == "win") the model's top boat as ["1"]; the market
+    condition of such a rule is checked after the race with the closing
+    odds (verify_trio.py)."""
     rule = strategy["rule"]
     if rule.get("stadiums") and str(stadium_id).zfill(2) not in rule["stadiums"]:
         return []
     by = boats_df.sort_values("p1", ascending=False)
+    if rule.get("bet") == "win":
+        return [str(int(by.iloc[0]["boat_number"]))]
     top = float(by.iloc[0]["p1"])
     gap = top - (float(by.iloc[1]["p1"]) if len(by) > 1 else 0.0)
     if not (rule.get("prob_min", 0) <= top < rule.get("prob_max", 1.01)):

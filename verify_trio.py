@@ -242,6 +242,22 @@ def to_markdown(s):
     return "\n".join(lines) + "\n"
 
 
+def win_bet_result(tickets, odds_entry, rule):
+    """(stake, return) of a win-bet rule for one race, or None when the
+    race is not bet or the closing data is missing. Condition
+    "not_favourite": bet only if the model's top boat is not the closing
+    favourite (lowest win odds)."""
+    closing = odds_entry.get("closing") or {}
+    odds = closing.get("win_odds")
+    if not tickets or not odds:
+        return None
+    boat = str(tickets[0])
+    if rule.get("condition") == "not_favourite" and min(odds, key=odds.get) == boat:
+        return None
+    ret = sum(a for b, a in closing.get("win_payouts") or [] if str(b) == boat)
+    return (100, float(ret))
+
+
 def tracked_summary(pred_files, results, strategies, seed=5):
     """Forward results of the pre-registered strategies: races dated on or
     after each strategy's frozen_at, live predictions only (no backfill),
@@ -256,10 +272,20 @@ def tracked_summary(pred_files, results, strategies, seed=5):
             d = doc.get("date")
             if not d or d < st["frozen_at"]:
                 continue
-            for race in (doc.get("races") or {}).values():
+            win_rule = st["rule"].get("bet") == "win"
+            odds_races = ((read_json(odds_path(date.fromisoformat(d))) or {})
+                          .get("races") or {}) if win_rule else {}
+            for key, race in (doc.get("races") or {}).items():
                 if race.get("prediction_kind") == "backfill":
                     continue
                 tickets = (race.get("tracked_tickets") or {}).get(st["id"])
+                if win_rule:
+                    bet = win_bet_result(tickets, odds_races.get(key) or {},
+                                         st["rule"])
+                    if bet is not None:
+                        per_race.append(bet)
+                        first, last = first or d, d
+                    continue
                 res = results.get((d, race["stadium_id"],
                                    int(race["race_number"])))
                 if not tickets or not res:

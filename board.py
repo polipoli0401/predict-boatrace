@@ -36,8 +36,18 @@ def fmt_req(c):
 
 
 def tracked_cell(r):
+    from tracked_strategies import load_strategies
+    win_ids = {s["id"] for s in load_strategies()
+               if s.get("rule", {}).get("bet") == "win"}
     t = r.get("tracked") or {}
-    return "<br>".join(f"{_esc(k)}: {_esc(' / '.join(v))}" for k, v in t.items()) or "—"
+    parts = []
+    for k, v in t.items():
+        if k in win_ids:
+            parts.append(f"{_esc(k)}: win {_esc(v[0])} "
+                         "(only if another boat is the favourite)")
+        else:
+            parts.append(f"{_esc(k)}: {_esc(' / '.join(v))}")
+    return "<br>".join(parts) or "—"
 
 
 def fmt_combo(c):

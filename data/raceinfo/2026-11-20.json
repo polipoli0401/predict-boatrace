@@ -1,6 +1,6 @@
 {
  "date": "2026-11-20",
- "updated_at": "2026-11-20T01:45:42+09:00",
+ "updated_at": "2026-11-20T11:33:55+09:00",
  "races": {
   "18-01": {
    "stadium_id": "18",
@@ -16,9 +16,16 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
-   "finished": false
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
+   "finished": true
   },
   "18-02": {
    "stadium_id": "18",
@@ -34,9 +41,16 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
-   "finished": false
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
+   "finished": true
   },
   "18-03": {
    "stadium_id": "18",
@@ -52,9 +66,16 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
-   "finished": false
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
+   "finished": true
   },
   "18-04": {
    "stadium_id": "18",
@@ -70,9 +91,16 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
-   "finished": false
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
+   "finished": true
   },
   "18-05": {
    "stadium_id": "18",
@@ -88,9 +116,16 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
-   "finished": false
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
+   "finished": true
   },
   "18-06": {
    "stadium_id": "18",
@@ -106,9 +141,16 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
-   "finished": false
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
+   "finished": true
   },
   "18-07": {
    "stadium_id": "18",
@@ -124,8 +166,15 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
    "finished": false
   },
   "18-08": {
@@ -232,9 +281,16 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
-   "finished": false
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
+   "finished": true
   },
   "21-02": {
    "stadium_id": "21",
@@ -250,9 +306,16 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
-   "finished": false
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
+   "finished": true
   },
   "21-03": {
    "stadium_id": "21",
@@ -268,9 +331,16 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
-   "finished": false
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
+   "finished": true
   },
   "21-04": {
    "stadium_id": "21",
@@ -286,9 +356,16 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
-   "finished": false
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
+   "finished": true
   },
   "21-05": {
    "stadium_id": "21",
@@ -304,9 +381,16 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
-   "finished": false
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
+   "finished": true
   },
   "21-06": {
    "stadium_id": "21",
@@ -322,9 +406,16 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
-   "finished": false
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
+   "finished": true
   },
   "21-07": {
    "stadium_id": "21",
@@ -340,8 +431,15 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
    "finished": false
   },
   "21-08": {

@@ -42,135 +42,135 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.46661,
-     "p_top3": 0.91582
+     "p_win": 0.46664,
+     "p_top3": 0.91964
     },
     {
      "boat": 2,
-     "p_win": 0.10294,
-     "p_top3": 0.40684
+     "p_win": 0.10734,
+     "p_top3": 0.43933
     },
     {
      "boat": 3,
-     "p_win": 0.1419,
-     "p_top3": 0.56966
+     "p_win": 0.14007,
+     "p_top3": 0.56479
     },
     {
      "boat": 4,
-     "p_win": 0.1639,
-     "p_top3": 0.47118
+     "p_win": 0.17047,
+     "p_top3": 0.48042
     },
     {
      "boat": 5,
-     "p_win": 0.02068,
-     "p_top3": 0.15085
+     "p_win": 0.01457,
+     "p_top3": 0.14141
     },
     {
      "boat": 6,
-     "p_win": 0.10397,
-     "p_top3": 0.39355
+     "p_win": 0.10092,
+     "p_top3": 0.3616
     }
    ],
    "predictions": [
     {
      "combination": "1-3-4",
-     "probability": 0.16786,
-     "raw_probability": 0.21138
-    },
-    {
-     "combination": "1-4-6",
-     "probability": 0.13398,
-     "raw_probability": 0.14657
+     "probability": 0.17287,
+     "raw_probability": 0.21892
     },
     {
      "combination": "1-2-4",
-     "probability": 0.13152,
-     "raw_probability": 0.14492
+     "probability": 0.14219,
+     "raw_probability": 0.16001
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.13798,
+     "raw_probability": 0.14914
     },
     {
      "combination": "1-2-3",
-     "probability": 0.10966,
-     "raw_probability": 0.12085
+     "probability": 0.11387,
+     "raw_probability": 0.12479
     },
     {
      "combination": "1-3-6",
-     "probability": 0.10966,
-     "raw_probability": 0.12223
+     "probability": 0.10989,
+     "raw_probability": 0.11628
     },
     {
      "combination": "1-2-6",
-     "probability": 0.08161,
-     "raw_probability": 0.08351
-    },
-    {
-     "combination": "1-4-5",
-     "probability": 0.03332,
-     "raw_probability": 0.02638
-    },
-    {
-     "combination": "1-3-5",
-     "probability": 0.02956,
-     "raw_probability": 0.02194
+     "probability": 0.08405,
+     "raw_probability": 0.08471
     },
     {
      "combination": "2-3-4",
-     "probability": 0.02956,
-     "raw_probability": 0.02292
+     "probability": 0.03044,
+     "raw_probability": 0.02483
     },
     {
      "combination": "3-4-6",
-     "probability": 0.02956,
-     "raw_probability": 0.02318
+     "probability": 0.03044,
+     "raw_probability": 0.02317
     },
     {
-     "combination": "1-2-5",
-     "probability": 0.02386,
-     "raw_probability": 0.01493
-    },
-    {
-     "combination": "1-5-6",
-     "probability": 0.02386,
-     "raw_probability": 0.0151
+     "combination": "1-4-5",
+     "probability": 0.02723,
+     "raw_probability": 0.01945
     },
     {
      "combination": "2-4-6",
-     "probability": 0.02386,
-     "raw_probability": 0.016
+     "probability": 0.0266,
+     "raw_probability": 0.01703
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.02457,
+     "raw_probability": 0.01511
     },
     {
      "combination": "2-3-6",
-     "probability": 0.02229,
-     "raw_probability": 0.01345
+     "probability": 0.02295,
+     "raw_probability": 0.01343
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.01731,
+     "raw_probability": 0.01097
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.01731,
+     "raw_probability": 0.01021
     },
     {
      "combination": "3-4-5",
-     "probability": 0.00986,
-     "raw_probability": 0.0042
+     "probability": 0.00924,
+     "raw_probability": 0.00304
     },
     {
      "combination": "2-4-5",
-     "probability": 0.00898,
-     "raw_probability": 0.0029
+     "probability": 0.00703,
+     "raw_probability": 0.00223
     },
     {
      "combination": "4-5-6",
-     "probability": 0.00898,
-     "raw_probability": 0.00293
+     "probability": 0.00703,
+     "raw_probability": 0.00208
     },
     {
      "combination": "2-3-5",
-     "probability": 0.00775,
-     "raw_probability": 0.00244
+     "probability": 0.00673,
+     "raw_probability": 0.00176
     },
     {
      "combination": "3-5-6",
-     "probability": 0.00775,
-     "raw_probability": 0.00246
+     "probability": 0.00673,
+     "raw_probability": 0.00164
     },
     {
      "combination": "2-5-6",
-     "probability": 0.00654,
-     "raw_probability": 0.0017
+     "probability": 0.00551,
+     "raw_probability": 0.00121
     }
    ],
    "strategy_tickets": [],
@@ -182,9 +182,9 @@
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "21-02": {
    "date": "2026-11-21",
@@ -227,135 +227,135 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.40642,
-     "p_top3": 0.85688
+     "p_win": 0.3846,
+     "p_top3": 0.87303
     },
     {
      "boat": 2,
-     "p_win": 0.22104,
-     "p_top3": 0.54212
+     "p_win": 0.21421,
+     "p_top3": 0.41579
     },
     {
      "boat": 3,
-     "p_win": 0.05165,
-     "p_top3": 0.29567
+     "p_win": 0.06062,
+     "p_top3": 0.2896
     },
     {
      "boat": 4,
-     "p_win": 0.25233,
-     "p_top3": 0.80914
+     "p_win": 0.26077,
+     "p_top3": 0.80299
     },
     {
      "boat": 5,
-     "p_win": 0.05587,
-     "p_top3": 0.26255
+     "p_win": 0.06863,
+     "p_top3": 0.29599
     },
     {
      "boat": 6,
-     "p_win": 0.01269,
-     "p_top3": 0.26646
+     "p_win": 0.01117,
+     "p_top3": 0.24273
     }
    ],
    "predictions": [
     {
      "combination": "1-2-4",
-     "probability": 0.33095,
-     "raw_probability": 0.49418
+     "probability": 0.31549,
+     "raw_probability": 0.443
     },
     {
      "combination": "1-4-5",
-     "probability": 0.10544,
-     "raw_probability": 0.09983
-    },
-    {
-     "combination": "1-2-5",
-     "probability": 0.09534,
-     "raw_probability": 0.08187
+     "probability": 0.11884,
+     "raw_probability": 0.11667
     },
     {
      "combination": "1-3-4",
-     "probability": 0.09534,
-     "raw_probability": 0.09188
+     "probability": 0.10463,
+     "raw_probability": 0.10218
+    },
+    {
+     "combination": "1-2-5",
+     "probability": 0.09089,
+     "raw_probability": 0.08724
     },
     {
      "combination": "1-2-3",
-     "probability": 0.09022,
-     "raw_probability": 0.07534
-    },
-    {
-     "combination": "2-3-4",
-     "probability": 0.04613,
-     "raw_probability": 0.0335
+     "probability": 0.08881,
+     "raw_probability": 0.07638
     },
     {
      "combination": "2-4-5",
-     "probability": 0.04613,
-     "raw_probability": 0.03641
+     "probability": 0.05341,
+     "raw_probability": 0.04558
     },
     {
-     "combination": "1-4-6",
-     "probability": 0.03453,
-     "raw_probability": 0.02174
-    },
-    {
-     "combination": "1-2-6",
-     "probability": 0.03018,
-     "raw_probability": 0.0178
+     "combination": "2-3-4",
+     "probability": 0.04895,
+     "raw_probability": 0.03991
     },
     {
      "combination": "1-3-5",
-     "probability": 0.02787,
-     "raw_probability": 0.01469
+     "probability": 0.02945,
+     "raw_probability": 0.01958
     },
     {
-     "combination": "2-4-6",
-     "probability": 0.01689,
-     "raw_probability": 0.00791
+     "combination": "1-4-6",
+     "probability": 0.02877,
+     "raw_probability": 0.01793
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.01961,
+     "raw_probability": 0.01337
     },
     {
      "combination": "3-4-5",
-     "probability": 0.01685,
-     "raw_probability": 0.00675
+     "probability": 0.01872,
+     "raw_probability": 0.01045
     },
     {
      "combination": "2-3-5",
-     "probability": 0.01323,
-     "raw_probability": 0.00563
+     "probability": 0.0161,
+     "raw_probability": 0.00798
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.01606,
+     "raw_probability": 0.00698
     },
     {
      "combination": "1-5-6",
-     "probability": 0.01056,
-     "raw_probability": 0.00345
+     "probability": 0.01006,
+     "raw_probability": 0.00341
     },
     {
      "combination": "1-3-6",
-     "probability": 0.01049,
-     "raw_probability": 0.00317
+     "probability": 0.01,
+     "raw_probability": 0.00298
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.00728,
+     "raw_probability": 0.0016
     },
     {
      "combination": "4-5-6",
-     "probability": 0.00764,
-     "raw_probability": 0.00159
+     "probability": 0.00728,
+     "raw_probability": 0.00182
     },
     {
      "combination": "2-3-6",
-     "probability": 0.00625,
+     "probability": 0.00596,
      "raw_probability": 0.00122
     },
     {
      "combination": "2-5-6",
-     "probability": 0.00625,
-     "raw_probability": 0.00133
-    },
-    {
-     "combination": "3-4-6",
-     "probability": 0.00625,
-     "raw_probability": 0.00146
+     "probability": 0.00596,
+     "raw_probability": 0.00139
     },
     {
      "combination": "3-5-6",
-     "probability": 0.00345,
-     "raw_probability": 0.00025
+     "probability": 0.00372,
+     "raw_probability": 0.00032
     }
    ],
    "strategy_tickets": [],
@@ -367,9 +367,9 @@
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "21-03": {
    "date": "2026-11-21",
@@ -412,135 +412,135 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.37308,
-     "p_top3": 0.83661
+     "p_win": 0.3713,
+     "p_top3": 0.873
     },
     {
      "boat": 2,
-     "p_win": 0.04558,
-     "p_top3": 0.23026
+     "p_win": 0.04203,
+     "p_top3": 0.24453
     },
     {
      "boat": 3,
-     "p_win": 0.32925,
-     "p_top3": 0.87109
+     "p_win": 0.33478,
+     "p_top3": 0.87078
     },
     {
      "boat": 4,
-     "p_win": 0.12618,
-     "p_top3": 0.40652
+     "p_win": 0.12804,
+     "p_top3": 0.45494
     },
     {
      "boat": 5,
-     "p_win": 0.09983,
-     "p_top3": 0.43403
+     "p_win": 0.10028,
+     "p_top3": 0.41476
     },
     {
      "boat": 6,
-     "p_win": 0.02608,
-     "p_top3": 0.10348
+     "p_win": 0.02357,
+     "p_top3": 0.10524
     }
    ],
    "predictions": [
     {
      "combination": "1-3-4",
-     "probability": 0.23344,
-     "raw_probability": 0.32048
+     "probability": 0.25641,
+     "raw_probability": 0.33308
     },
     {
      "combination": "1-3-5",
-     "probability": 0.21137,
-     "raw_probability": 0.24596
+     "probability": 0.20778,
+     "raw_probability": 0.25263
     },
     {
      "combination": "1-2-3",
-     "probability": 0.10198,
-     "raw_probability": 0.10624
-    },
-    {
-     "combination": "1-3-6",
-     "probability": 0.06842,
-     "raw_probability": 0.05971
+     "probability": 0.09631,
+     "raw_probability": 0.09981
     },
     {
      "combination": "1-4-5",
-     "probability": 0.06842,
-     "raw_probability": 0.06353
+     "probability": 0.07032,
+     "raw_probability": 0.06439
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.06617,
+     "raw_probability": 0.05504
     },
     {
      "combination": "3-4-5",
-     "probability": 0.05886,
-     "raw_probability": 0.05105
+     "probability": 0.06019,
+     "raw_probability": 0.05368
     },
     {
      "combination": "1-2-4",
-     "probability": 0.03617,
-     "raw_probability": 0.02717
+     "probability": 0.03154,
+     "raw_probability": 0.02517
     },
     {
      "combination": "2-3-4",
-     "probability": 0.03208,
-     "raw_probability": 0.02187
+     "probability": 0.03097,
+     "raw_probability": 0.02101
     },
     {
      "combination": "1-2-5",
-     "probability": 0.0287,
-     "raw_probability": 0.02072
-    },
-    {
-     "combination": "1-4-6",
-     "probability": 0.02589,
-     "raw_probability": 0.01522
+     "probability": 0.02756,
+     "raw_probability": 0.01896
     },
     {
      "combination": "2-3-5",
-     "probability": 0.02589,
-     "raw_probability": 0.0167
+     "probability": 0.02545,
+     "raw_probability": 0.01584
     },
     {
-     "combination": "1-5-6",
-     "probability": 0.01911,
-     "raw_probability": 0.0116
+     "combination": "1-4-6",
+     "probability": 0.02378,
+     "raw_probability": 0.01384
     },
     {
      "combination": "3-4-6",
-     "probability": 0.01911,
-     "raw_probability": 0.01225
+     "probability": 0.01878,
+     "raw_probability": 0.01155
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.01794,
+     "raw_probability": 0.01042
     },
     {
      "combination": "3-5-6",
-     "probability": 0.0167,
-     "raw_probability": 0.00935
-    },
-    {
-     "combination": "1-2-6",
-     "probability": 0.01159,
-     "raw_probability": 0.00494
+     "probability": 0.01642,
+     "raw_probability": 0.00871
     },
     {
      "combination": "2-4-5",
-     "probability": 0.01159,
-     "raw_probability": 0.00464
+     "probability": 0.01139,
+     "raw_probability": 0.00436
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.01052,
+     "raw_probability": 0.00406
     },
     {
      "combination": "2-3-6",
-     "probability": 0.0107,
-     "raw_probability": 0.00399
+     "probability": 0.00964,
+     "raw_probability": 0.0034
     },
     {
      "combination": "4-5-6",
-     "probability": 0.00865,
-     "raw_probability": 0.0026
+     "probability": 0.00827,
+     "raw_probability": 0.0024
     },
     {
      "combination": "2-4-6",
-     "probability": 0.00581,
-     "raw_probability": 0.00112
+     "probability": 0.00571,
+     "raw_probability": 0.00094
     },
     {
      "combination": "2-5-6",
-     "probability": 0.00551,
-     "raw_probability": 0.00086
+     "probability": 0.00484,
+     "raw_probability": 0.00071
     }
    ],
    "strategy_tickets": [],
@@ -552,9 +552,9 @@
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "21-04": {
    "date": "2026-11-21",
@@ -597,135 +597,135 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.48655,
-     "p_top3": 0.90261
+     "p_win": 0.48619,
+     "p_top3": 0.91477
     },
     {
      "boat": 2,
-     "p_win": 0.1,
-     "p_top3": 0.38854
+     "p_win": 0.09875,
+     "p_top3": 0.36869
     },
     {
      "boat": 3,
-     "p_win": 0.16058,
-     "p_top3": 0.48586
+     "p_win": 0.14805,
+     "p_top3": 0.48734
     },
     {
      "boat": 4,
-     "p_win": 0.12953,
-     "p_top3": 0.4505
+     "p_win": 0.14094,
+     "p_top3": 0.43132
     },
     {
      "boat": 5,
-     "p_win": 0.05842,
-     "p_top3": 0.3053
+     "p_win": 0.05407,
+     "p_top3": 0.30155
     },
     {
      "boat": 6,
-     "p_win": 0.06492,
-     "p_top3": 0.33282
+     "p_win": 0.072,
+     "p_top3": 0.32504
     }
    ],
    "predictions": [
     {
      "combination": "1-3-4",
-     "probability": 0.14936,
-     "raw_probability": 0.20501
+     "probability": 0.14907,
+     "raw_probability": 0.20452
     },
     {
      "combination": "1-2-3",
-     "probability": 0.13655,
-     "raw_probability": 0.15163
+     "probability": 0.1243,
+     "raw_probability": 0.1345
     },
     {
      "combination": "1-2-4",
-     "probability": 0.10875,
-     "raw_probability": 0.11594
-    },
-    {
-     "combination": "1-3-5",
-     "probability": 0.08318,
-     "raw_probability": 0.08396
+     "probability": 0.11246,
+     "raw_probability": 0.1265
     },
     {
      "combination": "1-3-6",
-     "probability": 0.08318,
-     "raw_probability": 0.09404
+     "probability": 0.0902,
+     "raw_probability": 0.09464
     },
     {
      "combination": "1-4-6",
-     "probability": 0.07404,
-     "raw_probability": 0.07178
+     "probability": 0.08301,
+     "raw_probability": 0.08898
+    },
+    {
+     "combination": "1-3-5",
+     "probability": 0.0687,
+     "raw_probability": 0.06951
     },
     {
      "combination": "1-4-5",
-     "probability": 0.06425,
-     "raw_probability": 0.06407
+     "probability": 0.06703,
+     "raw_probability": 0.06534
     },
     {
      "combination": "1-2-6",
-     "probability": 0.05749,
-     "raw_probability": 0.05286
+     "probability": 0.06412,
+     "raw_probability": 0.05822
     },
     {
      "combination": "1-2-5",
-     "probability": 0.05143,
-     "raw_probability": 0.04717
+     "probability": 0.04477,
+     "raw_probability": 0.04271
     },
     {
      "combination": "1-5-6",
-     "probability": 0.0392,
-     "raw_probability": 0.0291
+     "probability": 0.03912,
+     "raw_probability": 0.02995
     },
     {
      "combination": "2-3-4",
-     "probability": 0.02695,
-     "raw_probability": 0.01944
+     "probability": 0.02689,
+     "raw_probability": 0.01918
     },
     {
      "combination": "3-4-6",
-     "probability": 0.01794,
-     "raw_probability": 0.01211
+     "probability": 0.02267,
+     "raw_probability": 0.01356
     },
     {
      "combination": "3-4-5",
-     "probability": 0.01713,
-     "raw_probability": 0.01082
+     "probability": 0.0171,
+     "raw_probability": 0.00998
     },
     {
      "combination": "2-3-6",
-     "probability": 0.01568,
+     "probability": 0.01565,
      "raw_probability": 0.00901
     },
     {
+     "combination": "2-4-6",
+     "probability": 0.01471,
+     "raw_probability": 0.00849
+    },
+    {
      "combination": "2-3-5",
-     "probability": 0.01474,
-     "raw_probability": 0.00805
+     "probability": 0.01467,
+     "raw_probability": 0.00663
     },
     {
      "combination": "2-4-5",
-     "probability": 0.0147,
-     "raw_probability": 0.00623
-    },
-    {
-     "combination": "2-4-6",
-     "probability": 0.0147,
-     "raw_probability": 0.00698
+     "probability": 0.01467,
+     "raw_probability": 0.00625
     },
     {
      "combination": "3-5-6",
-     "probability": 0.01154,
-     "raw_probability": 0.00502
+     "probability": 0.01086,
+     "raw_probability": 0.00468
     },
     {
      "combination": "4-5-6",
-     "probability": 0.01005,
-     "raw_probability": 0.00388
+     "probability": 0.01086,
+     "raw_probability": 0.00442
     },
     {
      "combination": "2-5-6",
-     "probability": 0.00915,
-     "raw_probability": 0.00289
+     "probability": 0.00913,
+     "raw_probability": 0.00294
     }
    ],
    "strategy_tickets": [],
@@ -737,9 +737,9 @@
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "21-05": {
    "date": "2026-11-21",
@@ -782,135 +782,135 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.39236,
-     "p_top3": 0.8517
+     "p_win": 0.39722,
+     "p_top3": 0.79367
     },
     {
      "boat": 2,
-     "p_win": 0.17071,
-     "p_top3": 0.53968
+     "p_win": 0.17086,
+     "p_top3": 0.52682
     },
     {
      "boat": 3,
-     "p_win": 0.11181,
-     "p_top3": 0.39818
+     "p_win": 0.11345,
+     "p_top3": 0.40327
     },
     {
      "boat": 4,
-     "p_win": 0.14364,
-     "p_top3": 0.46866
+     "p_win": 0.14702,
+     "p_top3": 0.44862
     },
     {
      "boat": 5,
-     "p_win": 0.14096,
-     "p_top3": 0.47525
+     "p_win": 0.13229,
+     "p_top3": 0.45948
     },
     {
      "boat": 6,
-     "p_win": 0.04052,
-     "p_top3": 0.1668
+     "p_win": 0.03915,
+     "p_top3": 0.15898
     }
    ],
    "predictions": [
     {
      "combination": "1-2-4",
-     "probability": 0.13482,
-     "raw_probability": 0.15443
+     "probability": 0.13655,
+     "raw_probability": 0.16297
     },
     {
      "combination": "1-2-5",
-     "probability": 0.13151,
-     "raw_probability": 0.15097
-    },
-    {
-     "combination": "1-4-5",
-     "probability": 0.10764,
-     "raw_probability": 0.12189
+     "probability": 0.13007,
+     "raw_probability": 0.1436
     },
     {
      "combination": "1-2-3",
-     "probability": 0.10474,
-     "raw_probability": 0.11508
+     "probability": 0.10846,
+     "raw_probability": 0.12004
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.10846,
+     "raw_probability": 0.11908
     },
     {
      "combination": "1-3-4",
-     "probability": 0.08011,
-     "raw_probability": 0.09285
+     "probability": 0.08926,
+     "raw_probability": 0.09951
     },
     {
      "combination": "1-3-5",
-     "probability": 0.08011,
-     "raw_probability": 0.09075
+     "probability": 0.08071,
+     "raw_probability": 0.08761
     },
     {
      "combination": "1-2-6",
-     "probability": 0.04314,
-     "raw_probability": 0.03831
+     "probability": 0.03905,
+     "raw_probability": 0.03791
     },
     {
      "combination": "2-4-5",
-     "probability": 0.03876,
-     "raw_probability": 0.03513
+     "probability": 0.03905,
+     "raw_probability": 0.03356
     },
     {
      "combination": "1-4-6",
-     "probability": 0.03775,
-     "raw_probability": 0.03086
+     "probability": 0.03804,
+     "raw_probability": 0.03138
     },
     {
      "combination": "1-5-6",
-     "probability": 0.03775,
-     "raw_probability": 0.03016
+     "probability": 0.03296,
+     "raw_probability": 0.0276
     },
     {
      "combination": "2-3-4",
-     "probability": 0.03271,
-     "raw_probability": 0.02685
-    },
-    {
-     "combination": "2-3-5",
-     "probability": 0.03271,
-     "raw_probability": 0.02625
+     "probability": 0.03296,
+     "raw_probability": 0.0281
     },
     {
      "combination": "1-3-6",
-     "probability": 0.02901,
-     "raw_probability": 0.02291
+     "probability": 0.02923,
+     "raw_probability": 0.02302
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.02923,
+     "raw_probability": 0.0248
     },
     {
      "combination": "3-4-5",
-     "probability": 0.02849,
-     "raw_probability": 0.02129
+     "probability": 0.02615,
+     "raw_probability": 0.02065
     },
     {
      "combination": "2-4-6",
-     "probability": 0.0151,
-     "raw_probability": 0.00896
+     "probability": 0.01522,
+     "raw_probability": 0.0089
     },
     {
      "combination": "2-5-6",
-     "probability": 0.0151,
-     "raw_probability": 0.00876
+     "probability": 0.0143,
+     "raw_probability": 0.00786
     },
     {
      "combination": "2-3-6",
-     "probability": 0.01416,
-     "raw_probability": 0.0067
+     "probability": 0.01426,
+     "raw_probability": 0.00658
     },
     {
      "combination": "4-5-6",
-     "probability": 0.01416,
-     "raw_probability": 0.00711
+     "probability": 0.01426,
+     "raw_probability": 0.00654
     },
     {
      "combination": "3-4-6",
-     "probability": 0.01112,
-     "raw_probability": 0.00543
+     "probability": 0.0112,
+     "raw_probability": 0.00548
     },
     {
      "combination": "3-5-6",
-     "probability": 0.01112,
-     "raw_probability": 0.00531
+     "probability": 0.01056,
+     "raw_probability": 0.00484
     }
    ],
    "strategy_tickets": [
@@ -928,9 +928,9 @@
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "21-06": {
    "date": "2026-11-21",
@@ -973,135 +973,135 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.30943,
-     "p_top3": 0.63015
+     "p_win": 0.32784,
+     "p_top3": 0.63602
     },
     {
      "boat": 2,
-     "p_win": 0.08298,
-     "p_top3": 0.36312
+     "p_win": 0.07307,
+     "p_top3": 0.36812
     },
     {
      "boat": 3,
-     "p_win": 0.25862,
-     "p_top3": 0.72002
+     "p_win": 0.27055,
+     "p_top3": 0.72492
     },
     {
      "boat": 4,
-     "p_win": 0.08447,
-     "p_top3": 0.4246
+     "p_win": 0.08061,
+     "p_top3": 0.41244
     },
     {
      "boat": 5,
-     "p_win": 0.1051,
-     "p_top3": 0.40598
+     "p_win": 0.10644,
+     "p_top3": 0.42281
     },
     {
      "boat": 6,
-     "p_win": 0.15941,
-     "p_top3": 0.57286
+     "p_win": 0.1415,
+     "p_top3": 0.57346
     }
    ],
    "predictions": [
     {
      "combination": "1-3-6",
-     "probability": 0.14674,
-     "raw_probability": 0.20159
+     "probability": 0.14667,
+     "raw_probability": 0.2062
     },
     {
      "combination": "1-3-5",
-     "probability": 0.10981,
-     "raw_probability": 0.12391
-    },
-    {
-     "combination": "1-2-3",
-     "probability": 0.08884,
-     "raw_probability": 0.09534
+     "probability": 0.13408,
+     "raw_probability": 0.14843
     },
     {
      "combination": "1-3-4",
-     "probability": 0.08884,
-     "raw_probability": 0.09722
+     "probability": 0.09403,
+     "raw_probability": 0.10911
+    },
+    {
+     "combination": "1-2-3",
+     "probability": 0.09033,
+     "raw_probability": 0.09808
     },
     {
      "combination": "1-5-6",
-     "probability": 0.06598,
-     "raw_probability": 0.06472
+     "probability": 0.06309,
+     "raw_probability": 0.06243
     },
     {
      "combination": "1-4-6",
-     "probability": 0.0543,
-     "raw_probability": 0.05073
-    },
-    {
-     "combination": "1-2-6",
-     "probability": 0.05197,
-     "raw_probability": 0.04974
+     "probability": 0.0505,
+     "raw_probability": 0.0458
     },
     {
      "combination": "3-5-6",
-     "probability": 0.05197,
-     "raw_probability": 0.04928
+     "probability": 0.0505,
+     "raw_probability": 0.04623
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.04399,
+     "raw_probability": 0.04115
     },
     {
      "combination": "3-4-6",
-     "probability": 0.04401,
-     "raw_probability": 0.03864
-    },
-    {
-     "combination": "2-3-6",
-     "probability": 0.03954,
-     "raw_probability": 0.03789
+     "probability": 0.03952,
+     "raw_probability": 0.03394
     },
     {
      "combination": "1-2-5",
-     "probability": 0.03851,
-     "raw_probability": 0.03044
+     "probability": 0.03849,
+     "raw_probability": 0.0295
     },
     {
      "combination": "1-4-5",
-     "probability": 0.03851,
-     "raw_probability": 0.03104
+     "probability": 0.03849,
+     "raw_probability": 0.03284
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.03849,
+     "raw_probability": 0.03049
     },
     {
      "combination": "1-2-4",
-     "probability": 0.0296,
-     "raw_probability": 0.02384
+     "probability": 0.02958,
+     "raw_probability": 0.02162
     },
     {
      "combination": "2-3-5",
-     "probability": 0.0296,
-     "raw_probability": 0.02323
+     "probability": 0.02958,
+     "raw_probability": 0.0219
     },
     {
      "combination": "3-4-5",
-     "probability": 0.0296,
-     "raw_probability": 0.02369
+     "probability": 0.02958,
+     "raw_probability": 0.02437
     },
     {
      "combination": "2-3-4",
-     "probability": 0.02587,
-     "raw_probability": 0.0182
-    },
-    {
-     "combination": "2-5-6",
-     "probability": 0.01763,
-     "raw_probability": 0.01232
+     "probability": 0.02387,
+     "raw_probability": 0.01606
     },
     {
      "combination": "4-5-6",
-     "probability": 0.01763,
-     "raw_probability": 0.01257
+     "probability": 0.01682,
+     "raw_probability": 0.0105
+    },
+    {
+     "combination": "2-5-6",
+     "probability": 0.01661,
+     "raw_probability": 0.00943
     },
     {
      "combination": "2-4-6",
-     "probability": 0.01662,
-     "raw_probability": 0.00966
+     "probability": 0.01443,
+     "raw_probability": 0.00693
     },
     {
      "combination": "2-4-5",
-     "probability": 0.01444,
-     "raw_probability": 0.00594
+     "probability": 0.01134,
+     "raw_probability": 0.00499
     }
    ],
    "strategy_tickets": [],
@@ -1113,9 +1113,9 @@
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "21-07": {
    "date": "2026-11-21",
@@ -1158,135 +1158,135 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.44337,
-     "p_top3": 0.87223
+     "p_win": 0.427,
+     "p_top3": 0.89095
     },
     {
      "boat": 2,
-     "p_win": 0.05606,
-     "p_top3": 0.29412
+     "p_win": 0.04815,
+     "p_top3": 0.25375
     },
     {
      "boat": 3,
-     "p_win": 0.17988,
-     "p_top3": 0.52402
+     "p_win": 0.20599,
+     "p_top3": 0.5157
     },
     {
      "boat": 4,
-     "p_win": 0.1403,
-     "p_top3": 0.44971
+     "p_win": 0.13782,
+     "p_top3": 0.49603
     },
     {
      "boat": 5,
-     "p_win": 0.16076,
-     "p_top3": 0.49292
+     "p_win": 0.1583,
+     "p_top3": 0.48389
     },
     {
      "boat": 6,
-     "p_win": 0.01964,
-     "p_top3": 0.42902
+     "p_win": 0.02274,
+     "p_top3": 0.3292
     }
    ],
    "predictions": [
     {
      "combination": "1-3-5",
-     "probability": 0.20334,
-     "raw_probability": 0.24628
+     "probability": 0.20686,
+     "raw_probability": 0.26607
     },
     {
      "combination": "1-3-4",
-     "probability": 0.17528,
-     "raw_probability": 0.20832
+     "probability": 0.17832,
+     "raw_probability": 0.22487
     },
     {
      "combination": "1-4-5",
-     "probability": 0.15035,
-     "raw_probability": 0.18025
+     "probability": 0.14667,
+     "raw_probability": 0.15916
     },
     {
      "combination": "1-2-3",
-     "probability": 0.08064,
-     "raw_probability": 0.07463
+     "probability": 0.07717,
+     "raw_probability": 0.07034
     },
     {
      "combination": "1-2-5",
-     "probability": 0.06881,
-     "raw_probability": 0.06444
-    },
-    {
-     "combination": "1-2-4",
-     "probability": 0.0589,
-     "raw_probability": 0.05433
+     "probability": 0.05514,
+     "raw_probability": 0.04953
     },
     {
      "combination": "3-4-5",
-     "probability": 0.04596,
-     "raw_probability": 0.04272
+     "probability": 0.0536,
+     "raw_probability": 0.04886
+    },
+    {
+     "combination": "1-2-4",
+     "probability": 0.04676,
+     "raw_probability": 0.0417
     },
     {
      "combination": "1-3-6",
-     "probability": 0.03087,
-     "raw_probability": 0.02514
+     "probability": 0.04086,
+     "raw_probability": 0.03236
     },
     {
      "combination": "1-5-6",
-     "probability": 0.03087,
-     "raw_probability": 0.02169
+     "probability": 0.0314,
+     "raw_probability": 0.02276
     },
     {
      "combination": "1-4-6",
-     "probability": 0.02697,
-     "raw_probability": 0.01827
+     "probability": 0.02809,
+     "raw_probability": 0.01915
     },
     {
      "combination": "2-3-5",
-     "probability": 0.02491,
-     "raw_probability": 0.01542
+     "probability": 0.02534,
+     "raw_probability": 0.01534
     },
     {
      "combination": "2-3-4",
-     "probability": 0.01838,
-     "raw_probability": 0.01309
+     "probability": 0.0187,
+     "raw_probability": 0.01298
     },
     {
      "combination": "2-4-5",
-     "probability": 0.01838,
-     "raw_probability": 0.01139
+     "probability": 0.01634,
+     "raw_probability": 0.00932
     },
     {
      "combination": "1-2-6",
-     "probability": 0.01506,
-     "raw_probability": 0.00644
-    },
-    {
-     "combination": "3-5-6",
-     "probability": 0.01183,
-     "raw_probability": 0.0052
+     "probability": 0.01532,
+     "raw_probability": 0.00589
     },
     {
      "combination": "3-4-6",
-     "probability": 0.01115,
-     "raw_probability": 0.00441
+     "probability": 0.01532,
+     "raw_probability": 0.00597
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.01532,
+     "raw_probability": 0.00705
     },
     {
      "combination": "4-5-6",
-     "probability": 0.01029,
-     "raw_probability": 0.00384
+     "probability": 0.01047,
+     "raw_probability": 0.00429
     },
     {
      "combination": "2-3-6",
-     "probability": 0.00682,
-     "raw_probability": 0.00159
+     "probability": 0.00694,
+     "raw_probability": 0.00187
     },
     {
      "combination": "2-4-6",
-     "probability": 0.00559,
-     "raw_probability": 0.00118
+     "probability": 0.00569,
+     "raw_probability": 0.00114
     },
     {
      "combination": "2-5-6",
-     "probability": 0.00559,
-     "raw_probability": 0.00138
+     "probability": 0.00569,
+     "raw_probability": 0.00134
     }
    ],
    "strategy_tickets": [],
@@ -1298,9 +1298,9 @@
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "21-08": {
    "date": "2026-11-21",
@@ -1343,135 +1343,135 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.4393,
-     "p_top3": 0.90979
+     "p_win": 0.44034,
+     "p_top3": 0.91892
     },
     {
      "boat": 2,
-     "p_win": 0.28201,
-     "p_top3": 0.7842
+     "p_win": 0.29031,
+     "p_top3": 0.79623
     },
     {
      "boat": 3,
-     "p_win": 0.0649,
-     "p_top3": 0.25005
+     "p_win": 0.06729,
+     "p_top3": 0.28062
     },
     {
      "boat": 4,
-     "p_win": 0.06349,
-     "p_top3": 0.26549
+     "p_win": 0.06667,
+     "p_top3": 0.27322
     },
     {
      "boat": 5,
-     "p_win": 0.11475,
-     "p_top3": 0.31982
+     "p_win": 0.09922,
+     "p_top3": 0.23088
     },
     {
      "boat": 6,
-     "p_win": 0.03555,
-     "p_top3": 0.13086
+     "p_win": 0.03617,
+     "p_top3": 0.14634
     }
    ],
    "predictions": [
     {
      "combination": "1-2-5",
-     "probability": 0.23033,
-     "raw_probability": 0.31432
+     "probability": 0.21466,
+     "raw_probability": 0.28263
     },
     {
      "combination": "1-2-3",
-     "probability": 0.15003,
-     "raw_probability": 0.16822
+     "probability": 0.15617,
+     "raw_probability": 0.18523
     },
     {
      "combination": "1-2-4",
-     "probability": 0.15003,
-     "raw_probability": 0.16431
+     "probability": 0.15617,
+     "raw_probability": 0.18342
     },
     {
      "combination": "1-2-6",
-     "probability": 0.0874,
-     "raw_probability": 0.08953
+     "probability": 0.09624,
+     "raw_probability": 0.09662
     },
     {
      "combination": "1-3-5",
-     "probability": 0.05559,
-     "raw_probability": 0.04897
+     "probability": 0.05052,
+     "raw_probability": 0.04326
     },
     {
      "combination": "1-4-5",
-     "probability": 0.05404,
-     "raw_probability": 0.04782
-    },
-    {
-     "combination": "1-5-6",
-     "probability": 0.03569,
-     "raw_probability": 0.0259
+     "probability": 0.05052,
+     "raw_probability": 0.04283
     },
     {
      "combination": "1-3-4",
-     "probability": 0.03166,
-     "raw_probability": 0.02523
+     "probability": 0.03614,
+     "raw_probability": 0.02781
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.03206,
+     "raw_probability": 0.0224
     },
     {
      "combination": "2-3-5",
-     "probability": 0.03166,
-     "raw_probability": 0.02233
+     "probability": 0.02868,
+     "raw_probability": 0.02056
     },
     {
      "combination": "2-4-5",
-     "probability": 0.03166,
-     "raw_probability": 0.02181
+     "probability": 0.02868,
+     "raw_probability": 0.02036
     },
     {
      "combination": "1-3-6",
-     "probability": 0.02387,
-     "raw_probability": 0.01365
+     "probability": 0.02587,
+     "raw_probability": 0.01453
     },
     {
      "combination": "1-4-6",
-     "probability": 0.01885,
-     "raw_probability": 0.01333
+     "probability": 0.02587,
+     "raw_probability": 0.01438
     },
     {
      "combination": "2-3-4",
-     "probability": 0.01885,
-     "raw_probability": 0.0116
+     "probability": 0.01909,
+     "raw_probability": 0.01328
     },
     {
      "combination": "2-5-6",
-     "probability": 0.01885,
-     "raw_probability": 0.01184
+     "probability": 0.01823,
+     "raw_probability": 0.01067
     },
     {
      "combination": "2-3-6",
-     "probability": 0.01545,
-     "raw_probability": 0.00629
+     "probability": 0.01564,
+     "raw_probability": 0.00696
     },
     {
      "combination": "2-4-6",
-     "probability": 0.01545,
-     "raw_probability": 0.00615
+     "probability": 0.01564,
+     "raw_probability": 0.00689
     },
     {
      "combination": "3-4-5",
-     "probability": 0.01056,
-     "raw_probability": 0.00369
+     "probability": 0.0098,
+     "raw_probability": 0.00343
     },
     {
      "combination": "3-5-6",
-     "probability": 0.00731,
-     "raw_probability": 0.002
+     "probability": 0.00709,
+     "raw_probability": 0.0018
     },
     {
      "combination": "4-5-6",
-     "probability": 0.007,
-     "raw_probability": 0.00196
+     "probability": 0.00709,
+     "raw_probability": 0.00178
     },
     {
      "combination": "3-4-6",
-     "probability": 0.00573,
-     "raw_probability": 0.00104
+     "probability": 0.00581,
+     "raw_probability": 0.00117
     }
    ],
    "strategy_tickets": [],
@@ -1483,9 +1483,9 @@
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "21-09": {
    "date": "2026-11-21",
@@ -1528,135 +1528,135 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.38748,
-     "p_top3": 0.78269
+     "p_win": 0.37722,
+     "p_top3": 0.74445
     },
     {
      "boat": 2,
-     "p_win": 0.22845,
-     "p_top3": 0.65715
+     "p_win": 0.20956,
+     "p_top3": 0.5769
     },
     {
      "boat": 3,
-     "p_win": 0.18516,
-     "p_top3": 0.54944
+     "p_win": 0.18778,
+     "p_top3": 0.54306
     },
     {
      "boat": 4,
-     "p_win": 0.05948,
-     "p_top3": 0.19284
+     "p_win": 0.0606,
+     "p_top3": 0.20732
     },
     {
      "boat": 5,
-     "p_win": 0.05068,
-     "p_top3": 0.26077
+     "p_win": 0.05071,
+     "p_top3": 0.25474
     },
     {
      "boat": 6,
-     "p_win": 0.08874,
-     "p_top3": 0.49096
+     "p_win": 0.11413,
+     "p_top3": 0.49818
     }
    ],
    "predictions": [
     {
      "combination": "1-2-3",
-     "probability": 0.21022,
-     "raw_probability": 0.3052
+     "probability": 0.19553,
+     "raw_probability": 0.26142
     },
     {
      "combination": "1-2-6",
-     "probability": 0.11475,
-     "raw_probability": 0.12839
+     "probability": 0.13205,
+     "raw_probability": 0.14312
     },
     {
      "combination": "1-3-6",
-     "probability": 0.09208,
-     "raw_probability": 0.09618
+     "probability": 0.11011,
+     "raw_probability": 0.12352
     },
     {
      "combination": "1-2-4",
-     "probability": 0.0847,
-     "raw_probability": 0.08327
+     "probability": 0.07294,
+     "raw_probability": 0.07133
     },
     {
      "combination": "1-2-5",
-     "probability": 0.07539,
-     "raw_probability": 0.07028
+     "probability": 0.0633,
+     "raw_probability": 0.05905
     },
     {
      "combination": "1-3-4",
-     "probability": 0.06542,
-     "raw_probability": 0.0623
+     "probability": 0.0633,
+     "raw_probability": 0.06149
     },
     {
      "combination": "1-3-5",
-     "probability": 0.05854,
-     "raw_probability": 0.05257
+     "probability": 0.05445,
+     "raw_probability": 0.0509
     },
     {
      "combination": "2-3-6",
-     "probability": 0.04568,
-     "raw_probability": 0.04133
+     "probability": 0.05211,
+     "raw_probability": 0.04968
     },
     {
      "combination": "1-4-6",
-     "probability": 0.03458,
-     "raw_probability": 0.02582
-    },
-    {
-     "combination": "2-3-4",
-     "probability": 0.03458,
-     "raw_probability": 0.02679
+     "probability": 0.03965,
+     "raw_probability": 0.03335
     },
     {
      "combination": "1-5-6",
-     "probability": 0.03068,
-     "raw_probability": 0.02177
+     "probability": 0.03346,
+     "raw_probability": 0.02759
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.02968,
+     "raw_probability": 0.02477
     },
     {
      "combination": "2-3-5",
-     "probability": 0.03068,
-     "raw_probability": 0.02261
-    },
-    {
-     "combination": "1-4-5",
-     "probability": 0.02313,
-     "raw_probability": 0.01406
+     "probability": 0.02655,
+     "raw_probability": 0.02051
     },
     {
      "combination": "2-4-6",
-     "probability": 0.01827,
-     "raw_probability": 0.01128
+     "probability": 0.02238,
+     "raw_probability": 0.01361
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.02238,
+     "raw_probability": 0.01366
     },
     {
      "combination": "2-5-6",
-     "probability": 0.01723,
-     "raw_probability": 0.00952
+     "probability": 0.01768,
+     "raw_probability": 0.01126
     },
     {
      "combination": "3-4-6",
-     "probability": 0.01597,
-     "raw_probability": 0.00857
+     "probability": 0.01768,
+     "raw_probability": 0.01181
     },
     {
      "combination": "3-5-6",
-     "probability": 0.01497,
-     "raw_probability": 0.00723
+     "probability": 0.01667,
+     "raw_probability": 0.00977
     },
     {
      "combination": "2-4-5",
-     "probability": 0.01497,
-     "raw_probability": 0.00616
+     "probability": 0.01137,
+     "raw_probability": 0.00561
     },
     {
      "combination": "3-4-5",
-     "probability": 0.01108,
-     "raw_probability": 0.00469
+     "probability": 0.01072,
+     "raw_probability": 0.00487
     },
     {
      "combination": "4-5-6",
-     "probability": 0.00709,
-     "raw_probability": 0.00198
+     "probability": 0.008,
+     "raw_probability": 0.00268
     }
    ],
    "strategy_tickets": [],
@@ -1668,9 +1668,9 @@
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "21-10": {
    "date": "2026-11-21",
@@ -1713,135 +1713,135 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.31745,
-     "p_top3": 0.72523
+     "p_win": 0.31971,
+     "p_top3": 0.73365
     },
     {
      "boat": 2,
-     "p_win": 0.07754,
-     "p_top3": 0.34284
+     "p_win": 0.09425,
+     "p_top3": 0.36166
     },
     {
      "boat": 3,
-     "p_win": 0.16342,
-     "p_top3": 0.57901
+     "p_win": 0.16396,
+     "p_top3": 0.59324
     },
     {
      "boat": 4,
-     "p_win": 0.10697,
-     "p_top3": 0.35297
+     "p_win": 0.11347,
+     "p_top3": 0.3408
     },
     {
      "boat": 5,
-     "p_win": 0.04347,
-     "p_top3": 0.22923
+     "p_win": 0.04236,
+     "p_top3": 0.23259
     },
     {
      "boat": 6,
-     "p_win": 0.29115,
-     "p_top3": 0.71425
+     "p_win": 0.26625,
+     "p_top3": 0.71859
     }
    ],
    "predictions": [
     {
      "combination": "1-3-6",
-     "probability": 0.19637,
-     "raw_probability": 0.26055
+     "probability": 0.1666,
+     "raw_probability": 0.23024
     },
     {
      "combination": "1-4-6",
-     "probability": 0.13851,
-     "raw_probability": 0.15861
+     "probability": 0.13297,
+     "raw_probability": 0.14914
     },
     {
      "combination": "1-2-6",
-     "probability": 0.09647,
-     "raw_probability": 0.11117
+     "probability": 0.10884,
+     "raw_probability": 0.12107
     },
     {
      "combination": "1-3-4",
-     "probability": 0.07326,
-     "raw_probability": 0.07097
-    },
-    {
-     "combination": "3-4-6",
-     "probability": 0.06357,
-     "raw_probability": 0.06187
-    },
-    {
-     "combination": "1-5-6",
-     "probability": 0.06357,
-     "raw_probability": 0.06014
+     "probability": 0.07915,
+     "raw_probability": 0.07711
     },
     {
      "combination": "1-2-3",
-     "probability": 0.05234,
-     "raw_probability": 0.04964
+     "probability": 0.06257,
+     "raw_probability": 0.06253
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.06257,
+     "raw_probability": 0.05807
+    },
+    {
+     "combination": "1-5-6",
+     "probability": 0.05599,
+     "raw_probability": 0.05144
     },
     {
      "combination": "2-3-6",
-     "probability": 0.04697,
-     "raw_probability": 0.04328
+     "probability": 0.05008,
+     "raw_probability": 0.04711
     },
     {
      "combination": "1-2-4",
-     "probability": 0.03879,
-     "raw_probability": 0.03003
+     "probability": 0.04362,
+     "raw_probability": 0.04032
     },
     {
      "combination": "2-4-6",
-     "probability": 0.0336,
-     "raw_probability": 0.02622
+     "probability": 0.03817,
+     "raw_probability": 0.03044
     },
     {
      "combination": "1-3-5",
-     "probability": 0.0336,
-     "raw_probability": 0.02679
+     "probability": 0.03307,
+     "raw_probability": 0.02649
     },
     {
      "combination": "3-5-6",
-     "probability": 0.02981,
-     "raw_probability": 0.02336
+     "probability": 0.02624,
+     "raw_probability": 0.01996
     },
     {
      "combination": "1-4-5",
-     "probability": 0.02406,
-     "raw_probability": 0.01619
-    },
-    {
-     "combination": "4-5-6",
-     "probability": 0.02247,
-     "raw_probability": 0.01414
+     "probability": 0.02564,
+     "raw_probability": 0.01705
     },
     {
      "combination": "2-3-4",
-     "probability": 0.01775,
-     "raw_probability": 0.01203
+     "probability": 0.02368,
+     "raw_probability": 0.01602
     },
     {
      "combination": "1-2-5",
-     "probability": 0.01775,
-     "raw_probability": 0.0113
+     "probability": 0.02212,
+     "raw_probability": 0.01381
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.01747,
+     "raw_probability": 0.01289
     },
     {
      "combination": "2-5-6",
-     "probability": 0.01674,
-     "raw_probability": 0.00988
+     "probability": 0.01669,
+     "raw_probability": 0.01045
     },
     {
      "combination": "3-4-5",
-     "probability": 0.01454,
-     "raw_probability": 0.0065
+     "probability": 0.01431,
+     "raw_probability": 0.00679
     },
     {
      "combination": "2-3-5",
-     "probability": 0.01077,
-     "raw_probability": 0.00455
+     "probability": 0.01124,
+     "raw_probability": 0.00551
     },
     {
      "combination": "2-4-5",
-     "probability": 0.00905,
-     "raw_probability": 0.00277
+     "probability": 0.00897,
+     "raw_probability": 0.00357
     }
    ],
    "strategy_tickets": [],
@@ -1853,9 +1853,9 @@
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "21-11": {
    "date": "2026-11-21",
@@ -1898,135 +1898,135 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.44345,
-     "p_top3": 0.87648
+     "p_win": 0.43227,
+     "p_top3": 0.87952
     },
     {
      "boat": 2,
-     "p_win": 0.09168,
-     "p_top3": 0.37366
+     "p_win": 0.11239,
+     "p_top3": 0.37879
     },
     {
      "boat": 3,
-     "p_win": 0.13061,
-     "p_top3": 0.49455
+     "p_win": 0.12489,
+     "p_top3": 0.48223
     },
     {
      "boat": 4,
-     "p_win": 0.13057,
-     "p_top3": 0.40802
+     "p_win": 0.12439,
+     "p_top3": 0.39198
     },
     {
      "boat": 5,
-     "p_win": 0.15091,
-     "p_top3": 0.54805
+     "p_win": 0.15582,
+     "p_top3": 0.5551
     },
     {
      "boat": 6,
-     "p_win": 0.05277,
-     "p_top3": 0.26338
+     "p_win": 0.05023,
+     "p_top3": 0.2499
     }
    ],
    "predictions": [
     {
-     "combination": "1-3-5",
-     "probability": 0.13435,
-     "raw_probability": 0.1529
-    },
-    {
      "combination": "1-4-5",
-     "probability": 0.13105,
-     "raw_probability": 0.15284
+     "probability": 0.12938,
+     "raw_probability": 0.14188
     },
     {
-     "combination": "1-3-4",
-     "probability": 0.10815,
-     "raw_probability": 0.1282
+     "combination": "1-3-5",
+     "probability": 0.12938,
+     "raw_probability": 0.14255
     },
     {
      "combination": "1-2-5",
-     "probability": 0.0919,
-     "raw_probability": 0.10169
+     "probability": 0.10877,
+     "raw_probability": 0.12607
+    },
+    {
+     "combination": "1-3-4",
+     "probability": 0.09243,
+     "raw_probability": 0.10846
     },
     {
      "combination": "1-2-4",
-     "probability": 0.07983,
-     "raw_probability": 0.08518
+     "probability": 0.08729,
+     "raw_probability": 0.09588
     },
     {
      "combination": "1-2-3",
-     "probability": 0.07983,
-     "raw_probability": 0.08521
+     "probability": 0.08729,
+     "raw_probability": 0.09633
     },
     {
      "combination": "1-5-6",
-     "probability": 0.06066,
-     "raw_probability": 0.0558
+     "probability": 0.0555,
+     "raw_probability": 0.05213
     },
     {
      "combination": "1-4-6",
-     "probability": 0.04936,
-     "raw_probability": 0.0467
+     "probability": 0.04324,
+     "raw_probability": 0.03956
     },
     {
      "combination": "1-3-6",
-     "probability": 0.04936,
-     "raw_probability": 0.04671
+     "probability": 0.04324,
+     "raw_probability": 0.03975
     },
     {
      "combination": "1-2-6",
-     "probability": 0.03762,
-     "raw_probability": 0.03093
+     "probability": 0.03885,
+     "raw_probability": 0.0351
     },
     {
      "combination": "3-4-5",
-     "probability": 0.02891,
-     "raw_probability": 0.02469
+     "probability": 0.02908,
+     "raw_probability": 0.02303
     },
     {
      "combination": "2-4-5",
-     "probability": 0.02333,
-     "raw_probability": 0.01652
+     "probability": 0.02601,
+     "raw_probability": 0.0204
     },
     {
      "combination": "2-3-5",
-     "probability": 0.02333,
-     "raw_probability": 0.01652
+     "probability": 0.02601,
+     "raw_probability": 0.02049
     },
     {
      "combination": "2-3-4",
-     "probability": 0.0218,
-     "raw_probability": 0.01392
-    },
-    {
-     "combination": "4-5-6",
-     "probability": 0.01505,
-     "raw_probability": 0.00909
+     "probability": 0.02347,
+     "raw_probability": 0.0157
     },
     {
      "combination": "3-5-6",
-     "probability": 0.01505,
-     "raw_probability": 0.0091
-    },
-    {
-     "combination": "3-4-6",
-     "probability": 0.01414,
-     "raw_probability": 0.00766
+     "probability": 0.01514,
+     "raw_probability": 0.00852
     },
     {
      "combination": "2-5-6",
-     "probability": 0.01411,
-     "raw_probability": 0.00608
+     "probability": 0.01423,
+     "raw_probability": 0.00755
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.01423,
+     "raw_probability": 0.00848
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.01419,
+     "raw_probability": 0.00653
     },
     {
      "combination": "2-4-6",
-     "probability": 0.01108,
-     "raw_probability": 0.00513
+     "probability": 0.01114,
+     "raw_probability": 0.00578
     },
     {
      "combination": "2-3-6",
-     "probability": 0.01108,
-     "raw_probability": 0.00513
+     "probability": 0.01114,
+     "raw_probability": 0.00581
     }
    ],
    "strategy_tickets": [],
@@ -2038,9 +2038,9 @@
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "21-12": {
    "date": "2026-11-21",
@@ -2083,135 +2083,135 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.46777,
-     "p_top3": 0.9162
+     "p_win": 0.45905,
+     "p_top3": 0.90628
     },
     {
      "boat": 2,
-     "p_win": 0.13968,
-     "p_top3": 0.55384
+     "p_win": 0.13762,
+     "p_top3": 0.51872
     },
     {
      "boat": 3,
-     "p_win": 0.10258,
-     "p_top3": 0.36312
+     "p_win": 0.11615,
+     "p_top3": 0.41678
     },
     {
      "boat": 4,
-     "p_win": 0.18851,
-     "p_top3": 0.57826
+     "p_win": 0.1798,
+     "p_top3": 0.564
     },
     {
      "boat": 5,
-     "p_win": 0.03571,
-     "p_top3": 0.18731
+     "p_win": 0.03922,
+     "p_top3": 0.20015
     },
     {
      "boat": 6,
-     "p_win": 0.06576,
-     "p_top3": 0.34144
+     "p_win": 0.06816,
+     "p_top3": 0.31998
     }
    ],
    "predictions": [
     {
      "combination": "1-2-4",
-     "probability": 0.1985,
-     "raw_probability": 0.25081
+     "probability": 0.17118,
+     "raw_probability": 0.22079
     },
     {
      "combination": "1-3-4",
-     "probability": 0.14464,
-     "raw_probability": 0.17482
+     "probability": 0.14683,
+     "raw_probability": 0.1807
     },
     {
      "combination": "1-2-3",
-     "probability": 0.11179,
-     "raw_probability": 0.11875
+     "probability": 0.11275,
+     "raw_probability": 0.12873
     },
     {
      "combination": "1-4-6",
-     "probability": 0.09577,
-     "raw_probability": 0.10705
+     "probability": 0.09204,
+     "raw_probability": 0.0997
     },
     {
      "combination": "1-2-6",
-     "probability": 0.07405,
-     "raw_probability": 0.07252
-    },
-    {
-     "combination": "1-4-5",
-     "probability": 0.06322,
-     "raw_probability": 0.0562
+     "probability": 0.07408,
+     "raw_probability": 0.07083
     },
     {
      "combination": "1-3-6",
-     "probability": 0.05291,
-     "raw_probability": 0.05022
+     "probability": 0.06324,
+     "raw_probability": 0.05777
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.06324,
+     "raw_probability": 0.05551
     },
     {
      "combination": "1-2-5",
-     "probability": 0.0448,
-     "raw_probability": 0.038
+     "probability": 0.04482,
+     "raw_probability": 0.03937
     },
     {
      "combination": "2-3-4",
-     "probability": 0.03397,
-     "raw_probability": 0.02668
+     "probability": 0.03922,
+     "raw_probability": 0.02844
     },
     {
      "combination": "1-3-5",
-     "probability": 0.03397,
-     "raw_probability": 0.02628
-    },
-    {
-     "combination": "2-4-6",
-     "probability": 0.02432,
-     "raw_probability": 0.01638
+     "probability": 0.03922,
+     "raw_probability": 0.03209
     },
     {
      "combination": "1-5-6",
-     "probability": 0.02432,
-     "raw_probability": 0.01597
+     "probability": 0.02634,
+     "raw_probability": 0.01756
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.02433,
+     "raw_probability": 0.01576
     },
     {
      "combination": "3-4-6",
      "probability": 0.01795,
-     "raw_probability": 0.01148
-    },
-    {
-     "combination": "2-4-5",
-     "probability": 0.01568,
-     "raw_probability": 0.00861
+     "raw_probability": 0.01294
     },
     {
      "combination": "2-3-6",
-     "probability": 0.01474,
-     "raw_probability": 0.00795
+     "probability": 0.01569,
+     "raw_probability": 0.00935
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.01569,
+     "raw_probability": 0.00878
     },
     {
      "combination": "3-4-5",
-     "probability": 0.0147,
-     "raw_probability": 0.00603
+     "probability": 0.01471,
+     "raw_probability": 0.00721
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.01155,
+     "raw_probability": 0.00521
     },
     {
      "combination": "4-5-6",
      "probability": 0.01005,
-     "raw_probability": 0.0037
-    },
-    {
-     "combination": "2-3-5",
-     "probability": 0.01005,
-     "raw_probability": 0.00418
+     "raw_probability": 0.00399
     },
     {
      "combination": "2-5-6",
-     "probability": 0.0079,
-     "raw_probability": 0.00257
+     "probability": 0.00915,
+     "raw_probability": 0.00289
     },
     {
      "combination": "3-5-6",
-     "probability": 0.00666,
-     "raw_probability": 0.0018
+     "probability": 0.00791,
+     "raw_probability": 0.00237
     }
    ],
    "strategy_tickets": [],
@@ -2223,9 +2223,9 @@
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "24-01": {
    "date": "2026-11-21",
@@ -2268,135 +2268,135 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.45133,
-     "p_top3": 0.92809
+     "p_win": 0.43101,
+     "p_top3": 0.91942
     },
     {
      "boat": 2,
-     "p_win": 0.21682,
-     "p_top3": 0.68091
+     "p_win": 0.22983,
+     "p_top3": 0.67267
     },
     {
      "boat": 3,
-     "p_win": 0.10639,
-     "p_top3": 0.47638
+     "p_win": 0.11977,
+     "p_top3": 0.47646
     },
     {
      "boat": 4,
-     "p_win": 0.12889,
-     "p_top3": 0.47121
+     "p_win": 0.14007,
+     "p_top3": 0.49993
     },
     {
      "boat": 5,
-     "p_win": 0.09392,
-     "p_top3": 0.3687
+     "p_win": 0.0777,
+     "p_top3": 0.36919
     },
     {
      "boat": 6,
-     "p_win": 0.00265,
-     "p_top3": 0.05172
+     "p_win": 0.00161,
+     "p_top3": 0.05433
     }
    ],
    "predictions": [
     {
      "combination": "1-2-4",
-     "probability": 0.21544,
-     "raw_probability": 0.25379
+     "probability": 0.21576,
+     "raw_probability": 0.2737
     },
     {
      "combination": "1-2-3",
-     "probability": 0.16214,
-     "raw_probability": 0.20334
+     "probability": 0.18599,
+     "raw_probability": 0.22773
     },
     {
      "combination": "1-2-5",
-     "probability": 0.15931,
-     "raw_probability": 0.17672
+     "probability": 0.14285,
+     "raw_probability": 0.14037
     },
     {
      "combination": "1-3-4",
-     "probability": 0.10395,
-     "raw_probability": 0.10331
+     "probability": 0.12151,
+     "raw_probability": 0.11827
     },
     {
      "combination": "1-4-5",
-     "probability": 0.09029,
-     "raw_probability": 0.08965
+     "probability": 0.08049,
+     "raw_probability": 0.07255
     },
     {
      "combination": "1-3-5",
-     "probability": 0.08037,
-     "raw_probability": 0.07155
+     "probability": 0.06985,
+     "raw_probability": 0.06014
     },
     {
      "combination": "2-3-4",
-     "probability": 0.04255,
-     "raw_probability": 0.03036
+     "probability": 0.04877,
+     "raw_probability": 0.04147
     },
     {
      "combination": "2-4-5",
-     "probability": 0.03687,
-     "raw_probability": 0.0264
+     "probability": 0.03692,
+     "raw_probability": 0.02556
     },
     {
      "combination": "2-3-5",
-     "probability": 0.03212,
-     "raw_probability": 0.02117
+     "probability": 0.03216,
+     "raw_probability": 0.02128
     },
     {
      "combination": "3-4-5",
-     "probability": 0.01948,
-     "raw_probability": 0.01113
+     "probability": 0.0195,
+     "raw_probability": 0.0114
     },
     {
      "combination": "1-2-6",
-     "probability": 0.01181,
-     "raw_probability": 0.00452
-    },
-    {
-     "combination": "1-4-6",
-     "probability": 0.00858,
-     "raw_probability": 0.00227
+     "probability": 0.00883,
+     "raw_probability": 0.00269
     },
     {
      "combination": "1-3-6",
-     "probability": 0.00723,
-     "raw_probability": 0.00181
+     "probability": 0.00593,
+     "raw_probability": 0.00114
+    },
+    {
+     "combination": "1-4-6",
+     "probability": 0.00593,
+     "raw_probability": 0.00138
     },
     {
      "combination": "1-5-6",
-     "probability": 0.00723,
-     "raw_probability": 0.00157
-    },
-    {
-     "combination": "2-4-6",
-     "probability": 0.00502,
-     "raw_probability": 0.00067
+     "probability": 0.00503,
+     "raw_probability": 0.0007
     },
     {
      "combination": "2-3-6",
-     "probability": 0.00369,
-     "raw_probability": 0.00054
+     "probability": 0.0037,
+     "raw_probability": 0.00041
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.0037,
+     "raw_probability": 0.00049
     },
     {
      "combination": "2-5-6",
-     "probability": 0.00369,
-     "raw_probability": 0.00047
+     "probability": 0.00327,
+     "raw_probability": 0.00025
     },
     {
      "combination": "3-4-6",
-     "probability": 0.00369,
-     "raw_probability": 0.00028
+     "probability": 0.00327,
+     "raw_probability": 0.00022
     },
     {
      "combination": "3-5-6",
      "probability": 0.00327,
-     "raw_probability": 0.0002
+     "raw_probability": 0.00011
     },
     {
      "combination": "4-5-6",
      "probability": 0.00327,
-     "raw_probability": 0.00025
+     "raw_probability": 0.00013
     }
    ],
    "strategy_tickets": [],
@@ -2408,9 +2408,9 @@
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "24-02": {
    "date": "2026-11-21",
@@ -2453,135 +2453,135 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.3337,
-     "p_top3": 0.81002
+     "p_win": 0.34155,
+     "p_top3": 0.80345
     },
     {
      "boat": 2,
-     "p_win": 0.21287,
-     "p_top3": 0.73146
+     "p_win": 0.21162,
+     "p_top3": 0.70184
     },
     {
      "boat": 3,
-     "p_win": 0.10979,
-     "p_top3": 0.5581
+     "p_win": 0.10827,
+     "p_top3": 0.57741
     },
     {
      "boat": 4,
-     "p_win": 0.06559,
-     "p_top3": 0.3672
+     "p_win": 0.0704,
+     "p_top3": 0.39183
     },
     {
      "boat": 5,
-     "p_win": 0.27572,
-     "p_top3": 0.69461
+     "p_win": 0.26562,
+     "p_top3": 0.70282
     },
     {
      "boat": 6,
-     "p_win": 0.00232,
-     "p_top3": 0.05286
+     "p_win": 0.00254,
+     "p_top3": 0.04644
     }
    ],
    "predictions": [
     {
      "combination": "1-2-5",
-     "probability": 0.27535,
-     "raw_probability": 0.36573
+     "probability": 0.2624,
+     "raw_probability": 0.35714
     },
     {
      "combination": "1-3-5",
-     "probability": 0.15576,
-     "raw_probability": 0.16333
+     "probability": 0.14997,
+     "raw_probability": 0.15812
     },
     {
      "combination": "1-2-3",
-     "probability": 0.10792,
-     "raw_probability": 0.11201
+     "probability": 0.11651,
+     "raw_probability": 0.11387
     },
     {
      "combination": "1-4-5",
-     "probability": 0.09207,
-     "raw_probability": 0.09281
+     "probability": 0.09856,
+     "raw_probability": 0.09845
     },
     {
      "combination": "2-3-5",
-     "probability": 0.09207,
-     "raw_probability": 0.08244
+     "probability": 0.08432,
+     "raw_probability": 0.07614
     },
     {
      "combination": "1-2-4",
-     "probability": 0.07111,
-     "raw_probability": 0.06353
+     "probability": 0.07932,
+     "raw_probability": 0.0708
     },
     {
      "combination": "2-4-5",
-     "probability": 0.05692,
-     "raw_probability": 0.04677
+     "probability": 0.0551,
+     "raw_probability": 0.04735
     },
     {
      "combination": "1-3-4",
-     "probability": 0.03759,
-     "raw_probability": 0.02801
+     "probability": 0.042,
+     "raw_probability": 0.03094
     },
     {
      "combination": "3-4-5",
-     "probability": 0.02983,
-     "raw_probability": 0.02076
+     "probability": 0.0317,
+     "raw_probability": 0.02088
     },
     {
      "combination": "2-3-4",
-     "probability": 0.02691,
-     "raw_probability": 0.01447
+     "probability": 0.02605,
+     "raw_probability": 0.01525
     },
     {
      "combination": "1-5-6",
-     "probability": 0.01013,
-     "raw_probability": 0.00309
+     "probability": 0.00987,
+     "raw_probability": 0.00332
     },
     {
      "combination": "1-2-6",
-     "probability": 0.0077,
-     "raw_probability": 0.00211
+     "probability": 0.00847,
+     "raw_probability": 0.00238
     },
     {
      "combination": "2-5-6",
-     "probability": 0.00709,
-     "raw_probability": 0.00155
+     "probability": 0.00714,
+     "raw_probability": 0.00159
     },
     {
      "combination": "1-3-6",
-     "probability": 0.00604,
-     "raw_probability": 0.00093
+     "probability": 0.00585,
+     "raw_probability": 0.00104
     },
     {
      "combination": "3-5-6",
-     "probability": 0.00512,
-     "raw_probability": 0.00069
+     "probability": 0.00495,
+     "raw_probability": 0.0007
     },
     {
      "combination": "1-4-6",
-     "probability": 0.00376,
-     "raw_probability": 0.00052
+     "probability": 0.00364,
+     "raw_probability": 0.00064
     },
     {
      "combination": "2-3-6",
-     "probability": 0.00376,
-     "raw_probability": 0.00048
+     "probability": 0.00364,
+     "raw_probability": 0.00051
     },
     {
      "combination": "2-4-6",
-     "probability": 0.00376,
-     "raw_probability": 0.00027
+     "probability": 0.00364,
+     "raw_probability": 0.00032
     },
     {
      "combination": "4-5-6",
-     "probability": 0.00376,
-     "raw_probability": 0.00039
+     "probability": 0.00364,
+     "raw_probability": 0.00043
     },
     {
      "combination": "3-4-6",
-     "probability": 0.00333,
-     "raw_probability": 0.00012
+     "probability": 0.00323,
+     "raw_probability": 0.00014
     }
    ],
    "strategy_tickets": [],
@@ -2593,9 +2593,9 @@
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "24-03": {
    "date": "2026-11-21",
@@ -2638,135 +2638,135 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.33133,
-     "p_top3": 0.7108
+     "p_win": 0.33679,
+     "p_top3": 0.699
     },
     {
      "boat": 2,
-     "p_win": 0.18628,
-     "p_top3": 0.56395
+     "p_win": 0.17549,
+     "p_top3": 0.57357
     },
     {
      "boat": 3,
-     "p_win": 0.32535,
-     "p_top3": 0.80488
+     "p_win": 0.30123,
+     "p_top3": 0.80314
     },
     {
      "boat": 4,
-     "p_win": 0.03437,
-     "p_top3": 0.17951
+     "p_win": 0.04425,
+     "p_top3": 0.19159
     },
     {
      "boat": 5,
-     "p_win": 0.05015,
-     "p_top3": 0.26211
+     "p_win": 0.04801,
+     "p_top3": 0.2625
     },
     {
      "boat": 6,
-     "p_win": 0.07251,
-     "p_top3": 0.48856
+     "p_win": 0.09424,
+     "p_top3": 0.44701
     }
    ],
    "predictions": [
     {
      "combination": "1-2-3",
-     "probability": 0.27637,
-     "raw_probability": 0.39908
+     "probability": 0.24422,
+     "raw_probability": 0.33381
     },
     {
      "combination": "1-3-6",
-     "probability": 0.13406,
-     "raw_probability": 0.13478
+     "probability": 0.14032,
+     "raw_probability": 0.1616
     },
     {
      "combination": "1-3-5",
-     "probability": 0.08745,
-     "raw_probability": 0.09111
+     "probability": 0.08105,
+     "raw_probability": 0.07837
     },
     {
      "combination": "1-2-6",
-     "probability": 0.06755,
-     "raw_probability": 0.05853
+     "probability": 0.07848,
+     "raw_probability": 0.07431
     },
     {
      "combination": "1-3-4",
-     "probability": 0.06755,
-     "raw_probability": 0.0615
+     "probability": 0.07383,
+     "raw_probability": 0.07196
     },
     {
      "combination": "2-3-6",
-     "probability": 0.06645,
-     "raw_probability": 0.05676
+     "probability": 0.06407,
+     "raw_probability": 0.06186
     },
     {
      "combination": "1-2-5",
-     "probability": 0.0471,
-     "raw_probability": 0.03948
+     "probability": 0.04013,
+     "raw_probability": 0.0359
     },
     {
      "combination": "2-3-5",
-     "probability": 0.0471,
-     "raw_probability": 0.03829
+     "probability": 0.03909,
+     "raw_probability": 0.0299
     },
     {
      "combination": "1-2-4",
-     "probability": 0.03571,
-     "raw_probability": 0.02661
+     "probability": 0.03909,
+     "raw_probability": 0.03295
     },
     {
      "combination": "2-3-4",
-     "probability": 0.03571,
-     "raw_probability": 0.02581
+     "probability": 0.03387,
+     "raw_probability": 0.02744
     },
     {
      "combination": "1-5-6",
-     "probability": 0.01886,
-     "raw_probability": 0.01309
+     "probability": 0.02625,
+     "raw_probability": 0.01716
     },
     {
      "combination": "3-5-6",
-     "probability": 0.01886,
-     "raw_probability": 0.01271
+     "probability": 0.02424,
+     "raw_probability": 0.01433
     },
     {
      "combination": "1-4-6",
-     "probability": 0.01649,
-     "raw_probability": 0.00881
+     "probability": 0.02424,
+     "raw_probability": 0.01575
     },
     {
      "combination": "3-4-6",
-     "probability": 0.01649,
-     "raw_probability": 0.00856
+     "probability": 0.01789,
+     "raw_probability": 0.01316
     },
     {
      "combination": "1-4-5",
-     "probability": 0.01545,
-     "raw_probability": 0.00594
+     "probability": 0.0147,
+     "raw_probability": 0.00758
     },
     {
      "combination": "2-5-6",
-     "probability": 0.01214,
-     "raw_probability": 0.00578
+     "probability": 0.01466,
+     "raw_probability": 0.00683
     },
     {
      "combination": "3-4-5",
-     "probability": 0.01214,
-     "raw_probability": 0.00576
+     "probability": 0.01466,
+     "raw_probability": 0.00634
     },
     {
      "combination": "2-4-6",
-     "probability": 0.01056,
-     "raw_probability": 0.00389
+     "probability": 0.01466,
+     "raw_probability": 0.00627
     },
     {
      "combination": "2-4-5",
-     "probability": 0.00854,
-     "raw_probability": 0.00263
+     "probability": 0.00912,
+     "raw_probability": 0.00303
     },
     {
      "combination": "4-5-6",
      "probability": 0.00544,
-     "raw_probability": 0.00088
+     "raw_probability": 0.00146
     }
    ],
    "strategy_tickets": [],
@@ -2778,9 +2778,9 @@
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "24-04": {
    "date": "2026-11-21",
@@ -2823,135 +2823,135 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.41273,
-     "p_top3": 0.92634
+     "p_win": 0.4082,
+     "p_top3": 0.92881
     },
     {
      "boat": 2,
-     "p_win": 0.15762,
-     "p_top3": 0.54056
+     "p_win": 0.1495,
+     "p_top3": 0.55048
     },
     {
      "boat": 3,
-     "p_win": 0.19563,
-     "p_top3": 0.66787
+     "p_win": 0.20886,
+     "p_top3": 0.6463
     },
     {
      "boat": 4,
-     "p_win": 0.07596,
-     "p_top3": 0.37053
+     "p_win": 0.06868,
+     "p_top3": 0.35863
     },
     {
      "boat": 5,
-     "p_win": 0.15724,
-     "p_top3": 0.59629
+     "p_win": 0.164,
+     "p_top3": 0.63176
     },
     {
      "boat": 6,
-     "p_win": 0.00082,
-     "p_top3": 0.02467
+     "p_win": 0.00077,
+     "p_top3": 0.02308
     }
    ],
    "predictions": [
     {
      "combination": "1-3-5",
-     "probability": 0.18663,
-     "raw_probability": 0.22847
+     "probability": 0.21632,
+     "raw_probability": 0.25701
     },
     {
      "combination": "1-2-3",
-     "probability": 0.18663,
-     "raw_probability": 0.22916
+     "probability": 0.18647,
+     "raw_probability": 0.22935
     },
     {
      "combination": "1-2-5",
-     "probability": 0.15775,
-     "raw_probability": 0.17297
+     "probability": 0.15561,
+     "raw_probability": 0.16693
     },
     {
      "combination": "1-3-4",
-     "probability": 0.10035,
-     "raw_probability": 0.09912
+     "probability": 0.09851,
+     "raw_probability": 0.09504
     },
     {
      "combination": "1-4-5",
-     "probability": 0.08586,
-     "raw_probability": 0.07456
+     "probability": 0.07503,
+     "raw_probability": 0.0689
     },
     {
      "combination": "1-2-4",
-     "probability": 0.08586,
-     "raw_probability": 0.07478
+     "probability": 0.07003,
+     "raw_probability": 0.06135
     },
     {
      "combination": "2-3-5",
-     "probability": 0.06272,
-     "raw_probability": 0.05322
+     "probability": 0.06889,
+     "raw_probability": 0.05725
     },
     {
      "combination": "3-4-5",
-     "probability": 0.03286,
-     "raw_probability": 0.02315
+     "probability": 0.03284,
+     "raw_probability": 0.0238
     },
     {
      "combination": "2-3-4",
-     "probability": 0.03286,
-     "raw_probability": 0.02321
+     "probability": 0.03225,
+     "raw_probability": 0.02126
     },
     {
      "combination": "2-4-5",
-     "probability": 0.02872,
-     "raw_probability": 0.01767
+     "probability": 0.0265,
+     "raw_probability": 0.01564
     },
     {
      "combination": "1-3-6",
      "probability": 0.00595,
-     "raw_probability": 0.00099
-    },
-    {
-     "combination": "1-2-6",
-     "probability": 0.00535,
-     "raw_probability": 0.00074
+     "raw_probability": 0.001
     },
     {
      "combination": "1-5-6",
      "probability": 0.00504,
-     "raw_probability": 0.00074
+     "raw_probability": 0.00072
     },
     {
      "combination": "1-4-6",
      "probability": 0.00371,
-     "raw_probability": 0.00032
+     "raw_probability": 0.00026
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.00371,
+     "raw_probability": 0.00064
     },
     {
      "combination": "3-4-6",
      "probability": 0.00328,
-     "raw_probability": 0.0001
-    },
-    {
-     "combination": "3-5-6",
-     "probability": 0.00328,
-     "raw_probability": 0.00023
-    },
-    {
-     "combination": "2-3-6",
-     "probability": 0.00328,
-     "raw_probability": 0.00023
-    },
-    {
-     "combination": "4-5-6",
-     "probability": 0.00328,
-     "raw_probability": 8e-05
-    },
-    {
-     "combination": "2-4-6",
-     "probability": 0.00328,
-     "raw_probability": 8e-05
+     "raw_probability": 9e-05
     },
     {
      "combination": "2-5-6",
      "probability": 0.00328,
-     "raw_probability": 0.00018
+     "raw_probability": 0.00016
+    },
+    {
+     "combination": "3-5-6",
+     "probability": 0.00328,
+     "raw_probability": 0.00025
+    },
+    {
+     "combination": "2-3-6",
+     "probability": 0.00328,
+     "raw_probability": 0.00022
+    },
+    {
+     "combination": "4-5-6",
+     "probability": 0.00302,
+     "raw_probability": 7e-05
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.00302,
+     "raw_probability": 6e-05
     }
    ],
    "strategy_tickets": [],
@@ -2963,9 +2963,9 @@
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "24-05": {
    "date": "2026-11-21",
@@ -3008,123 +3008,118 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.30757,
-     "p_top3": 0.76551
+     "p_win": 0.28545,
+     "p_top3": 0.76414
     },
     {
      "boat": 2,
-     "p_win": 0.26876,
-     "p_top3": 0.84839
+     "p_win": 0.2761,
+     "p_top3": 0.85006
     },
     {
      "boat": 3,
-     "p_win": 0.20769,
-     "p_top3": 0.76985
+     "p_win": 0.22251,
+     "p_top3": 0.76188
     },
     {
      "boat": 4,
-     "p_win": 0.16439,
-     "p_top3": 0.63765
+     "p_win": 0.16186,
+     "p_top3": 0.63549
     },
     {
      "boat": 5,
-     "p_win": 0.05049,
-     "p_top3": 0.30246
+     "p_win": 0.05314,
+     "p_top3": 0.29023
     },
     {
      "boat": 6,
-     "p_win": 0.0011,
-     "p_top3": 0.01216
+     "p_win": 0.00094,
+     "p_top3": 0.01348
     }
    ],
    "predictions": [
     {
      "combination": "1-2-3",
      "probability": 0.22761,
-     "raw_probability": 0.29603
+     "raw_probability": 0.30025
     },
     {
      "combination": "1-2-4",
-     "probability": 0.18862,
-     "raw_probability": 0.21962
+     "probability": 0.16468,
+     "raw_probability": 0.19918
     },
     {
      "combination": "1-3-4",
      "probability": 0.15055,
-     "raw_probability": 0.15227
+     "raw_probability": 0.14574
     },
     {
      "combination": "2-3-4",
-     "probability": 0.12323,
-     "raw_probability": 0.12353
+     "probability": 0.14488,
+     "raw_probability": 0.1385
     },
     {
      "combination": "1-2-5",
-     "probability": 0.07084,
-     "raw_probability": 0.05878
+     "probability": 0.06969,
+     "raw_probability": 0.05734
     },
     {
      "combination": "1-3-5",
-     "probability": 0.04939,
-     "raw_probability": 0.04062
-    },
-    {
-     "combination": "1-4-5",
-     "probability": 0.04322,
-     "raw_probability": 0.03002
+     "probability": 0.04946,
+     "raw_probability": 0.04187
     },
     {
      "combination": "2-3-5",
-     "probability": 0.04322,
-     "raw_probability": 0.03298
+     "probability": 0.04939,
+     "raw_probability": 0.03979
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.03745,
+     "raw_probability": 0.02767
     },
     {
      "combination": "2-4-5",
-     "probability": 0.03322,
-     "raw_probability": 0.02442
+     "probability": 0.03745,
+     "raw_probability": 0.02631
     },
     {
      "combination": "3-4-5",
-     "probability": 0.02903,
-     "raw_probability": 0.01707
+     "probability": 0.02971,
+     "raw_probability": 0.01938
     },
     {
      "combination": "1-2-6",
      "probability": 0.00602,
-     "raw_probability": 0.00122
+     "raw_probability": 0.00096
     },
     {
      "combination": "1-3-6",
-     "probability": 0.00571,
-     "raw_probability": 0.00084
+     "probability": 0.0051,
+     "raw_probability": 0.0007
     },
     {
      "combination": "2-3-6",
-     "probability": 0.0051,
-     "raw_probability": 0.00068
+     "probability": 0.00378,
+     "raw_probability": 0.00066
     },
     {
      "combination": "1-4-6",
      "probability": 0.00375,
-     "raw_probability": 0.00062
-    },
-    {
-     "combination": "2-4-6",
-     "probability": 0.00375,
-     "raw_probability": 0.0005
+     "raw_probability": 0.00046
     },
     {
      "combination": "3-4-6",
      "probability": 0.00375,
-     "raw_probability": 0.00035
+     "raw_probability": 0.00032
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.00375,
+     "raw_probability": 0.00044
     },
     {
      "combination": "1-5-6",
-     "probability": 0.00332,
-     "raw_probability": 0.00016
-    },
-    {
-     "combination": "2-5-6",
      "probability": 0.00332,
      "raw_probability": 0.00013
     },
@@ -3134,23 +3129,30 @@
      "raw_probability": 9e-05
     },
     {
+     "combination": "2-5-6",
+     "probability": 0.00332,
+     "raw_probability": 0.00013
+    },
+    {
      "combination": "4-5-6",
      "probability": 0.00305,
-     "raw_probability": 7e-05
+     "raw_probability": 6e-05
     }
    ],
    "strategy_tickets": [],
    "tracked_tickets": {
     "S1": [],
     "S2": [],
-    "S3": [],
+    "S3": [
+     "1-2-3"
+    ],
     "S4": [
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "24-06": {
    "date": "2026-11-21",
@@ -3193,149 +3195,151 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.24755,
-     "p_top3": 0.60394
+     "p_win": 0.267,
+     "p_top3": 0.62157
     },
     {
      "boat": 2,
-     "p_win": 0.33076,
-     "p_top3": 0.88468
+     "p_win": 0.29947,
+     "p_top3": 0.87427
     },
     {
      "boat": 3,
-     "p_win": 0.10552,
-     "p_top3": 0.45948
+     "p_win": 0.1059,
+     "p_top3": 0.45261
     },
     {
      "boat": 4,
-     "p_win": 0.26173,
-     "p_top3": 0.71854
+     "p_win": 0.26652,
+     "p_top3": 0.73831
     },
     {
      "boat": 5,
-     "p_win": 0.05152,
-     "p_top3": 0.19917
+     "p_win": 0.05892,
+     "p_top3": 0.19544
     },
     {
      "boat": 6,
-     "p_win": 0.00293,
-     "p_top3": 0.05905
+     "p_win": 0.00218,
+     "p_top3": 0.04871
     }
    ],
    "predictions": [
     {
      "combination": "1-2-4",
-     "probability": 0.29503,
-     "raw_probability": 0.41046
-    },
-    {
-     "combination": "2-3-4",
-     "probability": 0.15044,
-     "raw_probability": 0.14187
+     "probability": 0.29118,
+     "raw_probability": 0.39887
     },
     {
      "combination": "1-2-3",
-     "probability": 0.12703,
-     "raw_probability": 0.13055
+     "probability": 0.12482,
+     "raw_probability": 0.12431
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.1238,
+     "raw_probability": 0.12397
     },
     {
      "combination": "1-3-4",
-     "probability": 0.09335,
-     "raw_probability": 0.08995
-    },
-    {
-     "combination": "2-4-5",
-     "probability": 0.07538,
-     "raw_probability": 0.06522
+     "probability": 0.10607,
+     "raw_probability": 0.1037
     },
     {
      "combination": "1-2-5",
-     "probability": 0.07211,
-     "raw_probability": 0.05999
+     "probability": 0.0744,
+     "raw_probability": 0.06559
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.0744,
+     "raw_probability": 0.06541
     },
     {
      "combination": "1-4-5",
-     "probability": 0.05035,
-     "raw_probability": 0.04131
+     "probability": 0.06945,
+     "raw_probability": 0.0547
     },
     {
      "combination": "2-3-5",
-     "probability": 0.03024,
-     "raw_probability": 0.02038
-    },
-    {
-     "combination": "3-4-5",
-     "probability": 0.02549,
-     "raw_probability": 0.01422
+     "probability": 0.02985,
+     "raw_probability": 0.02013
     },
     {
      "combination": "1-3-5",
-     "probability": 0.02014,
-     "raw_probability": 0.01313
+     "probability": 0.02693,
+     "raw_probability": 0.01695
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.02693,
+     "raw_probability": 0.0169
     },
     {
      "combination": "1-2-6",
-     "probability": 0.01034,
-     "raw_probability": 0.00325
+     "probability": 0.00875,
+     "raw_probability": 0.0023
     },
     {
      "combination": "2-4-6",
-     "probability": 0.01034,
-     "raw_probability": 0.00354
+     "probability": 0.00875,
+     "raw_probability": 0.00229
     },
     {
      "combination": "1-4-6",
-     "probability": 0.00781,
-     "raw_probability": 0.00224
+     "probability": 0.00738,
+     "raw_probability": 0.00192
     },
     {
      "combination": "2-3-6",
-     "probability": 0.00612,
-     "raw_probability": 0.0011
-    },
-    {
-     "combination": "3-4-6",
-     "probability": 0.00581,
-     "raw_probability": 0.00077
+     "probability": 0.00512,
+     "raw_probability": 0.0007
     },
     {
      "combination": "1-3-6",
-     "probability": 0.00519,
-     "raw_probability": 0.00071
+     "probability": 0.00377,
+     "raw_probability": 0.00059
     },
     {
      "combination": "1-5-6",
-     "probability": 0.00382,
-     "raw_probability": 0.00032
+     "probability": 0.00377,
+     "raw_probability": 0.00031
+    },
+    {
+     "combination": "3-4-6",
+     "probability": 0.00377,
+     "raw_probability": 0.00059
     },
     {
      "combination": "2-5-6",
-     "probability": 0.00382,
-     "raw_probability": 0.0005
+     "probability": 0.00377,
+     "raw_probability": 0.00037
     },
     {
      "combination": "4-5-6",
-     "probability": 0.00382,
-     "raw_probability": 0.00035
+     "probability": 0.00377,
+     "raw_probability": 0.00031
     },
     {
      "combination": "3-5-6",
-     "probability": 0.00338,
-     "raw_probability": 0.00011
+     "probability": 0.00333,
+     "raw_probability": 0.0001
     }
    ],
    "strategy_tickets": [],
    "tracked_tickets": {
     "S1": [],
     "S2": [],
-    "S3": [],
+    "S3": [
+     "1-2-4"
+    ],
     "S4": [
      "2"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "24-07": {
    "date": "2026-11-21",
@@ -3378,134 +3382,134 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.39065,
-     "p_top3": 0.89395
+     "p_win": 0.3786,
+     "p_top3": 0.89999
     },
     {
      "boat": 2,
-     "p_win": 0.28058,
-     "p_top3": 0.85599
+     "p_win": 0.29785,
+     "p_top3": 0.85636
     },
     {
      "boat": 3,
-     "p_win": 0.12937,
-     "p_top3": 0.5051
+     "p_win": 0.12475,
+     "p_top3": 0.50689
     },
     {
      "boat": 4,
-     "p_win": 0.00776,
-     "p_top3": 0.15983
+     "p_win": 0.01049,
+     "p_top3": 0.11487
     },
     {
      "boat": 5,
-     "p_win": 0.19003,
-     "p_top3": 0.71934
+     "p_win": 0.18703,
+     "p_top3": 0.69308
     },
     {
      "boat": 6,
-     "p_win": 0.00159,
-     "p_top3": 0.05069
+     "p_win": 0.00128,
+     "p_top3": 0.03933
     }
    ],
    "predictions": [
     {
      "combination": "1-2-5",
-     "probability": 0.33237,
-     "raw_probability": 0.43817
+     "probability": 0.34979,
+     "raw_probability": 0.44428
     },
     {
      "combination": "1-2-3",
-     "probability": 0.24541,
-     "raw_probability": 0.27418
+     "probability": 0.24044,
+     "raw_probability": 0.27236
     },
     {
      "combination": "1-3-5",
-     "probability": 0.17309,
-     "raw_probability": 0.15532
+     "probability": 0.15448,
+     "raw_probability": 0.13714
     },
     {
      "combination": "2-3-5",
-     "probability": 0.10285,
-     "raw_probability": 0.08804
+     "probability": 0.10077,
+     "raw_probability": 0.09066
     },
     {
      "combination": "1-2-4",
-     "probability": 0.03006,
-     "raw_probability": 0.01446
+     "probability": 0.03265,
+     "raw_probability": 0.02032
     },
     {
      "combination": "1-4-5",
-     "probability": 0.01822,
-     "raw_probability": 0.0081
+     "probability": 0.02076,
+     "raw_probability": 0.01011
     },
     {
      "combination": "1-3-4",
-     "probability": 0.01427,
-     "raw_probability": 0.00499
+     "probability": 0.01781,
+     "raw_probability": 0.0061
     },
     {
      "combination": "2-4-5",
-     "probability": 0.01346,
-     "raw_probability": 0.00461
-    },
-    {
-     "combination": "1-2-6",
-     "probability": 0.01131,
-     "raw_probability": 0.00295
+     "probability": 0.01781,
+     "raw_probability": 0.0067
     },
     {
      "combination": "2-3-4",
-     "probability": 0.01131,
-     "raw_probability": 0.00287
+     "probability": 0.01217,
+     "raw_probability": 0.00407
     },
     {
-     "combination": "1-5-6",
-     "probability": 0.00824,
-     "raw_probability": 0.00165
+     "combination": "1-2-6",
+     "probability": 0.00957,
+     "raw_probability": 0.00247
     },
     {
      "combination": "3-4-5",
-     "probability": 0.00824,
-     "raw_probability": 0.00168
+     "probability": 0.00843,
+     "raw_probability": 0.00214
     },
     {
-     "combination": "1-3-6",
-     "probability": 0.00675,
-     "raw_probability": 0.00102
+     "combination": "1-5-6",
+     "probability": 0.00661,
+     "raw_probability": 0.00123
     },
     {
      "combination": "2-5-6",
-     "probability": 0.00675,
-     "raw_probability": 0.00094
+     "probability": 0.00627,
+     "raw_probability": 0.00081
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.0056,
+     "raw_probability": 0.00074
     },
     {
      "combination": "2-3-6",
-     "probability": 0.00421,
-     "raw_probability": 0.00058
+     "probability": 0.00412,
+     "raw_probability": 0.00049
     },
     {
      "combination": "3-5-6",
-     "probability": 0.00421,
-     "raw_probability": 0.00034
+     "probability": 0.00365,
+     "raw_probability": 0.00026
     },
     {
      "combination": "1-4-6",
-     "probability": 0.00273,
+     "probability": 0.00267,
      "raw_probability": 5e-05
     },
     {
      "combination": "2-4-6",
-     "probability": 0.00264,
-     "raw_probability": 3e-05
+     "probability": 0.00258,
+     "raw_probability": 4e-05
     },
     {
      "combination": "3-4-6",
-     "probability": 0.00195,
+     "probability": 0.00191,
      "raw_probability": 1e-05
     },
     {
      "combination": "4-5-6",
-     "probability": 0.00195,
+     "probability": 0.00191,
      "raw_probability": 2e-05
     }
    ],
@@ -3518,9 +3522,9 @@
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "24-08": {
    "date": "2026-11-21",
@@ -3563,135 +3567,135 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.27872,
-     "p_top3": 0.61014
+     "p_win": 0.2756,
+     "p_top3": 0.615
     },
     {
      "boat": 2,
-     "p_win": 0.31545,
-     "p_top3": 0.78008
+     "p_win": 0.3168,
+     "p_top3": 0.79486
     },
     {
      "boat": 3,
-     "p_win": 0.13431,
-     "p_top3": 0.57441
+     "p_win": 0.13947,
+     "p_top3": 0.59355
     },
     {
      "boat": 4,
-     "p_win": 0.1019,
-     "p_top3": 0.45257
+     "p_win": 0.10134,
+     "p_top3": 0.46551
     },
     {
      "boat": 5,
-     "p_win": 0.16885,
-     "p_top3": 0.5558
+     "p_win": 0.16602,
+     "p_top3": 0.56927
     },
     {
      "boat": 6,
-     "p_win": 0.00075,
-     "p_top3": 0.01755
+     "p_win": 0.00076,
+     "p_top3": 0.0151
     }
    ],
    "predictions": [
     {
      "combination": "1-2-5",
-     "probability": 0.209,
-     "raw_probability": 0.25045
+     "probability": 0.20062,
+     "raw_probability": 0.24275
     },
     {
      "combination": "1-2-3",
-     "probability": 0.15454,
-     "raw_probability": 0.19013
+     "probability": 0.15559,
+     "raw_probability": 0.19672
     },
     {
      "combination": "1-2-4",
-     "probability": 0.13838,
-     "raw_probability": 0.13861
+     "probability": 0.13519,
+     "raw_probability": 0.13633
     },
     {
      "combination": "2-3-5",
-     "probability": 0.09523,
-     "raw_probability": 0.09518
+     "probability": 0.09753,
+     "raw_probability": 0.09814
     },
     {
      "combination": "1-3-5",
-     "probability": 0.08559,
-     "raw_probability": 0.0784
+     "probability": 0.08617,
+     "raw_probability": 0.07892
     },
     {
      "combination": "2-4-5",
-     "probability": 0.07249,
-     "raw_probability": 0.06926
-    },
-    {
-     "combination": "1-4-5",
-     "probability": 0.06656,
-     "raw_probability": 0.05707
+     "probability": 0.07298,
+     "raw_probability": 0.06786
     },
     {
      "combination": "2-3-4",
-     "probability": 0.06055,
-     "raw_probability": 0.05243
+     "probability": 0.06701,
+     "raw_probability": 0.05487
+    },
+    {
+     "combination": "1-4-5",
+     "probability": 0.06647,
+     "raw_probability": 0.05461
     },
     {
      "combination": "1-3-4",
-     "probability": 0.05,
-     "raw_probability": 0.04325
+     "probability": 0.05033,
+     "raw_probability": 0.04419
     },
     {
      "combination": "3-4-5",
-     "probability": 0.03173,
-     "raw_probability": 0.02203
+     "probability": 0.03194,
+     "raw_probability": 0.02241
     },
     {
      "combination": "1-2-6",
-     "probability": 0.00575,
+     "probability": 0.00579,
      "raw_probability": 0.00092
     },
     {
      "combination": "1-3-6",
-     "probability": 0.00358,
-     "raw_probability": 0.00029
+     "probability": 0.00361,
+     "raw_probability": 0.0003
     },
     {
      "combination": "1-5-6",
-     "probability": 0.00358,
-     "raw_probability": 0.00038
+     "probability": 0.00361,
+     "raw_probability": 0.00037
     },
     {
      "combination": "2-3-6",
-     "probability": 0.00358,
-     "raw_probability": 0.00035
+     "probability": 0.00361,
+     "raw_probability": 0.00037
     },
     {
      "combination": "2-5-6",
-     "probability": 0.00358,
+     "probability": 0.00361,
      "raw_probability": 0.00046
     },
     {
      "combination": "1-4-6",
-     "probability": 0.00317,
-     "raw_probability": 0.00021
+     "probability": 0.00319,
+     "raw_probability": 0.0002
     },
     {
      "combination": "2-4-6",
-     "probability": 0.00317,
+     "probability": 0.00319,
      "raw_probability": 0.00025
     },
     {
      "combination": "3-4-6",
-     "probability": 0.00317,
+     "probability": 0.00319,
      "raw_probability": 8e-05
     },
     {
      "combination": "3-5-6",
-     "probability": 0.00317,
+     "probability": 0.00319,
      "raw_probability": 0.00015
     },
     {
      "combination": "4-5-6",
-     "probability": 0.00317,
-     "raw_probability": 0.00011
+     "probability": 0.00319,
+     "raw_probability": 0.0001
     }
    ],
    "strategy_tickets": [],
@@ -3703,9 +3707,9 @@
      "2"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "24-09": {
    "date": "2026-11-21",
@@ -3748,135 +3752,135 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.41733,
-     "p_top3": 0.85818
+     "p_win": 0.42069,
+     "p_top3": 0.85538
     },
     {
      "boat": 2,
-     "p_win": 0.11931,
-     "p_top3": 0.37883
+     "p_win": 0.11327,
+     "p_top3": 0.37646
     },
     {
      "boat": 3,
-     "p_win": 0.1362,
-     "p_top3": 0.47677
+     "p_win": 0.13645,
+     "p_top3": 0.46788
     },
     {
      "boat": 4,
-     "p_win": 0.13652,
-     "p_top3": 0.48326
+     "p_win": 0.13643,
+     "p_top3": 0.49887
     },
     {
      "boat": 5,
-     "p_win": 0.16653,
-     "p_top3": 0.5245
+     "p_win": 0.16577,
+     "p_top3": 0.52369
     },
     {
      "boat": 6,
-     "p_win": 0.02409,
-     "p_top3": 0.25789
+     "p_win": 0.02739,
+     "p_top3": 0.22567
     }
    ],
    "predictions": [
     {
      "combination": "1-3-5",
-     "probability": 0.13854,
-     "raw_probability": 0.15927
+     "probability": 0.13885,
+     "raw_probability": 0.16141
     },
     {
      "combination": "1-4-5",
-     "probability": 0.13854,
-     "raw_probability": 0.15972
+     "probability": 0.13885,
+     "raw_probability": 0.16139
     },
     {
      "combination": "1-2-5",
-     "probability": 0.12554,
-     "raw_probability": 0.13626
+     "probability": 0.11168,
+     "raw_probability": 0.12973
     },
     {
      "combination": "1-3-4",
-     "probability": 0.11095,
-     "raw_probability": 0.12466
+     "probability": 0.11119,
+     "raw_probability": 0.12696
     },
     {
      "combination": "1-2-3",
-     "probability": 0.09427,
-     "raw_probability": 0.10629
+     "probability": 0.09448,
+     "raw_probability": 0.10197
     },
     {
      "combination": "1-2-4",
-     "probability": 0.09427,
-     "raw_probability": 0.10659
-    },
-    {
-     "combination": "3-4-5",
-     "probability": 0.03859,
-     "raw_probability": 0.03081
-    },
-    {
-     "combination": "2-3-5",
-     "probability": 0.03344,
-     "raw_probability": 0.02634
-    },
-    {
-     "combination": "2-4-5",
-     "probability": 0.03344,
-     "raw_probability": 0.02641
+     "probability": 0.09448,
+     "raw_probability": 0.10195
     },
     {
      "combination": "1-5-6",
-     "probability": 0.02966,
-     "raw_probability": 0.02455
+     "probability": 0.03868,
+     "raw_probability": 0.02831
+    },
+    {
+     "combination": "3-4-5",
+     "probability": 0.03868,
+     "raw_probability": 0.03067
     },
     {
      "combination": "1-3-6",
-     "probability": 0.02653,
-     "raw_probability": 0.0191
+     "probability": 0.02973,
+     "raw_probability": 0.0222
     },
     {
      "combination": "1-4-6",
-     "probability": 0.02653,
-     "raw_probability": 0.01915
+     "probability": 0.02973,
+     "raw_probability": 0.02219
+    },
+    {
+     "combination": "2-3-5",
+     "probability": 0.02973,
+     "raw_probability": 0.02473
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.02973,
+     "raw_probability": 0.02472
     },
     {
      "combination": "2-3-4",
-     "probability": 0.02653,
-     "raw_probability": 0.02074
+     "probability": 0.02659,
+     "raw_probability": 0.01956
     },
     {
      "combination": "1-2-6",
-     "probability": 0.02394,
-     "raw_probability": 0.0163
+     "probability": 0.02598,
+     "raw_probability": 0.01778
     },
     {
      "combination": "3-5-6",
-     "probability": 0.01072,
-     "raw_probability": 0.00477
+     "probability": 0.01139,
+     "raw_probability": 0.00542
     },
     {
      "combination": "4-5-6",
-     "probability": 0.01072,
-     "raw_probability": 0.00478
+     "probability": 0.01139,
+     "raw_probability": 0.00542
     },
     {
      "combination": "2-5-6",
-     "probability": 0.00989,
-     "raw_probability": 0.00409
+     "probability": 0.01074,
+     "raw_probability": 0.00437
     },
     {
      "combination": "3-4-6",
-     "probability": 0.00989,
-     "raw_probability": 0.00376
+     "probability": 0.00991,
+     "raw_probability": 0.00429
     },
     {
      "combination": "2-3-6",
-     "probability": 0.00901,
-     "raw_probability": 0.00321
+     "probability": 0.00909,
+     "raw_probability": 0.00346
     },
     {
      "combination": "2-4-6",
-     "probability": 0.00901,
-     "raw_probability": 0.00322
+     "probability": 0.00909,
+     "raw_probability": 0.00346
     }
    ],
    "strategy_tickets": [],
@@ -3888,9 +3892,9 @@
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "24-10": {
    "date": "2026-11-21",
@@ -3933,135 +3937,135 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.46476,
-     "p_top3": 0.87025
+     "p_win": 0.43854,
+     "p_top3": 0.88315
     },
     {
      "boat": 2,
-     "p_win": 0.16798,
-     "p_top3": 0.66439
+     "p_win": 0.17478,
+     "p_top3": 0.67347
     },
     {
      "boat": 3,
-     "p_win": 0.10283,
-     "p_top3": 0.35712
+     "p_win": 0.09501,
+     "p_top3": 0.3396
     },
     {
      "boat": 4,
-     "p_win": 0.17609,
-     "p_top3": 0.62967
+     "p_win": 0.20772,
+     "p_top3": 0.65368
     },
     {
      "boat": 5,
-     "p_win": 0.06649,
-     "p_top3": 0.2744
+     "p_win": 0.064,
+     "p_top3": 0.25693
     },
     {
      "boat": 6,
-     "p_win": 0.02185,
-     "p_top3": 0.20505
+     "p_win": 0.01995,
+     "p_top3": 0.21117
     }
    ],
    "predictions": [
     {
      "combination": "1-2-4",
-     "probability": 0.20661,
-     "raw_probability": 0.28353
+     "probability": 0.22989,
+     "raw_probability": 0.32399
     },
     {
      "combination": "1-3-4",
-     "probability": 0.14338,
-     "raw_probability": 0.15745
+     "probability": 0.14682,
+     "raw_probability": 0.15739
     },
     {
      "combination": "1-2-3",
-     "probability": 0.13986,
-     "raw_probability": 0.148
+     "probability": 0.11819,
+     "raw_probability": 0.12452
     },
     {
      "combination": "1-4-5",
-     "probability": 0.09262,
-     "raw_probability": 0.09724
+     "probability": 0.10043,
+     "raw_probability": 0.10221
     },
     {
      "combination": "1-2-5",
-     "probability": 0.08519,
-     "raw_probability": 0.09136
+     "probability": 0.08724,
+     "raw_probability": 0.08076
     },
     {
      "combination": "1-3-5",
-     "probability": 0.05418,
-     "raw_probability": 0.05021
+     "probability": 0.04698,
+     "raw_probability": 0.03866
     },
     {
      "combination": "2-3-4",
-     "probability": 0.04015,
-     "raw_probability": 0.03069
+     "probability": 0.04221,
+     "raw_probability": 0.03647
     },
     {
      "combination": "1-4-6",
-     "probability": 0.04015,
-     "raw_probability": 0.0304
-    },
-    {
-     "combination": "1-2-6",
-     "probability": 0.04015,
-     "raw_probability": 0.02855
+     "probability": 0.04111,
+     "raw_probability": 0.03041
     },
     {
      "combination": "2-4-5",
-     "probability": 0.02697,
-     "raw_probability": 0.01902
+     "probability": 0.0316,
+     "raw_probability": 0.0237
     },
     {
-     "combination": "1-3-6",
-     "probability": 0.0249,
-     "raw_probability": 0.01563
+     "combination": "1-2-6",
+     "probability": 0.0316,
+     "raw_probability": 0.02399
     },
     {
      "combination": "3-4-5",
-     "probability": 0.01755,
-     "raw_probability": 0.01069
+     "probability": 0.01882,
+     "raw_probability": 0.01159
+    },
+    {
+     "combination": "1-3-6",
+     "probability": 0.01882,
+     "raw_probability": 0.01144
     },
     {
      "combination": "2-3-5",
-     "probability": 0.01755,
-     "raw_probability": 0.01008
+     "probability": 0.01645,
+     "raw_probability": 0.0093
     },
     {
      "combination": "1-5-6",
-     "probability": 0.01733,
-     "raw_probability": 0.00959
+     "probability": 0.01546,
+     "raw_probability": 0.00738
     },
     {
      "combination": "2-4-6",
-     "probability": 0.01505,
-     "raw_probability": 0.00596
+     "probability": 0.01542,
+     "raw_probability": 0.00705
     },
     {
      "combination": "3-4-6",
-     "probability": 0.00943,
-     "raw_probability": 0.00335
+     "probability": 0.00966,
+     "raw_probability": 0.00345
     },
     {
      "combination": "2-3-6",
-     "probability": 0.00937,
-     "raw_probability": 0.00316
+     "probability": 0.00959,
+     "raw_probability": 0.00277
     },
     {
      "combination": "4-5-6",
-     "probability": 0.00713,
-     "raw_probability": 0.00207
+     "probability": 0.0073,
+     "raw_probability": 0.00224
     },
     {
      "combination": "2-5-6",
-     "probability": 0.00682,
-     "raw_probability": 0.00195
+     "probability": 0.00699,
+     "raw_probability": 0.0018
     },
     {
      "combination": "3-5-6",
-     "probability": 0.00559,
-     "raw_probability": 0.0011
+     "probability": 0.00543,
+     "raw_probability": 0.00088
     }
    ],
    "strategy_tickets": [],
@@ -4073,9 +4077,9 @@
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "24-11": {
    "date": "2026-11-21",
@@ -4118,135 +4122,135 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.39876,
-     "p_top3": 0.91997
+     "p_win": 0.40615,
+     "p_top3": 0.91452
     },
     {
      "boat": 2,
-     "p_win": 0.08523,
-     "p_top3": 0.37297
+     "p_win": 0.0833,
+     "p_top3": 0.40736
     },
     {
      "boat": 3,
-     "p_win": 0.1604,
-     "p_top3": 0.59679
+     "p_win": 0.15349,
+     "p_top3": 0.58665
     },
     {
      "boat": 4,
-     "p_win": 0.26174,
-     "p_top3": 0.69478
+     "p_win": 0.25387,
+     "p_top3": 0.71304
     },
     {
      "boat": 5,
-     "p_win": 0.08435,
-     "p_top3": 0.43191
+     "p_win": 0.09172,
+     "p_top3": 0.43527
     },
     {
      "boat": 6,
-     "p_win": 0.00952,
-     "p_top3": 0.08535
+     "p_win": 0.01147,
+     "p_top3": 0.08785
     }
    ],
    "predictions": [
     {
      "combination": "1-3-4",
-     "probability": 0.25362,
-     "raw_probability": 0.33096
-    },
-    {
-     "combination": "1-2-4",
-     "probability": 0.14572,
-     "raw_probability": 0.15993
+     "probability": 0.22104,
+     "raw_probability": 0.31107
     },
     {
      "combination": "1-4-5",
-     "probability": 0.14496,
-     "raw_probability": 0.15812
+     "probability": 0.15286,
+     "raw_probability": 0.17186
     },
     {
-     "combination": "1-2-3",
-     "probability": 0.08613,
-     "raw_probability": 0.08092
+     "combination": "1-2-4",
+     "probability": 0.14988,
+     "raw_probability": 0.15459
     },
     {
      "combination": "1-3-5",
-     "probability": 0.08417,
-     "raw_probability": 0.08
+     "probability": 0.08905,
+     "raw_probability": 0.08621
+    },
+    {
+     "combination": "1-2-3",
+     "probability": 0.08702,
+     "raw_probability": 0.07747
     },
     {
      "combination": "1-2-5",
-     "probability": 0.04639,
-     "raw_probability": 0.03814
-    },
-    {
-     "combination": "2-3-4",
-     "probability": 0.04639,
-     "raw_probability": 0.04001
+     "probability": 0.04803,
+     "raw_probability": 0.04232
     },
     {
      "combination": "3-4-5",
-     "probability": 0.04639,
-     "raw_probability": 0.03955
+     "probability": 0.04796,
+     "raw_probability": 0.03935
     },
     {
-     "combination": "2-4-5",
-     "probability": 0.02791,
-     "raw_probability": 0.01904
+     "combination": "2-3-4",
+     "probability": 0.04309,
+     "raw_probability": 0.03538
     },
     {
      "combination": "1-4-6",
-     "probability": 0.02518,
-     "raw_probability": 0.01655
+     "probability": 0.02885,
+     "raw_probability": 0.01978
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.02885,
+     "raw_probability": 0.0195
     },
     {
      "combination": "2-3-5",
-     "probability": 0.01774,
-     "raw_probability": 0.01001
+     "probability": 0.01834,
+     "raw_probability": 0.01015
     },
     {
      "combination": "1-3-6",
-     "probability": 0.01526,
-     "raw_probability": 0.00831
-    },
-    {
-     "combination": "1-2-6",
-     "probability": 0.0104,
-     "raw_probability": 0.00394
+     "probability": 0.01811,
+     "raw_probability": 0.00984
     },
     {
      "combination": "1-5-6",
-     "probability": 0.0104,
-     "raw_probability": 0.0039
+     "probability": 0.01236,
+     "raw_probability": 0.00536
+    },
+    {
+     "combination": "1-2-6",
+     "probability": 0.01165,
+     "raw_probability": 0.00481
     },
     {
      "combination": "3-4-6",
-     "probability": 0.0104,
-     "raw_probability": 0.00412
-    },
-    {
-     "combination": "2-4-6",
-     "probability": 0.00721,
-     "raw_probability": 0.00198
+     "probability": 0.01165,
+     "raw_probability": 0.00451
     },
     {
      "combination": "4-5-6",
-     "probability": 0.0069,
-     "raw_probability": 0.00196
+     "probability": 0.00846,
+     "raw_probability": 0.00248
+    },
+    {
+     "combination": "2-4-6",
+     "probability": 0.00745,
+     "raw_probability": 0.00223
     },
     {
      "combination": "2-3-6",
-     "probability": 0.00565,
-     "raw_probability": 0.00104
+     "probability": 0.00584,
+     "raw_probability": 0.00116
     },
     {
      "combination": "3-5-6",
-     "probability": 0.00565,
-     "raw_probability": 0.00103
+     "probability": 0.00584,
+     "raw_probability": 0.00129
     },
     {
      "combination": "2-5-6",
-     "probability": 0.00352,
-     "raw_probability": 0.0005
+     "probability": 0.00364,
+     "raw_probability": 0.00064
     }
    ],
    "strategy_tickets": [],
@@ -4258,9 +4262,9 @@
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   },
   "24-12": {
    "date": "2026-11-21",
@@ -4303,135 +4307,135 @@
    "boats": [
     {
      "boat": 1,
-     "p_win": 0.49525,
-     "p_top3": 0.95094
+     "p_win": 0.49929,
+     "p_top3": 0.9566
     },
     {
      "boat": 2,
-     "p_win": 0.24241,
-     "p_top3": 0.6308
+     "p_win": 0.25957,
+     "p_top3": 0.64734
     },
     {
      "boat": 3,
-     "p_win": 0.13679,
-     "p_top3": 0.49572
+     "p_win": 0.11633,
+     "p_top3": 0.49388
     },
     {
      "boat": 4,
-     "p_win": 0.03465,
-     "p_top3": 0.12097
+     "p_win": 0.03534,
+     "p_top3": 0.16852
     },
     {
      "boat": 5,
-     "p_win": 0.07181,
-     "p_top3": 0.32513
+     "p_win": 0.06734,
+     "p_top3": 0.31892
     },
     {
      "boat": 6,
-     "p_win": 0.01909,
-     "p_top3": 0.20165
+     "p_win": 0.02214,
+     "p_top3": 0.20232
     }
    ],
    "predictions": [
     {
      "combination": "1-2-3",
-     "probability": 0.30148,
-     "raw_probability": 0.41234
+     "probability": 0.28988,
+     "raw_probability": 0.39199
     },
     {
      "combination": "1-2-5",
-     "probability": 0.1713,
-     "raw_probability": 0.19951
+     "probability": 0.18865,
+     "raw_probability": 0.21437
     },
     {
      "combination": "1-2-4",
-     "probability": 0.09539,
-     "raw_probability": 0.0926
+     "probability": 0.10559,
+     "raw_probability": 0.10894
     },
     {
      "combination": "1-3-5",
-     "probability": 0.09539,
-     "raw_probability": 0.08962
+     "probability": 0.08164,
+     "raw_probability": 0.0701
     },
     {
      "combination": "1-2-6",
-     "probability": 0.06067,
-     "raw_probability": 0.05027
+     "probability": 0.07591,
+     "raw_probability": 0.06741
     },
     {
      "combination": "1-3-4",
-     "probability": 0.05145,
-     "raw_probability": 0.04131
+     "probability": 0.04438,
+     "raw_probability": 0.03533
     },
     {
      "combination": "1-3-6",
-     "probability": 0.03455,
-     "raw_probability": 0.02237
+     "probability": 0.03322,
+     "raw_probability": 0.02179
     },
     {
      "combination": "2-3-5",
-     "probability": 0.03455,
-     "raw_probability": 0.02456
+     "probability": 0.03263,
+     "raw_probability": 0.0209
     },
     {
      "combination": "1-4-5",
-     "probability": 0.0309,
-     "raw_probability": 0.01953
-    },
-    {
-     "combination": "2-3-4",
-     "probability": 0.02058,
-     "raw_probability": 0.01137
+     "probability": 0.02903,
+     "raw_probability": 0.01895
     },
     {
      "combination": "1-5-6",
-     "probability": 0.01965,
-     "raw_probability": 0.01056
+     "probability": 0.01978,
+     "raw_probability": 0.01168
+    },
+    {
+     "combination": "2-3-4",
+     "probability": 0.01889,
+     "raw_probability": 0.01058
     },
     {
      "combination": "2-3-6",
-     "probability": 0.01686,
-     "raw_probability": 0.00617
-    },
-    {
-     "combination": "2-4-5",
-     "probability": 0.01324,
-     "raw_probability": 0.0055
+     "probability": 0.01621,
+     "raw_probability": 0.00654
     },
     {
      "combination": "1-4-6",
-     "probability": 0.01248,
-     "raw_probability": 0.00484
+     "probability": 0.01273,
+     "raw_probability": 0.00586
+    },
+    {
+     "combination": "2-4-5",
+     "probability": 0.01273,
+     "raw_probability": 0.00577
     },
     {
      "combination": "2-5-6",
-     "probability": 0.01049,
-     "raw_probability": 0.00298
+     "probability": 0.01016,
+     "raw_probability": 0.00356
     },
     {
      "combination": "3-4-5",
-     "probability": 0.00931,
-     "raw_probability": 0.00267
+     "probability": 0.00768,
+     "raw_probability": 0.00211
     },
     {
      "combination": "2-4-6",
-     "probability": 0.00626,
-     "raw_probability": 0.00138
+     "probability": 0.00735,
+     "raw_probability": 0.0018
     },
     {
      "combination": "3-5-6",
-     "probability": 0.00626,
-     "raw_probability": 0.00145
+     "probability": 0.00602,
+     "raw_probability": 0.0013
     },
     {
      "combination": "3-4-6",
-     "probability": 0.0053,
-     "raw_probability": 0.00067
+     "probability": 0.00378,
+     "raw_probability": 0.00066
     },
     {
      "combination": "4-5-6",
-     "probability": 0.0039,
-     "raw_probability": 0.00033
+     "probability": 0.00375,
+     "raw_probability": 0.00036
     }
    ],
    "strategy_tickets": [],
@@ -4443,18 +4447,18 @@
      "1"
     ]
    },
-   "prediction_kind": "race-day update",
-   "predicted_at": "2026-11-21T01:04:40+09:00",
-   "model_id": "b6430f5889ab-5fdfa8b216d6"
+   "prediction_kind": "night",
+   "predicted_at": "2026-11-21T07:20:38+09:00",
+   "model_id": "59fb022e4175-c923cef04473"
   }
  },
- "updated_at": "2026-11-21T01:04:40+09:00",
+ "updated_at": "2026-11-21T07:20:38+09:00",
  "model": {
-  "model_id": "b6430f5889ab-5fdfa8b216d6",
-  "trained_at": "2026-11-20T07:45:46+09:00",
-  "train_rows": 119974,
-  "train_last_date": "2026-11-19",
-  "train_days": 961
+  "model_id": "59fb022e4175-c923cef04473",
+  "trained_at": "2026-11-21T07:20:33+09:00",
+  "train_rows": 120190,
+  "train_last_date": "2026-11-20",
+  "train_days": 962
  },
  "calibration": {
   "method": "harville_from_p_win+isotonic",

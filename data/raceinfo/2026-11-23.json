@@ -1,6 +1,6 @@
 {
  "date": "2026-11-23",
- "updated_at": "2026-11-23T10:56:53+09:00",
+ "updated_at": "2026-11-23T12:41:02+09:00",
  "races": {
   "21-01": {
    "stadium_id": "21",
@@ -150,7 +150,7 @@
     6
    ],
    "exhibition_status": "Received",
-   "finished": false
+   "finished": true
   },
   "21-07": {
    "stadium_id": "21",
@@ -166,9 +166,16 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
-   "finished": false
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
+   "finished": true
   },
   "21-08": {
    "stadium_id": "21",
@@ -184,9 +191,16 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
-   "finished": false
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
+   "finished": true
   },
   "21-09": {
    "stadium_id": "21",
@@ -202,8 +216,15 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
    "finished": false
   },
   "21-10": {

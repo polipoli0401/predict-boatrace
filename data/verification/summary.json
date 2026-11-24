@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-23T06:13:18+09:00",
- "period": "2026-10-19 .. 2026-11-22",
+ "generated_at": "2026-11-24T11:33:35+09:00",
+ "period": "2026-10-19 .. 2026-11-23",
  "by_stadium": {
   "18": {
    "races": 192,
@@ -28,8 +28,8 @@
    ]
   },
   "21": {
-   "races": 204,
-   "model_log_loss": 2.2409,
+   "races": 216,
+   "model_log_loss": 2.2556,
    "candidate_races": 0,
    "tickets": 0,
    "hits": 0,
@@ -39,22 +39,22 @@
    "roi": null,
    "mean_expected_return": null,
    "closing_rule": {
-    "candidate_races": 148,
-    "tickets": 255,
-    "hits": 11,
-    "hit_rate": 7.4,
-    "roi": 57.5,
-    "mean_expected_return": 177.7
+    "candidate_races": 170,
+    "tickets": 298,
+    "hits": 16,
+    "hit_rate": 9.4,
+    "roi": 69.0,
+    "mean_expected_return": 177.9
    },
-   "market_compared_races": 192,
+   "market_compared_races": 216,
    "log_loss_model_vs_market": [
-    2.2605,
-    2.1156
+    2.2556,
+    2.1081
    ]
   },
   "24": {
-   "races": 264,
-   "model_log_loss": 2.2927,
+   "races": 276,
+   "model_log_loss": 2.2902,
    "candidate_races": 0,
    "tickets": 0,
    "hits": 0,
@@ -64,22 +64,22 @@
    "roi": null,
    "mean_expected_return": null,
    "closing_rule": {
-    "candidate_races": 180,
-    "tickets": 294,
-    "hits": 15,
-    "hit_rate": 8.3,
-    "roi": 82.0,
-    "mean_expected_return": 173.3
+    "candidate_races": 200,
+    "tickets": 324,
+    "hits": 16,
+    "hit_rate": 8.0,
+    "roi": 77.0,
+    "mean_expected_return": 174.8
    },
-   "market_compared_races": 252,
+   "market_compared_races": 276,
    "log_loss_model_vs_market": [
-    2.2898,
-    2.1878
+    2.2902,
+    2.1897
    ]
   },
   "all": {
-   "races": 660,
-   "model_log_loss": 2.2517,
+   "races": 684,
+   "model_log_loss": 2.2559,
    "candidate_races": 0,
    "tickets": 0,
    "hits": 0,
@@ -89,62 +89,62 @@
    "roi": null,
    "mean_expected_return": null,
    "closing_rule": {
-    "candidate_races": 466,
-    "tickets": 789,
-    "hits": 36,
-    "hit_rate": 7.7,
-    "roi": 67.8,
-    "mean_expected_return": 172.9
+    "candidate_races": 508,
+    "tickets": 862,
+    "hits": 42,
+    "hit_rate": 8.3,
+    "roi": 69.9,
+    "mean_expected_return": 173.8
    },
-   "market_compared_races": 636,
+   "market_compared_races": 684,
    "log_loss_model_vs_market": [
     2.2559,
-    2.1433
+    2.1423
    ]
   }
  },
  "calibration": [
   {
    "bin": "(0.0, 0.02]",
-   "n": 6043,
+   "n": 6250,
    "predicted": 0.0102,
-   "observed": 0.0071
+   "observed": 0.0072
   },
   {
    "bin": "(0.02, 0.05]",
-   "n": 3119,
+   "n": 3249,
    "predicted": 0.0339,
-   "observed": 0.0256
+   "observed": 0.0262
   },
   {
    "bin": "(0.05, 0.1]",
-   "n": 1972,
-   "predicted": 0.0738,
-   "observed": 0.0674
+   "n": 2041,
+   "predicted": 0.0737,
+   "observed": 0.0676
   },
   {
    "bin": "(0.1, 0.15]",
-   "n": 1027,
+   "n": 1062,
    "predicted": 0.1266,
-   "observed": 0.1412
+   "observed": 0.1394
   },
   {
    "bin": "(0.15, 0.2]",
-   "n": 526,
-   "predicted": 0.1699,
-   "observed": 0.1901
+   "n": 547,
+   "predicted": 0.17,
+   "observed": 0.1883
   },
   {
    "bin": "(0.2, 0.3]",
-   "n": 441,
-   "predicted": 0.2351,
-   "observed": 0.2925
+   "n": 458,
+   "predicted": 0.2352,
+   "observed": 0.2948
   },
   {
    "bin": "(0.3, 0.5]",
-   "n": 71,
-   "predicted": 0.3338,
-   "observed": 0.4225
+   "n": 72,
+   "predicted": 0.3341,
+   "observed": 0.4167
   },
   {
    "bin": "(0.5, 1.0]",
@@ -157,11 +157,11 @@
   "S1": {
    "name": "Favourite trio, 1 ticket (top win prob 30-40%, gap >= 20%)",
    "frozen_at": "2026-11-20",
-   "period": "2026-11-21 .. 2026-11-22",
-   "races": 2,
-   "tickets": 2,
+   "period": "2026-11-21 .. 2026-11-23",
+   "races": 3,
+   "tickets": 3,
    "hits": 0,
-   "invest": 200,
+   "invest": 300,
    "return": 0,
    "roi": 0.0,
    "roi_ci95": null,
@@ -175,11 +175,11 @@
   "S2": {
    "name": "Top-3 by P(top-3) box, 1 ticket (top win prob 30-40%, gap >= 20%)",
    "frozen_at": "2026-11-20",
-   "period": "2026-11-21 .. 2026-11-22",
-   "races": 2,
-   "tickets": 2,
+   "period": "2026-11-21 .. 2026-11-23",
+   "races": 3,
+   "tickets": 3,
    "hits": 0,
-   "invest": 200,
+   "invest": 300,
    "return": 0,
    "roi": 0.0,
    "roi_ci95": null,
@@ -211,13 +211,13 @@
   "S4": {
    "name": "Win bet on the model's top boat when it is not the market favourite",
    "frozen_at": "2026-11-20",
-   "period": "2026-11-20 .. 2026-11-21",
-   "races": 11,
-   "tickets": 11,
-   "hits": 3,
-   "invest": 1100,
-   "return": 840,
-   "roi": 76.4,
+   "period": "2026-11-20 .. 2026-11-23",
+   "races": 21,
+   "tickets": 21,
+   "hits": 9,
+   "invest": 2100,
+   "return": 2820,
+   "roi": 134.3,
    "roi_ci95": null,
    "past_evidence": {
     "selection_roi": 115.7,

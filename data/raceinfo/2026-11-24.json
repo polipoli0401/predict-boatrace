@@ -1,6 +1,6 @@
 {
  "date": "2026-11-24",
- "updated_at": "2026-11-24T15:54:37+09:00",
+ "updated_at": "2026-11-24T18:44:44+09:00",
  "races": {
   "18-01": {
    "stadium_id": "18",
@@ -650,7 +650,7 @@
     6
    ],
    "exhibition_status": "Received",
-   "finished": false
+   "finished": true
   },
   "24-03": {
    "stadium_id": "24",
@@ -675,7 +675,7 @@
     6
    ],
    "exhibition_status": "Received",
-   "finished": false
+   "finished": true
   },
   "24-04": {
    "stadium_id": "24",
@@ -691,9 +691,16 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
-   "finished": false
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
+   "finished": true
   },
   "24-05": {
    "stadium_id": "24",
@@ -709,9 +716,16 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
-   "finished": false
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
+   "finished": true
   },
   "24-06": {
    "stadium_id": "24",
@@ -727,9 +741,16 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
-   "finished": false
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
+   "finished": true
   },
   "24-07": {
    "stadium_id": "24",
@@ -745,9 +766,16 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
-   "finished": false
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
+   "finished": true
   },
   "24-08": {
    "stadium_id": "24",
@@ -763,8 +791,15 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
    "finished": false
   },
   "24-09": {

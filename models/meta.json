@@ -1,8 +1,8 @@
 {
- "trained_at": "2026-11-26T08:46:22+09:00",
- "train_rows": 121036,
- "train_days": 967,
- "train_last_date": "2026-11-25",
+ "trained_at": "2026-11-27T08:59:28+09:00",
+ "train_rows": 121108,
+ "train_days": 968,
+ "train_last_date": "2026-11-26",
  "features": [
   "stadium_id_num",
   "boat_number",
@@ -49,5 +49,5 @@
   "random_state": 42,
   "verbose": -1
  },
- "model_id": "2b0b739cc430-2b40f8eea9bc"
+ "model_id": "8e0afc3e4669-1330ad47bc03"
 }

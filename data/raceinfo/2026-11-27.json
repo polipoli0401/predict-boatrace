@@ -1,6 +1,6 @@
 {
  "date": "2026-11-27",
- "updated_at": "2026-11-27T03:23:33+09:00",
+ "updated_at": "2026-11-27T08:59:42+09:00",
  "races": {
   "18-01": {
    "stadium_id": "18",
@@ -16,8 +16,15 @@
    },
    "entry_status": "Received",
    "entry_note": null,
-   "exhibition_boats": [],
-   "exhibition_status": "Not yet",
+   "exhibition_boats": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "exhibition_status": "Received",
    "finished": false
   },
   "18-02": {
